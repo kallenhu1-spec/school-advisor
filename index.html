@@ -119,6 +119,47 @@ tr:hover>td{background:#fafbff}
 .tl-month{margin-bottom:20px}
 .tl-month-hd{display:flex;align-items:center;gap:8px;margin-bottom:12px}
 .tl-kw{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600}
+
+/* ===== 手机端适配 ===== */
+@media (max-width: 768px) {
+  /* 隐藏桌面表格 */
+  #school-table-wrap { display: none; }
+  /* 显示卡片列表 */
+  #school-cards { display: block !important; }
+
+  .school-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.08);
+    margin-bottom: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+  }
+  .school-card:active { background: #f7f8ff; }
+  .sc-header { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+  .sc-name { font-size:15px; font-weight:700; color:#1a1a2e; flex:1; min-width:0; }
+  .sc-badges { display:flex; gap:4px; flex-shrink:0; }
+  .sc-meta { display:flex; gap:8px; margin-top:6px; font-size:12px; color:#666; flex-wrap:wrap; align-items:center; }
+  .sc-rate { font-weight:600; color:#4361ee; }
+  .sc-btns { display:flex; gap:8px; margin-top:8px; }
+  .sc-btns a {
+    flex:1; display:inline-flex; align-items:center; justify-content:center;
+    gap:4px; height:32px; border-radius:8px; font-size:12px; font-weight:600;
+    text-decoration:none;
+  }
+  .sc-btns .map-btn { background:#EEF2FF; color:#4361ee; }
+  .sc-btns .xhs-btn { background:#FFF0F2; color:#FF2442; }
+  .sc-detail-panel { margin-top:10px; }
+
+  /* 隐藏桌面端学校数量badge在移动端 */
+  .stat-tag { font-size:11px; }
+}
+
+/* 桌面端隐藏卡片列表 */
+@media (min-width: 769px) {
+  #school-cards { display: none; }
+}
+
 </style>
 </head>
 <body>
@@ -204,6 +245,12 @@ tr:hover>td{background:#fafbff}
         <button class="tb" onclick="showTab(2)">📊 中签率对比</button>
       </div>
       <div class="tc on" id="tc1">
+        <div style="margin-bottom:8px;position:relative">
+          <input id="school-search" type="text" placeholder="🔍 搜索学校名称..."
+            oninput="applyFilters()"
+            style="width:100%;box-sizing:border-box;padding:8px 12px 8px 12px;border:1.5px solid #e0e4ff;border-radius:10px;font-size:14px;color:#333;outline:none;background:#fff"
+            onfocus="this.style.borderColor='#4361ee'" onblur="this.style.borderColor='#e0e4ff'">
+        </div>
         <div class="filter-row">
           <label style="font-size:12px;color:#888">区域：</label>
           <select class="ft-sel" id="f-dist" onchange="applyFilters()">
@@ -225,7 +272,7 @@ tr:hover>td{background:#fafbff}
           <button class="fb" id="f-hot" onclick="setStatus('hot',this)">🔥 超额</button>
           <button class="fb" id="f-cool" onclick="setStatus('cool',this)">🍀 全录</button>
         </div>
-        <div style="overflow-x:auto">
+        <div id="school-table-wrap" style="overflow-x:auto">
           <table style="table-layout:fixed;width:100%">
             <thead><tr>
               <th style="width:30%">学校名称 <span style="font-size:11px;font-weight:400;color:#999">（点击展开详情）</span></th>
@@ -238,6 +285,7 @@ tr:hover>td{background:#fafbff}
           </table>
         </div>
       </div>
+      <div id="school-cards" style="display:none;padding:0 4px"></div>
       <div class="tc" id="tc2"><div class="chw"><canvas id="ch"></canvas></div></div>
     </div>
   </div>
@@ -456,8 +504,11 @@ document.addEventListener('DOMContentLoaded',function(){
 
 function applyFilters(){
   var d=document.getElementById('f-dist').value,t=document.getElementById('f-type').value;
+  var sq=(document.getElementById('school-search')||{}).value||'';
+  sq=sq.trim().toLowerCase();
   closeDetail();
   curList=SD.filter(function(s){
+    if(sq&&s[0].toLowerCase().indexOf(sq)<0)return false;
     if(d&&s[1]!==d)return false;
     if(t==='pub'&&s[2]!=='pub')return false;
     if(t==='pri'&&s[2]!=='pri')return false;
@@ -501,7 +552,8 @@ function renderTable(list){
     var name=s[0],dist=s[1],typ=s[2],lo=s[3],hi=s[4],lat=s[7],lng=s[8],st=s[9],tier=s[10];
     var enc=encodeURIComponent(name);
     var esq=name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-    var mapUrl='https://uri.amap.com/marker?position='+lng+','+lat+'&name='+encodeURIComponent(name);
+    var cleanName=name.replace(/^(民办|公办|上海市)/,'');
+    var mapUrl='https://uri.amap.com/search?keyword='+encodeURIComponent(cleanName)+'&city=%E4%B8%8A%E6%B5%B7&src=mypage&callnative=1';
     var xhsKw=name;
     var xhsUrl='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(xhsKw)+'&source=web_explore_feed';
     var tierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
@@ -520,6 +572,42 @@ function renderTable(list){
     h+='</tr><tr class="dp-row"><td colspan="6"><div class="dp-wrap" id="dpw-'+enc+'" style="display:none"></div></td></tr>';
   });
   tb.innerHTML=h;
+  /* 手机端卡片渲染 */
+  var cards=document.getElementById('school-cards');
+  if(cards){
+    var ch='';
+    list.forEach(function(s){
+      var name=s[0],dist=s[1],typ=s[2],lo=s[3],hi=s[4],lat=s[7],lng=s[8],st=s[9],tier=s[10];
+      var enc=encodeURIComponent(name);
+      var esq=name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+      var cleanName=name.replace(/^(民办|公办|上海市)/,'');
+    var mapUrl='https://uri.amap.com/search?keyword='+encodeURIComponent(cleanName)+'&city=%E4%B8%8A%E6%B5%B7&src=mypage&callnative=1';
+      var xhsUrl='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(name)+'&source=web_explore_feed';
+      var tierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
+      var typBadge=typ==='pub'?'<span class="pub-b">公办</span>':'<span class="pri-b">民办</span>';
+      var rateStr=lo===0&&hi===0?'—':lo+'–'+hi+'%';
+      var MAP_IMG=document.querySelector('.map-btn img')?document.querySelector('.map-btn img').outerHTML:'';
+      var XHS_IMG=document.querySelector('.xhs-btn img')?document.querySelector('.xhs-btn img').outerHTML:'';
+      ch+='<div class="school-card" id="card-'+enc+'">';
+      ch+='<div class="sc-header" onclick="toggleDetail(\''+esq+'\')">';
+      ch+='<span class="sc-name">'+name+'</span>';
+      ch+='<span class="sc-badges">'+tierBadge+typBadge+'</span>';
+      ch+='</div>';
+      ch+='<div class="sc-meta" onclick="toggleDetail(\''+esq+'\')">';
+      ch+='<span>'+DN[dist]+'</span>';
+      ch+='<span class="sc-rate">中签率 '+rateStr+'</span>';
+      if(st==='hot') ch+='<span>🌟超额</span>';
+      if(st==='cool') ch+='<span>🍀全录</span>';
+      ch+='</div>';
+      ch+='<div class="sc-btns">';
+      ch+='<a class="map-btn" href="'+mapUrl+'" target="_blank">'+MAP_IMG+'导航</a>';
+      ch+='<a class="xhs-btn" href="'+xhsUrl+'" target="_blank">'+XHS_IMG+'口碑</a>';
+      ch+='</div>';
+      ch+='<div class="sc-detail-panel" id="dpw-'+enc+'" style="display:none"></div>';
+      ch+='</div>';
+    });
+    cards.innerHTML=ch;
+  }
 }
 function toggleDetail(name){
   if(openName&&openName!==name){
