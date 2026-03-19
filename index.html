@@ -689,7 +689,7 @@ function renderTable(list){
     h+='<td style="text-align:center">'+tierBadge+'</td><td style="white-space:nowrap;text-align:center">'+typBadge+'</td><td style="white-space:nowrap;text-align:center">'+rateHtml+'</td>';
     h+='<td style="white-space:nowrap;vertical-align:middle;text-align:left;padding:6px 8px"><a class="map-btn" href="'+mapUrl+'" target="_blank"><img src=\"data:image/png;base64,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" style=\"width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle\"> 导航</a>'
     +' <button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>'
-    +' <button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>'
+    +' <a class="dz-btn" href="'+'dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+encodeURIComponent(name)+'" target="_blank">'+DZ_IMG+'点评</a>'
     +'</td>';
     h+='</tr><tr class="dp-row"><td colspan="6"><div class="dp-wrap" id="dpw-'+enc+'" style="display:none"></div></td></tr>';
   });
@@ -722,7 +722,7 @@ function renderTable(list){
       ch+='<div class="sc-btns">';
       ch+='<a class="map-btn" href="'+mapUrl+'" target="_blank">'+MAP_IMG+'导航</a>';
       ch+='<button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>';
-      ch+='<button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>';
+      ch+='<a class="dz-btn" href="'+'dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+encodeURIComponent(name)+'" target="_blank">'+DZ_IMG+'点评</a>';
       ch+='</div>';
       var hintCls=PR[name]?' has-profile':'';
       ch+='<div class="sc-detail-hint'+hintCls+'" onclick="toggleDetail(\''+esq+'\')">';
@@ -767,7 +767,7 @@ function buildDetail(name){
       +'<span class="dz-guide-tag">👩‍👧 家长口碑</span>'
       +'<span class="dz-guide-tag">📞 咨询电话</span>'
       +'</div>'
-      +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(name)+')" type="button">'+DZ_IMG+' 去大众点评查看该校信息</button>'
+      +'<a class="dz-guide-btn" href="'+'dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+encodeURIComponent(name)+'" target="_blank">'+DZ_IMG+' 去大众点评查看该校信息</a>'
       +'</div>';
   }
 
@@ -825,7 +825,7 @@ function buildDetail(name){
     +'<span class="dz-guide-tag">👩‍👧 家长评价</span>'
     +'<span class="dz-guide-tag">🏫 校园环境</span>'
     +'</div>'
-    +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(name)+')" type="button">'+DZ_IMG+' 去大众点评查看该校详情</button>'
+    +'<a class="dz-guide-btn" href="'+'dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+encodeURIComponent(name)+'" target="_blank">'+DZ_IMG+' 去大众点评查看该校详情</a>'
     +'</div>';
 
   var h='';
@@ -1098,9 +1098,27 @@ function openDZ(name){
   var enc=encodeURIComponent(name);
   var appScheme='dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+enc;
   var webUrl='https://www.dianping.com/search/keyword/1/0_'+enc;
-  /* 微信内外统一：location.href 唤起 App，800ms 后 fallback 网页版 */
-  /* 微信内：会弹"在浏览器打开"系统对话框 → 系统浏览器 → 大众点评 App */
-  /* 非微信：直接唤起 App */
+  var ua=navigator.userAgent;
+  var isMiniProg=/miniProgram/i.test(ua)||typeof wx!=='undefined'&&wx&&typeof wx.miniProgram!=='undefined';
+  /* 在小程序 webview 里无法唤起第三方 App，只能复制关键词提示 */
+  if(isMiniProg){
+    var kw=name+' 口碑';
+    function doToast(copied){
+      showToast(copied?'已复制「'+kw+'」\n请打开大众点评 App 搜索 🍴':'请打开大众点评 App 搜索：'+kw);
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(kw).then(function(){doToast(true);}).catch(function(){doToast(false);});
+    } else {
+      try{
+        var ta=document.createElement('textarea');
+        ta.value=kw;document.body.appendChild(ta);ta.select();
+        document.execCommand('copy');document.body.removeChild(ta);
+        doToast(true);
+      }catch(e){doToast(false);}
+    }
+    return;
+  }
+  /* 微信普通 WebView 或非微信：location.href 唤起 App，800ms fallback 网页 */
   var t=Date.now();
   window.location.href=appScheme;
   setTimeout(function(){
