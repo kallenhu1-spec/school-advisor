@@ -415,14 +415,16 @@ tr:hover>td{background:#fafbff}
 
   /* 展开提示 */
   .sc-detail-hint {
-    font-size:12px; color:#ccc; margin-top:7px; text-align:right;
-    font-weight:400; display:flex; align-items:center; justify-content:flex-end; gap:3px;
+    font-size:12px; color:#ccc; margin-top:6px; margin-bottom:2px;
+    border:1.5px dashed #e0e4f5; border-radius:8px;
+    padding:7px 12px; cursor:pointer;
+    display:flex; align-items:center; justify-content:space-between;
+    -webkit-tap-highlight-color:rgba(102,126,234,.1); user-select:none;
   }
-  .sc-detail-hint.has-profile { color:#4361ee; font-weight:500; }
-  .sc-detail-hint::before {
-    content:''; display:inline-block; width:16px; height:1px;
-    background:linear-gradient(90deg,transparent,#c5cff8); margin-right:2px;
-  }
+  .sc-detail-hint:active { opacity:.75; background:#f0f3ff; }
+  .sc-detail-hint.has-profile { color:#4361ee; border-color:#c5cff8; }
+  .sc-detail-hint .no-profile { color:#bbb; }
+  .sc-detail-hint .hint-arr { font-size:18px; font-weight:700; color:#4361ee; line-height:1; }
 }
 
 </style>
@@ -922,6 +924,10 @@ function renderTable(list){
       ch+='<span class="sc-name">'+name+'<span class="sc-arrow"> ›</span></span>';
       ch+='<span class="sc-badges">'+tierBadge+typBadge+'</span>';
       ch+='</div>';
+       var hintCls=PR[name]?' has-profile':'';
+       ch+='<div class="sc-detail-hint'+hintCls+'" onclick="toggleDetail(\''+esq+'\')">'+
+         (PR[name]?'<span>展开教育理念·作业·升学路径 <span class="hint-arr">›</span></span>':'<span class="no-profile">暂无详情</span>')+
+         '</div>';
       ch+='<div class="sc-meta" onclick="openSheet(\''+esq+'\')">';
       ch+='<span>'+DN[dist]+'</span>';
       if(rateStr) ch+='<span class="sc-rate">中签率 '+rateStr+'</span>';
@@ -932,10 +938,6 @@ function renderTable(list){
       ch+='<a class="map-btn" href="'+mapUrl+'" target="_blank">'+MAP_IMG+'导航</a>';
       ch+='<button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>';
       ch+='<button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>';
-      ch+='</div>';
-      var hintCls=PR[name]?' has-profile':'';
-      ch+='<div class="sc-detail-hint'+hintCls+'" onclick="toggleDetail(\''+esq+'\')">';
-      ch+=PR[name]?'<span>展开教育理念·作业·升学路径</span>':'<span style="color:#bbb">暂无详情</span>';
       ch+='</div>';
       ch+='<div class="sc-detail-panel" id="dpw-'+enc+'" style="display:none"></div>';
       ch+='</div>';
