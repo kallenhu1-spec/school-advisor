@@ -1351,6 +1351,7 @@ function openSheet(name){
   body.innerHTML=buildDetail(name);
   overlay.classList.add('open');
   sheet.classList.add('open');
+  sheet.scrollTop = 0;
   document.body.style.overflow='hidden';
   return true;
 }
