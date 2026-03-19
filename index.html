@@ -37,8 +37,9 @@ function switchOuterTab(n,btn){
 </script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#f5f7fa;color:#333}
-.hd{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:24px 20px;text-align:center}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#f5f7fa;color:#333;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+.hd{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:24px 20px 0;text-align:center}
+.hd,.hd *{color:#fff}
 .hd h1{font-size:22px;font-weight:700;margin-bottom:4px}
 .hd p{font-size:13px;opacity:.85}
 .badge{display:inline-block;background:rgba(255,255,255,.2);border-radius:12px;padding:3px 10px;font-size:11px;margin-top:6px}
@@ -47,7 +48,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 .ct{font-size:15px;font-weight:700;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #f0f0f0}
 .r2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
 label{display:block;font-size:12px;color:#888;margin-bottom:4px}
-select{width:100%;padding:8px 10px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;background:#fff;outline:none}
+select{width:100%;padding:8px 40px 8px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;background:#fff;outline:none;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23aaa' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
 select:focus{border-color:#667eea}
 .gbtn{width:100%;padding:12px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;margin-top:4px;transition:.2s}
 .gbtn:hover{opacity:.9;transform:translateY(-1px)}
@@ -127,9 +128,9 @@ tr:hover>td{background:#fafbff}
 #res{display:none}
 @media(max-width:600px){.r2,.dp-grid{grid-template-columns:1fr}th,td{padding:7px 6px;font-size:11px}.filter-row{gap:6px}}
 
-.outer-tabs{display:flex;gap:8px;margin-bottom:14px}
-.otb{flex:1;padding:10px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;background:#f0f0f0;color:#666;transition:.2s}
-.otb.on{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff}
+.outer-tabs{display:flex;gap:6px;margin-top:16px;padding:4px;background:rgba(0,0,0,.15);border-radius:14px 14px 0 0;margin-left:-20px;margin-right:-20px;padding-left:16px;padding-right:16px;padding-bottom:0}
+.otb{flex:1;padding:10px 8px;border:none;border-radius:10px 10px 0 0;font-size:14px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,.7);transition:.2s;-webkit-tap-highlight-color:transparent}
+.otb.on{background:#fff;color:#5a4fcf;box-shadow:0 -2px 8px rgba(0,0,0,.08)}
 .otc{display:block}
 .tl-month{margin-bottom:20px}
 .tl-month-hd{display:flex;align-items:center;gap:8px;margin-bottom:12px}
@@ -186,34 +187,149 @@ tr:hover>td{background:#fafbff}
   /* 手机端卡片列表默认显示 */
   #school-cards { display: block; }
 
+  /* === 学校卡片 === */
   .school-card {
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 1px 6px rgba(0,0,0,.08);
-    margin-bottom: 10px;
-    padding: 12px 14px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    margin-bottom: 12px;
+    padding: 14px 16px;
     cursor: pointer;
+    border: 1px solid rgba(0,0,0,.04);
   }
-  .school-card:active { background: #f7f8ff; }
-  .sc-header { display:flex; align-items:center; gap:6px; flex-wrap:wrap; cursor:pointer; -webkit-tap-highlight-color:rgba(67,97,238,.08); } .sc-header:active { opacity:0.75; }
-  .sc-name { font-size:15px; font-weight:700; color:#1a1a2e; flex:1; min-width:0; border-bottom:1.5px dashed #c5cff8; padding-bottom:2px; display:inline-block; }
-  .sc-badges { display:flex; gap:4px; flex-shrink:0; }
-  .sc-meta { display:flex; gap:8px; margin-top:6px; font-size:12px; color:#666; flex-wrap:wrap; align-items:center; }
-  .sc-rate { font-weight:600; color:#4361ee; }
-  .sc-btns { display:flex; gap:8px; margin-top:8px; }
-  .sc-btns a, .sc-btns button {
-    flex:1; display:inline-flex; align-items:center; justify-content:center;
-    gap:4px; height:36px; border-radius:10px; font-size:13px; font-weight:600;
-    text-decoration:none; border:none; cursor:pointer; padding:0;
-    -webkit-appearance:none; appearance:none; font-family:inherit; box-sizing:border-box;
-  }
-  .sc-btns .map-btn { background:#EEF2FF; color:#4361ee; }
-  .sc-btns .xhs-btn { background:#FFF0F2; color:#FF2442; }
-  .sc-btns .dz-btn  { background:#FFF7EE; color:#FF6200; border:none; }
-  .sc-detail-panel { margin-top:10px; }
+  .school-card:active { background: #f7f8ff; box-shadow: 0 0 0 2px #4361ee30; }
 
-  /* 隐藏桌面端学校数量badge在移动端 */
-  .stat-tag { font-size:11px; }
+  /* 顶部：学校名 + badge */
+  .sc-header {
+    display: flex; align-items: flex-start; gap: 8px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(67,97,238,.08);
+  }
+  .sc-header:active { opacity: 0.75; }
+  .sc-name {
+    font-size: 16px; font-weight: 700; color: #1a1a2e;
+    flex: 1; min-width: 0; line-height: 1.4;
+    border-bottom: 1.5px dashed #c5cff8;
+    padding-bottom: 3px; display: inline-block;
+    letter-spacing: 0.01em;
+  }
+  .sc-badges { display: flex; gap: 5px; flex-shrink: 0; margin-top: 2px; }
+  .sc-arrow { color: #a0aec0; font-size: 14px; font-weight: 400; margin-left: 1px; vertical-align: middle; }
+
+  /* 元信息行：区 / 中签率 / 状态 */
+  .sc-meta {
+    display: flex; gap: 10px; margin-top: 8px;
+    font-size: 13px; color: #888; flex-wrap: wrap; align-items: center;
+    line-height: 1.5;
+  }
+  .sc-rate { font-weight: 700; color: #4361ee; font-size: 13px; }
+
+  /* 操作按钮区 */
+  .sc-btns {
+    display: flex; gap: 8px; margin-top: 10px;
+  }
+  .sc-btns a, .sc-btns button {
+    flex: 1; display: inline-flex; align-items: center; justify-content: center;
+    gap: 4px; height: 38px; border-radius: 12px; font-size: 13px; font-weight: 600;
+    text-decoration: none; border: none; cursor: pointer; padding: 0;
+    -webkit-appearance: none; appearance: none; font-family: inherit;
+    box-sizing: border-box; letter-spacing: 0.01em;
+  }
+  .sc-btns .map-btn { background: #EEF2FF; color: #4361ee; }
+  .sc-btns .xhs-btn { background: #FFF0F2; color: #FF2442; }
+  .sc-btns .dz-btn  { background: #FFF7EE; color: #FF6200; border: none; }
+
+  .sc-detail-panel { margin-top: 10px; }
+
+  /* badge 字号 */
+  .stat-tag { font-size: 11px; }
+
+  /* 整体页面排版优化 */
+  .hd h1 { font-size: 20px; letter-spacing: 0.02em; color: #fff; }
+  .hd p { font-size: 13px; color: rgba(255,255,255,0.82); margin-top: 4px; line-height: 1.6; }
+  .wrap { padding: 16px 12px 12px; }
+  .card { border-radius: 16px; padding: 16px; margin-bottom: 14px; }
+  .card h2 { font-size: 15px; letter-spacing: 0.01em; }
+
+  /* 筛选区字号 */
+  #search-school { font-size: 14px; height: 40px; border-radius: 12px; }
+  select { font-size: 14px; height: 40px; border-radius: 12px; }
+  .flt-btn { font-size: 12px; height: 30px; padding: 0 12px; border-radius: 15px; }
+
+
+  /* 表单区 */
+  .card label { font-size: 13px; color: #555; font-weight: 500; margin-bottom: 4px; display: block; }
+  .card select, .card input[type=text] {
+    font-size: 15px; height: 44px; border-radius: 12px; padding: 0 44px 0 14px;
+    border: 1.5px solid #e8e8e8; width: 100%; box-sizing: border-box;
+    background: #fafafa; color: #1a1a2e;
+    -webkit-appearance: none; appearance: none;
+  }
+  .card select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+  }
+  .card select:focus, .card input[type=text]:focus {
+    border-color: #4361ee; background: #fff; outline: none;
+    box-shadow: 0 0 0 3px rgba(67,97,238,.12);
+  }
+
+  /* 主按钮 */
+  .btn-primary {
+    height: 48px; border-radius: 14px; font-size: 16px; font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  /* 策略建议卡片 */
+  .stg-wrap { gap: 10px; }
+  .rec-card { border-radius: 16px; padding: 14px 16px; }
+  .rec-card h3 { font-size: 15px; letter-spacing: 0.01em; }
+  .rec-card p, .rec-card li { font-size: 13px; line-height: 1.75; }
+
+  /* 详情内容字号 */
+  .dp-wrap { font-size: 13px; line-height: 1.7; }
+  .dz-guide { font-size: 13px; }
+  .dz-guide-btn { height: 44px; font-size: 14px; border-radius: 12px; }
+
+  /* 数据来源 */
+  .src-bar { font-size: 12px; line-height: 1.6; }
+
+  /* 表单行间距 */
+  .form-row { margin-bottom: 14px; }
+  .card { margin-bottom: 14px; box-shadow: 0 2px 12px rgba(0,0,0,.07); border-radius: 16px; }
+  .card + .card { margin-top: 0; }
+
+  /* 筛选器行间距 */
+  .flt-row { gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .flt-btn { font-size: 12px; height: 30px; padding: 0 12px; border-radius: 15px; }
+
+  /* 源信息行 */
+  .src-bar { padding: 10px 14px; font-size: 12px; line-height: 1.7; border-radius: 12px; }
+
+  /* badge 区行距 */
+  #school-count-badge { font-size: 12px; padding: 6px 14px; line-height: 1.5; }
+
+  /* 筛选行：手机端换行布局 */
+  .filter-row {
+    gap: 6px 8px;
+    margin-bottom: 8px;
+  }
+  .ft-sel {
+    flex: 0 0 auto;
+    width: calc(50% - 4px);
+    height: 34px;
+    font-size: 13px;
+    padding: 0 32px 0 10px;
+    border-radius: 10px;
+  }
+  .filter-row label { display: none; } /* 手机端 label 省略，select 够清晰 */
+  .fb { padding: 4px 12px; font-size: 12px; height: 30px; }
+
+  /* Tab 按钮 */
+  .tb { font-size: 13px; padding: 7px 14px; }
+  .otb { font-size: 13px; padding: 9px 8px; }
+  .outer-tabs { margin-left: -20px; margin-right: -20px; padding-left: 12px; padding-right: 12px; }
 }
 
 /* 桌面端隐藏卡片列表 */
@@ -225,43 +341,53 @@ tr:hover>td{background:#fafbff}
 /* ===== 手机端底部详情抽屉 ===== */
 @media (max-width: 768px) {
   #detail-sheet-overlay {
-    display:none; position:fixed; inset:0; background:rgba(0,0,0,.4);
+    display:none; position:fixed; inset:0; background:rgba(0,0,0,.45);
     z-index:1000; opacity:0; transition:opacity .25s;
   }
   #detail-sheet-overlay.open { display:block; opacity:1; }
   #detail-sheet {
     position:fixed; bottom:0; left:0; right:0; z-index:1001;
-    background:#fff; border-radius:20px 20px 0 0;
-    max-height:82vh; overflow-y:auto;
-    transform:translateY(100%); transition:transform .3s cubic-bezier(.4,0,.2,1);
-    padding:0 0 80px 0;
+    background:#fff; border-radius:24px 24px 0 0;
+    max-height:85vh; overflow-y:auto;
+    transform:translateY(100%); transition:transform .32s cubic-bezier(.4,0,.2,1);
+    padding:0 0 env(safe-area-inset-bottom, 24px) 0;
   }
   #detail-sheet.open { transform:translateY(0); }
+
+  /* 拖拽把手 */
   .sheet-handle {
-    width:40px; height:4px; background:#ddd; border-radius:2px;
-    margin:12px auto 0; cursor:pointer;
+    width:36px; height:4px; background:#e0e0e0; border-radius:2px;
+    margin:14px auto 0; cursor:pointer;
   }
+
+  /* 标题栏 */
   .sheet-header {
     display:flex; align-items:center; justify-content:space-between;
-    padding:12px 16px 8px; border-bottom:1px solid #f0f0f0;
+    padding:12px 18px 10px; border-bottom:1px solid #f2f2f2;
+    position:sticky; top:0; background:#fff; z-index:1;
   }
-  .sheet-title { font-size:16px; font-weight:700; color:#1a1a2e; }
+  .sheet-title { font-size:17px; font-weight:700; color:#1a1a2e; letter-spacing:0.01em; }
   .sheet-close {
-    width:28px; height:28px; border-radius:50%; background:#f5f5f5;
-    border:none; font-size:16px; cursor:pointer; color:#666;
+    width:30px; height:30px; border-radius:50%; background:#f5f5f5;
+    border:none; font-size:17px; cursor:pointer; color:#888;
     display:flex; align-items:center; justify-content:center;
+    -webkit-appearance:none;
   }
-  .sheet-body { padding:14px 16px 20px; }
-  /* 卡片点击效果 */
+
+  /* 内容区 */
+  .sheet-body { padding:16px 18px 28px; font-size:14px; line-height:1.7; color:#333; }
+  .sheet-body p, .sheet-body li { font-size:14px; line-height:1.75; }
+
+  /* 卡片交互 */
   .school-card { cursor:pointer; transition:box-shadow .15s; }
   .school-card:active { box-shadow:0 0 0 2px #4361ee40; }
+
+  /* 展开提示 */
   .sc-detail-hint {
-    font-size:11px; color:#ccc; margin-top:6px; text-align:right;
+    font-size:12px; color:#ccc; margin-top:7px; text-align:right;
     font-weight:400; display:flex; align-items:center; justify-content:flex-end; gap:3px;
   }
-  .sc-detail-hint.has-profile {
-    color:#4361ee; font-weight:500;
-  }
+  .sc-detail-hint.has-profile { color:#4361ee; font-weight:500; }
   .sc-detail-hint::before {
     content:''; display:inline-block; width:16px; height:1px;
     background:linear-gradient(90deg,transparent,#c5cff8); margin-right:2px;
@@ -275,13 +401,13 @@ tr:hover>td{background:#fafbff}
   <h1>🏫 上海幼升小选校助手</h1>
   <p>填写信息，获取专属选校策略 &amp; 中签率分析</p>
   <div class="badge" id="school-count-badge">📅 加载中... | 2025年实际摇号数据汇总 | T1/T2/T3梯队</div>
-</div>
-<div class="wrap">
-  <!-- 外层导航 Tab -->
+  <!-- 外层导航 Tab（移入 header 渐变区） -->
   <div class="outer-tabs">
     <button class="otb on" onclick="switchOuterTab(1,this)">🏫 我的择校</button>
     <button class="otb" onclick="switchOuterTab(2,this)">📅 关键时间</button>
   </div>
+</div>
+<div class="wrap">
 
   <!-- Tab1: 我的择校 -->
   <div id="ot1" class="otc on">
@@ -378,8 +504,8 @@ tr:hover>td{background:#fafbff}
             <option value="pub">公办</option>
             <option value="pri">民办</option>
           </select>
-          <button class="fb t1 tier-fb" onclick="setTierFilter('T1',this)">T1 顶尖</button>
-          <button class="fb t2 tier-fb" onclick="setTierFilter('T2',this)">T2 优质</button>
+          <button class="fb t1 tier-fb" onclick="setTierFilter('T1',this)">T1</button>
+          <button class="fb t2 tier-fb" onclick="setTierFilter('T2',this)">T2</button>
           <button class="fb tier-fb on" id="f-all" onclick="setStatus(null,this)">全部</button>
           <button class="fb" id="f-hot" onclick="setStatus('hot',this)">🔥 超额</button>
           <button class="fb" id="f-cool" onclick="setStatus('cool',this)">🍀 全录</button>
@@ -689,7 +815,7 @@ function renderTable(list){
     h+='<td style="text-align:center">'+tierBadge+'</td><td style="white-space:nowrap;text-align:center">'+typBadge+'</td><td style="white-space:nowrap;text-align:center">'+rateHtml+'</td>';
     h+='<td style="white-space:nowrap;vertical-align:middle;text-align:left;padding:6px 8px"><a class="map-btn" href="'+mapUrl+'" target="_blank"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAALT0lEQVR42n2YWYylx1mGn6+q/u0s3T09PT3TPYvbM/bgjBfiGBsxkIBNnIiLRCJRLghRQLkIN5BLhJSLcE8kJOAGSyiKFIKEbEUKIk4sKzjBwrFNbMuesWfxMt2efevT2/m3qvq4OKc3L9TdL5Wq3v9932+pT1RVREQBLg9f+Jo3fNN7/6APviuCgACgqogACEENqbTM2BX6ZhXEE+I+yvAgQWdUNTBaAii9TiHGGNY2hqoKIiAiQ5fYV2KMT/Q7nR+M7xBR/Y6BkwXt4PshmfryxXYSX1eoAujWoQIEDAZl0qwzbQZYU6Lao4qfoAl3AQ7wO8CMfsRaQ79bUDctZdWMARmyLMM5QznceHK1u/Jn88xXoqrSbvzoqaRr/5hy4Bf9nKnJjCFuHRsxAPRMyV4zIDVroAlNvIsq3kuMPUQaIO4AwpjREagiz8jShLX1ISHqGLRGkDg10XXLq6tP7ZmY/IoM1vRPJnvXfkj9kxa1yVA7XGxnsRJRhIghl5pps0LPrACRVg9Th/vxug/BA2EMRDYv+hBLIjDR6+JDYGNYImK29qqqn5jouWFZftXB2reqdr8af8im9n06UtI3Gwxin3zskykzAGqQfTTcz0ZzcHS91AhC1NHFI0Z0LPc2QyIQVSmrmk6RYa3De48xBhBU1bRtUO/Dt2R5ZbUUSXMjA3ruGQSl1oyV2GfaDHBmA9UOVbgHNScoioK19Q1UdQcj2wb+/76jKt0iJ00MG8OS1o+YG8lrMCZWMlhdj6CimlG4X5OZ00A2lkFpdIE63EeIUyg1/U4GCGvDEiM7AX38ijq6NE+UTu64tJLSNA37eoE2KNYYijzFWYcZ0StASx1PoPSBiALDcJKh/zQhdhGpMALDssFZS+Lc+P9lS6ItH+kmEEEROgn0MmVpOeHvno78xfeGRElInSFLU/rdAkFY3xiq29KZQIwFVbyXwryIIFhZRoggnhgFEUgSS1SlyFLWhuWOSNr2TFAwjECEKLx2UXjmTM7zZ0quLdc8crzPsVmDao6NyrCsaVqPCLitg8QiNDThKKl5F8tNMnOGNh7Gx72kSSRNEqIq68OSfrcgSxLqpkFGiYUQwVllooCyFf77beE/37C8dS3h9vKA3NbMTM9w36Fx9CEMqwrvA9YaVBW3rbSOIgRLFe6na58DIrl9nXV9FGOEumnxIQJKWTV0ioy69YSopE4pMlgeCj8/a/jZacO5a0KSJJSrV3GxZc/MPKtl5MRcxDc1anI6ecbaRonqKDrdbsoNQkMb5mnlCIlZxMkVUrNI1SxgpMEYgypUjSdJEqZ6KW1TcW3V8KNzhmffsizdhtTCZMdx9eoSMUYOzB2h9YGJHBb2eOo2Emnod3PSxI0lk50MjUkUQYlU8T6cuYzgye0p2jiPYoijBE6RKJaai8sZP3414bmzhhvrQuYiU4VBRVi88DbWOeYPLhCjpwmwMKPsn1AaD87pOIuntN6PJNtR7LaSmuAJOk0Tj5OZUxgGJHKeOt5PNy1RDGeuWp4+bXjhncBqZeikMJFHRCxtCCxeOEea5swfXCAEjzXQBrh7VumkUIWUxAnDsqbbycmzlGFZf9BDO8JXG8pwD5ZFnFmn030dU83z8uIefnJKeWXJULfQyWCyYFSfjKOuKy68e5ZOt8fhI8cIwW9ZwgjcOz8qSYmzlFVFjIqrW7IsoWnabQ9tAhGBGJWokcR0cOkJ2vZlnj99Bz9+PeXUZYtqpJNCVkCI4IPinGN9fZXF984xOTXNocPbYAB8hD0dOD4LZROxzpOlCVXdUjUNSeooimyboZF0SoyCs1AkcHO95adv3skzp+d558YerIl0Uj8uAyMwoDiXMFi+ydLieab3znLo8NFdYIxA1cLxWWWmp9ReCI2nW2RYY/AhUFU1nSKXXR5SlCJVrq8K/37G8exbwpUVQ+pyJvIGHWffncsYy/VrF7lyaYm9+w5w8NACIYRde0RGDN0zp2ROqVowBsq6RTVijND6QOv9tmRRldTCD192/NtLBh+VIoHJQonqCTuAqOqoUqty6eIFbt64wr59c8wfWiBuhuHO2FWwBh4+mmAsW02caty1p6wazM4qFBFOHg38/vFIYlJCdOPI2w3GWksInqXFt7l54wp7Zw58LBgBfIC9Xbh7v0FsgpFNv8pWLRQRVFXNzigLIXJk2vLXn1O+84VzHNlzm8HQbflAdWTeqhxy4d2zrAxuMb13loMfA2ZTribAHdNK1zWAIc8SYow7ivJWo7aZhxQRi+Lw/jrGvMHJuxZ56HDBv770OE++up+q9fSKhJWVZS5ffI+mqdkzPcuhQ0fHvREfC8hHuOeAEkNLGy15luJ9IIx/YmekuxG2DMM6hX2T1JwHqWirgwS9lz8/2efhhYrvvZDwwptXuXX9fbxvmZqa4dCRox9OYR/RC6UWTsxHggpV25ClBXmWsl5Wm00uqskIkAik9gy5OYXIANU9VP4hmngMJaEctpyYh7/8zAZP/2KJEIXpmTnm5g7talc/kp2xf2b6cOdepQ1CjJGqbsizlCyx1E0EUqy5RW5Pi+slPxcrl0EzmvAAVTxBjD2gQaTGGWGjFlIrTHRTrt1ax8WSJE2pm4iTFlXzkSSJQONhYVqZLJSyBSNCVTckzpLnOT6skcgb5OYsSIOzXMHHO6jCA3jdB+oRqWEcgJvvs25u6ReO98s1zr/yMhcXz/LIyT9gpZmmcC3W6IdylMioWTsxH0ktDBtAIkpCVQc62bv03GsIA6IWDPx+DOnnac3jtGEaoUYkbr4ExoeOwjJ1wkTH4ps1BhuRP3og45+//jx/+vCrRDVsNAnW6C6Dxgi5g0/MKU2IiBiUjMReJ5NnkfY5RDdYCzMstXPciFO4Nt6hRabStoHNLLD5jtoEE2Kk30nZPyncuHSTb3zxfv7p249Q1y/yjc+8xO8du8QTz/8Wv16apZN6EjsqLa2H2Qnl8JRS+wJrVijsaRI5DwQq3cOtOMl6yDGiOAmYYbkOCEWWoRrHQEZSxfELM0sTrMugrvjc707z3b85yNLaK1ypMqpymuNz1/jul3/GXz16kzxxrFaKM4qPysKMY7ITScwb9N1PSeQUyDTr/CZL7QzDWOAkIuMAcapsud61Fu+3c4NzliJLMcbgY83jv1Nz51dnWW1ugFrEWG5rnwNNjUjDlx56lU8deZQfvBj55fmUYWN48OASafK/JPE6QocqfAqbfpIiyUn9r2h1CNgxCYosr6yVxti818lRlLX1EmtH2TRxo9IxaC5xu76AS1u8N4QwSqaM3/0H3XW6MiRET5BPo3I3v3rvEt//nw7f/vx/cWzuGk19nDreR9BpjLRMdDtshBtcGr6OEbc5WRnK6traC0la/HbbNtrvFqb1fgwEhv42t+p3GYYBRiyoYTSg2TZ8VCGVhiPuKoLH6xRtPEBRvIUvITCD5wRtPIygiLSEAEWekmcpl4evs9Zej91uT5qqfdGI5R/S1IqR0bgjcY42llwt3+TS8DWquIqTFEEQ0a3CqDqu+hKpYsYg9gHBySqFPU2oCoJ8klofowmHEW0Aj6rBmFEuilGZyY8hYqJzVkxw/yiqKlVTPZmn+Zcg+lvVkhm0SybQYsXtGhzsnBl98NuIcsRexklAgY3wGG2YRxiO5TW7WmVVcM7EXqeIsObOrbz01PHJP/yK5W8xn7Wf/Y+yXf6NNfvefet6VWJQBPPBrmZHy6C7ns6C4jEohp4ZIowaNK9zGAk7WozNxwQYIyRJJs4aA8mTw/z61/+efwmyc6T3ztovv5Ym2Tdb3zzoo+8KIpvu3znv+WiWAAyH3FVyqYDIengMH/YrjNqO7f1grQwTZ1/xsX2i3+lvjfT+D31cG6dHzK+lAAAAAElFTkSuQmCC" style=\"width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle\"> 导航</a>'
     +' <button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>'
-    +' <a class="dz-btn" href="'+'dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+encodeURIComponent(name)+'" target="_blank">'+DZ_IMG+'点评</a>'
+     +' <button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>'
     +'</td>';
     h+='</tr><tr class="dp-row"><td colspan="6"><div class="dp-wrap" id="dpw-'+enc+'" style="display:none"></div></td></tr>';
   });
@@ -710,7 +836,7 @@ function renderTable(list){
       var rateStr=typ==='pub'?null:(lo===null||lo===undefined?null:(lo===0&&hi===0?'—':lo+'–'+hi+'%'));
       ch+='<div class="school-card" id="card-'+enc+'">';
       ch+='<div class="sc-header" onclick="openSheet(\''+esq+'\')">';
-      ch+='<span class="sc-name">'+name+'</span>';
+      ch+='<span class="sc-name">'+name+'<span class="sc-arrow"> ›</span></span>';
       ch+='<span class="sc-badges">'+tierBadge+typBadge+'</span>';
       ch+='</div>';
       ch+='<div class="sc-meta" onclick="openSheet(\''+esq+'\')">';
@@ -722,11 +848,11 @@ function renderTable(list){
       ch+='<div class="sc-btns">';
       ch+='<a class="map-btn" href="'+mapUrl+'" target="_blank">'+MAP_IMG+'导航</a>';
       ch+='<button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>';
-      ch+='<a class="dz-btn" href="'+'dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+encodeURIComponent(name)+'" target="_blank">'+DZ_IMG+'点评</a>';
+      ch+='<button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>';
       ch+='</div>';
       var hintCls=PR[name]?' has-profile':'';
       ch+='<div class="sc-detail-hint'+hintCls+'" onclick="toggleDetail(\''+esq+'\')">';
-      ch+=PR[name]?'<span>展开教育理念·作业·升学路径 ›</span>':'<span style="color:#ddd">暂无详情</span>';
+      ch+=PR[name]?'<span>展开教育理念·作业·升学路径</span>':'<span style="color:#ddd">暂无详情</span>';
       ch+='</div>';
       ch+='<div class="sc-detail-panel" id="dpw-'+enc+'" style="display:none"></div>';
       ch+='</div>';
@@ -767,7 +893,7 @@ function buildDetail(name){
       +'<span class="dz-guide-tag">👩‍👧 家长口碑</span>'
       +'<span class="dz-guide-tag">📞 咨询电话</span>'
       +'</div>'
-      +'<a class="dz-guide-btn" href="'+'dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+encodeURIComponent(name)+'" target="_blank">'+DZ_IMG+' 去大众点评查看该校信息</a>'
+      +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(name)+')" type="button">'+DZ_IMG+' 去大众点评查看该校信息</button>'
       +'</div>';
   }
 
@@ -825,7 +951,7 @@ function buildDetail(name){
     +'<span class="dz-guide-tag">👩‍👧 家长评价</span>'
     +'<span class="dz-guide-tag">🏫 校园环境</span>'
     +'</div>'
-    +'<a class="dz-guide-btn" href="'+'dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+encodeURIComponent(name)+'" target="_blank">'+DZ_IMG+' 去大众点评查看该校详情</a>'
+    +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(name)+')" type="button">'+DZ_IMG+' 去大众点评查看该校详情</button>'
     +'</div>';
 
   var h='';
@@ -1099,12 +1225,12 @@ function openDZ(name){
   var appScheme='dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+enc;
   var webUrl='https://www.dianping.com/search/keyword/1/0_'+enc;
   var ua=navigator.userAgent;
-  var isMiniProg=/miniProgram/i.test(ua)||typeof wx!=='undefined'&&wx&&typeof wx.miniProgram!=='undefined';
-  /* 在小程序 webview 里无法唤起第三方 App，只能复制关键词提示 */
-  if(isMiniProg){
+  var isWx=/MicroMessenger/i.test(ua);
+  if(isWx){
+    /* 微信内（H5或小程序）：无法唤起第三方App，复制关键词提示用户 */
     var kw=name+' 口碑';
-    function doToast(copied){
-      showToast(copied?'已复制「'+kw+'」\n请打开大众点评 App 搜索 🍴':'请打开大众点评 App 搜索：'+kw);
+    function doToast(ok){
+      showToast(ok?'已复制「'+kw+'」\n打开大众点评 App 搜索即可 🍴':'请去大众点评 App 搜索：'+kw);
     }
     if(navigator.clipboard&&navigator.clipboard.writeText){
       navigator.clipboard.writeText(kw).then(function(){doToast(true);}).catch(function(){doToast(false);});
@@ -1116,14 +1242,14 @@ function openDZ(name){
         doToast(true);
       }catch(e){doToast(false);}
     }
-    return;
+  } else {
+    /* 非微信：scheme 唤起App，800ms fallback 网页 */
+    var t=Date.now();
+    window.location.href=appScheme;
+    setTimeout(function(){
+      if(Date.now()-t<2000) window.open(webUrl,'_blank');
+    },800);
   }
-  /* 微信普通 WebView 或非微信：location.href 唤起 App，800ms fallback 网页 */
-  var t=Date.now();
-  window.location.href=appScheme;
-  setTimeout(function(){
-    if(Date.now()-t<2000) window.open(webUrl,'_blank');
-  },800);
 }
 function openXHS(name){
   var kw=name+' 口碑';
