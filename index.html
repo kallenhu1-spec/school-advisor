@@ -188,16 +188,7 @@ function switchOuterTab(n,btn){
   if(n===2) renderTimeline();
   if(n===3) renderOpenDays();
 }
-var OD=[
-  {name:"民办打一外国语小学",dist:"yangpu",tier:"T1",typ:"pri",date:"2026-03-22",time:"09:00-11:30",actType:"开放日",applyMethod:"关注公众号「民办打一外国语小学」，回复「开放日」",applyUrl:"",mpName:"民办打一外国语小学",source:"官方公众号",verified:true},
-  {name:"包玉刚实验学校",dist:"changning",tier:"T1",typ:"pri",date:"2026-04-05",time:"10:00-12:00",actType:"校园开放日",applyMethod:"官网预约",applyUrl:"https://bayk.org",mpName:"",source:"官方官网",verified:true},
-  {name:"民办平和双语学校",dist:"pudong",tier:"T1",typ:"pri",date:"2026-04-12",time:"09:30-11:30",actType:"开放参观日",applyMethod:"关注公众号「平和双语学校小学部」预约",applyUrl:"",mpName:"平和双语学校小学部",source:"官方公众号",verified:true},
-  {name:"星河湾双语学校",dist:"minhang",tier:"T1",typ:"pri",date:"2026-03-29",time:"09:00-11:00",actType:"开放日",applyMethod:"关注公众号「上海星河湾双语学校」预约",applyUrl:"",mpName:"上海星河湾双语学校",source:"官方公众号",verified:true},
-  {name:"博世凯双语学校",dist:"minhang",tier:"T2",typ:"pri",date:"2026-04-19",time:"10:00-12:00",actType:"开放日",applyMethod:"关注公众号「博世凯双语」预约",applyUrl:"",mpName:"博世凯双语",source:"官方公众号",verified:true},
-  {name:"七宝外国语小学",dist:"minhang",tier:"T2",typ:"pri",date:"2026-04-26",time:"09:00-11:00",actType:"校园开放日",applyMethod:"关注公众号「七宝外国语小学」预约",applyUrl:"",mpName:"七宝外国语小学",source:"官方公众号",verified:true},
-  {name:"民办筑桥实验小学",dist:"pudong",tier:"T2",typ:"pri",date:"2026-04-18",time:"10:00-12:00",actType:"开放日",applyMethod:"关注公众号「筑桥实验小学」报名",applyUrl:"",mpName:"筑桥实验小学",source:"官方公众号",verified:true},
-  {name:"存志实验小学",dist:"yangpu",tier:"T1",typ:"pri",date:"2026-04-11",time:"09:30-11:30",actType:"校园开放日",applyMethod:"关注公众号「存志学校」报名",applyUrl:"",mpName:"存志学校",source:"官方公众号",verified:true}
-];
+var OD=[];  // 开放日数据持续收集中
 function renderOpenDays(){
   var dist=document.getElementById('od-dist').value;
   var list=document.getElementById('od-list');
@@ -206,7 +197,7 @@ function renderOpenDays(){
   var data=OD.slice().sort(function(a,b){return a.date>b.date?1:a.date<b.date?-1:0;});
   if(dist) data=data.filter(function(o){return o.dist===dist;});
   if(data.length===0){
-    list.innerHTML='<div style="color:#999;padding:16px 0;text-align:center">暂无该区域开放日信息，持续更新中</div>';
+    list.innerHTML='<div style="color:#999;padding:20px 0;text-align:center;line-height:1.8">📋 <b>2026年开放日信息持续收集中</b><br><span style="font-size:12px">各学校通常在10-11月陆续发布来年招生开放日<br>请关注各学校官方公众号获取第一手信息</span></div>';
     return;
   }
   var tierColor={'T1':'#e74c3c','T2':'#e67e22','T3':'#27ae60'};
