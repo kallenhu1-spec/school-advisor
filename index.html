@@ -89,14 +89,28 @@ tr:hover>td{background:#fafbff}
 .dp-wrap{padding:14px 16px;background:#f8f9fe;border-left:3px solid #667eea;margin:0 6px 8px}
 @keyframes dpIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 .dp-wrap.show{animation:dpIn .2s ease}
-.dp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.dp-sec h4{font-size:11px;color:#667eea;margin-bottom:4px}
-.dp-sec p{font-size:12px;color:#444;line-height:1.6}
-.path-chip{display:inline-block;padding:2px 8px;background:#eef2ff;color:#4361ee;border-radius:10px;font-size:11px;margin:2px}
-.pro-item{color:#059669;font-size:12px;margin-bottom:2px}
-.con-item{color:#dc2626;font-size:12px;margin-bottom:2px}
-.sd-row{display:flex;gap:3px;margin-top:4px;align-items:center}
-.sd{width:10px;height:10px;border-radius:50%;background:#e5e7eb}.sd.on{background:#667eea}
+.dp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dp-sec h4{font-size:13px;font-weight:700;color:#4361ee;margin-bottom:6px;border-left:3px solid #4361ee;padding-left:7px}
+.dp-sec p{font-size:13px;color:#444;line-height:1.7}
+.path-chip{display:inline-block;padding:3px 10px;background:#eef2ff;color:#4361ee;border-radius:12px;font-size:12px;margin:3px 3px 3px 0}
+.pro-item{color:#059669;font-size:13px;margin-bottom:4px;padding-left:4px}
+.con-item{color:#dc2626;font-size:13px;margin-bottom:4px;padding-left:4px}
+.sd-row{display:flex;gap:4px;margin-top:6px;align-items:center}
+.sd{width:12px;height:12px;border-radius:50%;background:#e5e7eb}.sd.on{background:#667eea}
+/* 家长关注标签 */
+.focus-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.focus-tag{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#f0f4ff;color:#4361ee}
+.focus-tag.red{background:#fff1f1;color:#dc2626}
+.focus-tag.green{background:#f0fdf4;color:#059669}
+.focus-tag.orange{background:#fff7ed;color:#ea580c}
+.focus-tag.purple{background:#faf5ff;color:#7c3aed}
+/* 大众点评引导块 */
+.dz-guide{background:linear-gradient(135deg,#fff5f5 0%,#fff0e8 100%);border:1.5px solid #ffcdb2;border-radius:12px;padding:12px 14px;margin-top:14px}
+.dz-guide .dz-guide-title{font-size:13px;font-weight:700;color:#c0392b;margin-bottom:6px}
+.dz-guide .dz-guide-desc{font-size:12px;color:#666;line-height:1.6;margin-bottom:10px}
+.dz-guide .dz-guide-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+.dz-guide .dz-guide-tag{padding:2px 8px;background:#fff;border:1px solid #ffb3a7;border-radius:8px;font-size:11px;color:#c0392b}
+.dz-guide .dz-guide-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;height:38px;background:#FF3B30;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none}
 .chw{height:520px;position:relative}
 .tl{position:relative;padding-left:22px}
 .tl::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:2px;background:#e5e7eb}
@@ -107,8 +121,8 @@ tr:hover>td{background:#fafbff}
 .tls{font-size:12px;color:#666;line-height:1.7}
 .tls a{color:#667eea;text-decoration:none}.tls a:hover{text-decoration:underline}
 .src-tag{display:inline-block;background:#f3f4f6;color:#6b7280;font-size:10px;padding:1px 5px;border-radius:4px;margin-left:4px}
-.xhs-dist-area{display:none;align-items:center;gap:8px;padding:8px 12px;background:#fff8f8;border-radius:8px;border:1px solid #ffe4e6;margin-bottom:8px}
-.xhs-dist-btn{display:inline-flex;align-items:center;gap:4px;padding:5px 12px;background:#fff0f2;color:#ff2442;border:1px solid #ffb3bf;border-radius:20px;font-size:12px;text-decoration:none;cursor:pointer;-webkit-appearance:none;font-family:inherit}
+.xhs-dist-area{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#FFF8F9;border-radius:12px;margin-bottom:12px;flex-wrap:wrap;}
+.xhs-dist-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;background:#FFF0F2;color:#FF2442;border:1px solid #FFCCD5;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;-webkit-appearance:none;}
 #res{display:none}
 @media(max-width:600px){.r2,.dp-grid{grid-template-columns:1fr}th,td{padding:7px 6px;font-size:11px}.filter-row{gap:6px}}
 
@@ -121,6 +135,50 @@ tr:hover>td{background:#fafbff}
 .tl-kw{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600}
 
 /* ===== 手机端适配 ===== */
+/* ===== 推荐卡片全局样式（桌面+手机通用）===== */
+.rec-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,.08);
+  margin-bottom: 10px;
+  padding: 12px 14px;
+}
+.rec-card .sc-header { display:flex; align-items:center; gap:6px; flex-wrap:wrap; cursor:pointer; }
+.rec-card .sc-header:active { opacity:0.75; }
+.rec-card .sc-name { font-size:15px; font-weight:700; color:#1a1a2e; flex:1; min-width:0; border-bottom:1.5px dashed #c5cff8; padding-bottom:2px; display:inline-block; }
+.rec-card .sc-badges { display:flex; gap:4px; flex-shrink:0; }
+.rec-card .sc-meta { display:flex; gap:8px; margin-top:6px; font-size:12px; color:#666; flex-wrap:wrap; align-items:center; }
+.rec-card .sc-rate { font-weight:600; color:#4361ee; }
+.rec-card .sc-btns { display:flex; gap:8px; margin-top:8px; }
+.rec-card .sc-btns a, .rec-card .sc-btns button {
+  flex:1; display:inline-flex; align-items:center; justify-content:center;
+  gap:4px; height:36px; border-radius:10px; font-size:13px; font-weight:600;
+  text-decoration:none; border:none; cursor:pointer; padding:0;
+  -webkit-appearance:none; appearance:none; font-family:inherit; box-sizing:border-box;
+}
+.rec-card .sc-btns .map-btn { background:#EEF2FF; color:#4361ee; }
+.rec-card .sc-btns .xhs-btn { background:#FFF0F2; color:#FF2442; }
+.rec-card .sc-btns .dz-btn  { background:#FFF7EE; color:#FF6200; border:none; }
+.rec-card .sc-detail-hint { font-size:11px; color:#ccc; margin-top:6px; text-align:right; cursor:pointer; padding:2px 0; }
+.sc-detail-hint.has-profile { color:#4361ee; }
+.rec-card .sc-detail-panel { margin-top:10px; }
+
+/* ===== stg 策略建议区域电脑端布局 ===== */
+#stg-wrap {
+  margin-bottom: 16px;
+}
+#stg .rec-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+/* 电脑端 rec-card 最小宽度适配 */
+@media (min-width: 769px) {
+  #stg .rec-card {
+    min-width: 260px;
+  }
+}
+
 @media (max-width: 768px) {
   /* 隐藏桌面表格 */
   #school-table-wrap { display: none; }
@@ -150,6 +208,7 @@ tr:hover>td{background:#fafbff}
   }
   .sc-btns .map-btn { background:#EEF2FF; color:#4361ee; }
   .sc-btns .xhs-btn { background:#FFF0F2; color:#FF2442; }
+  .sc-btns .dz-btn  { background:#FFF7EE; color:#FF6200; border:none; }
   .sc-detail-panel { margin-top:10px; }
 
   /* 隐藏桌面端学校数量badge在移动端 */
@@ -174,7 +233,7 @@ tr:hover>td{background:#fafbff}
     background:#fff; border-radius:20px 20px 0 0;
     max-height:82vh; overflow-y:auto;
     transform:translateY(100%); transition:transform .3s cubic-bezier(.4,0,.2,1);
-    padding:0 0 32px 0;
+    padding:0 0 80px 0;
   }
   #detail-sheet.open { transform:translateY(0); }
   .sheet-handle {
@@ -191,13 +250,16 @@ tr:hover>td{background:#fafbff}
     border:none; font-size:16px; cursor:pointer; color:#666;
     display:flex; align-items:center; justify-content:center;
   }
-  .sheet-body { padding:12px 16px; }
+  .sheet-body { padding:14px 16px 20px; }
   /* 卡片点击效果 */
   .school-card { cursor:pointer; transition:box-shadow .15s; }
   .school-card:active { box-shadow:0 0 0 2px #4361ee40; }
   .sc-detail-hint {
-    font-size:11px; color:#4361ee; margin-top:8px; text-align:right;
-    font-weight:500; display:flex; align-items:center; justify-content:flex-end; gap:3px;
+    font-size:11px; color:#ccc; margin-top:6px; text-align:right;
+    font-weight:400; display:flex; align-items:center; justify-content:flex-end; gap:3px;
+  }
+  .sc-detail-hint.has-profile {
+    color:#4361ee; font-weight:500;
   }
   .sc-detail-hint::before {
     content:''; display:inline-block; width:16px; height:1px;
@@ -284,8 +346,9 @@ tr:hover>td{background:#fafbff}
     <div class="card">
       <div class="ct">🏫 候选学校列表</div>
       <div id="xhsArea" class="xhs-dist-area">
-        <span style="font-size:12px;color:#ff6b6b">📷 小红书梯队攻略：</span>
-        <a id="xhsDistBtn" class="xhs-dist-btn" target="_blank" href="#">搜索</a>
+        <button id="xhsDistBtn" class="xhs-dist-btn" type="button" onclick="openXHSDist()">
+          <svg width="14" height="14" viewBox="0 0 18 18" fill="none"><rect width="18" height="18" rx="4" fill="#FF2442"/><path d="M9 4C8 4 6.5 5.2 6.5 7c0 1.5 1 2.6 2.5 3v1.5l2-2.5-2-2.5V8c-1-.3-1.5-1-1.5-1.8C7.5 5.5 8.2 5 9 5c.8 0 1.5.5 1.5 1.2 0 .5-.3.9-.7 1.1l.7.9C11.2 7.8 11.5 7 11.5 6.2 11.5 5 10.4 4 9 4z" fill="white"/></svg>
+          小红书梯队攻略</button>
         <span style="font-size:11px;color:#999">看真实家长标注的梯队图</span>
       </div>
       <div class="tabs">
@@ -347,7 +410,8 @@ tr:hover>td{background:#fafbff}
   </div>
 
 </div>
-<script>var MAP_IMG='<img src="data:image/png;base64,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" style="width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle">';
+<script>var DZ_IMG='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAADKklEQVR4nG2UTWjcVRTFf/e+N5OZZMZkbNNmYZqiOGmKGG3qF1hMxUXcdFcoghTponQRa+guC6EILtSU6kIF6c5Q3LQLEVQQLS0ihUJjxVrTxjEljdavlGQ+Mv9577r4T5oWchfv8R6Xc+4997wnZmatW3PY6ZPI3BU0RrAI9SqIQK4r3QFEwSJiRnSeuH0HcuANfH8ZSRauG+8dxf1zC+ssIq2E4DOw82kILeTniwhtoNUaZHPgM2CGNKq0SluQifeR1alx8zMXoFiCpEn0Hnt9Cj+4C4Dk0rfox5NIoUR84nmoXMXNz0K2A9RB9Q5x6ClUb/wI+QKYQbOBjYySGdyFhASJgczIXuL2IeK+Q/iDk1AehmYjbTO0IFdAKlfxGmJadnMVlpfSBABry9JeNZtDYoAQ796uJYqBrh1jXz9h32vY5fO0rl0Cn8GcI7n4Nfw5jzz2DKYOFivg3TpTOzxmRKcw/g6ZLdtItpUJHxzDHnkcWgn2+zXk0Jto92Zacz+hszOQL0IM9wFJOPKCUa8Sdr+IO/I2qo7wxzzMXEinMzKK6+klJk2SU8fx33+BqId8V7szawMd3mOIQm2Z1u69uP3juL6B+9gwAxGsXiUuVojnzqDnP0cyHaCaWiEc3pNCqkJtBSt0E8pPoq8cw5d6wXmiGawsIYUeRAQDWj98iZ56C3GurdFdtSMUupE7f0PPJlypF3Oe5JvPkO/OIsv/QWcRe24M//JBMs+O0Vz6Cz89BQ+U1qeGCLLaIGztx+0fR5wnOfMh7pPj+MUKWq/ibi/gpk+QfPouBmTGXiU8Ogz16j0ViWKrddjxEpovEBZ/Q7+aRku9mAhEwzIeHtyKO3eW1shoasikCar3AEH6IHsfQsyw61eQeg0r9kAI66IbSEce+WgSqa0gzkO2A2/qUseumdVCOoVcZ3sibBgaQvq0ADND48M70y9DPahiCxVMlbi5D8t3pSQbhUhKVF8hDpSR5Oavxomj6L+3IZvDuoqE8jA6exmt1TYGSZGgUSV2b8ImTiLRzMLNWez0FFr5BQktaNSQbB5re2SjMBHiwCAcmCCzfYj/AQaTVPl4QJzoAAAAAElFTkSuQmCC" style="width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle">';
+var MAP_IMG='<img src="data:image/png;base64,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" style="width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle">';
 var XHS_IMG='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAEzUlEQVR42u2WT2xURRzHf795M/vebrfbUlvaYrVV2koLFCUBy5VeJK0JiNEeIGqCpBoSDILcaBo00YsmklAq9cAJMBoOJE2TNhQkIVTppYmNut1aC7aWfQvt7r63b9+bNz8Pr//QeuCCienkHSaT38zn937zne8M/rThaXhSjcETbGuwNdga7D+DMQaMPcZ40BCBMUB8PBjZtspmQam/rUW2rTIZUAoYQ84XPw0AkHOSUmUyJCUKESCR85XJ8dVQZGzZguFwPh4n216IRiQpja1bWSyWHxuTpkmeFwQDMm1dsUwmRfWzem1dPh53Jya0oiIUQpomMwwMh4EIAHDZiBGRMUBUjlN7fUhvaEjsbsmNjmrRKCilLCtUX1d786acmfl1x87ClpbIyzuBCBhTlpXq7i58ZU/JO29Hmpvt27czAwPZgcH8xETZB0ez14bs4WGMREApvlxu35dzc6hpaBjk+0AEiMqyyHW1ggLlOKVHjiDn0ydOOLN/Vr22t2j/60u1MM+eLfvwmF5fT54XaW6ONDeXHDr0oKen7PhxUVWVHRri0SgptVgi1+Xr1z/Te77ys0+RsQWSbZUcPPDMVz3G1i16XW3x/v3Kysba2p7r7U31fp3qPkeu64yN3evoAEXTx0+k+/qQ8/krVzL9/aKyEiORe4cPJz//ghXGyPcXBcIY5V1RXV3c3h5rbSXPC7aXHEdvbCxubzeammJtbWgYKELrDhwIbdyY7u9PX72KoZCbSKR6elhBgXX9ujM6Coi5kRF7eBiU8pPJ5PnzbiKBeijYMwYACABKaUVFJP18IqHy+UVRMDc+Tr4vKjfMXf7mj6NHlW0r2545eVLTDa24CADQMJDzWGvr5vuzpceOAUB5V1d5ZycwVn769KaREb1hEzlOsCBbFKBikTByTWUy4PsLwmVM3r+PmiY2VObG43J6hkWj1o0b0jTRMJbUGGywchwIRjzPT6WkaQJiePv2pzo6lGXhMgwRiPT6elBKJpOBMAEAOPdmZ4FIVFXxaLTik4+R88I9e4rfeNPPZIBzACDf1wpj6b6+n1/YZH55BgDMnp5fmpriO3bMdnWBUswwgGlBGQM1EgCQ5wFj9p07MmeT5wERCiGnpwEREMj1Hl64EKqrBenPXbqEyCiXAwCQknI5ZVn+3Dw5DgBQPu+bKd/N58fHAZFWOEOQnWKRgrmLF6Mtu3M/3qk8dUorKwNEDIXcqanstWvmmTOxV9tibW2kVHZwMPzSi9WXL7GCAiCK7Nq18fsb1q1b0x+dBCEAgDwpamoq339PVNcAIgoBpFY4CBGGhEyaUwffUvPzRfv2iYoK+4dhNx7nJSV33z0MUj4/OKDX1QFAqvtceWdneNu2hfmlpby01E+nyZeLFqX5cw9je/eGqqv9dHr+2+9QiIXD/MhTTilSCoUwGhvy4wmVzaKuk+excDhUUwOI4Et38ndjcyN5EhCAMVAERP78vDs5ySsqRPl6aZru1F1mGEZjo3yQcn+bZJHIP+wqUAoAKKVyOWYYoGnB6QallOMEAUzXlZ2DR50dOQ/SIs8L+uD7KpdDIVDXlwwdV3mkIgb6DNJZvlwW/36VWyYIXjlxtUVWd/1HMEuMVfv/NnG1RdbeIGuwNdj/DPYX3EBv25NksS0AAAAASUVORK5CYII=" style="width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle">';
 var SD=[["民办打一外国语小学","yangpu","pri",20,35,88,"T1民办，英语特色，对口铁岭中学",31.2834,121.5224,"hot","T1"],
 ["杨浦双语学校","yangpu","pri",0,0,84,"2025首次超额，中签率待公布，直升初中部",31.2712,121.5334,"hot","T1"],
@@ -612,11 +676,12 @@ function renderTable(list){
     var tierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
     var typBadge=typ==='pub'?'<span class="pub-b">\u516c\u529e</span>':'<span class="pri-b">\u6c11\u529e</span>';
     var rateHtml='';
-    if(lo===null||lo===undefined){rateHtml='<span style="color:#bbb">—</span>';}
-    else if(lo===0&&hi===0){rateHtml='<span class="na-tag">\u5f85\u516c\u5e03</span>';}
-    else if(lo>=80){rateHtml='<span class="cool-tag">\ud83c\udf40\u5168\u5f55</span>';}
+    if(typ==='pub'){rateHtml='';}  /* 公办无中签率 */
+    else if(lo===null||lo===undefined){rateHtml='';}
+    else if(lo===0&&hi===0){rateHtml='<span class="na-tag">待公布</span>';}
+    else if(lo>=80){rateHtml='<span class="cool-tag">🍀全录</span>';}
     else{var pct=lo===hi?lo+'%':lo+'-'+hi+'%';var col=lo<20?'#ef4444':lo<40?'#f97316':'#16a34a';rateHtml='<span style="color:'+col+';font-weight:600">'+pct+'</span>';}
-    var stIcon=st==='hot'?'\ud83d\udd25':st==='cool'?'\ud83c\udf40':'';
+    var stIcon=typ==='pub'?'':(st==='hot'?'🔥':st==='cool'?'🍀':'');
     h+='<tr>';
     h+='<td><button class="nm-btn" onclick="toggleDetail(\''+esq+'\')">'+stIcon+' '+name+' <span class="expand-hint" id="eh-'+enc+'">\u25be</span></button></td>';
     h+='<td style="text-align:center"><span style="font-size:12px;color:#666">'+(DN[dist]||dist)+'</span></td>';
@@ -638,7 +703,7 @@ function renderTable(list){
       var xhsUrl='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(name)+'&source=web_explore_feed';
       var tierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
       var typBadge=typ==='pub'?'<span class="pub-b">公办</span>':'<span class="pri-b">民办</span>';
-      var rateStr=lo===0&&hi===0?'—':lo+'–'+hi+'%';
+      var rateStr=typ==='pub'?null:(lo===null||lo===undefined?null:(lo===0&&hi===0?'—':lo+'–'+hi+'%'));
       ch+='<div class="school-card" id="card-'+enc+'">';
       ch+='<div class="sc-header" onclick="openSheet(\''+esq+'\')">';
       ch+='<span class="sc-name">'+name+'</span>';
@@ -646,21 +711,26 @@ function renderTable(list){
       ch+='</div>';
       ch+='<div class="sc-meta" onclick="openSheet(\''+esq+'\')">';
       ch+='<span>'+DN[dist]+'</span>';
-      ch+='<span class="sc-rate">中签率 '+rateStr+'</span>';
-      if(st==='hot') ch+='<span>🌟超额</span>';
-      if(st==='cool') ch+='<span>🍀全录</span>';
+      if(rateStr) ch+='<span class="sc-rate">中签率 '+rateStr+'</span>';
+      if(typ!=='pub'&&st==='hot') ch+='<span>🌟超额</span>';
+      if(typ!=='pub'&&st==='cool') ch+='<span>🍀全录</span>';
       ch+='</div>';
       ch+='<div class="sc-btns">';
       ch+='<a class="map-btn" href="'+mapUrl+'" target="_blank">'+MAP_IMG+'导航</a>';
       ch+='<button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>';
+      ch+='<button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>';
       ch+='</div>';
-      ch+='<div class="sc-detail-hint" onclick="toggleDetail(\''+esq+'\')">';
-      ch+='<span>展开教育理念·作业·升学路径</span> ›</div>';
+      var hintCls=PR[name]?' has-profile':'';
+      ch+='<div class="sc-detail-hint'+hintCls+'" onclick="toggleDetail(\''+esq+'\')">';
+      ch+=PR[name]?'<span>展开教育理念·作业·升学路径 ›</span>':'<span style="color:#ddd">暂无详情</span>';
+      ch+='</div>';
       ch+='<div class="sc-detail-panel" id="dpw-'+enc+'" style="display:none"></div>';
       ch+='</div>';
     });
     cards.innerHTML=ch;
-    cards.style.display='block';
+    // 只在手机端显示卡片列表（电脑端用表格）
+    if(window.innerWidth<=768) cards.style.display='block';
+    else cards.style.display='';
   }
 }
 function toggleDetail(name){
@@ -681,36 +751,99 @@ function closeDetail(){
 }
 function buildDetail(name){
   var pr=PR[name];
-  if(!pr)return '<p style="font-size:12px;color:#999;padding:8px">\u8be6\u7ec6\u4ecb\u7ecd\u5c1a\u5728\u5efa\u8bbe\u4e2d\uff0c\u70b9\u300c\u53e3\u7891\u300d\u641c\u5c0f\u7ea2\u4e66</p>';
-  var stress=pr.stress||3,hw=pr.hw||'',slogan=pr.slogan||'';
-  var dots='';for(var i=1;i<=5;i++)dots+='<div class="sd'+(i<=stress?' on':'')+'"></div>';
-  var sl=['','\ud83d\udc9a\u8f7b\u677e','\ud83d\udc9a\u8f7b\u677e','\ud83e\udddf\u9002\u4e2d','\ud83d\udfe0\u5047\u5355\u591a','\ud83d\udd34\u538b\u529b\u5927'];
+  // 没有 profile 时：引导去大众点评
+  if(!pr){
+    var dzUrl='https://www.dianping.com/search/keyword/2/84_'+encodeURIComponent(name);
+    return '<div class="dz-guide">'
+      +'<div class="dz-guide-title">📋 查看官方招生简章</div>'
+      +'<div class="dz-guide-desc">在大众点评搜索该学校，可查看 <b>官方招生简章</b>、<b>家长真实评价</b> 和 <b>学校环境照片</b></div>'
+      +'<div class="dz-guide-tags">'
+      +'<span class="dz-guide-tag">📅 招生简章</span>'
+      +'<span class="dz-guide-tag">📍 学校地址</span>'
+      +'<span class="dz-guide-tag">👩‍👧 家长口碑</span>'
+      +'<span class="dz-guide-tag">📞 咨询电话</span>'
+      +'</div>'
+      +'<a class="dz-guide-btn" href="'+dzUrl+'" target="_blank">'+DZ_IMG+' 去大众点评查看该校信息</a>'
+      +'</div>';
+  }
+
+  var stress=pr.stress||3, hw=pr.hw||'', slogan=pr.slogan||'';
+  var dots=''; for(var i=1;i<=5;i++) dots+='<div class="sd'+(i<=stress?' on':'')+'"></div>';
+  var sl=['','💚轻松','💚轻松','🧟适中','🟠假单多','🔴压力大'];
   var paths=(pr.path||[]).map(function(p){return '<span class="path-chip">'+p+'</span>';}).join('');
+
   // 学费信息
-  var tfData=TF[name];
-  var tfHtml='';
+  var tfData=TF[name], tfHtml='';
   if(tfData){
     var termFee=tfData.term;
-    var feeColor=termFee===0?'#43e97b':termFee<20000?'#43e97b':termFee<50000?'#f093fb':'#fa709a';
-    var feeLabel=termFee===0?'政府购买学位·免费入读':
-                 (Math.round(termFee/1000)/10)+'万/学期（约'+(Math.round(termFee*2/10000))+'万/年）';
+    var feeColor=termFee===0?'#059669':termFee<20000?'#059669':termFee<50000?'#ea580c':'#dc2626';
+    var feeLabel=termFee===0?'政府购买学位·免费入读':(Math.round(termFee/1000)/10)+'万/学期（约'+(Math.round(termFee*2/10000))+'万/年）';
     tfHtml='<div class="dp-sec" style="grid-column:1/-1"><h4>💰 学费参考</h4>'
       +'<p><span style="color:'+feeColor+';font-weight:700;font-size:14px">'+feeLabel+'</span>'
       +'<span style="font-size:11px;color:#bbb;margin-left:8px">'+tfData.note+'</span></p></div>';
   }
-  var pros=(pr.pros||[]).map(function(p){return '<div class="pro-item">\u2714 '+p+'</div>';}).join('');
-  var cons=(pr.cons||[]).map(function(p){return '<div class="con-item">\u26a0 '+p+'</div>';}).join('');
-  var ideas=(pr.ideas||[]).join('<br>\u2022 ');
-  var xhsKw=name;
-  var xhsUrl='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(xhsKw)+'&source=web_explore_feed';
-  var h='<div style="font-size:14px;font-weight:700;color:#333;margin-bottom:4px">'+name+'</div>';
-  if(slogan)h+='<div style="font-size:12px;color:#667eea;font-style:italic;margin-bottom:10px">'+slogan+'</div>';
+
+  var pros=(pr.pros||[]).map(function(p){return '<div class="pro-item">✔ '+p+'</div>';}).join('');
+  var cons=(pr.cons||[]).map(function(p){return '<div class="con-item">⚠ '+p+'</div>';}).join('');
+  var ideas=(pr.ideas||[]).join('<br>• ');
+
+  // ===== 家长最关心的标签 =====
+  var focusTags='';
+  // 双语/传统路线
+  var tag=pr.tag||'';
+  if(tag.indexOf('双语')>=0||tag.indexOf('国际')>=0||tag.indexOf('IB')>=0){
+    focusTags+='<span class="focus-tag purple">🌍 双语/国际路线</span>';
+  } else if(tag.indexOf('传统')>=0||tag.indexOf('精英')>=0||tag.indexOf('竞赛')>=0){
+    focusTags+='<span class="focus-tag orange">🏆 传统精英路线</span>';
+  } else {
+    focusTags+='<span class="focus-tag">⚖️ 均衡发展</span>';
+  }
+  // 压力标签
+  if(stress>=4) focusTags+='<span class="focus-tag red">🔴 高压/作业多</span>';
+  else if(stress<=2) focusTags+='<span class="focus-tag green">🟢 轻松/低压</span>';
+  else focusTags+='<span class="focus-tag">📚 压力适中</span>';
+  // 学费标签
+  if(tfData){
+    if(tfData.term===0) focusTags+='<span class="focus-tag green">🆓 政府购买学位</span>';
+    else if(tfData.term>=50000) focusTags+='<span class="focus-tag red">💸 学费较贵</span>';
+    else if(tfData.term>=20000) focusTags+='<span class="focus-tag orange">💰 中等学费</span>';
+  }
+
+  // ===== 大众点评引导区块 =====
+  var dzUrl='https://www.dianping.com/search/keyword/2/84_'+encodeURIComponent(name);
+  var dzGuide='<div class="dz-guide">'
+    +'<div class="dz-guide-title">📋 查官方招生简章 & 家长评价</div>'
+    +'<div class="dz-guide-desc">在大众点评可查看该校 <b>官方招生简章</b>（招生人数/报名条件/时间）和家长真实口碑</div>'
+    +'<div class="dz-guide-tags">'
+    +'<span class="dz-guide-tag">📅 报名时间</span>'
+    +'<span class="dz-guide-tag">👫 招生人数</span>'
+    +'<span class="dz-guide-tag">📍 学校地址</span>'
+    +'<span class="dz-guide-tag">👩‍👧 家长评价</span>'
+    +'<span class="dz-guide-tag">🏫 校园环境</span>'
+    +'</div>'
+    +'<a class="dz-guide-btn" href="'+dzUrl+'" target="_blank">'+DZ_IMG+' 去大众点评查看该校详情</a>'
+    +'</div>';
+
+  var h='';
+  // 学校名+slogan
+  h+='<div style="font-size:15px;font-weight:700;color:#1a1a2e;margin-bottom:4px">'+name+'</div>';
+  if(slogan) h+='<div style="font-size:12px;color:#667eea;font-style:italic;margin-bottom:8px">'+slogan+'</div>';
+  // 家长关注标签行
+  h+='<div class="focus-tags">'+focusTags+'</div>';
   h+='<div class="dp-grid">';
-  h+='<div class="dp-sec"><h4>\ud83d\udcda \u6559\u80b2\u7406\u5ff5</h4><p>\u2022 '+ideas+'</p></div>';
-  h+='<div class="dp-sec"><h4>\ud83d\udcdd \u4f5c\u4e1a/\u538b\u529b</h4><p>'+hw+'</p><div class="sd-row">'+dots+'<span style="font-size:11px;color:#667eea;margin-left:4px">'+sl[stress]+'</span></div></div>';
-  h+='<div class="dp-sec"><h4>\ud83c\udf93 \u5347\u5b66\u8def\u5f84</h4><p>'+paths+'</p></div>';
-  h+=tfHtml;h+='<div class="dp-sec"><h4>\u2714 \u4f18\u70b9 / \u26a0 \u6ce8\u610f</h4>'+pros+cons+'</div>';
-  h+='</div><div style="margin-top:10px"><button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAEzUlEQVR42u2WT2xURRzHf795M/vebrfbUlvaYrVV2koLFCUBy5VeJK0JiNEeIGqCpBoSDILcaBo00YsmklAq9cAJMBoOJE2TNhQkIVTppYmNut1aC7aWfQvt7r63b9+bNz8Pr//QeuCCienkHSaT38zn937zne8M/rThaXhSjcETbGuwNdga7D+DMQaMPcZ40BCBMUB8PBjZtspmQam/rUW2rTIZUAoYQ84XPw0AkHOSUmUyJCUKESCR85XJ8dVQZGzZguFwPh4n216IRiQpja1bWSyWHxuTpkmeFwQDMm1dsUwmRfWzem1dPh53Jya0oiIUQpomMwwMh4EIAHDZiBGRMUBUjlN7fUhvaEjsbsmNjmrRKCilLCtUX1d786acmfl1x87ClpbIyzuBCBhTlpXq7i58ZU/JO29Hmpvt27czAwPZgcH8xETZB0ez14bs4WGMREApvlxu35dzc6hpaBjk+0AEiMqyyHW1ggLlOKVHjiDn0ydOOLN/Vr22t2j/60u1MM+eLfvwmF5fT54XaW6ONDeXHDr0oKen7PhxUVWVHRri0SgptVgi1+Xr1z/Te77ys0+RsQWSbZUcPPDMVz3G1i16XW3x/v3Kysba2p7r7U31fp3qPkeu64yN3evoAEXTx0+k+/qQ8/krVzL9/aKyEiORe4cPJz//ghXGyPcXBcIY5V1RXV3c3h5rbSXPC7aXHEdvbCxubzeammJtbWgYKELrDhwIbdyY7u9PX72KoZCbSKR6elhBgXX9ujM6Coi5kRF7eBiU8pPJ5PnzbiKBeijYMwYACABKaUVFJP18IqHy+UVRMDc+Tr4vKjfMXf7mj6NHlW0r2545eVLTDa24CADQMJDzWGvr5vuzpceOAUB5V1d5ZycwVn769KaREb1hEzlOsCBbFKBikTByTWUy4PsLwmVM3r+PmiY2VObG43J6hkWj1o0b0jTRMJbUGGywchwIRjzPT6WkaQJiePv2pzo6lGXhMgwRiPT6elBKJpOBMAEAOPdmZ4FIVFXxaLTik4+R88I9e4rfeNPPZIBzACDf1wpj6b6+n1/YZH55BgDMnp5fmpriO3bMdnWBUswwgGlBGQM1EgCQ5wFj9p07MmeT5wERCiGnpwEREMj1Hl64EKqrBenPXbqEyCiXAwCQknI5ZVn+3Dw5DgBQPu+bKd/N58fHAZFWOEOQnWKRgrmLF6Mtu3M/3qk8dUorKwNEDIXcqanstWvmmTOxV9tibW2kVHZwMPzSi9WXL7GCAiCK7Nq18fsb1q1b0x+dBCEAgDwpamoq339PVNcAIgoBpFY4CBGGhEyaUwffUvPzRfv2iYoK+4dhNx7nJSV33z0MUj4/OKDX1QFAqvtceWdneNu2hfmlpby01E+nyZeLFqX5cw9je/eGqqv9dHr+2+9QiIXD/MhTTilSCoUwGhvy4wmVzaKuk+excDhUUwOI4Et38ndjcyN5EhCAMVAERP78vDs5ySsqRPl6aZru1F1mGEZjo3yQcn+bZJHIP+wqUAoAKKVyOWYYoGnB6QallOMEAUzXlZ2DR50dOQ/SIs8L+uD7KpdDIVDXlwwdV3mkIgb6DNJZvlwW/36VWyYIXjlxtUVWd/1HMEuMVfv/NnG1RdbeIGuwNdj/DPYX3EBv25NksS0AAAAASUVORK5CYII=" style="width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle"> 搜「'+xhsKw+'\u300d</button></div>';
+  h+='<div class="dp-sec"><h4>📚 教育理念</h4><p>• '+ideas+'</p></div>';
+  h+='<div class="dp-sec"><h4>📝 作业/压力</h4><p>'+hw+'</p><div class="sd-row">'+dots+'<span style="font-size:12px;color:#667eea;margin-left:6px;font-weight:600">'+sl[stress]+'</span></div></div>';
+  h+='<div class="dp-sec" style="grid-column:1/-1"><h4>🎓 升学路径</h4><p>'+paths+'</p></div>';
+  h+=tfHtml;
+  h+='<div class="dp-sec" style="grid-column:1/-1"><h4>✔ 优点 / ⚠ 注意</h4>'+pros+cons+'</div>';
+  h+='</div>';
+  // 大众点评引导
+  h+=dzGuide;
+  // 底部按钮
+  h+='<div style="margin-top:12px;padding:0 0 4px;display:flex;gap:10px">'
+    +'<button class="xhs-btn" style="flex:1" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+' 小红书口碑</button>'
+    +'<button class="dz-btn" style="flex:1" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+' 大众点评</button>'
+    +'</div>';
   return h;
 }
 function showTab(n){
@@ -718,7 +851,7 @@ function showTab(n){
   document.querySelectorAll('.tc').forEach(function(c,i){c.classList.toggle('on',i===n-1)});
   /* 手机端：tab1显示卡片，其他tab隐藏 */
   var cards=document.getElementById('school-cards');
-  if(cards) cards.style.display=(n===1?'block':'none');
+  if(cards) cards.style.display=(window.innerWidth<=768?(n===1?'block':'none'):'');
   if(n===2)setTimeout(function(){try{renderChart(curList);}catch(e){}},50);
 }
 function renderChart(list){
@@ -874,35 +1007,43 @@ function renderStrategy(h,d,r,p){
       var enc=encodeURIComponent(name);
       var esq=name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
       var cleanName=name.replace(/^(民办|公办|上海市)/,'');
-      var mapUrl='https://uri.amap.com/search?keyword='+encodeURIComponent(cleanName)+'&city=%E4%B8%8A%E6%B5%B7&src=mypage&callnative=1';
-      var rateStr=lo===0&&hi===0?'待公布':(lo===hi?lo+'%':lo+'–'+hi+'%');
-      var stStr=st==='hot'?'🔥超额':st==='cool'?'✅全录':'';
-      var tierColor=tier==='T1'?'#FF6B6B':tier==='T2'?'#FF9F43':'#A8A8A8';
-      var typStr=typ==='pub'?'公办':'民办';
-      var typColor=typ==='pub'?'#4361ee':'#e84393';
-      /* 使用和 school-card 完全一致的结构 */
-      recHtml+='<div class="school-card" id="rec-card-'+enc+'">';
-      recHtml+='<div class="sc-header" onclick="toggleDetail(\''+esq+'\'"+")">';
+      var mapUrl='https://uri.amap.com/search?keyword='+encodeURIComponent(cleanName)+'&city=%E4%B8%8A%E6%B5%B7';
+      /* 推荐卡片：对齐列表卡片结构，公办不显示中签率 */
+      var recTierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
+      var recTypBadge=typ==='pub'?'<span class="pub-b">公办</span>':'<span class="pri-b">民办</span>';
+      var recRateHtml='';
+      if(typ!=='pub'&&lo!==null&&lo!==undefined){
+        if(lo===0&&hi===0){recRateHtml='<span class="na-tag">待公布</span>';}
+        else{var pct=lo===hi?lo+'%':lo+'-'+hi+'%';var col=lo<20?'#ef4444':lo<40?'#f97316':'#16a34a';recRateHtml='<span style="color:'+col+';font-weight:600">'+pct+'</span>';}
+      }
+      var recStIcon=typ!=='pub'?(st==='hot'?'🔥':st==='cool'?'🍀':''):'';
+            recHtml+='<div class="rec-card">';
+recHtml+='<div class="sc-header" onclick="toggleDetail(\''+esq+'\')">';
       recHtml+='<span class="sc-name">'+name+'</span>';
-      recHtml+='<span style="display:flex;gap:4px;flex-shrink:0">';
-      recHtml+='<span style="font-size:11px;padding:2px 7px;border-radius:10px;border:1px solid '+tierColor+';color:'+tierColor+'">'+tier+'</span>';
-      recHtml+='<span style="font-size:11px;padding:2px 7px;border-radius:10px;border:1px solid '+typColor+';color:'+typColor+'">'+typStr+'</span>';
-      recHtml+='</span></div>';
-      recHtml+='<div class="sc-sub">'+( DN[dist]||dist)+'&nbsp;·&nbsp;中签率 <span style="color:#ff6b6b;font-weight:600">'+rateStr+'</span>&nbsp;'+stStr+'</div>';
+      recHtml+='<span class="sc-badges">'+recTierBadge+recTypBadge+'</span>';
+      recHtml+='</div>';
+      recHtml+='<div class="sc-meta" onclick="toggleDetail(\''+esq+'\')">'; 
+      recHtml+='<span>'+(DN[dist]||dist)+'</span>';
+      if(recRateHtml) recHtml+='<span class="sc-rate">中签率 '+recRateHtml+'</span>';
+      if(recStIcon) recHtml+='<span>'+recStIcon+'</span>';
+      recHtml+='</div>';
       recHtml+='<div class="sc-btns">';
       recHtml+='<a class="map-btn" href="'+mapUrl+'" target="_blank">'+MAP_IMG+'导航</a>';
       recHtml+='<button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>';
+      recHtml+='<button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>';
       recHtml+='</div>';
-      recHtml+='<div class="sc-detail-hint" onclick="toggleDetail(\''+esq+'\'"+")">';
-      recHtml+='<span>展开教育理念·作业·升学路径</span> ›</div>';
+      var recHintCls=PR[name]?' has-profile':'';
+      recHtml+='<div class="sc-detail-hint'+recHintCls+'" onclick="toggleDetail(\''+esq+'\')">';
+      recHtml+=PR[name]?'<span>展开教育理念·作业·升学路径 ›</span>':'<span style="color:#ddd">暂无详情</span>';
+      recHtml+='</div>';
       recHtml+='<div class="sc-detail-panel" id="dpw-'+enc+'-rec" style="display:none"></div>';
-      recHtml+='</div>';
+      recHtml+='</div>'; // rec-card end
     });
     recHtml+='<div style="font-size:11px;color:#bbb;margin-top:4px;text-align:center">👇 下方完整列表可按区域/梯队/类型进一步筛选</div>';
     recHtml+='</div>';
   })();
 
-  document.getElementById('stg').innerHTML=summary+stepsHtml+recHtml;
+  document.getElementById('stg').innerHTML=summary+stepsHtml+'<div class="rec-cards-grid">'+recHtml+'</div>';
 }
 function renderTimeline(){
   var months=[
@@ -992,6 +1133,12 @@ function closeSheet(){
 }
 
 /* 小红书口碑跳转（微信内复制关键词，外部直接打开） */
+function openDZ(name){
+  /* 大众点评：直接跳转搜索页 */
+  var kw=encodeURIComponent(name+' 学校');
+  var url='https://www.dianping.com/search/keyword/2/10_'+kw;
+  window.open(url,'_blank');
+}
 function openXHS(name){
   var kw=name+' 口碑';
   var url='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(name)+'&source=web_explore_feed';
