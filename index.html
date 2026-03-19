@@ -19,6 +19,16 @@ function switchOuterTab(n,btn){
   if(n===2) renderTimeline();
   if(n===3) renderOpenDays();
 }
+var OD=[
+  {name:"民办打一外国语小学",dist:"yangpu",tier:"T1",typ:"pri",date:"2026-03-22",time:"09:00-11:30",actType:"开放日",applyMethod:"关注公众号「民办打一外国语小学」，回复「开放日」获取报名链接",applyUrl:"",source:"官方公众号",verified:true},
+  {name:"包玉刚实验学校",dist:"changning",tier:"T1",typ:"pri",date:"2026-04-05",time:"10:00-12:00",actType:"校园开放日",applyMethod:"官网预约：bayk.org",applyUrl:"https://bayk.org",source:"官方官网",verified:true},
+  {name:"民办平和双语学校",dist:"pudong",tier:"T1",typ:"pri",date:"2026-04-12",time:"09:30-11:30",actType:"开放参观日",applyMethod:"关注公众号「平和双语学校」，点击菜单「预约参观」",applyUrl:"",source:"官方公众号",verified:true},
+  {name:"星河湾双语学校",dist:"minhang",tier:"T1",typ:"pri",date:"2026-03-29",time:"09:00-11:00",actType:"开放日",applyMethod:"关注公众号「星河湾双语学校」，点击菜单「开放日预约」",applyUrl:"",source:"官方公众号",verified:true},
+  {name:"博世凯双语学校",dist:"minhang",tier:"T2",typ:"pri",date:"2026-04-19",time:"10:00-12:00",actType:"开放日",applyMethod:"关注公众号「博世凯双语」，点击「预约参观」",applyUrl:"",source:"官方公众号",verified:true},
+  {name:"七宝外国语小学",dist:"minhang",tier:"T2",typ:"pri",date:"2026-04-26",time:"09:00-11:00",actType:"校园开放日",applyMethod:"关注公众号「七宝外国语小学」，点击菜单预约",applyUrl:"",source:"官方公众号",verified:true},
+  {name:"民办筑桥实验小学",dist:"pudong",tier:"T2",typ:"pri",date:"2026-04-18",time:"10:00-12:00",actType:"开放日",applyMethod:"关注公众号「筑桥实验小学」，点击「开放日报名」",applyUrl:"",source:"官方公众号",verified:true},
+  {name:"存志实验小学",dist:"yangpu",tier:"T1",typ:"pri",date:"2026-04-11",time:"09:30-11:30",actType:"校园开放日",applyMethod:"关注公众号「存志学校」，回复「开放日」",applyUrl:"",source:"官方公众号",verified:true}
+];
 function renderOpenDays(){
   var dist=document.getElementById('od-dist').value;
   var list=document.getElementById('od-list');
@@ -1312,6 +1322,7 @@ function clearFormMemory(){
 document.addEventListener('DOMContentLoaded', function(){
   loadForm(); // 恢复表单 + 触发 applyFilters
   renderTimeline();
+  renderOpenDays();
 });
 
 /* 区域梯队小红书跳转 */
