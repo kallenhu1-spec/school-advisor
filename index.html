@@ -349,6 +349,17 @@ tr:hover>td{background:#fafbff}
 .xhs-dist-area{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#FFF8F9;border-radius:12px;margin-bottom:12px;flex-wrap:wrap;}
 .xhs-dist-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;background:#FFF0F2;color:#FF2442;border:1px solid #FFCCD5;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;-webkit-appearance:none;}
 #res{display:none}
+.pref-section { margin: 10px 0 14px; }
+.pref-label { font-size: 13px; color: #555; font-weight: 600; margin-bottom: 8px; }
+.pref-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.pref-chip {
+  background: #f0f4ff; color: #4361ee; border: 1.5px solid #c5cff8;
+  border-radius: 20px; padding: 5px 12px; font-size: 12px; cursor: pointer;
+  transition: all .15s; font-weight: 500;
+}
+.pref-chip.active {
+  background: #4361ee; color: #fff; border-color: #4361ee;
+}
 @media(max-width:600px){.r2,.dp-grid{grid-template-columns:1fr}th,td{padding:7px 6px;font-size:11px}.filter-row{gap:6px}}
 
 .outer-tabs{display:flex;gap:6px;margin-top:16px;padding:4px;background:rgba(0,0,0,.15);border-radius:14px 14px 0 0;margin-left:-20px;margin-right:-20px;padding-left:16px;padding-right:16px;padding-bottom:0}
@@ -707,7 +718,19 @@ tr:hover>td{background:#fafbff}
         <option value="tr">传统精英路线</option>
         <option value="ba">均衡发展</option>
       </select></div>
-      
+    </div>
+    <div class="pref-section">
+      <div class="pref-label">🎯 我最在意（可多选）</div>
+      <div class="pref-chips" id="pref-chips">
+        <button type="button" class="pref-chip" data-pref="sport" onclick="togglePref(this)">🏃 体育运动</button>
+        <button type="button" class="pref-chip" data-pref="bilingual" onclick="togglePref(this)">🌏 双语环境</button>
+        <button type="button" class="pref-chip" data-pref="light" onclick="togglePref(this)">📚 作业少/低压</button>
+        <button type="button" class="pref-chip" data-pref="stem" onclick="togglePref(this)">🔬 STEM创造</button>
+        <button type="button" class="pref-chip" data-pref="ai" onclick="togglePref(this)">🤖 AI教育</button>
+        <button type="button" class="pref-chip" data-pref="culture" onclick="togglePref(this)">🧘 校风好</button>
+        <button type="button" class="pref-chip" data-pref="path" onclick="togglePref(this)">🏅 升学清晰</button>
+        <button type="button" class="pref-chip" data-pref="art" onclick="togglePref(this)">🎨 艺术音乐</button>
+      </div>
     </div>
     <button class="gbtn" id="gbtn">生成我的选校策略 🎯</button>
   </div>
@@ -1340,6 +1363,27 @@ function renderTimeline(){
 }
 
 /* 手机端底部抽屉 */
+var selectedPrefs = [];
+function togglePref(btn){
+  var pref = btn.dataset.pref;
+  btn.classList.toggle('active');
+  if(btn.classList.contains('active')){
+    if(!selectedPrefs.includes(pref)) selectedPrefs.push(pref);
+  } else {
+    selectedPrefs = selectedPrefs.filter(function(p){ return p !== pref; });
+  }
+  try { localStorage.setItem('xz_prefs', JSON.stringify(selectedPrefs)); } catch(e){}
+}
+function loadPrefs(){
+  try {
+    var saved = JSON.parse(localStorage.getItem('xz_prefs') || '[]');
+    selectedPrefs = saved;
+    document.querySelectorAll('.pref-chip').forEach(function(btn){
+      if(saved.includes(btn.dataset.pref)) btn.classList.add('active');
+    });
+  } catch(e){}
+}
+
 function isMobile(){ return window.innerWidth <= 768; }
 function openSheet(name){
   if(!isMobile()) return false;
@@ -1500,7 +1544,8 @@ function clearFormMemory(){
   if(hint) hint.style.display='none';
 }
 document.addEventListener('DOMContentLoaded', function(){
-  loadForm(); // 恢复表单（有历史数据时会触发 applyFilters）
+  loadForm();
+  loadPrefs(); // 恢复表单（有历史数据时会触发 applyFilters）
   applyFilters(); // 无论如何都渲染学校列表
   renderTimeline();
   renderOpenDays();
