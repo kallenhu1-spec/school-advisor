@@ -1094,20 +1094,34 @@ function closeSheet(){
 
 /* 小红书口碑跳转（微信内复制关键词，外部直接打开） */
 function openDZ(name){
-  /* 大众点评：优先用 App deeplink（手机上直接跳App无需登录），fallback 网页版 */
   var enc=encodeURIComponent(name);
-  var appLink='dianping://search?keyword='+enc+'&city=上海';
-  var webLink='https://www.dianping.com/search/keyword/1/0_'+enc;
-  /* 尝试唤起 App，300ms 后若未跳转则打开网页 */
-  var t=Date.now();
-  var iframe=document.createElement('iframe');
-  iframe.style.display='none';
-  iframe.src=appLink;
-  document.body.appendChild(iframe);
-  setTimeout(function(){
-    document.body.removeChild(iframe);
-    if(Date.now()-t<1000) window.open(webLink,'_blank');
-  },600);
+  var appScheme='dianping://search?keyword='+enc;
+  var webUrl='https://www.dianping.com/search/keyword/1/0_'+enc;
+  var isWx=/MicroMessenger/i.test(navigator.userAgent);
+  if(isWx){
+    /* 微信内：先尝试 App scheme 跳转（会触发"在浏览器打开"提示→系统浏览器→App）*/
+    /* 同时复制关键词备用 */
+    var kw=name+' 口碑';
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(kw);
+      } else {
+        var ta=document.createElement('textarea');
+        ta.value=kw;document.body.appendChild(ta);ta.select();
+        try{document.execCommand('copy');}catch(e){}
+        document.body.removeChild(ta);
+      }
+    }catch(e){}
+    /* 显示操作引导 */
+    showToast('👆 点右上角「...」→ 在浏览器打开\n即可跳转大众点评 App 搜索\n（已复制「'+kw+'」备用）');
+  } else {
+    /* 非微信：直接打开，先尝试 scheme 唤起 App */
+    var t=Date.now();
+    window.location.href=appScheme;
+    setTimeout(function(){
+      if(Date.now()-t<2000) window.open(webUrl,'_blank');
+    },800);
+  }
 }
 function openXHS(name){
   var kw=name+' 口碑';
