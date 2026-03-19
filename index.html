@@ -686,7 +686,7 @@ function renderTable(list){
     h+='<td><button class="nm-btn" onclick="toggleDetail(\''+esq+'\')">'+stIcon+' '+name+' <span class="expand-hint" id="eh-'+enc+'">\u25be</span></button></td>';
     h+='<td style="text-align:center"><span style="font-size:12px;color:#666">'+(DN[dist]||dist)+'</span></td>';
     h+='<td style="text-align:center">'+tierBadge+'</td><td style="white-space:nowrap;text-align:center">'+typBadge+'</td><td style="white-space:nowrap;text-align:center">'+rateHtml+'</td>';
-    h+='<td style="white-space:nowrap;vertical-align:middle;text-align:left"><a class="map-btn" href="'+mapUrl+'" target="_blank"><img src=\"data:image/png;base64,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" style=\"width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle\"> 导航</a> <button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAEzUlEQVR42u2WT2xURRzHf795M/vebrfbUlvaYrVV2koLFCUBy5VeJK0JiNEeIGqCpBoSDILcaBo00YsmklAq9cAJMBoOJE2TNhQkIVTppYmNut1aC7aWfQvt7r63b9+bNz8Pr//QeuCCienkHSaT38zn937zne8M/rThaXhSjcETbGuwNdga7D+DMQaMPcZ40BCBMUB8PBjZtspmQam/rUW2rTIZUAoYQ84XPw0AkHOSUmUyJCUKESCR85XJ8dVQZGzZguFwPh4n216IRiQpja1bWSyWHxuTpkmeFwQDMm1dsUwmRfWzem1dPh53Jya0oiIUQpomMwwMh4EIAHDZiBGRMUBUjlN7fUhvaEjsbsmNjmrRKCilLCtUX1d786acmfl1x87ClpbIyzuBCBhTlpXq7i58ZU/JO29Hmpvt27czAwPZgcH8xETZB0ez14bs4WGMREApvlxu35dzc6hpaBjk+0AEiMqyyHW1ggLlOKVHjiDn0ydOOLN/Vr22t2j/60u1MM+eLfvwmF5fT54XaW6ONDeXHDr0oKen7PhxUVWVHRri0SgptVgi1+Xr1z/Te77ys0+RsQWSbZUcPPDMVz3G1i16XW3x/v3Kysba2p7r7U31fp3qPkeu64yN3evoAEXTx0+k+/qQ8/krVzL9/aKyEiORe4cPJz//ghXGyPcXBcIY5V1RXV3c3h5rbSXPC7aXHEdvbCxubzeammJtbWgYKELrDhwIbdyY7u9PX72KoZCbSKR6elhBgXX9ujM6Coi5kRF7eBiU8pPJ5PnzbiKBeijYMwYACABKaUVFJP18IqHy+UVRMDc+Tr4vKjfMXf7mj6NHlW0r2545eVLTDa24CADQMJDzWGvr5vuzpceOAUB5V1d5ZycwVn769KaREb1hEzlOsCBbFKBikTByTWUy4PsLwmVM3r+PmiY2VObG43J6hkWj1o0b0jTRMJbUGGywchwIRjzPT6WkaQJiePv2pzo6lGXhMgwRiPT6elBKJpOBMAEAOPdmZ4FIVFXxaLTik4+R88I9e4rfeNPPZIBzACDf1wpj6b6+n1/YZH55BgDMnp5fmpriO3bMdnWBUswwgGlBGQM1EgCQ5wFj9p07MmeT5wERCiGnpwEREMj1Hl64EKqrBenPXbqEyCiXAwCQknI5ZVn+3Dw5DgBQPu+bKd/N58fHAZFWOEOQnWKRgrmLF6Mtu3M/3qk8dUorKwNEDIXcqanstWvmmTOxV9tibW2kVHZwMPzSi9WXL7GCAiCK7Nq18fsb1q1b0x+dBCEAgDwpamoq339PVNcAIgoBpFY4CBGGhEyaUwffUvPzRfv2iYoK+4dhNx7nJSV33z0MUj4/OKDX1QFAqvtceWdneNu2hfmlpby01E+nyZeLFqX5cw9je/eGqqv9dHr+2+9QiIXD/MhTTilSCoUwGhvy4wmVzaKuk+excDhUUwOI4Et38ndjcyN5EhCAMVAERP78vDs5ySsqRPl6aZru1F1mGEZjo3yQcn+bZJHIP+wqUAoAKKVyOWYYoGnB6QallOMEAUzXlZ2DR50dOQ/SIs8L+uD7KpdDIVDXlwwdV3mkIgb6DNJZvlwW/36VWyYIXjlxtUVWd/1HMEuMVfv/NnG1RdbeIGuwNdj/DPYX3EBv25NksS0AAAAASUVORK5CYII=" style="width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle"> 口碑</button></td>';
+    h+='<td style="white-space:nowrap;vertical-align:middle;text-align:left"><a class="map-btn" href="'+mapUrl+'" target="_blank"><img src=\"data:image/png;base64,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" style=\"width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle\"> 导航</a></td>';
     h+='</tr><tr class="dp-row"><td colspan="6"><div class="dp-wrap" id="dpw-'+enc+'" style="display:none"></div></td></tr>';
   });
   tb.innerHTML=h;
@@ -717,8 +717,6 @@ function renderTable(list){
       ch+='</div>';
       ch+='<div class="sc-btns">';
       ch+='<a class="map-btn" href="'+mapUrl+'" target="_blank">'+MAP_IMG+'导航</a>';
-      ch+='<button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>';
-      ch+='<button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>';
       ch+='</div>';
       var hintCls=PR[name]?' has-profile':'';
       ch+='<div class="sc-detail-hint'+hintCls+'" onclick="toggleDetail(\''+esq+'\')">';
@@ -753,7 +751,7 @@ function buildDetail(name){
   var pr=PR[name];
   // 没有 profile 时：引导去大众点评
   if(!pr){
-    var dzUrl='https://www.dianping.com/search/keyword/2/84_'+encodeURIComponent(name);
+    var dzUrl='https://www.dianping.com/search/keyword/1/0_'+encodeURIComponent(name);
     return '<div class="dz-guide">'
       +'<div class="dz-guide-title">📋 查看官方招生简章</div>'
       +'<div class="dz-guide-desc">在大众点评搜索该学校，可查看 <b>官方招生简章</b>、<b>家长真实评价</b> 和 <b>学校环境照片</b></div>'
@@ -810,7 +808,7 @@ function buildDetail(name){
   }
 
   // ===== 大众点评引导区块 =====
-  var dzUrl='https://www.dianping.com/search/keyword/2/84_'+encodeURIComponent(name);
+  var dzUrl='https://www.dianping.com/search/keyword/1/0_'+encodeURIComponent(name);
   var dzGuide='<div class="dz-guide">'
     +'<div class="dz-guide-title">📋 查官方招生简章 & 家长评价</div>'
     +'<div class="dz-guide-desc">在大众点评可查看该校 <b>官方招生简章</b>（招生人数/报名条件/时间）和家长真实口碑</div>'
@@ -839,11 +837,7 @@ function buildDetail(name){
   h+='</div>';
   // 大众点评引导
   h+=dzGuide;
-  // 底部按钮
-  h+='<div style="margin-top:12px;padding:0 0 4px;display:flex;gap:10px">'
-    +'<button class="xhs-btn" style="flex:1" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+' 小红书口碑</button>'
-    +'<button class="dz-btn" style="flex:1" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+' 大众点评</button>'
-    +'</div>';
+  // 底部按钮已移除（详情里已有大众点评引导块，无需重复）
   return h;
 }
 function showTab(n){
@@ -939,112 +933,73 @@ function renderChart(list){
   });
 }
 function renderStrategy(h,d,r,p){
-  var dn=DN[d]||d,rn=r==='bi'?'\u53cc\u8bed/\u56fd\u9645\u5316':r==='tr'?'\u4f20\u7edf\u7cbe\u82f1':'\u5747\u8861\u53d1\u5c55';
-  var pn=p==='good'?'\u5f88\u597d':p==='ok'?'\u4e00\u822c':p==='bad'?'\u8f83\u5dee':'\u4e0d\u786e\u5b9a';
-  var hn=h==='sh'?'\u4e0a\u6d77\u6237\u7c4d':h==='jz'?'\u5c45\u4f4f\u8bc1':'\u968f\u8fc1/\u5176\u4ed6';
-  var tips=[];
-  if(p==='good'){tips.push({t:'\u516c\u529e\u5e95\u724c\u7a33\u56fa',s:'\u5bf9\u53e3\u516c\u529e\u8d28\u91cf\u597d\uff0c\u6c11\u529e\u6447\u53f7\u98ce\u9669\u76f8\u5bf9\u53ef\u63a7\u3002\u5efa\u8bae\u53ea\u51b2T1\u9876\u6d41\u6c11\u529e\uff0c\u672a\u4e2d\u7b7e\u5b89\u5fc3\u5c31\u516c\u529e\u3002'});}
-  else if(p==='bad'){tips.push({t:'\u516c\u529e\u8f83\u5f31\uff0c\u79ef\u6781\u51b2\u6c11\u529e',s:'\u5bf9\u53e3\u516c\u529e\u8f83\u5f31\uff0c\u6c11\u529e\u56de\u62a5\u8f83\u9ad8\u3002\u5fd7\u613f\u4f18\u5148\u586b\u8c03\u5242\uff0c\u6700\u5927\u5316\u4e2d\u7b7e\u673a\u4f1a\u3002'});}
-  if(r==='bi'){tips.push({t:'\u53cc\u8bed\u8def\u7ebf\u8981\u70b9',s:'\u53cc\u8bed\u6821\u5c0f\u5b66\u5bfc\u5907\u82f1\u8bed\u539f\u7248\u7ec3\u4e60\u3001\u5b66\u4e49\u5de5\u5177\u5907\u8db3\u3002\u8003\u5bdf\u5f00\u653e\u65e5\u91cd\u70b9\u89c2\u5bdf\u80fd\u5426\u9002\u5e94\u5168\u82f1\u6559\u5b66\u73af\u5883\u3002'});}
-  else if(r==='tr'){tips.push({t:'\u4f20\u7edf\u7cbe\u82f1\u8def\u7ebf\u8981\u70b9',s:'\u4f20\u7edf\u5f3a\u6821\u9009\u62e9\u5c0f\u521d\u5bf9\u53e3\u8d44\u6e90\u597d\u7684\u5b66\u6821\uff0c\u91cd\u70b9\u770b\u5c0f\u5347\u521d\u5f00\u653e\u7387\u548c\u5386\u5e74\u4e2d\u8003\u6210\u7ee9\u3002'});}
-  if(h!=='sh'){tips.push({t:'\u975e\u6caa\u7c4d\u6ce8\u610f\u5c45\u4f4f\u8bc1\u5e74\u9650',s:'\u6c11\u529e\u62a5\u540d\u9700\u63d0\u4f9b\u5c45\u4f4f\u8bc1\uff0c\u786e\u8ba4\u5c45\u4f4f\u8bc1\u5df2\u6ee1\u7b97\u5c40\u8981\u6c42\u5e74\u9650\u3002\u516c\u529e\u7edf\u7b4c\u9700\u793e\u4fdd\u3001\u5c45\u4f4f\u8bc1\u3001\u5c31\u8bfb\u5730\u5c45\u4f4f\u767b\u8bb0\u7b49\u3002'});}
-  tips.push({t:'\u516c\u6c11\u540c\u62db\u62a5\u540d\u7b56\u7565',s:'\u9009\u5b9a\u4e00\u6240T1\u6c11\u529e\u4e3a\u4e3b\u5fd7\u613f\uff0c\u8c03\u5242\u586bT2\u5b66\u6821\u3002\u53cc\u9009\u4e00\uff0c\u5f52\u6c11\u529e\u5c31\u4e0d\u80fd\u4fdd\u5e95\u516c\u529e\uff0c\u8981\u786e\u8ba4\u5bf9\u53e3\u516c\u529e\u5165\u5b66\u987a\u4f4d\u3002'});
-  var stepsHtml='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">';
-  tips.forEach(function(t){stepsHtml+='<div style="background:#f8faff;border-radius:8px;padding:10px 12px;border:1px solid #e8eeff"><div style="font-size:12px;color:#667eea;font-weight:600;margin-bottom:3px">'+t.t+'</div><p style="font-size:12px;color:#555;line-height:1.5">'+t.s+'</p></div>';});
+  var dn=DN[d]||d,rn=r==='bi'?'双语/国际化':r==='tr'?'传统精英':'均衡发展';
+  var pn=p==='good'?'很好':p==='ok'?'一般':p==='bad'?'较差':'不确定';
+  var hn=h==='sh'?'上海户籍':h==='jz'?'居住证':'随迁/其他';
+
+  // ===== 报名策略（唯一保留的 tips 模块）=====
+  var strategyTips=[];
+
+  // 公民同招核心策略
+  var s1='';
+  if(p==='good'){
+    s1='对口公办质量好，可稳为保底。建议选一所T1民办作为主志愿，调剂填T2，若未中签安心就对口公办。';
+  } else if(p==='bad'){
+    s1='对口公办较弱，建议积极冲民办。主志愿填T1民办，调剂填T2，同时关注4月确认对口公办录取顺位。';
+  } else {
+    s1='选定一所T1民办为主志愿，调剂填T2。注意：录取民办后不能保底公办，提前确认对口公办入学顺位。';
+  }
+  strategyTips.push({icon:'📋',t:'报名节奏',s:'3月关注各校开放日（可现场了解师资/班级氛围）；4月完成信息登记；5月公民同招填报，同步关注摇号结果通知。'});
+  strategyTips.push({icon:'🎯',t:'志愿填报策略',s:s1});
+
+  // 户籍相关
+  if(h!=='sh'){
+    strategyTips.push({icon:'📄',t:'非沪籍材料准备',s:'民办报名需居住证（确认已满各区年限要求）；公办统筹需社保+居住证+就读地居住登记，提前3个月整理材料。'});
+  }
+
+  // 路线相关
+  if(r==='bi'){
+    strategyTips.push({icon:'🌍',t:'双语校考察重点',s:'开放日重点观察：孩子能否适应全英环境、师资是否稳定、外教比例；回家练习量是否可控；一贯制直升初中的年级通过率。'});
+  } else if(r==='tr'){
+    strategyTips.push({icon:'🏆',t:'传统校考察重点',s:'重点看小升初对口资源（直升率/推优名额）和历年中考成绩；传统校竞赛氛围浓，提前了解孩子是否适合有压力的学习节奏。'});
+  }
+
+  // ===== 家长选校考察维度（基于真实口碑整理）=====
+  var checkItems=[
+    {icon:'📚',label:'作业量/压力',desc:'到校开放日或家长群了解每日作业时长，是否有分层教学，压力节奏是否适合你家娃。'},
+    {icon:'💰',label:'学费/性价比',desc:'民办学费从免费（政府购买学位）到10万+/年不等。确认包含住宿/餐饮/校车等附加费用。'},
+    {icon:'🎓',label:'升学路径是否清晰',desc:'一贯制直升率多少？直升摇号概率？若不直升，对口初中资源如何？'},
+    {icon:'👩‍🏫',label:'老师稳定性',desc:'重点观察班主任流动率，家长最关心"老师是否负责"，口碑好的学校老师三观正、沟通顺畅。'},
+    {icon:'🏠',label:'通勤/住宿',desc:'住宿制与走读体验差异大。走读需考虑接送距离；住宿要了解宿舍管理和周末接送安排。'},
+    {icon:'👥',label:'生源/同学圈',desc:'即使摇号，不同学校家长资源圈差异明显。双语顶校家长资源强，传统公办生源均衡稳定。'}
+  ];
+
+  // 拼接 HTML
+  var stepsHtml='<div style="display:flex;flex-direction:column;gap:8px">';
+  strategyTips.forEach(function(t){
+    stepsHtml+='<div style="background:#f8faff;border-radius:10px;padding:11px 13px;border-left:3px solid #667eea">';
+    stepsHtml+='<div style="font-size:13px;color:#4361ee;font-weight:700;margin-bottom:4px">'+t.icon+' '+t.t+'</div>';
+    stepsHtml+='<p style="font-size:13px;color:#555;line-height:1.6;margin:0">'+t.s+'</p></div>';
+  });
   stepsHtml+='</div>';
-  var summary='<div style="background:linear-gradient(135deg,#f0f4ff,#faf0ff);border-radius:10px;padding:12px 14px;margin-bottom:10px;border-left:4px solid #667eea"><span style="font-size:13px;color:#444">您的情况：<b style="color:#667eea">'+hn+'</b> · <b style="color:#667eea">'+dn+'</b> · <b style="color:#667eea">'+rn+'</b> · 对口公办<b style="color:#667eea">'+pn+'</b></span></div>';
-  /* ===== 智能推荐学校 ===== */
-  var recHtml='';
-  (function(){
-    /* 根据用户情况筛选推荐学校 */
-    var candidates=SD.filter(function(s){
-      /* 按用户选的区 */
-      if(d&&d!=='other'&&s[1]!==d)return false;
-      return true;
-    });
 
-    /* 推荐逻辑：按教育方向偏好 + 梯队 + 中签率综合排序 */
-    var scored=candidates.map(function(s){
-      var score=0;
-      if(s[10]==='T1')score+=30;
-      else if(s[10]==='T2')score+=15;
-      if(r==='bi'&&s[2]==='pri')score+=25;
-      if(r==='tr'&&s[2]==='pub')score+=25;
-      if(r==='bal')score+=5;
-      if(p==='bad'&&s[2]==='pri')score+=15;
-      if(p==='good'&&s[2]==='pub')score+=10;
-      var mid=(s[3]+s[4])/2;
-      if(mid>=5&&mid<=40)score+=10;
-      else if(mid>40)score+=5;
-      score+=s[5]/10;
-      return {s:s,score:score};
-    });
-    scored.sort(function(a,b){return b.score-a.score;});
+  // 选校考察维度（网格展示）
+  var checkHtml='<div style="margin-top:14px">';
+  checkHtml+='<div style="font-size:13px;font-weight:700;color:#333;margin-bottom:8px">🔍 选校时重点考察这些维度</div>';
+  checkHtml+='<div style="display:grid;grid-template-columns:1fr 1fr;gap:7px">';
+  checkItems.forEach(function(c){
+    checkHtml+='<div style="background:#fff;border:1px solid #e8eeff;border-radius:10px;padding:9px 11px">';
+    checkHtml+='<div style="font-size:12px;font-weight:700;color:#4361ee;margin-bottom:3px">'+c.icon+' '+c.label+'</div>';
+    checkHtml+='<p style="font-size:11px;color:#666;line-height:1.5;margin:0">'+c.desc+'</p></div>';
+  });
+  checkHtml+='</div></div>';
 
-    /* 按方向决定推荐数量和顺序 */
-    var pri=[],pub2=[];
-    scored.forEach(function(item){
-      if(item.s[2]==='pri'&&pri.length<(r==='bi'?3:2))pri.push(item.s);
-      if(item.s[2]==='pub'&&pub2.length<(r==='tr'?3:2))pub2.push(item.s);
-    });
+  var summary='<div style="background:linear-gradient(135deg,#f0f4ff,#faf0ff);border-radius:10px;padding:11px 13px;margin-bottom:10px;border-left:4px solid #667eea">'
+    +'<span style="font-size:13px;color:#444">您的情况：<b style="color:#667eea">'+hn+'</b> · <b style="color:#667eea">'+dn+'</b> · <b style="color:#667eea">'+rn+'</b> · 对口公办<b style="color:#667eea">'+pn+'</b></span></div>';
 
-    /* 双语优先民办，传统优先公办 */
-    var recs=r==='bi'?pri.concat(pub2):r==='tr'?pub2.concat(pri):pub2.concat(pri);
-    recs=recs.slice(0,5);
-    if(!recs.length)return;
-
-    /* 方向提示文案 */
-    var dirTip='';
-    if(r==='bi')dirTip='<div style="font-size:12px;color:#e84393;background:#fff0f8;border-radius:8px;padding:8px 10px;margin-bottom:10px">💡 双语路线：优先考虑民办摇号，若未摇中需提前了解对口公办情况，关注4月政策公告</div>';
-    else if(r==='tr')dirTip='<div style="font-size:12px;color:#4361ee;background:#f0f4ff;border-radius:8px;padding:8px 10px;margin-bottom:10px">💡 传统精英路线：公办优先，注意核实对口入学资格（户籍+房产+居住年限），5月前确认</div>';
-    else dirTip='<div style="font-size:12px;color:#667;background:#f8f8f8;border-radius:8px;padding:8px 10px;margin-bottom:10px">💡 均衡发展路线：公民办均可，建议结合离家距离和校风综合权衡</div>';
-
-    recHtml+='<div style="margin-top:14px">';
-    recHtml+='<div style="font-size:13px;font-weight:700;color:#333;margin-bottom:8px">🎯 为你推荐的学校</div>';
-    recHtml+=dirTip;
-    recs.forEach(function(s){
-      var name=s[0],dist=s[1],typ=s[2],lo=s[3],hi=s[4],st=s[9],tier=s[10];
-      var enc=encodeURIComponent(name);
-      var esq=name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-      var cleanName=name.replace(/^(民办|公办|上海市)/,'');
-      var mapUrl='https://uri.amap.com/search?keyword='+encodeURIComponent(cleanName)+'&city=%E4%B8%8A%E6%B5%B7';
-      /* 推荐卡片：对齐列表卡片结构，公办不显示中签率 */
-      var recTierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
-      var recTypBadge=typ==='pub'?'<span class="pub-b">公办</span>':'<span class="pri-b">民办</span>';
-      var recRateHtml='';
-      if(typ!=='pub'&&lo!==null&&lo!==undefined){
-        if(lo===0&&hi===0){recRateHtml='<span class="na-tag">待公布</span>';}
-        else{var pct=lo===hi?lo+'%':lo+'-'+hi+'%';var col=lo<20?'#ef4444':lo<40?'#f97316':'#16a34a';recRateHtml='<span style="color:'+col+';font-weight:600">'+pct+'</span>';}
-      }
-      var recStIcon=typ!=='pub'?(st==='hot'?'🔥':st==='cool'?'🍀':''):'';
-            recHtml+='<div class="rec-card">';
-recHtml+='<div class="sc-header" onclick="toggleDetail(\''+esq+'\')">';
-      recHtml+='<span class="sc-name">'+name+'</span>';
-      recHtml+='<span class="sc-badges">'+recTierBadge+recTypBadge+'</span>';
-      recHtml+='</div>';
-      recHtml+='<div class="sc-meta" onclick="toggleDetail(\''+esq+'\')">'; 
-      recHtml+='<span>'+(DN[dist]||dist)+'</span>';
-      if(recRateHtml) recHtml+='<span class="sc-rate">中签率 '+recRateHtml+'</span>';
-      if(recStIcon) recHtml+='<span>'+recStIcon+'</span>';
-      recHtml+='</div>';
-      recHtml+='<div class="sc-btns">';
-      recHtml+='<a class="map-btn" href="'+mapUrl+'" target="_blank">'+MAP_IMG+'导航</a>';
-      recHtml+='<button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>';
-      recHtml+='<button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>';
-      recHtml+='</div>';
-      var recHintCls=PR[name]?' has-profile':'';
-      recHtml+='<div class="sc-detail-hint'+recHintCls+'" onclick="toggleDetail(\''+esq+'\')">';
-      recHtml+=PR[name]?'<span>展开教育理念·作业·升学路径 ›</span>':'<span style="color:#ddd">暂无详情</span>';
-      recHtml+='</div>';
-      recHtml+='<div class="sc-detail-panel" id="dpw-'+enc+'-rec" style="display:none"></div>';
-      recHtml+='</div>'; // rec-card end
-    });
-    recHtml+='<div style="font-size:11px;color:#bbb;margin-top:4px;text-align:center">👇 下方完整列表可按区域/梯队/类型进一步筛选</div>';
-    recHtml+='</div>';
-  })();
-
-  document.getElementById('stg').innerHTML=summary+stepsHtml+'<div class="rec-cards-grid">'+recHtml+'</div>';
+  document.getElementById('stg').innerHTML=summary+stepsHtml+checkHtml;
 }
+
 function renderTimeline(){
   var months=[
     {month:'3月',color:'#667eea',keyword:'材料准备',nodes:[
@@ -1134,9 +1089,8 @@ function closeSheet(){
 
 /* 小红书口碑跳转（微信内复制关键词，外部直接打开） */
 function openDZ(name){
-  /* 大众点评：直接跳转搜索页 */
-  var kw=encodeURIComponent(name+' 学校');
-  var url='https://www.dianping.com/search/keyword/2/10_'+kw;
+  /* 大众点评：上海搜索，keyword/1/0_ + 学校名编码 */
+  var url='https://www.dianping.com/search/keyword/1/0_'+encodeURIComponent(name);
   window.open(url,'_blank');
 }
 function openXHS(name){
@@ -1241,8 +1195,15 @@ window.addEventListener('DOMContentLoaded', function(){ loadForm(); });
 
 /* 区域梯队小红书跳转 */
 function openXHSDist(){
-  var btn=document.getElementById('xhsDistBtn');
-  var kw=(btn&&btn.dataset.kw)||'上海小学梯队';
+  // 读取当前区域选择，组成关键词
+  var sel=document.getElementById('f-dist');
+  var distVal=sel?sel.value:'';
+  var kw='上海小学梯队';
+  if(distVal&&distVal!=='other'){
+    var DN_local=typeof DN!=='undefined'?DN:{};
+    var distName=DN_local[distVal]||distVal;
+    kw='上海'+distName+'小学梯队';
+  }
   openXHS(kw);
 }
 </script>
