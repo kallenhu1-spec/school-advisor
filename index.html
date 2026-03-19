@@ -218,7 +218,7 @@ function renderOpenDays(){
     } else if(o.mpName){
       // 微信内走 weixin://dl/search 搜一搜，非微信复制名称
       var isWx=/MicroMessenger/i.test(navigator.userAgent);
-      var wxSearchUrl='weixin://dl/search?k='+encodeURIComponent(o.mpName);
+      var wxSearchUrl='weixin://dl/search?k='+encodeURIComponent(o.mpName)+'%20'+'%E5%BC%80%E6%94%BE%E6%97%A5';
       if(isWx){
         applyBtn='<a href="'+wxSearchUrl+'" style="margin-left:6px;color:#fff;background:#07c160;padding:3px 10px;border-radius:12px;text-decoration:none;font-size:12px">🔍 搜公众号</a>';
       } else {
