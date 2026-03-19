@@ -642,11 +642,7 @@ document.getElementById('gbtn').onclick=function(){
   setTimeout(function(){sw.scrollIntoView({behavior:'smooth'});},80);
 };
 
-// 页面加载时立即渲染学校列表和时间轴
-document.addEventListener('DOMContentLoaded',function(){
-  applyFilters();
-  renderTimeline();
-});
+// renderTimeline 已在统一初始化入口调用
 
 
 function onDistChange(sel){
@@ -1313,7 +1309,10 @@ function clearFormMemory(){
   var hint=document.getElementById('form-memory-hint');
   if(hint) hint.style.display='none';
 }
-window.addEventListener('DOMContentLoaded', function(){ loadForm(); });
+document.addEventListener('DOMContentLoaded', function(){
+  loadForm(); // 恢复表单 + 触发 applyFilters
+  renderTimeline();
+});
 
 /* 区域梯队小红书跳转 */
 function openXHSDist(){
