@@ -61,7 +61,7 @@ select:focus{border-color:#667eea}
 .tb.on{color:#667eea;border-bottom-color:#667eea}
 .tc{display:none}.tc.on{display:block}
 .filter-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
-.ft-sel{width:90px;padding:5px 26px 5px 10px;border:1.5px solid #ddd;border-radius:16px;font-size:13px;background:#fff;outline:none;flex-shrink:0;height:32px;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+.ft-sel{width:90px;max-width:90px;padding:5px 26px 5px 10px;border:1.5px solid #ddd;border-radius:16px;font-size:13px;background:#fff;outline:none;flex-shrink:0;height:32px;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
 .ft-sel:focus{border-color:#667eea}
 .fb{padding:5px 13px;border:1px solid #ddd;border-radius:20px;font-size:13px;cursor:pointer;background:#fff;color:#666;transition:.15s}
 .fb.on{background:#667eea;color:#fff;border-color:#667eea}
@@ -319,28 +319,30 @@ tr:hover>td{background:#fafbff}
     gap: 6px 8px;
     margin-bottom: 8px;
   }
-  .ft-sel {
-    flex: 0 0 auto;
-    width: 90px;
-    height: 32px;
-    font-size: 13px;
-    padding: 0 26px 0 10px;
-    border-radius: 16px;
-  }
+
   .filter-row label { display: none; } /* 手机端 label 省略，select 够清晰 */
   .fb { padding: 4px 12px; font-size: 12px; height: 30px; }
 
   /* Chip 筛选行：横向滚动，不换行 */
+  .filter-dist-row {
+    margin-bottom: 6px;
+  }
+  .filter-dist-row .ft-sel {
+    width: auto;
+    max-width: 100%;
+    min-width: 0;
+    height: 36px;
+    padding: 0 32px 0 12px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
   #filter-chips {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 8px;
     align-items: center;
-    padding: 4px 0 8px;
-    margin: 0 -12px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 2px 0 8px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -518,16 +520,18 @@ tr:hover>td{background:#fafbff}
             style="width:100%;box-sizing:border-box;padding:8px 12px 8px 12px;border:1.5px solid #e0e4ff;border-radius:10px;font-size:14px;color:#333;outline:none;background:#fff"
             onfocus="this.style.borderColor='#4361ee'" onblur="this.style.borderColor='#e0e4ff'">
         </div>
-        <div class="filter-row" id="filter-chips">
-          <!-- 区域下拉 -->
+        <!-- 第1行：区域下拉 -->
+        <div class="filter-dist-row">
           <select class="ft-sel" id="f-dist" onchange="onDistChange(this)">
-            <option value="">区域</option>
+            <option value="">区域（全部）</option>
             <option value="pudong">浦东</option><option value="minhang">闵行</option>
             <option value="xuhui">徐汇</option><option value="changning">长宁</option>
             <option value="jingan">静安</option><option value="huangpu">黄浦</option>
             <option value="putuo">普陀</option><option value="yangpu">杨浦</option>
           </select>
-          <!-- 类型 + 梯队 chips -->
+        </div>
+        <!-- 第2行：类型 + 梯队 chips -->
+        <div class="filter-row" id="filter-chips">
           <button class="fb flt-chip on" id="f-all" onclick="setChipFilter('all',this)">全部</button>
           <button class="fb flt-chip" onclick="setChipFilter('type:pri',this)">民办</button>
           <button class="fb flt-chip" onclick="setChipFilter('type:pub',this)">公办</button>
