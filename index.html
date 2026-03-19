@@ -446,9 +446,6 @@ tr:hover>td{background:#fafbff}
   <div id="ot1" class="otc on">
     <div class="src-bar">
     📚 <b>数据说明</b>：
-    <span class="src-c src-a">A</span>=2025实测 &nbsp;
-    <span class="src-c src-b">B</span>=2024实测 &nbsp;
-    <span class="src-c src-c2">C</span>=同类推测 &nbsp;
     🌟超额摇号 🍀爆冷全录 |&nbsp;
     <a href="https://vsxue.com/2782.html" target="_blank">vsxue时间轴</a>&nbsp;
     <a href="https://www.shijiancn.com" target="_blank">上海小升初网</a>&nbsp;
@@ -487,13 +484,7 @@ tr:hover>td{background:#fafbff}
         <option value="tr">传统精英路线</option>
         <option value="ba">均衡发展</option>
       </select></div>
-      <div><label>对口公办质量</label><select id="v4">
-        <option value="">请选择</option>
-        <option value="good">很好（区重点/品牌校）</option>
-        <option value="ok">一般（普通公办）</option>
-        <option value="bad">较差</option>
-        <option value="unk">不清楚</option>
-      </select></div>
+      
     </div>
     <button class="gbtn" id="gbtn">生成我的选校策略 🎯</button>
   </div>
@@ -537,8 +528,8 @@ tr:hover>td{background:#fafbff}
           <button class="fb flt-chip on" id="f-all" onclick="setChipFilter('all',this)">全部</button>
           <button class="fb flt-chip" onclick="setChipFilter('type:pri',this)">民办</button>
           <button class="fb flt-chip" onclick="setChipFilter('type:pub',this)">公办</button>
-          <button class="fb flt-chip t1" onclick="setChipFilter('tier:T1',this)">T1</button>
-          <button class="fb flt-chip t2" onclick="setChipFilter('tier:T2',this)">T2</button>
+          <button class="fb flt-chip t1" onclick="setChipFilter('tier:T1',this)">一梯队</button>
+          <button class="fb flt-chip t2" onclick="setChipFilter('tier:T2',this)">二梯队</button>
         </div>
         <div id="school-table-wrap" style="overflow-x:auto">
           <table style="table-layout:fixed;width:100%">
@@ -885,7 +876,7 @@ function renderTable(list){
     var mapUrl='https://uri.amap.com/search?keyword='+encodeURIComponent(cleanName)+'&city=%E4%B8%8A%E6%B5%B7&src=mypage&callnative=1';
     var xhsKw=name;
     var xhsUrl='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(xhsKw)+'&source=web_explore_feed';
-    var tierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
+    var tierBadge=tier==='T1'?'<span class="t1b">一梯队</span>':tier==='T2'?'<span class="t2b">二梯队</span>':'<span class="t3b">T3</span>';
     var typBadge=typ==='pub'?'<span class="pub-b">\u516c\u529e</span>':'<span class="pri-b">\u6c11\u529e</span>';
     var rateHtml='';
     if(typ==='pub'){rateHtml='';}  /* 公办无中签率 */
@@ -916,7 +907,7 @@ function renderTable(list){
       var cleanName=name.replace(/^(民办|公办|上海市)/,'');
     var mapUrl='https://uri.amap.com/search?keyword='+encodeURIComponent(cleanName)+'&city=%E4%B8%8A%E6%B5%B7&src=mypage&callnative=1';
       var xhsUrl='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(name)+'&source=web_explore_feed';
-      var tierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
+      var tierBadge=tier==='T1'?'<span class="t1b">一梯队</span>':tier==='T2'?'<span class="t2b">二梯队</span>':'<span class="t3b">T3</span>';
       var typBadge=typ==='pub'?'<span class="pub-b">公办</span>':'<span class="pri-b">民办</span>';
       var rateStr=typ==='pub'?null:(lo===null||lo===undefined?null:(lo===0&&hi===0?'—':lo+'–'+hi+'%'));
       ch+='<div class="school-card" id="card-'+enc+'">';
@@ -1378,14 +1369,13 @@ function showToast(msg){
 var FORM_KEY = 'xz_form_v1';
 function saveForm(){
   var data={};
-  ['v1','v2','v3','v4'].forEach(function(id){
+  ['v1','v2','v3'].forEach(function(id){
     var el=document.getElementById(id);
     if(el) data[id]=el.value;
   });
   /* 同时保存筛选条件 */
   var fd=document.getElementById('f-dist');
   data['f-dist']=fd?fd.value:'';
-  data['f-type']=typeFlt||'';
   data['tierFlt']=tierFlt||'';
   data['statusFlt']=statusFlt||'';
   try{ localStorage.setItem(FORM_KEY, JSON.stringify(data)); }catch(e){}
@@ -1395,15 +1385,13 @@ function loadForm(){
     var raw=localStorage.getItem(FORM_KEY);
     if(!raw) return;
     var data=JSON.parse(raw);
-    ['v1','v2','v3','v4'].forEach(function(id){
+    ['v1','v2','v3'].forEach(function(id){
       var el=document.getElementById(id);
       if(el && data[id]) el.value=data[id];
     });
     /* 恢复筛选条件 */
     var fd=document.getElementById('f-dist');
-    var ft=document.getElementById('f-type');
     if(fd && data['f-dist']) fd.value=data['f-dist'];
-    if(data['f-type']) typeFlt=data['f-type'];
     if(data['tierFlt']) tierFlt=data['tierFlt'];
     if(data['statusFlt']) statusFlt=data['statusFlt'];
     /* 恢复 chip 高亮（区域已改为 select，只需同步 type/tier chip） */
