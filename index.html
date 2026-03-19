@@ -214,15 +214,18 @@ function renderOpenDays(){
     var tc=tierColor[o.tier]||'#888';
     var applyBtn='';
     if(o.applyUrl){
-      applyBtn='<a href="'+o.applyUrl+'" target="_blank" style="margin-left:8px;color:#fff;background:#3498db;padding:3px 10px;border-radius:12px;text-decoration:none;font-size:12px">立即预约</a>';
-    } else if(o.wxId){
-      // 跳转微信搜一搜搜公众号
-      var wxUrl='weixin://dl/officialaccounts?username='+encodeURIComponent(o.wxId);
-      applyBtn='<a href="'+wxUrl+'" style="margin-left:8px;color:#fff;background:#07c160;padding:3px 10px;border-radius:12px;text-decoration:none;font-size:12px">关注公众号</a>';
+      applyBtn='<a href="'+o.applyUrl+'" target="_blank" style="margin-left:6px;color:#fff;background:#3498db;padding:3px 10px;border-radius:12px;text-decoration:none;font-size:12px">立即预约</a>';
     } else if(o.mpName){
-      // 复制公众号名称
-      applyBtn='<button onclick="navigator.clipboard&&navigator.clipboard.writeText(\"'+o.mpName+'\").then(function(){alert(\"已复制：'+o.mpName+'\
-请去微信搜索此公众号关注\")});return false;" style="margin-left:8px;color:#fff;background:#07c160;padding:3px 10px;border-radius:12px;border:none;font-size:12px;cursor:pointer">复制公众号名</button>';
+      // 微信内走 weixin://dl/search 搜一搜，非微信复制名称
+      var isWx=/MicroMessenger/i.test(navigator.userAgent);
+      var wxSearchUrl='weixin://dl/search?k='+encodeURIComponent(o.mpName);
+      if(isWx){
+        applyBtn='<a href="'+wxSearchUrl+'" style="margin-left:6px;color:#fff;background:#07c160;padding:3px 10px;border-radius:12px;text-decoration:none;font-size:12px">🔍 搜公众号</a>';
+      } else {
+        // 非微信：onclick 复制
+        var safeName=o.mpName.replace(/"/g,'\\"');
+        applyBtn='<button onclick="(function(){var n=\"'+safeName+'\";if(navigator.clipboard){navigator.clipboard.writeText(n).then(function(){alert(\"已复制：\"+n+\"\\n请去微信搜索此公众号关注\")});}else{prompt(\"请复制公众号名称：\",n);}})();return false;" style="margin-left:6px;color:#fff;background:#07c160;padding:3px 10px;border-radius:12px;border:none;font-size:12px;cursor:pointer">关注公众号</button>';
+      }
     }
     var verifiedBadge=o.verified?'<span style="color:#27ae60;font-size:11px;margin-left:6px">✓已核实</span>':'';
     return '<div style="background:#f8f9fa;border-radius:10px;padding:14px 16px;margin-bottom:10px;border-left:3px solid '+tc+'">'
