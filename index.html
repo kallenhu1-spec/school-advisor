@@ -79,7 +79,7 @@ tr:hover>td{background:#fafbff}
 .pri-b{background:#eff6ff;color:#2563eb;padding:2px 7px;border-radius:10px;font-size:11px;border:1px solid #bfdbfe;white-space:nowrap}
 .nm-btn{background:none;border:none;cursor:pointer;color:#1677ff;font-size:13px;font-weight:500;padding:2px 0;text-align:left;border-bottom:1px dashed #b3d4ff;display:inline-flex;align-items:center;gap:3px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .nm-btn:hover{color:#0958d9}
-.expand-hint{font-size:9px;color:#aaa;transition:transform .2s}
+.expand-hint{font-size:14px;color:#4361ee;font-weight:700;transition:transform .2s}
 .map-btn,.map-logo{display:inline-flex;align-items:center;justify-content:center;width:18px;height:16px;background:#4361ee;border-radius:3px;font-size:9px;font-weight:700;color:#fff;flex-shrink:0}
 .xhs-logo{display:inline-flex;align-items:center;justify-content:center;width:28px;height:16px;background:#FF2442;border-radius:3px;font-size:9px;font-weight:700;color:#fff;letter-spacing:-0.5px;flex-shrink:0}
 .xhs-btn{display:inline-flex;align-items:center;justify-content:center;gap:4px;width:56px;height:24px;box-sizing:border-box;border-radius:12px;font-size:11px;font-weight:600;text-decoration:none;white-space:nowrap;background:#FFF0F2;color:#FF2442;border:none;padding:0;cursor:pointer;-webkit-appearance:none;appearance:none;outline:none;font-family:inherit}
@@ -817,7 +817,7 @@ function setChipFilter(key, btn){
 
   if(key==='all'){
     /* 全部：重置所有筛选 */
-    if(document.getElementById('f-dist')) document.getElementById('f-dist').value='';
+    /* 全部：只清 type/tier/status，不清区域 */
     typeFlt=''; tierFlt=''; statusFlt=null;
     /* 重置 chip 高亮，只亮「全部」 */
     document.querySelectorAll('.flt-chip').forEach(function(b){b.classList.remove('on')});
@@ -850,13 +850,11 @@ function setChipFilter(key, btn){
 }
 
 function _syncAllChip(){
-  /* 如果区域/类型/梯队都没选，高亮「全部」 */
-  var distVal=document.getElementById('f-dist')?document.getElementById('f-dist').value:'';
-  if(!distVal && !typeFlt && !tierFlt){
+  /* 「全部」chip 只管 type/tier，不管区域 dropdown */
+  if(!typeFlt && !tierFlt){
     var allBtn=document.getElementById('f-all');
     if(allBtn) allBtn.classList.add('on');
   } else {
-    /* 有任何条件时，去掉「全部」高亮 */
     var allBtn2=document.getElementById('f-all');
     if(allBtn2) allBtn2.classList.remove('on');
   }
@@ -937,7 +935,7 @@ function renderTable(list){
       ch+='</div>';
       var hintCls=PR[name]?' has-profile':'';
       ch+='<div class="sc-detail-hint'+hintCls+'" onclick="toggleDetail(\''+esq+'\')">';
-      ch+=PR[name]?'<span>展开教育理念·作业·升学路径</span><span class="hint-arrow" id="eh-'+enc+'">›</span>':'<span style="color:#bbb">暂无详情</span>';
+      ch+=PR[name]?'<span>展开教育理念·作业·升学路径</span>':'<span style="color:#bbb">暂无详情</span>';
       ch+='</div>';
       ch+='<div class="sc-detail-panel" id="dpw-'+enc+'" style="display:none"></div>';
       ch+='</div>';
@@ -957,7 +955,7 @@ function toggleDetail(name){
   if(!w)return;
   if(w.style.display==='block'){w.style.display='none';if(eh)eh.style.transform='';var hd=document.getElementById('hint-'+enc);if(hd)hd.classList.remove('expanded');openName=null;return;}
   if(!w.dataset.loaded){w.innerHTML=buildDetail(name);w.dataset.loaded='1';}
-  w.style.display='block';w.classList.add('show');
+  w.style.display='block';w.classList.add('show');w.scrollTop=0;
   if(eh)eh.style.transform='rotate(90deg)';
   var hd2=document.getElementById('hint-'+enc);if(hd2)hd2.classList.add('expanded');
   openName=name;
@@ -979,7 +977,7 @@ function buildDetail(name){
       +'<span class="dz-guide-tag">👩‍👧 家长口碑</span>'
       +'<span class="dz-guide-tag">📞 咨询电话</span>'
       +'</div>'
-      +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(name)+')" type="button">'+DZ_IMG+' 去大众点评查看该校信息</button>'
+      +'<button class="dz-guide-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+' 去大众点评查看该校信息</button>'
       +'</div>';
   }
 
@@ -1037,7 +1035,7 @@ function buildDetail(name){
     +'<span class="dz-guide-tag">👩‍👧 家长评价</span>'
     +'<span class="dz-guide-tag">🏫 校园环境</span>'
     +'</div>'
-    +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(name)+')" type="button">'+DZ_IMG+' 去大众点评查看该校详情</button>'
+    +'<button class="dz-guide-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+' 去大众点评查看该校详情</button>'
     +'</div>';
 
   var h='';
@@ -1308,40 +1306,36 @@ function closeSheet(){
 /* 小红书口碑跳转（微信内复制关键词，外部直接打开） */
 function openDZ(name){
   var enc=encodeURIComponent(name);
-  var appScheme='dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+enc;
   var webUrl='https://www.dianping.com/search/keyword/1/0_'+enc;
+  var appScheme='dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+enc;
   var ua=navigator.userAgent;
   var isWx=/MicroMessenger/i.test(ua);
+  /* 微信内：无法唤起第三方App，先弹提示，再尝试复制关键词 */
   if(isWx){
-    /* 微信内（H5或小程序）：无法唤起第三方App，复制关键词提示用户 */
     var kw=name+' 口碑';
-    function doToast(ok){
-      showToast(ok?'已复制「'+kw+'」\n打开大众点评 App 搜索即可 🍴':'请去大众点评 App 搜索：'+kw);
-    }
-    if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(kw).then(function(){doToast(true);}).catch(function(){doToast(false);});
-    } else {
-      try{
+    showToast('请在浏览器中打开后使用点评功能\n或去大众点评 App 搜索：'+kw);
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(kw).catch(function(){});
+      } else {
         var ta=document.createElement('textarea');
         ta.value=kw;document.body.appendChild(ta);ta.select();
         document.execCommand('copy');document.body.removeChild(ta);
-        doToast(true);
-      }catch(e){doToast(false);}
-    }
-  } else {
-    /* 非微信：先尝试 scheme 唤起App，1s 后如果还在页面就跳网页 */
-    var t0=Date.now();
+      }
+    }catch(e){}
+    return;
+  }
+  /* 非微信：先尝试 App scheme，直接跳网页版（location.href 最可靠） */
+  try{
     var iframe=document.createElement('iframe');
     iframe.style.display='none';
     iframe.src=appScheme;
     document.body.appendChild(iframe);
     setTimeout(function(){
-      document.body.removeChild(iframe);
-      if(Date.now()-t0<3000){
-        window.location.href=webUrl;
-      }
-    },1200);
-  }
+      if(document.body.contains(iframe)) document.body.removeChild(iframe);
+    },2000);
+  }catch(e){}
+  window.location.href=webUrl;
 }
 function openXHS(name){
   var kw=name+' 口碑';
@@ -1410,19 +1404,19 @@ function loadForm(){
     if(data['f-type']) typeFlt=data['f-type'];
     if(data['tierFlt']) tierFlt=data['tierFlt'];
     if(data['statusFlt']) statusFlt=data['statusFlt'];
-    /* 恢复 chip 高亮 */
+    /* 恢复 chip 高亮（区域已改为 select，只需同步 type/tier chip） */
     var chips=document.querySelectorAll('.flt-chip');
-    var fd2=document.getElementById('f-dist');
-    var ft2=document.getElementById('f-type');
-    var distVal=fd2?fd2.value:'';
-    var typeVal=ft2?ft2.value:'';
     chips.forEach(function(b){b.classList.remove('on');});
-    if(distVal){
-      chips.forEach(function(b){if(b.getAttribute('onclick')&&b.getAttribute('onclick').indexOf('dist:'+distVal)>-1)b.classList.add('on');});
-    } else if(typeVal){
-      chips.forEach(function(b){if(b.getAttribute('onclick')&&b.getAttribute('onclick').indexOf('type:'+typeVal)>-1)b.classList.add('on');});
+    if(typeFlt){
+      chips.forEach(function(b){
+        var oc=b.getAttribute('onclick')||'';
+        if(oc.indexOf('type:'+typeFlt)>-1) b.classList.add('on');
+      });
     } else if(tierFlt){
-      chips.forEach(function(b){if(b.getAttribute('onclick')&&b.getAttribute('onclick').indexOf('tier:'+tierFlt)>-1)b.classList.add('on');});
+      chips.forEach(function(b){
+        var oc=b.getAttribute('onclick')||'';
+        if(oc.indexOf('tier:'+tierFlt)>-1) b.classList.add('on');
+      });
     } else {
       var allBtn=document.getElementById('f-all');
       if(allBtn) allBtn.classList.add('on');
