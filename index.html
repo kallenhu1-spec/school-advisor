@@ -737,9 +737,9 @@ var curList=[],statusFlt=null,tierFlt='',typeFlt='',openName=null,myChart=null;
 document.getElementById('gbtn').onclick=function(){
   saveForm();
   var h=document.getElementById('v1').value,d=document.getElementById('v2').value,
-      r=document.getElementById('v3').value,p=document.getElementById('v4').value;
-  if(!h||!d||!r||!p){alert('\u8bf7\u5b8c\u6574\u586b\u5199\u6240\u6709\u9009\u9879');return;}
-  renderStrategy(h,d,r,p);
+      r=document.getElementById('v3').value;
+  if(!h||!d||!r){alert('\u8bf7\u5b8c\u6574\u586b\u5199\u6240\u6709\u9009\u9879');return;}
+  renderStrategy(h,d,r,'');
   if(d&&d!=='other'){
     document.getElementById('f-dist').value=d;
     var dn=DN[d]||d,area=document.getElementById('xhsArea'),ab=document.getElementById('xhsDistBtn');
@@ -1422,7 +1422,7 @@ function showFormMemoryHint(){
 }
 function clearFormMemory(){
   try{ localStorage.removeItem(FORM_KEY); }catch(e){}
-  ['v1','v2','v3','v4'].forEach(function(id){
+  ['v1','v2','v3'].forEach(function(id){
     var el=document.getElementById(id);
     if(el) el.value='';
   });
