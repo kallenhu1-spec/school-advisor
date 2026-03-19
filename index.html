@@ -1320,7 +1320,8 @@ function clearFormMemory(){
   if(hint) hint.style.display='none';
 }
 document.addEventListener('DOMContentLoaded', function(){
-  loadForm(); // 恢复表单 + 触发 applyFilters
+  loadForm(); // 恢复表单（有历史数据时会触发 applyFilters）
+  applyFilters(); // 无论如何都渲染学校列表
   renderTimeline();
   renderOpenDays();
 });
