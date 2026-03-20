@@ -1644,38 +1644,47 @@ function renderStrategy(h,d,r,p){
         function buildMatchDesc(pref, pr){
           if(!pr) return null;
           if(pref === 'bilingual'){
-            // 从 pros 里找双语/英语相关条目
-            var hits = (pr.pros||[]).filter(function(p){ return /双语|英语|外教|中英|全英/.test(p); });
-            if(hits.length) return '双语方面：' + hits.slice(0,2).join('、');
-            if(pr.ideas && pr.ideas.length) return '双语特色：' + pr.ideas[0];
+            var biIdeas = (pr.ideas||[]).filter(function(i){ return /浸入|全英|双语|外教|中英/.test(i); });
+            if(biIdeas.length) return biIdeas[0];
+            var biPros = (pr.pros||[]).filter(function(p){ return /双语|英语|外教|中英|全英/.test(p); });
+            if(biPros.length) return biPros.slice(0,2).join('，');
+            if(pr.tag && /双语/.test(pr.tag)) return pr.tag;
           }
           if(pref === 'light'){
-            var hwStr = typeof pr.hw === 'string' ? pr.hw : (pr.stress<=2?'作业量少，压力小':'');
-            if(hwStr) return '低压方面：' + (hwStr.length>25 ? hwStr.slice(0,25)+'…' : hwStr);
+            if(typeof pr.hw === 'string' && pr.hw.length>2) return pr.hw.length>30 ? pr.hw.slice(0,30)+'…' : pr.hw;
+            if(pr.stress<=1) return '几乎无书面作业，以项目探究为主';
+            if(pr.stress<=2) return '作业量轻，无大量重复练习';
+            var lPros = (pr.pros||[]).filter(function(p){ return /压力小|作业少|轻松|不内卷/.test(p); });
+            if(lPros.length) return lPros[0];
           }
           if(pref === 'path'){
-            if(pr.path && pr.path.length) return '升学路径：' + pr.path.slice(0,2).join(' → ');
+            if(pr.path && pr.path.length) return pr.path.slice(0,2).join(' → ');
           }
           if(pref === 'sport'){
-            var hits2 = (pr.pros||[]).filter(function(p){ return /体育|运动|泳池|操场|球/.test(p); });
-            if(hits2.length) return '体育方面：' + hits2[0];
+            var sPros = (pr.pros||[]).filter(function(p){ return /体育|运动|泳池|操场|球/.test(p); });
+            if(sPros.length) return sPros[0];
+            var sIdeas = (pr.ideas||[]).filter(function(i){ return /体育|运动|球|游泳/.test(i); });
+            if(sIdeas.length) return sIdeas[0];
           }
           if(pref === 'stem'){
-            var hits3 = (pr.pros||[]).filter(function(p){ return /科创|STEM|实验|机器人|编程/.test(p); });
-            if(hits3.length) return 'STEM方面：' + hits3[0];
-            if(pr.ideas) { var si = (pr.ideas||[]).filter(function(i){return /科|STEM|实验|创/.test(i);}); if(si.length) return 'STEM特色：'+si[0]; }
+            var stPros = (pr.pros||[]).filter(function(p){ return /科创|STEM|实验|机器人|编程/.test(p); });
+            if(stPros.length) return stPros[0];
+            var stIdeas = (pr.ideas||[]).filter(function(i){ return /科|STEM|实验|创/.test(i); });
+            if(stIdeas.length) return stIdeas[0];
           }
           if(pref === 'ai'){
-            var hits4 = (pr.pros||[]).filter(function(p){ return /AI|编程|科技|创新/.test(p); });
-            if(hits4.length) return 'AI/科技：' + hits4[0];
+            var aiPros = (pr.pros||[]).filter(function(p){ return /AI|编程|科技|创新/.test(p); });
+            if(aiPros.length) return aiPros[0];
           }
           if(pref === 'culture'){
-            var hits5 = (pr.pros||[]).filter(function(p){ return /校风|口碑|氛围|家校/.test(p); });
-            if(hits5.length) return '校风方面：' + hits5[0];
+            var cuPros = (pr.pros||[]).filter(function(p){ return /校风|口碑|氛围|家校/.test(p); });
+            if(cuPros.length) return cuPros[0];
           }
           if(pref === 'art'){
-            var hits6 = (pr.pros||[]).filter(function(p){ return /艺术|音乐|美术|舞蹈/.test(p); });
-            if(hits6.length) return '艺术方面：' + hits6[0];
+            var arPros = (pr.pros||[]).filter(function(p){ return /艺术|音乐|美术|舞蹈/.test(p); });
+            if(arPros.length) return arPros[0];
+            var arIdeas = (pr.ideas||[]).filter(function(i){ return /艺术|音乐|美术/.test(i); });
+            if(arIdeas.length) return arIdeas[0];
           }
           return null;
         }
