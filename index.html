@@ -5,6 +5,157 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>上海幼升小选校助手 2026</title>
 <script>
+var SCHOOL_TAGS={
+"民办打一外国语小学":["bilingual","path"],
+"杨浦双语学校":["bilingual","path"],
+"存志实验小学":["path","culture"],
+"杨浦实验小学":["bilingual"],
+"同大实验小学":["stem","path"],
+"长阳实验小学":["path"],
+"沪东外国语学校":["bilingual"],
+"民办平和双语学校":["bilingual","culture","light"],
+"民办正达外国语小学":["bilingual"],
+"宏文学校":["bilingual","sport","art"],
+"民办协和双语学校":["bilingual","path"],
+"民办筑桥实验小学":["light","stem"],
+"民办向明双语学校":["bilingual"],
+"民办万科双语实验学校":["bilingual"],
+"启能东方外国语学校":["bilingual","sport","art"],
+"民办金苹果学校":["path"],
+"民办尚德实验学校":["path"],
+"未来科技学校":["stem","ai","path"],
+"民办惠立学校":["bilingual","culture"],
+"明珠小学":["culture","path"],
+"六师附小":["culture"],
+"平和双语学校":["bilingual","culture","path"],
+"浦东外国语小学":["bilingual"],
+"上实东校":["stem"],
+"华二前滩学校（小学部）":["culture","path"],
+"正达外国语小学":["bilingual"],
+"福山外国语小学":["bilingual"],
+"进才外国语小学":["bilingual"],
+"平和双语小学":["bilingual","culture","path"],
+"星河湾双语（浦东）":["bilingual","sport","culture"],
+"浦东建平实验":["path"],
+"向未来外国语小学":["bilingual","path"],
+"星河湾双语学校":["bilingual","sport","culture"],
+"七宝德怀特高级中学附属小学":["bilingual","path","culture"],
+"闵行协和双语学校":["bilingual","path"],
+"万源城协和双语学校":["bilingual","path"],
+"博世凯双语学校":["bilingual"],
+"德英乐实验学校":["culture"],
+"上海世界外国语小学闵行分校":["bilingual"],
+"闵行育才中学附属小学":["path"],
+"七宝外国语小学":["bilingual","light"],
+"圣华紫竹双语学校":["bilingual"],
+"闵行虹桥学校":["bilingual"],
+"明强小学":["culture","path"],
+"闵行区实验小学":["stem"],
+"七宝实验小学":["path"],
+"七宝文来实验小学":["path"],
+"田园外国语实验小学":["bilingual"],
+"交通大学闵行实验学校（小学部）":["stem"],
+"七宝德怀特":["bilingual","path","culture"],
+"闵行协和双语":["bilingual","path"],
+"博世凯双语":["bilingual"],
+"星河湾双语（闵行）":["bilingual","sport","culture"],
+"上海世界外国语小学":["bilingual","culture"],
+"上海交通大学附属小学":["stem"],
+"世界外国语小学":["bilingual","culture"],
+"盛大花园小学":["culture","light"],
+"逸夫小学":["culture","light"],
+"爱菊小学":["art"],
+"高安路第一小学":["culture","path"],
+"向阳小学":["culture","light"],
+"汇师小学":["culture"],
+"建襄小学":["sport"],
+"宋庆龄学校附属徐汇实验小学":["bilingual","culture"],
+"上海市实验学校附属小学":["stem","culture"],
+"交大附属小学（徐汇）":["stem"],
+"上汇实验学校（小学部）":["stem"],
+"复旦附属徐汇实验学校":["stem","culture"],
+"西南位育附属实验学校（小学部）":["path"],
+"康健外国语小学":["bilingual"],
+"东安路第二小学":["light"],
+"徐汇汇佳双语":["bilingual"],
+"徐汇盛大花园":["bilingual","culture"],
+"徐汇逸夫小学":["path"],
+"徐汇世界外国语":["bilingual"],
+"包玉刚实验学校":["bilingual","sport","culture","light","path"],
+"包玉岗实验":["bilingual","sport","culture","light","path"],
+"包玉岗实验（长宁）":["bilingual","sport","culture","light","path"],
+"民办新世纪小学":["bilingual"],
+"江苏路第五小学":["culture","path"],
+"愚园路第一小学":["culture","art"],
+"建青实验学校（小学部）":["stem","culture"],
+"绿苑小学":["light"],
+"东展小学（民办）":["light"],
+"东展双语":["bilingual","light"],
+"健达双语":["bilingual"],
+"东展小学":["bilingual"],
+"上海外国语大学静安外国语小学":["bilingual","path"],
+"童园实验小学":["stem","light"],
+"扬波小学":["bilingual"],
+"静教院附校（小学部）":["culture","path"],
+"上海市第一师范附属小学":["culture"],
+"闸北实验小学":["path"],
+"大宁国际小学":["bilingual","culture"],
+"陈鹤琴小学":["light","culture"],
+"静安代安双语":["bilingual"],
+"静安协和双语":["bilingual","path"],
+"静安协和双语学校":["bilingual","path"],
+"扬波外国语小学":["bilingual"],
+"静安兮园实验":["path"],
+"筑桥实验小学":["light","stem"],
+"黄浦区第一中心小学民办部":["path"],
+"上海世界外国语学校黄浦分校":["bilingual"],
+"黄浦区逸夫小学民办部":["art"],
+"上海实验小学":["stem","culture"],
+"蓬莱路第二小学":["culture","path"],
+"卢湾第二中心小学":["path"],
+"上外黄浦外国语小学":["bilingual"],
+"曹光彪小学":["culture"],
+"梅溪小学":["culture"],
+"私立永昌学校":["culture"],
+"康德双语实验学校":["bilingual"],
+"黄浦红旗小学":["path"],
+"黄浦永昌学校":["bilingual"],
+"黄浦康德双语":["bilingual","light"],
+"上海市民办光新小学":["culture","path"],
+"普陀区上大附属实验学校":["stem"],
+"华东师范大学附属小学":["stem","culture"],
+"金洲小学":["bilingual"],
+"培佳双语学校":["bilingual"],
+"武宁路小学":["culture","path"],
+"江宁学校（九年一贯制）":["path","light"],
+"中远实验学校":["stem"],
+"长征中心小学":["culture"],
+"晋元附校（小学部）":["path"],
+"上外普陀外国语小学":["bilingual"],
+"普陀尚德实验":["path"],
+"普陀双语实验":["bilingual"],
+"普陀安生学校":["bilingual","path","light"],
+"二师附小":["culture"],
+"控江二小":["culture","path"],
+"复旦大学附属小学":["stem","culture"],
+"上海理工大学附属小学":["stem"],
+"上海音乐学院实验学校（小学部）":["art","culture"],
+"复旦科技园实验学校（小学部）":["stem","ai"],
+"齐一小学":["culture"],
+"兰生实验小学":["path"],
+"凯慧小学":["bilingual","path"],
+"嘉定世外学校（小学部）":["bilingual","path"],
+"桃李园实验学校（小学部）":["culture","art"],
+"同济大学附属实验学校（小学部）":["stem","path"],
+"中科院上海实验学校（小学部）":["stem","ai"],
+"上外嘉定外国语学校（小学部）":["bilingual"],
+"嘉定实验小学":["stem"],
+"华旭双语学校（小学部）":["bilingual"],
+"怀少学校（小学部）":["light","culture"],
+"嘉定宋校（宋庆龄学校）":["culture"],
+"上大附属嘉定实验学校（小学部）":["stem"],
+"上海实验学校嘉定分校（小学部）":["stem"]
+};
 var SD=[["民办打一外国语小学","yangpu","pri",20,35,88,"T1民办，英语特色，对口铁岭中学",31.2834,121.5224,"hot","T1"],
 ["杨浦双语学校","yangpu","pri",0,0,84,"2025首次超额，中签率待公布，直升初中部",31.2712,121.5334,"hot","T1"],
 ["存志实验小学","yangpu","pri",15,28,85,"2025摇号，升学强，体制内路线",31.2734,121.5123,"hot","T1"],
@@ -188,10 +339,11 @@ function switchOuterTab(n,btn){
   if(n===2) renderTimeline();
   if(n===3) renderOpenDays();
 }
+// ⚠️ 开放日数据说明：以下信息为历史/公开信息摘录，具体日期和预约方式请以学校官方公众号为准
 var OD=[
-  {name:"星河湾双语学校",dist:"minhang",tier:"T1",typ:"pri",date:"持续开放",time:"预约制",actType:"幼升小咨询登记",applyMethod:"登记后学校通知具体时间",applyUrl:"https://www.ssbs.sh.cn/siteIndex.action",mpName:"上海星河湾双语学校",source:"官网",verified:true},
-  {name:"宏文学校",dist:"pudong",tier:"T2",typ:"pri",date:"2026-03-28",time:"09:00起",actType:"小学&初中开放日",applyMethod:"官网预约报名",applyUrl:"https://guoji.114study.com/school/HWSH/news/27931/",mpName:"",source:"guoji.114study.com",verified:true}
-];  // 数据来源：2026年3月真实公开信息；民办打一/七宝/筑桥等暂无春季开放日公告
+  {name:"星河湾双语学校",dist:"minhang",tier:"T1",typ:"pri",date:"持续开放",time:"预约制",actType:"幼升小咨询登记",applyMethod:"以官网或公众号通知为准",applyUrl:"https://www.ssbs.sh.cn/siteIndex.action",mpName:"上海星河湾双语学校",source:"官网（请核实最新公告）",verified:false},
+  {name:"宏文学校",dist:"pudong",tier:"T2",typ:"pri",date:"开放日信息请关注公众号",time:"待确认",actType:"小学&初中开放日",applyMethod:"关注"宏文学校招生"公众号",applyUrl:"",mpName:"宏文学校招生",source:"公众号（请以官方公告为准）",verified:false}
+];  // ⚠️ 数据仅供参考，所有开放日时间和预约方式以学校官方公众号最新公告为准
 function renderOpenDays(){
   var dist=document.getElementById('od-dist').value;
   var list=document.getElementById('od-list');
@@ -231,7 +383,7 @@ function renderOpenDays(){
       +'</div>'
       +'<div style="font-size:13px;color:#555;margin-bottom:4px">📅 '+o.date+' &nbsp; ⏰ '+o.time+'</div>'
       +'<div style="font-size:13px;color:#444;margin-bottom:4px">📌 '+o.applyMethod+applyBtn+'</div>'
-      +'<div style="font-size:11px;color:#aaa">来源：'+o.source+'</div>'
+      +'<div style="font-size:11px;color:#aaa">来源：'+o.source+(o.verified===false?'&nbsp;<span style="color:#e67e22;font-weight:600">⚠️待核实</span>':'')+'</div>'
       +'</div>';
   }).join('');
   list.innerHTML=html;
@@ -750,7 +902,7 @@ tr:hover>td{background:#fafbff}
       </div>
       <div class="tabs">
         <button class="tb on" onclick="showTab(1)">📋 学校列表</button>
-        <button class="tb" onclick="showTab(2)">📊 中签率对比</button>
+        <button class="tb" onclick="showTab(2)">📊 2025年中签率对比</button>
       </div>
       <div class="tc on" id="tc1">
         <div style="margin-bottom:8px;position:relative">
@@ -815,6 +967,9 @@ tr:hover>td{background:#fafbff}
           <option value="jingan">静安</option><option value="huangpu">黄浦</option>
           <option value="putuo">普陀</option><option value="yangpu">杨浦</option>
         </select>
+      </div>
+      <div style="font-size:12px;color:#c0392b;background:#fff5f5;border-radius:8px;padding:7px 11px;margin-bottom:6px;border-left:3px solid #e74c3c;line-height:1.5">
+        ⚠️ 以下信息仅供参考，实际开放日时间和预约方式以学校<b>官方公众号</b>最新公告为准，请勿依赖本页信息
       </div>
       <div id="od-list"></div>
     </div>
@@ -974,7 +1129,7 @@ function renderTable(list){
     else if(lo>=80){rateHtml='<span class="cool-tag">🍀全录</span>';}
     else{var pct=lo===hi?lo+'%':lo+'-'+hi+'%';var col=lo<20?'#ef4444':lo<40?'#f97316':'#16a34a';rateHtml='<span style="color:'+col+';font-weight:600">'+pct+'</span>';}
     var stIcon=typ==='pub'?'':(st==='hot'?'🔥':st==='cool'?'🍀':'');
-    h+='<tr>';
+    h+='<tr data-name="'+name+'">';
     h+='<td><button class="nm-btn" onclick="toggleDetail(\''+esq+'\')">'+stIcon+' '+name+' <span class="expand-hint" id="eh-'+enc+'">\u25be</span></button></td>';
     h+='<td style="text-align:center"><span style="font-size:12px;color:#666">'+(DN[dist]||dist)+'</span></td>';
     h+='<td style="text-align:center">'+tierBadge+'</td><td style="white-space:nowrap;text-align:center">'+typBadge+'</td><td style="white-space:nowrap;text-align:center">'+rateHtml+'</td>';
@@ -999,7 +1154,7 @@ function renderTable(list){
       var tierBadge=tier==='T1'?'<span class="t1b">一梯队</span>':tier==='T2'?'<span class="t2b">二梯队</span>':'<span class="t3b">T3</span>';
       var typBadge=typ==='pub'?'<span class="pub-b">公办</span>':'<span class="pri-b">民办</span>';
       var rateStr=typ==='pub'?null:(lo===null||lo===undefined?null:(lo===0&&hi===0?'—':lo+'–'+hi+'%'));
-      ch+='<div class="school-card" id="card-'+enc+'">';
+      ch+='<div class="school-card" id="card-'+enc+'" data-name="'+name+'">';
       ch+='<div class="sc-header" onclick="openSheet(\''+esq+'\')">';
       ch+='<span class="sc-name">'+name+'<span class="sc-arrow"> ›</span></span>';
       ch+='<span class="sc-badges">'+tierBadge+typBadge+'</span>';
@@ -1230,15 +1385,19 @@ function renderChart(list){
     }
   });
 }
+// 保存当前策略参数，用于 pref 变更时刷新
+var _lastStrategyArgs = null;
+
 function renderStrategy(h,d,r,p){
+  _lastStrategyArgs = {h:h,d:d,r:r,p:p};
+  var prefs = selectedPrefs || [];
   var dn=DN[d]||d,rn=r==='bi'?'双语/国际化':r==='tr'?'传统精英':'均衡发展';
   var pn=p==='good'?'很好':p==='ok'?'一般':p==='bad'?'较差':'不确定';
   var hn=h==='sh'?'上海户籍':h==='jz'?'居住证':'随迁/其他';
 
-  // ===== 报名策略（唯一保留的 tips 模块）=====
+  // ===== 报名策略 =====
   var strategyTips=[];
 
-  // 公民同招核心策略
   var s1='';
   if(p==='good'){
     s1='对口公办质量好，可稳为保底。建议选一所T1民办作为主志愿，调剂填T2，若未中签安心就对口公办。';
@@ -1250,27 +1409,73 @@ function renderStrategy(h,d,r,p){
   strategyTips.push({icon:'📋',t:'报名节奏',s:'3月关注各校开放日（可现场了解师资/班级氛围）；4月完成信息登记；5月公民同招填报，同步关注摇号结果通知。'});
   strategyTips.push({icon:'🎯',t:'志愿填报策略',s:s1});
 
-  // 户籍相关
   if(h!=='sh'){
     strategyTips.push({icon:'📄',t:'非沪籍材料准备',s:'民办报名需居住证（确认已满各区年限要求）；公办统筹需社保+居住证+就读地居住登记，提前3个月整理材料。'});
   }
 
-  // 路线相关
   if(r==='bi'){
-    strategyTips.push({icon:'🌍',t:'双语校考察重点',s:'开放日重点观察：孩子能否适应全英环境、师资是否稳定、外教比例；回家练习量是否可控；一贯制直升初中的年级通过率。'});
+    strategyTips.push({icon:'🌍',t:'双语路线提示',s:'建议优先对照"🌏双语环境"偏好找下方推荐学校，开放日重点确认外教比例和英语课时占比。'});
   } else if(r==='tr'){
-    strategyTips.push({icon:'🏆',t:'传统校考察重点',s:'重点看小升初对口资源（直升率/推优名额）和历年中考成绩；传统校竞赛氛围浓，提前了解孩子是否适合有压力的学习节奏。'});
+    strategyTips.push({icon:'🏆',t:'传统路线提示',s:'建议对照下方推荐学校查看升学路径，重点看对口初中质量和竞赛培育资源。'});
   }
 
-  // ===== 家长选校考察维度（基于真实口碑整理）=====
-  var checkItems=[
-    {icon:'📚',label:'作业量/压力',desc:'到校开放日或家长群了解每日作业时长，是否有分层教学，压力节奏是否适合你家娃。'},
-    {icon:'💰',label:'学费/性价比',desc:'民办学费从免费（政府购买学位）到10万+/年不等。确认包含住宿/餐饮/校车等附加费用。'},
-    {icon:'🎓',label:'升学路径是否清晰',desc:'一贯制直升率多少？直升摇号概率？若不直升，对口初中资源如何？'},
-    {icon:'👩‍🏫',label:'老师稳定性',desc:'重点观察班主任流动率，家长最关心"老师是否负责"，口碑好的学校老师三观正、沟通顺畅。'},
-    {icon:'🏠',label:'通勤/住宿',desc:'住宿制与走读体验差异大。走读需考虑接送距离；住宿要了解宿舍管理和周末接送安排。'},
-    {icon:'👥',label:'生源/同学圈',desc:'即使摇号，不同学校家长资源圈差异明显。双语顶校家长资源强，传统公办生源均衡稳定。'}
-  ];
+  // ===== 基于「最在意维度」动态添加专项建议 =====
+  var prefTips = {
+    sport: {icon:'🏃',t:'体育运动 · 选校提示',s:'下方已筛选出体育特色学校，开放日实地看操场/泳池，确认每周体育课时和体育特色项目（游泳/足球/篮球）。'},
+    bilingual: {icon:'🌏',t:'双语环境 · 选校提示',s:'下方已筛选出双语特色学校，开放日可直接确认：外教比例、英语课时占比、原版教材使用情况。'},
+    light: {icon:'📚',t:'低压低负担 · 选校提示',s:'下方已筛选出低压学校，可直接在家长群问在读家长：每天作业多久？周末有没有补课压力？'},
+    stem: {icon:'🔬',t:'STEM/创造力 · 专项建议',s:'重点看：有无专属STEM/创客实验室、机器人/编程社团、科创竞赛成绩；了解老师是否鼓励动手实验和项目制学习；双语+STEM的组合在上海较常见，可重点考察这类学校。'},
+    ai: {icon:'🤖',t:'AI教育 · 专项建议',s:'目前上海明确落地AI课程的学校较少，可重点考察：是否引入AI编程课（如Scratch、Python入门）、有无科技创新节/机器人社团；推荐问招生老师"AI或编程教育"的具体落地情况，而不只是宣传口号。'},
+    culture: {icon:'🧘',t:'校风 · 专项建议',s:'校风很难从官宣判断，建议：① 开放日观察学生精神面貌和老师说话方式；② 加入当地择校家长群，问2-3年级在读家长真实评价；③ 重点关注：班主任流动率、家校沟通是否顺畅、有无霸凌事件处理机制。'},
+    path: {icon:'🏅',t:'升学路径 · 选校提示',s:'下方已筛选出升学路径清晰的学校，重点确认：一贯制直升率多少？直升是否需要摇号？对口初中历年成绩如何？'},
+    art: {icon:'🎨',t:'艺术音乐 · 专项建议',s:'重点考察：艺术/音乐课时数（每周几节）、有无专业艺术老师（美术/音乐/舞蹈）、是否有剧场/排练室；了解有无校园艺术节、合唱团、舞蹈团等兴趣团体；部分双语学校在艺术教育上投入较大，可重点考察。'}
+  };
+
+  prefs.forEach(function(pref){
+    if(prefTips[pref]) strategyTips.push(prefTips[pref]);
+  });
+
+  // ===== 学校推荐（基于偏好+区域） =====
+  var recHtml='';
+  if(prefs.length>0){
+    // 从 SD 中按偏好+区域筛选
+    var distFilter = (function(){
+      var el=document.getElementById('f-dist');
+      return el ? el.value : '';
+    })();
+    var prefLabelMap2={sport:'🏃体育',bilingual:'🌏双语',light:'📚低压',stem:'🔬STEM',ai:'🤖AI',culture:'🧘校风',path:'🏅升学',art:'🎨艺术'};
+    var matched=[];
+    SD.forEach(function(s){
+      var name=s[0], dist=s[1], tier=s[10];
+      if(distFilter && dist!==distFilter) return;
+      var tags=SCHOOL_TAGS[name]||[];
+      var hits=prefs.filter(function(p){return tags.indexOf(p)>=0;});
+      if(hits.length>0) matched.push({name:name,dist:s[1],tier:tier,hits:hits,hitCount:hits.length});
+    });
+    // 按命中数降序，最多12所
+    matched.sort(function(a,b){return b.hitCount-a.hitCount;});
+    matched=matched.slice(0,12);
+    if(matched.length>0){
+      var distTip=distFilter?(''+DN[distFilter]+'区'):'全市';
+      recHtml='<div style="margin-top:12px;background:#f0f7ff;border-radius:10px;padding:12px 13px">';
+      recHtml+='<div style="font-size:13px;font-weight:700;color:#2d4fad;margin-bottom:8px">🎯 '+distTip+'中可能适合你的学校</div>';
+      matched.forEach(function(m){
+        var tagBadges=m.hits.map(function(p){return '<span style="display:inline-block;background:#dce8ff;color:#3a5fc8;font-size:10px;padding:1px 5px;border-radius:4px;margin-right:3px">'+prefLabelMap2[p]+'</span>';}).join('');
+        var pr=PR[m.name];
+        var desc=pr?pr.slogan:m.tier+'民办/公办学校';
+        recHtml+='<div style="display:flex;align-items:flex-start;gap:7px;padding:6px 0;border-bottom:1px solid #deeaff">';
+        recHtml+='<div style="flex:1;min-width:0">';
+        recHtml+='<span onclick="jumpToSchool(''+m.name.replace(/'/g,"\'")+'')" style="color:#2563eb;font-weight:700;font-size:13px;cursor:pointer;text-decoration:underline">'+m.name+'</span>';
+        recHtml+=' <span style="font-size:11px;color:#888">'+m.tier+'</span>';
+        recHtml+=' '+tagBadges;
+        recHtml+='<div style="font-size:11px;color:#666;margin-top:2px">'+desc+'</div>';
+        recHtml+='</div></div>';
+      });
+      recHtml+='</div>';
+    } else {
+      recHtml='<div style="margin-top:12px;font-size:12px;color:#aaa;text-align:center;padding:12px 0">当前区域暂无匹配学校，可尝试切换为"全部区域"查看</div>';
+    }
+  }
 
   // 拼接 HTML
   var stepsHtml='<div style="display:flex;flex-direction:column;gap:8px">';
@@ -1280,22 +1485,19 @@ function renderStrategy(h,d,r,p){
     stepsHtml+='<p style="font-size:13px;color:#555;line-height:1.6;margin:0">'+t.s+'</p></div>';
   });
   stepsHtml+='</div>';
+  var checkHtml = recHtml;
 
-  // 选校考察维度（网格展示）
-  var checkHtml='<div style="margin-top:14px">';
-  checkHtml+='<div style="font-size:13px;font-weight:700;color:#333;margin-bottom:8px">🔍 选校时重点考察这些维度</div>';
-  checkHtml+='<div style="display:grid;grid-template-columns:1fr 1fr;gap:7px">';
-  checkItems.forEach(function(c){
-    checkHtml+='<div style="background:#fff;border:1px solid #e8eeff;border-radius:10px;padding:9px 11px">';
-    checkHtml+='<div style="font-size:12px;font-weight:700;color:#4361ee;margin-bottom:3px">'+c.icon+' '+c.label+'</div>';
-    checkHtml+='<p style="font-size:11px;color:#666;line-height:1.5;margin:0">'+c.desc+'</p></div>';
-  });
-  checkHtml+='</div></div>';
+  var prefsBadge = '';
+  if(prefs.length>0){
+    var prefLabelMap={sport:'体育运动',bilingual:'双语环境',light:'作业少/低压',stem:'STEM创造',ai:'AI教育',culture:'校风好',path:'升学清晰',art:'艺术音乐'};
+    var prefNames=prefs.map(function(p){return prefLabelMap[p]||p;}).join(' · ');
+    prefsBadge='<div style="margin-bottom:8px;padding:8px 12px;background:#f0f4ff;border-radius:8px;font-size:12px;color:#4361ee">⭐ 你最在意：<b>'+prefNames+'</b> · 以下策略已为你优先呈现</div>';
+  }
 
   var summary='<div style="background:linear-gradient(135deg,#f0f4ff,#faf0ff);border-radius:10px;padding:11px 13px;margin-bottom:10px;border-left:4px solid #667eea">'
     +'<span style="font-size:13px;color:#444">您的情况：<b style="color:#667eea">'+hn+'</b> · <b style="color:#667eea">'+dn+'</b> · <b style="color:#667eea">'+rn+'</b> · 对口公办<b style="color:#667eea">'+pn+'</b></span></div>';
 
-  document.getElementById('stg').innerHTML=summary+stepsHtml+checkHtml;
+  document.getElementById('stg').innerHTML=summary+prefsBadge+stepsHtml+checkHtml;
 }
 
 function renderTimeline(){
@@ -1363,6 +1565,46 @@ function renderTimeline(){
 }
 
 /* 手机端底部抽屉 */
+function jumpToSchool(name){
+  // 1. 切到学校列表 tab（tab index 0）
+  showTab(0);
+  // 2. 尝试在列表中找到该学校，展开详情
+  setTimeout(function(){
+    // 先把列表筛选清掉，确保能找到
+    var allRows = document.querySelectorAll('.sc-row[data-name]');
+    var found = null;
+    allRows.forEach(function(row){
+      if(row.dataset.name === name) found = row;
+    });
+    // 如果手机卡片模式
+    var allCards = document.querySelectorAll('.school-card[data-name]');
+    allCards.forEach(function(card){
+      if(card.dataset.name === name) found = found || card;
+    });
+    if(found){
+      found.scrollIntoView({behavior:'smooth', block:'center'});
+      // 展开详情
+      setTimeout(function(){ toggleDetail(name); }, 400);
+    } else {
+      // 若当前区域过滤导致找不到，清除区域筛选后重试
+      var distSel = document.getElementById('f-dist');
+      if(distSel && distSel.value){
+        distSel.value='';
+        applyFilters();
+        setTimeout(function(){
+          var allRows2 = document.querySelectorAll('.sc-row[data-name], .school-card[data-name]');
+          allRows2.forEach(function(el){
+            if(el.dataset.name === name){
+              el.scrollIntoView({behavior:'smooth', block:'center'});
+              setTimeout(function(){ toggleDetail(name); }, 400);
+            }
+          });
+        }, 300);
+      }
+    }
+  }, 150);
+}
+
 var selectedPrefs = [];
 function togglePref(btn){
   var pref = btn.dataset.pref;
@@ -1373,6 +1615,11 @@ function togglePref(btn){
     selectedPrefs = selectedPrefs.filter(function(p){ return p !== pref; });
   }
   try { localStorage.setItem('xz_prefs', JSON.stringify(selectedPrefs)); } catch(e){}
+  // 如果策略面板已渲染，立即刷新
+  if(_lastStrategyArgs && document.getElementById('stg-wrap').style.display !== 'none'){
+    var a=_lastStrategyArgs;
+    renderStrategy(a.h,a.d,a.r,a.p);
+  }
 }
 function loadPrefs(){
   try {
