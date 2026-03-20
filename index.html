@@ -1782,43 +1782,37 @@ function renderTimeline(){
 
 /* 手机端底部抽屉 */
 function jumpToSchool(name){
-  // 1. 切到学校列表 tab（tab index 0）
-  showTab(0);
-  // 2. 尝试在列表中找到该学校，展开详情
+  // 1. 切到学校列表 tab（tab index 1）
+  showTab(1);
+  // 2. 确保列表已渲染（curList为空时先触发一次applyFilters）
+  if(!curList || curList.length === 0){
+    applyFilters();
+  }
+  // 3. 尝试在列表中找到该学校，展开详情
   setTimeout(function(){
-    // 先把列表筛选清掉，确保能找到
-    var allRows = document.querySelectorAll('.sc-row[data-name]');
-    var found = null;
-    allRows.forEach(function(row){
-      if(row.dataset.name === name) found = row;
-    });
-    // 如果手机卡片模式
-    var allCards = document.querySelectorAll('.school-card[data-name]');
-    allCards.forEach(function(card){
-      if(card.dataset.name === name) found = found || card;
-    });
-    if(found){
-      found.scrollIntoView({behavior:'smooth', block:'center'});
-      // 展开详情
-      setTimeout(function(){ toggleDetail(name); }, 400);
-    } else {
-      // 若当前区域过滤导致找不到，清除区域筛选后重试
-      var distSel = document.getElementById('f-dist');
-      if(distSel && distSel.value){
-        distSel.value='';
-        applyFilters();
-        setTimeout(function(){
-          var allRows2 = document.querySelectorAll('.sc-row[data-name], .school-card[data-name]');
-          allRows2.forEach(function(el){
-            if(el.dataset.name === name){
-              el.scrollIntoView({behavior:'smooth', block:'center'});
-              setTimeout(function(){ toggleDetail(name); }, 400);
-            }
-          });
-        }, 300);
+    function findAndOpen(){
+      var found = null;
+      document.querySelectorAll('.sc-row[data-name], .school-card[data-name]').forEach(function(el){
+        if(el.dataset.name === name) found = el;
+      });
+      if(found){
+        found.scrollIntoView({behavior:'smooth', block:'center'});
+        setTimeout(function(){ toggleDetail(name); }, 400);
+        return true;
       }
+      return false;
     }
-  }, 150);
+    if(!findAndOpen()){
+      // 若当前区域/状态过滤导致找不到，清除所有筛选后重试
+      var distSel = document.getElementById('f-dist');
+      if(distSel) distSel.value = '';
+      statusFlt = null; tierFlt = ''; typeFlt = '';
+      applyFilters();
+      setTimeout(function(){
+        findAndOpen();
+      }, 350);
+    }
+  }, 200);
 }
 
 var selectedPrefs = [];
