@@ -1681,7 +1681,7 @@ function renderStrategy(h,d,r,p){
         var desc=pr?pr.slogan:m.tier+'民办/公办学校';
         recHtml+='<div style="display:flex;align-items:flex-start;gap:7px;padding:6px 0;border-bottom:1px solid #deeaff">';
         recHtml+='<div style="flex:1;min-width:0">';
-        recHtml+='<span onclick="jumpToSchool(''+m.name.replace(/'/g,"\'")+'')" style="color:#2563eb;font-weight:700;font-size:13px;cursor:pointer;text-decoration:underline">'+m.name+'</span>';
+        recHtml+='<span onclick="jumpToSchool(\''+m.name.replace(/\'/g,"\'")+'\')" style="color:#2563eb;font-weight:700;font-size:13px;cursor:pointer;text-decoration:underline">'+m.name+'</span>';
         recHtml+=' <span style="font-size:11px;color:#888">'+m.tier+'</span>';
         recHtml+=' '+tagBadges;
         recHtml+='<div style="font-size:11px;color:#666;margin-top:2px">'+desc+'</div>';
