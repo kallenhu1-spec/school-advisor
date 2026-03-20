@@ -1652,7 +1652,8 @@ function renderStrategy(h,d,r,p){
           art: '艺术音乐特色，重点了解专业艺术老师配置和社团活动'
         };
         var prefDescs = m.hits.map(function(p){ return prefDescMap[p] || ''; }).filter(Boolean);
-        var desc = prefDescs.length > 0 ? prefDescs[0] : (pr ? pr.slogan : m.tier + '民办/公办学校');
+        // 优先用学校自己的 slogan，没有时才用偏好描述兜底
+        var desc = (pr && pr.slogan) ? pr.slogan : (prefDescs.length > 0 ? prefDescs[0] : m.tier + '民办/公办学校');
         recHtml+='<div style="display:flex;align-items:flex-start;gap:7px;padding:6px 0;border-bottom:1px solid #deeaff">';
         recHtml+='<div style="flex:1;min-width:0">';
         recHtml+='<span onclick="jumpToSchool(\''+m.name.replace(/\'/g,"\'")+'\')" style="color:#2563eb;font-weight:700;font-size:13px;cursor:pointer;text-decoration:underline">'+m.name+'</span>';
