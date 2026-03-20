@@ -1172,19 +1172,20 @@ function showTab(n){
   if(n===2)setTimeout(function(){try{renderChart(curList);}catch(e){}},50);
 }
 function renderChart(list){
-  // 只展示有中签率数据的学校，按中签率低值排序
   var src = (list && list.length ? list : SD);
-  var items = src.filter(function(s){ return s[3] > 0; });
+  var items = src.filter(function(s){ return s[3] > 0 || s[4] > 0; });
   items.sort(function(a, b){ return (a[3]||0) - (b[3]||0); });
 
-  var labels = [], lo_vals = [], hi_vals = [], colors = [];
+  var labels = [], vals = [], colors = [], hiVals = [];
   var pal = ['#667eea','#764ba2','#f093fb','#4facfe','#43e97b','#fa709a','#fee140','#30cfd0'];
   var distList = Object.keys(DN);
 
   items.forEach(function(s){
     labels.push(s[0]);
-    lo_vals.push(s[3]||0);
-    hi_vals.push(s[4] ? (s[4] - (s[3]||0)) : 0);
+    var lo = s[3]||0, hi = s[4]||lo;
+    // 用中间值作为柱子长度，视觉更准确
+    vals.push(hi > lo ? Math.round((lo + hi) / 2) : lo);
+    hiVals.push(hi);
     var di = distList.indexOf(s[1]);
     colors.push(pal[di >= 0 ? di % pal.length : 0]);
   });
@@ -1205,20 +1206,13 @@ function renderChart(list){
     type: 'bar',
     data: {
       labels: labels,
-      datasets: [
-        {
-          label: '中签率低值(%)',
-          data: lo_vals,
-          backgroundColor: colors,
-          stack: 'rate'
-        },
-        {
-          label: '区间上浮',
-          data: hi_vals,
-          backgroundColor: colors.map(function(c){ return c + '55'; }),
-          stack: 'rate'
-        }
-      ]
+      datasets: [{
+        label: '2025年中签率',
+        data: vals,
+        backgroundColor: colors,
+        borderRadius: 4,
+        borderSkipped: false
+      }]
     },
     options: {
       responsive: true,
@@ -1228,10 +1222,12 @@ function renderChart(list){
         x: {
           beginAtZero: true,
           max: 100,
-          stacked: true,
-          ticks: { callback: function(v){ return v + '%'; } }
+          ticks: { callback: function(v){ return v + '%'; }, font: { size: 11 } },
+          grid: { color: '#f0f0f0' }
         },
-        y: { stacked: true }
+        y: {
+          ticks: { font: { size: 11 } }
+        }
       },
       plugins: {
         legend: { display: false },
@@ -1239,14 +1235,12 @@ function renderChart(list){
           callbacks: {
             label: function(c){
               var s = items[c.dataIndex];
-              var lo = s[3], hi = s[4];
-              if(lo && hi) return '中签率约 ' + lo + '%–' + hi + '%';
-              if(lo) return '中签率约 ' + lo + '%';
-              return '';
+              var lo = s[3]||0, hi = s[4]||lo;
+              if(hi > lo) return '2025年中签率：' + lo + '% – ' + hi + '%';
+              return '2025年中签率：约 ' + lo + '%';
             },
             afterLabel: function(c){
               var s = items[c.dataIndex];
-              if(c.datasetIndex !== 0) return null;
               return s[6] ? s[6] : '';
             }
           }
@@ -1254,7 +1248,18 @@ function renderChart(list){
       }
     }
   });
+
+  // 图表下方注释
+  var note = document.getElementById('chart-note');
+  if(!note){
+    note = document.createElement('div');
+    note.id = 'chart-note';
+    document.getElementById('ch').parentElement.appendChild(note);
+  }
+  note.style.cssText = 'font-size:11px;color:#999;margin-top:6px;text-align:center';
+  note.textContent = '柱长 = 2025年实际中签率中间值；悬停可查看完整区间';
 }
+
 function renderStrategy(h,d,r,p){
   var dn=DN[d]||d,rn=r==='bi'?'双语/国际化':r==='tr'?'传统精英':'均衡发展';
   var pn=p==='good'?'很好':p==='ok'?'一般':p==='bad'?'较差':'不确定';
