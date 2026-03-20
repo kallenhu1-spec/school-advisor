@@ -987,13 +987,7 @@ tr:hover>td{background:#fafbff}
           📊 数据来源：2025年上海民办小学公示数据（非官方整理，仅供参考）<br>
           ⚠️ 最大报名数为测算值，实际中签率以学校官方公告为准 &nbsp;|&nbsp; 点击表头可排序
         </div>
-        <!-- 子Tab切换 -->
-        <div style="display:flex;gap:6px;margin-bottom:10px">
-          <button id="lt-tab-tbl" onclick="showLtTab('tbl')"
-            style="flex:1;padding:7px 0;border-radius:8px;border:1.5px solid #4361ee;background:#4361ee;color:#fff;font-size:13px;cursor:pointer;font-weight:600;transition:all .15s">📋 数据表格</button>
-          <button id="lt-tab-chart" onclick="showLtTab('chart')"
-            style="flex:1;padding:7px 0;border-radius:8px;border:1.5px solid #e0e4ff;background:#fff;color:#4361ee;font-size:13px;cursor:pointer;transition:all .15s">📊 柱状图</button>
-        </div>
+
         <!-- 图例说明 -->
         <div style="display:flex;gap:10px;flex-wrap:wrap;font-size:11.5px;color:#666;margin-bottom:8px;padding:0 2px">
           <span>🍀 全录（无需摇号）</span>
@@ -1015,8 +1009,7 @@ tr:hover>td{background:#fafbff}
             <tbody id="lt-tbody"></tbody>
           </table>
         </div>
-        <!-- 柱状图 -->
-        <div id="lt-chart-wrap" style="display:none"><div class="chw"><canvas id="ch"></canvas></div></div>
+
       </div>
     </div>
   </div>
@@ -1423,7 +1416,7 @@ function showTab(n){
   /* 手机端：tab1显示卡片，其他tab隐藏 */
   var cards=document.getElementById('school-cards');
   if(cards) cards.style.display=(window.innerWidth<=768?(n===1?'block':'none'):'');
-  if(n===2){setTimeout(function(){try{renderChart(curList);}catch(e){}},50);try{renderLtTable(curList);}catch(e){}}
+  if(n===2){try{renderLtTable(curList);}catch(e){}}
 }
 function renderChart(list){
   // 只展示有中签率数据的学校，按中签率低值排序
@@ -1511,22 +1504,7 @@ function renderChart(list){
 }
 // ===== 中签率表格 =====
 var _ltSortKey='rate', _ltSortAsc=true;
-function showLtTab(tab){
-  var tbl=document.getElementById('lt-tbl-wrap');
-  var chart=document.getElementById('lt-chart-wrap');
-  var btnT=document.getElementById('lt-tab-tbl');
-  var btnC=document.getElementById('lt-tab-chart');
-  if(tab==='tbl'){
-    tbl.style.display='block'; chart.style.display='none';
-    btnT.style.background='#4361ee'; btnT.style.color='#fff'; btnT.style.borderColor='#4361ee';
-    btnC.style.background='#fff'; btnC.style.color='#4361ee'; btnC.style.borderColor='#e0e4ff';
-  } else {
-    tbl.style.display='none'; chart.style.display='block';
-    btnC.style.background='#4361ee'; btnC.style.color='#fff'; btnC.style.borderColor='#4361ee';
-    btnT.style.background='#fff'; btnT.style.color='#4361ee'; btnT.style.borderColor='#e0e4ff';
-    setTimeout(function(){try{renderChart(curList);}catch(e){}},50);
-  }
-}
+function showLtTab(tab){} // 柱状图已移除
 function sortLtTable(key){
   if(_ltSortKey===key){ _ltSortAsc=!_ltSortAsc; }
   else { _ltSortKey=key; _ltSortAsc=(key==='rate'); }
