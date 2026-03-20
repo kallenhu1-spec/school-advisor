@@ -1634,21 +1634,6 @@ function renderStrategy(h,d,r,p){
     strategyTips.push({icon:'🏆',t:'传统路线提示',s:'建议对照下方推荐学校查看升学路径，重点看对口初中质量和竞赛培育资源。'});
   }
 
-  // ===== 基于「最在意维度」动态添加专项建议 =====
-  var prefTips = {
-    sport: {icon:'🏃',t:'体育运动 · 选校提示',s:'下方已筛选出体育特色学校，开放日实地看操场/泳池，确认每周体育课时和体育特色项目（游泳/足球/篮球）。'},
-    bilingual: {icon:'🌏',t:'双语环境 · 选校提示',s:'下方已筛选出双语特色学校，开放日可直接确认：外教比例、英语课时占比、原版教材使用情况。'},
-    light: {icon:'📚',t:'低压低负担 · 选校提示',s:'下方已筛选出低压学校，可直接在家长群问在读家长：每天作业多久？周末有没有补课压力？'},
-    stem: {icon:'🔬',t:'STEM/创造力 · 专项建议',s:'重点看：有无专属STEM/创客实验室、机器人/编程社团、科创竞赛成绩；了解老师是否鼓励动手实验和项目制学习；双语+STEM的组合在上海较常见，可重点考察这类学校。'},
-    ai: {icon:'🤖',t:'AI教育 · 专项建议',s:'目前上海明确落地AI课程的学校较少，可重点考察：是否引入AI编程课（如Scratch、Python入门）、有无科技创新节/机器人社团；推荐问招生老师"AI或编程教育"的具体落地情况，而不只是宣传口号。'},
-    culture: {icon:'🧘',t:'校风 · 专项建议',s:'校风很难从官宣判断，建议：① 开放日观察学生精神面貌和老师说话方式；② 加入当地择校家长群，问2-3年级在读家长真实评价；③ 重点关注：班主任流动率、家校沟通是否顺畅、有无霸凌事件处理机制。'},
-    path: {icon:'🏅',t:'升学路径 · 选校提示',s:'下方已筛选出升学路径清晰的学校，重点确认：一贯制直升率多少？直升是否需要摇号？对口初中历年成绩如何？'},
-    art: {icon:'🎨',t:'艺术音乐 · 专项建议',s:'重点考察：艺术/音乐课时数（每周几节）、有无专业艺术老师（美术/音乐/舞蹈）、是否有剧场/排练室；了解有无校园艺术节、合唱团、舞蹈团等兴趣团体；部分双语学校在艺术教育上投入较大，可重点考察。'}
-  };
-
-  prefs.forEach(function(pref){
-    if(prefTips[pref]) strategyTips.push(prefTips[pref]);
-  });
 
   // ===== 学校推荐（基于偏好+区域） =====
   var recHtml='';
@@ -1677,7 +1662,19 @@ function renderStrategy(h,d,r,p){
       matched.forEach(function(m){
         var tagBadges=m.hits.map(function(p){return '<span style="display:inline-block;background:#dce8ff;color:#3a5fc8;font-size:10px;padding:1px 5px;border-radius:4px;margin-right:3px">'+prefLabelMap2[p]+'</span>';}).join('');
         var pr=PR[m.name];
-        var desc=pr?pr.slogan:m.tier+'民办/公办学校';
+        // 基于命中偏好生成匹配描述
+        var prefDescMap = {
+          bilingual: '双语特色学校，可重点开放日确认外教比例和英语课时占比',
+          light: '低压低负担学校，可问在读家长：每天作业多久、有无补课压力',
+          sport: '体育特色学校，可实地看操场/泳池，了解每周体育课时和特色项目',
+          stem: 'STEM/创造力特色，重点了解实验室、机器人/编程社团情况',
+          ai: '关注AI教育落地，可问招生老师编程课和科创活动具体情况',
+          culture: '校风口碑好，建议开放日观察学生精神面貌，加入家长群问在读家长',
+          path: '升学路径清晰，可确认一贯制直升率和对口初中质量',
+          art: '艺术音乐特色，重点了解专业艺术老师配置和社团活动'
+        };
+        var prefDescs = m.hits.map(function(p){ return prefDescMap[p] || ''; }).filter(Boolean);
+        var desc = prefDescs.length > 0 ? prefDescs[0] : (pr ? pr.slogan : m.tier + '民办/公办学校');
         recHtml+='<div style="display:flex;align-items:flex-start;gap:7px;padding:6px 0;border-bottom:1px solid #deeaff">';
         recHtml+='<div style="flex:1;min-width:0">';
         recHtml+='<span onclick="jumpToSchool(\''+m.name.replace(/\'/g,"\'")+'\')" style="color:#2563eb;font-weight:700;font-size:13px;cursor:pointer;text-decoration:underline">'+m.name+'</span>';
