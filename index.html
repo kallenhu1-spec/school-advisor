@@ -753,7 +753,7 @@ tr:hover>td{background:#fafbff}
       </div>
       <div class="tabs">
         <button class="tb on" onclick="showTab(1)">📋 学校列表</button>
-        <button class="tb" onclick="showTab(2)">📊 2025年中签率</button>
+        <button class="tb" onclick="showTab(2)">📊 中签率参考</button>
       </div>
       <div class="tc on" id="tc1">
         <div style="margin-bottom:8px;position:relative">
@@ -1256,14 +1256,11 @@ function renderChart(list){
     note.id = 'chart-note';
     document.getElementById('ch').parentElement.appendChild(note);
   }
-  note.style.cssText = 'font-size:12px;color:#888;margin-top:12px;line-height:1.6;padding:10px 12px;background:#f8f9fa;border-radius:8px;border-left:3px solid #dee2e6';
-  note.innerHTML = '<strong style="color:#555">数据说明：</strong>以上中签率数据来源于2025年实际摇号结果，综合多个家长社群及小红书实录汇总整理。'
-    + '柱长为该校中签率区间中间值，悬停可查看完整范围。'
-    + '<br>参考来源：'
-    + '<a href="https://www.xiaohongshu.com/search_result?keyword=上海幼升小摇号+中签率" target="_blank" style="color:#667eea;text-decoration:none">小红书实录</a>'
-    + ' · <a href="https://edu.sh.gov.cn/" target="_blank" style="color:#667eea;text-decoration:none">市教委官网</a>'
-    + ' · vsxue.com幼升小论坛'
-    + '<br><span style="color:#bbb;font-size:11px">⚠️ 仅供参考，每年实际中签率因报名人数变化而浮动</span>';
+  note.style.cssText = 'font-size:12px;color:#888;margin-top:12px;line-height:1.6;padding:10px 12px;background:#fff8e1;border-radius:8px;border-left:3px solid #f59e0b';
+  note.innerHTML = '<strong style="color:#92400e">⚠️ 数据说明：</strong>'
+    + '以下中签率为<strong>估算区间</strong>，根据各校历年热度、超额比及公开讨论综合推算，<strong>非官方实测数据</strong>。'
+    + '<br>实际中签率每年因报名人数变化而浮动，仅供参考，请以当年摇号结果为准。'
+    + '<br><a href="https://edu.sh.gov.cn/" target="_blank" style="color:#d97706;text-decoration:none;font-weight:600">📋 市教委官网查看官方结果 ↗</a>';
 }
 
 function renderStrategy(h,d,r,p){
