@@ -1034,6 +1034,25 @@ function renderTable(list){
     else cards.style.display='';
   }
 }
+function openSchoolFromRec(name){
+  if(isMobile()){ openSheet(name); return; }
+  // PC端：切换到我的择校tab，展开对应学校详情
+  var otb1 = document.querySelector('.otb');
+  if(otb1) switchOuterTab(1, otb1);
+  showTab(1);
+  setTimeout(function(){
+    var enc=encodeURIComponent(name);
+    var card=document.getElementById('dpw-'+enc);
+    if(card){
+      card.scrollIntoView({behavior:'smooth',block:'center'});
+      if(!card.dataset.loaded){card.innerHTML=buildDetail(name);card.dataset.loaded='1';}
+      card.style.display='block';
+      var eh=document.getElementById('eh-'+enc);
+      if(eh)eh.style.transform='rotate(90deg)';
+      openName=name;
+    }
+  }, 150);
+}
 function toggleDetail(name){
   if(openName&&openName!==name){
     var oe=encodeURIComponent(openName),ow=document.getElementById('dpw-'+oe),oeh=document.getElementById('eh-'+oe);
@@ -1304,7 +1323,7 @@ function renderStrategy(h,d,r,p){
       var name=s[0], sTier=s[10], sDesc=s[6], sTags=(s[11]||'').split(',').filter(Boolean);
       var tagBadges = sTags.filter(function(t){ return prefs.length===0 || prefs.indexOf(t)>=0; })
         .map(function(t){ return '<span style="font-size:10px;background:#eef0ff;color:#667eea;border-radius:4px;padding:1px 5px;margin-right:3px">'+(prefLabels[t]||t)+'</span>'; }).join('');
-      recHtml += '<div style="background:#f8faff;border-radius:9px;padding:9px 12px;display:flex;align-items:center;gap:6px;flex-wrap:wrap" onclick="toggleDetail(\'' + name.replace(/'/g,"\'") + '\')" style="cursor:pointer">';
+      recHtml += '<div style="background:#f8faff;border-radius:9px;padding:9px 12px;display:flex;align-items:center;gap:6px;flex-wrap:wrap" onclick="openSchoolFromRec(\'' + name.replace(/'/g,"\'") + '\')" style="cursor:pointer">';
       recHtml += '<span style="color:#4361ee;font-weight:700;font-size:13px;cursor:pointer;text-decoration:none">' + name + '</span>';
       recHtml += '<span style="font-size:11px;color:#999;background:#f0f0f0;border-radius:4px;padding:1px 5px">' + sTier + '</span>';
       recHtml += tagBadges;
