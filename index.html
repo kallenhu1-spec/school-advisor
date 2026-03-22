@@ -553,7 +553,9 @@ tr:hover>td{background:#fafbff}
         </div>
       </div>
       <div id="school-cards" style="padding:0 4px"></div>
-      <div class="tc" id="tc2"><div class="chw"><canvas id="ch"></canvas></div></div>
+      <div class="tc" id="tc2">
+        <div id="lt-tbl-wrap"></div>
+      </div>
     </div>
   </div>
 
@@ -1079,7 +1081,39 @@ function showTab(n){
   /* 手机端：tab1显示卡片，其他tab隐藏 */
   var cards=document.getElementById('school-cards');
   if(cards) cards.style.display=(window.innerWidth<=768?(n===1?'block':'none'):'');
-  if(n===2)setTimeout(function(){try{renderChart(curList);}catch(e){}},50);
+  if(n===2){try{renderLtTable(curList);}catch(e){}}
+}
+function renderLtTable(list){
+  var src = (list && list.length ? list : SD);
+  var items = src.filter(function(s){ return s[3] > 0 && s[3] < 100; });
+  items.sort(function(a,b){ return (a[3]||0)-(b[3]||0); });
+  var wrap = document.getElementById('lt-tbl-wrap');
+  if(!wrap) return;
+  if(items.length===0){
+    wrap.innerHTML='<p style="text-align:center;color:#999;padding:20px">当前筛选范围内暂无中签率数据</p>';
+    return;
+  }
+  var html='<table style="width:100%;border-collapse:collapse;font-size:13px">';
+  html+='<thead><tr style="background:#f0f3ff">';
+  html+='<th style="padding:8px 6px;text-align:left;border-bottom:2px solid #e0e4ff">学校名称</th>';
+  html+='<th style="padding:8px 6px;text-align:center;border-bottom:2px solid #e0e4ff;white-space:nowrap">区</th>';
+  html+='<th style="padding:8px 6px;text-align:center;border-bottom:2px solid #e0e4ff;white-space:nowrap">梯队</th>';
+  html+='<th style="padding:8px 6px;text-align:center;border-bottom:2px solid #e0e4ff;white-space:nowrap">中签率</th>';
+  html+='</tr></thead><tbody>';
+  items.forEach(function(s,i){
+    var lo=s[3];
+    var rateStr= lo+'%';
+    var rateColor = lo<30?'#e53e3e':lo<60?'#dd6b20':'#2d6a4f';
+    var bg = i%2===0?'#fff':'#fafbff';
+    html+='<tr style="background:'+bg+'">';
+    html+='<td style="padding:7px 6px;border-bottom:1px solid #f0f0f0">'+s[0]+'</td>';
+    html+='<td style="padding:7px 6px;text-align:center;border-bottom:1px solid #f0f0f0">'+(DN[s[1]]||s[1])+'</td>';
+    html+='<td style="padding:7px 6px;text-align:center;border-bottom:1px solid #f0f0f0">'+(s[10]||'—')+'</td>';
+    html+='<td style="padding:7px 6px;text-align:center;border-bottom:1px solid #f0f0f0;font-weight:700;color:'+rateColor+'">'+rateStr+'</td>';
+    html+='</tr>';
+  });
+  html+='</tbody></table>';
+  wrap.innerHTML=html;
 }
 function renderChart(list){
   // 只展示有中签率数据的学校，按中签率低值排序
