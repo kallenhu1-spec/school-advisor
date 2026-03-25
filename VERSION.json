@@ -1,0 +1,12 @@
+{
+  "version": "v8.0.0",
+  "release_date": "2026-03-26",
+  "entry_html": "index.html",
+  "latest_html": "school-advisor-v8.0.0-latest.html",
+  "snapshot_html": "versions/v8.0.0-20260326.html",
+  "notes": [
+    "完成前后端分离：前端页面 + Python API + SQLite 数据库",
+    "新增数据库导入与更新脚本",
+    "统一版本入口为 index.html"
+  ]
+}
