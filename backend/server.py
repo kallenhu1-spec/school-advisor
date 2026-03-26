@@ -298,6 +298,9 @@ def _build_school_items(payload: dict) -> list[dict]:
                 "lng": row[8] if len(row) > 8 else None,
                 "status": row[9] if len(row) > 9 else "normal",
                 "tier": row[10] if len(row) > 10 else "T3",
+                "admission2025": row[11] if len(row) > 11 else None,
+                "maxLottery2025": row[12] if len(row) > 12 else None,
+                "sourceUrl": row[13] if len(row) > 13 else "",
                 "profile": info or {},
                 "tuition": fee or {},
             }
@@ -439,6 +442,9 @@ def _extract_school_from_xlsx(content: bytes) -> list[list]:
         "lat": {"lat", "纬度"},
         "lng": {"lng", "经度"},
         "status": {"status", "状态"},
+        "admission_2025": {"admission2025", "2025录取数", "录取数2025"},
+        "max_lottery_2025": {"maxlottery2025", "2025最大摇号数", "最大摇号数2025"},
+        "source_url": {"sourceurl", "参考信息来源网址", "来源网址", "source"},
     }
 
     def norm_key(s: str) -> str:
@@ -481,7 +487,25 @@ def _extract_school_from_xlsx(content: bytes) -> list[list]:
         lat = _to_float(get("lat"))
         lng = _to_float(get("lng"))
         status = _normalize_status(get("status", "normal"))
-        row = [name, district, s_type, low, high, recommend, desc, lat, lng, status, tier]
+        admission_2025 = _to_int(get("admission_2025"), default=None)
+        max_lottery_2025 = _to_int(get("max_lottery_2025"), default=None)
+        source_url = str(get("source_url", "") or "").strip()
+        row = [
+            name,
+            district,
+            s_type,
+            low,
+            high,
+            recommend,
+            desc,
+            lat,
+            lng,
+            status,
+            tier,
+            admission_2025,
+            max_lottery_2025,
+            source_url,
+        ]
         result.append(row)
     return result
 
@@ -526,6 +550,132 @@ def _fetch_text(url: str) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": "PrimarySchoolAdvisorBot/1.0"})
     with urllib.request.urlopen(req, timeout=20) as resp:
         return resp.read().decode("utf-8", errors="ignore")
+
+
+def _to_count(v):
+    if v is None:
+        return None
+    if isinstance(v, (int, float)):
+        return int(v)
+    s = str(v).strip().lower().replace(",", "")
+    if not s:
+        return None
+    m = re.match(r"^(\d+(?:\.\d+)?)\s*([wk万千k]?)$", s)
+    if not m:
+        try:
+            return int(float(s))
+        except ValueError:
+            return None
+    num = float(m.group(1))
+    unit = m.group(2)
+    if unit in ("w", "万"):
+        num *= 10000
+    elif unit in ("k", "千"):
+        num *= 1000
+    return int(num)
+
+
+def _extract_xhs_meta(url: str) -> dict:
+    html = _fetch_text(url)
+    title = ""
+    m = re.search(r'<meta[^>]+property=["\']og:title["\'][^>]*content=["\'](.*?)["\']', html, flags=re.I | re.S)
+    if m:
+        title = re.sub(r"\s+", " ", m.group(1)).strip()
+    if not title:
+        m = re.search(r"<title[^>]*>(.*?)</title>", html, flags=re.I | re.S)
+        if m:
+            title = re.sub(r"\s+", " ", m.group(1)).strip()
+
+    published_at = ""
+    date_patterns = [
+        r"(20\d{2}-\d{1,2}-\d{1,2})",
+        r"(20\d{2}/\d{1,2}/\d{1,2})",
+        r"(20\d{2}年\d{1,2}月\d{1,2}日)",
+    ]
+    for p in date_patterns:
+        mm = re.search(p, html)
+        if mm:
+            published_at = mm.group(1)
+            break
+
+    def pick_int(patterns):
+        for p in patterns:
+            mm = re.search(p, html, flags=re.I)
+            if mm:
+                val = _to_count(mm.group(1))
+                if val is not None:
+                    return val
+        return None
+
+    like_count = pick_int(
+        [
+            r'"liked_count"\s*:\s*"?([0-9]+(?:\.[0-9]+)?[wk万千k]?)"?',
+            r'"like_count"\s*:\s*"?([0-9]+(?:\.[0-9]+)?[wk万千k]?)"?',
+            r"点赞[^0-9]{0,6}([0-9]+(?:\.[0-9]+)?[wk万千k]?)",
+        ]
+    )
+    fav_count = pick_int(
+        [
+            r'"collected_count"\s*:\s*"?([0-9]+(?:\.[0-9]+)?[wk万千k]?)"?',
+            r'"collect_count"\s*:\s*"?([0-9]+(?:\.[0-9]+)?[wk万千k]?)"?',
+            r"收藏[^0-9]{0,6}([0-9]+(?:\.[0-9]+)?[wk万千k]?)",
+        ]
+    )
+
+    return {"title": title, "publishedAt": published_at, "likeCount": like_count, "favoriteCount": fav_count}
+
+
+def _collect_xhs_proposals(items: list[dict], purpose: str) -> dict:
+    proposals = []
+    errors = []
+    for i, it in enumerate(items):
+        if not isinstance(it, dict):
+            errors.append({"index": i, "error": "item 必须是对象"})
+            continue
+        school_name = str(it.get("schoolName") or "").strip()
+        url = str(it.get("url") or "").strip()
+        if not school_name or not url:
+            errors.append({"index": i, "error": "schoolName/url 不能为空"})
+            continue
+        tier = str(it.get("tier") or "").strip().upper()
+        if tier:
+            tier = _normalize_tier(tier)
+        admission_2025 = _to_int(it.get("admission2025"), default=None)
+        max_lottery_2025 = _to_int(it.get("maxLottery2025"), default=None)
+        note = str(it.get("note") or "").strip()
+
+        meta = {}
+        fetch_error = ""
+        try:
+            meta = _extract_xhs_meta(url)
+        except Exception as e:
+            fetch_error = str(e)
+            meta = {"title": "", "publishedAt": "", "likeCount": None, "favoriteCount": None}
+
+        new_value = {
+            "tier": tier or None,
+            "admission2025": admission_2025,
+            "maxLottery2025": max_lottery_2025,
+            "sourceUrl": url,
+            "xhsMeta": {
+                **meta,
+                "url": url,
+                "purpose": purpose,
+                "note": note,
+                "fetchError": fetch_error,
+                "capturedAt": _now(),
+            },
+        }
+        proposals.append(
+            {
+                "proposalType": "patch_school_fields",
+                "proposalKey": school_name,
+                "newValue": new_value,
+                "evidenceUrl": url,
+            }
+        )
+    result = _insert_proposals(f"xhs:{purpose}", "", proposals)
+    return {**result, "errors": errors, "submitted": len(items)}
 
 
 def _collect_policy_html(source: dict) -> list[dict]:
@@ -626,6 +776,60 @@ def _apply_single_proposal(payload: dict, row: sqlite3.Row) -> bool:
                 return True
         sd.append(new_value)
         return True
+    if p_type == "patch_school_fields":
+        if not isinstance(new_value, dict):
+            return False
+        sd = payload["SD"]
+        for i, school in enumerate(sd):
+            if not (isinstance(school, list) and school and school[0] == p_key):
+                continue
+            while len(school) <= 13:
+                school.append(None)
+            changed = False
+            tier_val = new_value.get("tier")
+            if isinstance(tier_val, str) and tier_val.strip():
+                t = _normalize_tier(tier_val)
+                if school[10] != t:
+                    school[10] = t
+                    changed = True
+            admission = _to_int(new_value.get("admission2025"), default=None)
+            if admission is not None and school[11] != admission:
+                school[11] = admission
+                changed = True
+            max_lottery = _to_int(new_value.get("maxLottery2025"), default=None)
+            if max_lottery is not None and school[12] != max_lottery:
+                school[12] = max_lottery
+                changed = True
+
+            source_url = str(new_value.get("sourceUrl") or "").strip()
+            old_source = str(school[13] or "").strip()
+            if source_url:
+                if not old_source:
+                    school[13] = source_url
+                    changed = True
+                elif source_url not in old_source:
+                    school[13] = old_source + "；" + source_url
+                    changed = True
+
+            xhs_meta = new_value.get("xhsMeta")
+            if isinstance(xhs_meta, dict):
+                pr = payload.get("PR")
+                if isinstance(pr, dict):
+                    node = pr.get(p_key)
+                    if not isinstance(node, dict):
+                        node = {}
+                    old = node.get("xhsSignals")
+                    if not isinstance(old, list):
+                        old = []
+                    old.append(xhs_meta)
+                    node["xhsSignals"] = old[-20:]
+                    pr[p_key] = node
+                    payload["PR"] = pr
+                    changed = True
+            if changed:
+                sd[i] = school
+            return changed
+        return False
     if p_type == "upsert_pr":
         payload["PR"][p_key] = new_value
         return True
@@ -923,6 +1127,16 @@ class Handler(BaseHTTPRequestHandler):
             except ValueError as e:
                 _json_response(self, 400, {"error": str(e)})
                 return
+            _json_response(self, 200, {"ok": True, **result})
+            return
+
+        if p.path == "/api/admin/xhs/collect-proposals":
+            items = body.get("items")
+            purpose = str(body.get("purpose") or "tier2026").strip() or "tier2026"
+            if not isinstance(items, list) or not items:
+                _json_response(self, 400, {"error": "items 必须是非空数组"})
+                return
+            result = _collect_xhs_proposals(items, purpose)
             _json_response(self, 200, {"ok": True, **result})
             return
 

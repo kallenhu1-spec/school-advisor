@@ -33,9 +33,11 @@ python3 backend/server.py --host 127.0.0.1 --port 8787
 - 导入提案到待审核队列
 - 批量通过 / 批量驳回提案
 - 学校列表可视化筛选（区 / 梯队 / 公民办）
+- 学校列表支持展示 `2025录取数`、`2025最大摇号数`、`参考信息来源网址`
 - 点击学校查看详情（含 SD + PR + TF 聚合信息）
 - Excel 上传导入学校数据（.xlsx）
 - 支持在学校列表直接调整梯队，并一键推送到前台数据
+- 支持小红书链接半自动抓取并入待审核（审核通过后自动写入学校字段）
 
 ## API
 - `GET /api/health`
@@ -53,6 +55,12 @@ python3 backend/server.py --host 127.0.0.1 --port 8787
 - `POST /api/admin/schools/import-xlsx`
 - `POST /api/admin/schools/tier-batch-update`
 - `POST /api/admin/schools/push-changes`（梯队调整+删校统一推送）
+- `POST /api/admin/xhs/collect-proposals`（小红书链接抓取 -> 生成待审核提案）
+
+`SD` 学校数组支持扩展字段（可选）：
+- 下标 `11`: `2025录取数`（整数）
+- 下标 `12`: `2025最大摇号数`（整数）
+- 下标 `13`: `参考信息来源网址`（字符串）
 
 `PUT /api/bootstrap` 请求体格式：
 ```json

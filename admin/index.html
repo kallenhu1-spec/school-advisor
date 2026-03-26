@@ -68,12 +68,15 @@
       <table>
         <thead>
           <tr>
-            <th style="width:18%">区域</th>
-            <th style="width:34%">学校名</th>
-            <th style="width:16%">类型</th>
-            <th style="width:14%">梯队（可调）</th>
-            <th style="width:10%">推荐度</th>
-            <th style="width:8%">操作</th>
+            <th style="width:12%">区域</th>
+            <th style="width:22%">学校名</th>
+            <th style="width:9%">类型</th>
+            <th style="width:11%">梯队（可调）</th>
+            <th style="width:10%">2025录取数</th>
+            <th style="width:10%">2025最大摇号数</th>
+            <th style="width:12%">推荐度</th>
+            <th style="width:8%">来源</th>
+            <th style="width:6%">操作</th>
           </tr>
         </thead>
         <tbody id="school-body"></tbody>
@@ -95,7 +98,7 @@
           </select>
           <button id="btn-upload-xlsx" class="orange">上传 Excel</button>
         </div>
-        <div class="status" id="excel-status">Excel 模板字段建议：学校名称、区域、类型、梯队、中签率低、中签率高、推荐度、描述、纬度、经度、状态</div>
+        <div class="status" id="excel-status">Excel 模板字段建议：学校名称、区域、类型、梯队、中签率低、中签率高、推荐度、描述、纬度、经度、状态、2025录取数、2025最大摇号数、参考信息来源网址</div>
       </div>
 
       <div class="card">
@@ -137,6 +140,18 @@
         <textarea id="import-json"></textarea>
       </div>
     </div>
+
+    <div class="card">
+      <div class="row">
+        <select id="xhs-purpose">
+          <option value="tier2026">小红书梯队参考（2026）</option>
+          <option value="admission2025">小红书中签/录取参考（2025）</option>
+        </select>
+        <button id="btn-xhs-collect" class="orange">抓取并入待审核</button>
+      </div>
+      <div class="status" id="xhs-status">每行格式：学校名, 小红书链接, 梯队(可空), 2025录取数(可空), 2025最大摇号数(可空), 备注(可空)</div>
+      <textarea id="xhs-lines" placeholder="示例：上海青浦兰生学校（小学）,https://www.xiaohongshu.com/explore/xxxx,T1,148,101,2026家长口碑贴"></textarea>
+    </div>
   </div>
 
   <script>
@@ -150,7 +165,7 @@
     function j(v){ return JSON.stringify(v, null, 2); }
 
     function districtName(code){
-      var map = {pudong:"浦东",minhang:"闵行",xuhui:"徐汇",changning:"长宁",jingan:"静安",huangpu:"黄浦",putuo:"普陀",yangpu:"杨浦",hongkou:"虹口"};
+      var map = {pudong:"浦东",minhang:"闵行",xuhui:"徐汇",changning:"长宁",jingan:"静安",huangpu:"黄浦",putuo:"普陀",yangpu:"杨浦",hongkou:"虹口",jiading:"嘉定",qingpu:"青浦"};
       return map[code] || code || "-";
     }
     function typeName(t){ return t === "pri" ? "民办" : "公办"; }
@@ -239,6 +254,24 @@
         var tdRec = document.createElement('td');
         tdRec.textContent = (s.recommend == null ? "-" : s.recommend);
 
+        var tdAdmission2025 = document.createElement('td');
+        tdAdmission2025.textContent = (s.admission2025 == null ? "-" : s.admission2025);
+
+        var tdMaxLottery2025 = document.createElement('td');
+        tdMaxLottery2025.textContent = (s.maxLottery2025 == null ? "-" : s.maxLottery2025);
+
+        var tdSource = document.createElement('td');
+        if(s.sourceUrl){
+          var a = document.createElement('a');
+          a.href = s.sourceUrl;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.textContent = '查看';
+          tdSource.appendChild(a);
+        }else{
+          tdSource.textContent = '-';
+        }
+
         var tdOp = document.createElement('td');
         var delBtn = document.createElement('button');
         delBtn.className = 'del-btn ' + (isPendingDelete ? 'gray' : 'warn');
@@ -256,7 +289,10 @@
         tr.appendChild(tdName);
         tr.appendChild(tdType);
         tr.appendChild(tdTier);
+        tr.appendChild(tdAdmission2025);
+        tr.appendChild(tdMaxLottery2025);
         tr.appendChild(tdRec);
+        tr.appendChild(tdSource);
         tr.appendChild(tdOp);
         tb.appendChild(tr);
       });
@@ -292,6 +328,8 @@
         + '<div class="kv"><b>学校：</b>' + esc(s.name) + '</div>'
         + '<div class="kv"><b>区域：</b>' + districtName(s.district) + '　<b>类型：</b>' + typeName(s.type) + '　<b>梯队：</b>' + esc(s.tier) + '</div>'
         + '<div class="kv"><b>中签率：</b>' + esc((s.lotteryLow == null ? "-" : s.lotteryLow) + ' ~ ' + (s.lotteryHigh == null ? "-" : s.lotteryHigh)) + '</div>'
+        + '<div class="kv"><b>2025录取数：</b>' + esc(s.admission2025 == null ? "-" : s.admission2025) + '　<b>2025最大摇号数：</b>' + esc(s.maxLottery2025 == null ? "-" : s.maxLottery2025) + '</div>'
+        + '<div class="kv"><b>参考来源：</b>' + (s.sourceUrl ? ('<a href=\"' + esc(s.sourceUrl) + '\" target=\"_blank\" rel=\"noopener noreferrer\">' + esc(s.sourceUrl) + '</a>') : '-') + '</div>'
         + '<div class="kv"><b>推荐度：</b>' + esc(s.recommend == null ? "-" : s.recommend) + '　<b>状态：</b>' + esc(s.status || "normal") + '</div>'
         + '<div class="kv"><b>简介：</b>' + esc(s.desc || "") + '</div>'
         + '<div class="kv"><b>坐标：</b>' + esc((s.lat == null ? "-" : s.lat) + ', ' + (s.lng == null ? "-" : s.lng)) + '</div>'
@@ -444,6 +482,47 @@
       }
     }
 
+    async function collectXhs(){
+      var raw = qs('xhs-lines').value.trim();
+      if(!raw){
+        qs('xhs-status').textContent = '请先粘贴至少一行数据';
+        return;
+      }
+      var lines = raw.split(/\r?\n/).map(function(x){ return x.trim(); }).filter(Boolean);
+      var items = [];
+      for(var i = 0; i < lines.length; i++){
+        var parts = lines[i].split(',').map(function(x){ return x.trim(); });
+        if(parts.length < 2){
+          qs('xhs-status').textContent = '第 ' + (i + 1) + ' 行格式不正确';
+          return;
+        }
+        items.push({
+          schoolName: parts[0] || '',
+          url: parts[1] || '',
+          tier: parts[2] || '',
+          admission2025: parts[3] || null,
+          maxLottery2025: parts[4] || null,
+          note: parts.slice(5).join(',') || ''
+        });
+      }
+      var res = await fetch(API + '/api/admin/xhs/collect-proposals', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({purpose: qs('xhs-purpose').value, items: items})
+      });
+      var data = await res.json();
+      if(!res.ok || !data.ok){
+        qs('xhs-status').textContent = '抓取失败：' + (data.error || '未知错误');
+        return;
+      }
+      var msg = '已提交 ' + (data.submitted || 0) + ' 条，新增待审核 ' + (data.created || 0) + '，跳过 ' + (data.skipped || 0);
+      if(data.errors && data.errors.length){
+        msg += '；解析错误 ' + data.errors.length + ' 条';
+      }
+      qs('xhs-status').textContent = msg;
+      await loadQueue();
+    }
+
     qs('btn-filter').onclick = loadSchools;
     qs('btn-reset').onclick = function(){
       qs('q').value = '';
@@ -470,6 +549,7 @@
     qs('btn-save-sources').onclick = saveSources;
     qs('btn-run-collect').onclick = runCollect;
     qs('btn-import-proposals').onclick = importProposals;
+    qs('btn-xhs-collect').onclick = collectXhs;
 
     loadSchools();
     loadQueue();

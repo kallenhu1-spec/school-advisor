@@ -1,0 +1,41 @@
+name: Sync To Cloudflare Repo
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    if: github.repository == 'kallenhu1-spec/primary-school-advisor'
+    runs-on: ubuntu-latest
+    env:
+      TARGET_REPO: ${{ vars.CF_TARGET_REPO || 'kallenhu1-spec/school-advisor' }}
+      TARGET_BRANCH: ${{ vars.CF_TARGET_BRANCH || 'main' }}
+    steps:
+      - name: Checkout Source Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate Secret
+        run: |
+          if [ -z "${{ secrets.CF_SYNC_TOKEN }}" ]; then
+            echo "Missing secret: CF_SYNC_TOKEN"
+            exit 1
+          fi
+
+      - name: Setup Git User
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Push To Cloudflare Repo
+        run: |
+          git remote add target "https://x-access-token:${{ secrets.CF_SYNC_TOKEN }}@github.com/${TARGET_REPO}.git"
+          git push target "HEAD:${TARGET_BRANCH}" --force
