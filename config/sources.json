@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "id": "sh_municipal_policy",
+      "name": "上海市教委官网（政策）",
+      "enabled": false,
+      "type": "policy_html",
+      "url": "https://edu.sh.gov.cn/",
+      "keywords": [
+        "幼升小",
+        "义务教育",
+        "招生",
+        "摇号",
+        "入学",
+        "公办",
+        "民办"
+      ]
+    },
+    {
+      "id": "district_school_json_sample",
+      "name": "区教育局学校 JSON 样例",
+      "enabled": false,
+      "type": "school_json",
+      "url": "https://example.com/schools.json",
+      "mapping": {
+        "name": "name",
+        "district": "district",
+        "schoolType": "type",
+        "lotteryLow": "lotteryLow",
+        "lotteryHigh": "lotteryHigh",
+        "recommend": "recommend",
+        "desc": "desc",
+        "lat": "lat",
+        "lng": "lng",
+        "status": "status",
+        "tier": "tier"
+      }
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学校数据管理台</title>
+  <style>
+    :root { --bg:#f4f6fb; --card:#fff; --line:#e5e7eb; --text:#1f2937; --muted:#6b7280; --blue:#2563eb; --green:#16a34a; --orange:#ea580c; --gray:#6b7280; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; background: var(--bg); color: var(--text); }
+    .wrap { max-width: 1320px; margin: 0 auto; padding: 16px; }
+    h1 { font-size: 22px; margin: 0 0 8px; }
+    .sub { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px; margin-bottom: 12px; }
+    .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
+    .grow { flex: 1; min-width: 180px; }
+    input, select, textarea { border: 1px solid #d1d5db; border-radius: 8px; min-height: 34px; padding: 6px 10px; font-size: 13px; }
+    input, select { width: 100%; background: #fff; }
+    textarea { width: 100%; min-height: 130px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    button { border: 0; border-radius: 8px; background: var(--blue); color: #fff; height: 34px; padding: 0 12px; cursor: pointer; font-size: 13px; }
+    button.green { background: var(--green); }
+    button.orange { background: var(--orange); }
+    button.gray { background: var(--gray); }
+    .status { color: var(--muted); font-size: 12px; margin: 4px 0 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { border-bottom: 1px solid #edf0f4; text-align: left; padding: 8px; vertical-align: top; }
+    th { background: #f9fafb; color: #374151; }
+    tr.clickable:hover td { background: #f8fbff; cursor: pointer; }
+    .tag { display:inline-block; padding:2px 8px; border-radius:999px; font-size:11px; border:1px solid transparent; }
+    .tag.pub { background:#f0fdf4; color:#15803d; border-color:#bbf7d0; }
+    .tag.pri { background:#eff6ff; color:#1d4ed8; border-color:#bfdbfe; }
+    .tag.t1 { background:#fef2f2; color:#dc2626; border-color:#fecaca; }
+    .tag.t2 { background:#fff7ed; color:#c2410c; border-color:#fed7aa; }
+    .tag.t3 { background:#f7fee7; color:#4d7c0f; border-color:#d9f99d; }
+    .tier-edit { width: 86px; min-height: 30px; font-size: 12px; }
+    .name-btn { border:0; background:transparent; color:#2563eb; cursor:pointer; padding:0; text-align:left; font-size:13px; }
+    .name-btn:hover { text-decoration: underline; }
+    .tier-mark { color:#ea580c; font-size: 11px; margin-left: 4px; }
+    .row-delete td { background:#fff1f2 !important; color:#9f1239; }
+    .del-btn { height:30px; font-size:12px; border-radius:7px; padding:0 10px; }
+    .del-btn.warn { background:#dc2626; }
+    .detail { border:1px solid var(--line); border-radius:10px; padding:10px; background:#fafcff; }
+    .kv { margin-bottom: 6px; font-size: 13px; }
+    .kv b { color:#374151; }
+    .grid2 { display:grid; gap:12px; grid-template-columns: 1fr 1fr; }
+    @media (max-width: 980px){ .grid2 { grid-template-columns: 1fr; } }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+    pre { margin: 0; white-space: pre-wrap; word-break: break-word; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>学校数据管理台（本地）</h1>
+    <div class="sub">学校列表筛选、学校详情查看、Excel 导入、待审核批量通过/驳回</div>
+
+    <div class="card">
+      <div class="row">
+        <div class="grow"><input id="q" placeholder="搜索学校名" /></div>
+        <div class="grow"><select id="f-district"><option value="">全部区域</option></select></div>
+        <div class="grow"><select id="f-tier"><option value="">全部梯队</option><option value="T1">T1</option><option value="T2">T2</option><option value="T3">T3</option></select></div>
+        <div class="grow"><select id="f-type"><option value="">全部类型</option><option value="pub">公办</option><option value="pri">民办</option></select></div>
+        <button id="btn-filter">筛选</button>
+        <button id="btn-reset" class="gray">重置</button>
+        <button id="btn-clear-tier-edits" class="gray">清空梯队暂存</button>
+        <button id="btn-push-tier" class="green">数据推送前台</button>
+      </div>
+      <div class="status" id="school-status">加载中...</div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:18%">区域</th>
+            <th style="width:34%">学校名</th>
+            <th style="width:16%">类型</th>
+            <th style="width:14%">梯队（可调）</th>
+            <th style="width:10%">推荐度</th>
+            <th style="width:8%">操作</th>
+          </tr>
+        </thead>
+        <tbody id="school-body"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="status">学校详情（点击上方任一学校）</div>
+      <div id="school-detail" class="detail">尚未选择学校</div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <div class="row">
+          <input id="excel-file" type="file" accept=".xlsx" />
+          <select id="excel-mode">
+            <option value="proposals">导入到待审核队列（推荐）</option>
+            <option value="apply">直接写入正式数据（谨慎）</option>
+          </select>
+          <button id="btn-upload-xlsx" class="orange">上传 Excel</button>
+        </div>
+        <div class="status" id="excel-status">Excel 模板字段建议：学校名称、区域、类型、梯队、中签率低、中签率高、推荐度、描述、纬度、经度、状态</div>
+      </div>
+
+      <div class="card">
+        <div class="row">
+          <button id="btn-refresh-queue">刷新待审核</button>
+          <button id="btn-approve" class="green">批量通过</button>
+          <button id="btn-reject" class="gray">批量驳回</button>
+        </div>
+        <div class="status" id="queue-status">待加载</div>
+        <table>
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="check-all" /></th>
+              <th>ID</th>
+              <th>来源</th>
+              <th>类型</th>
+              <th>键</th>
+              <th>新值</th>
+            </tr>
+          </thead>
+          <tbody id="queue-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <div class="row">
+          <button id="btn-load-sources">加载数据源配置</button>
+          <button id="btn-save-sources" class="green">保存数据源配置</button>
+          <button id="btn-run-collect" class="orange">触发自动采集</button>
+        </div>
+        <div class="status" id="sources-status">未加载</div>
+        <textarea id="sources-json"></textarea>
+      </div>
+      <div class="card">
+        <div class="row"><button id="btn-import-proposals">手动导入提案</button></div>
+        <div class="status">格式：{"source":"manual","proposals":[...]}</div>
+        <textarea id="import-json"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var API = location.origin;
+    var cacheSchools = [];
+    var pendingTierUpdates = {};
+    var pendingDeleteNames = {};
+    var selectedSchoolName = '';
+
+    function qs(id){ return document.getElementById(id); }
+    function j(v){ return JSON.stringify(v, null, 2); }
+
+    function districtName(code){
+      var map = {pudong:"浦东",minhang:"闵行",xuhui:"徐汇",changning:"长宁",jingan:"静安",huangpu:"黄浦",putuo:"普陀",yangpu:"杨浦",hongkou:"虹口"};
+      return map[code] || code || "-";
+    }
+    function typeName(t){ return t === "pri" ? "民办" : "公办"; }
+
+    function esc(s){ return String(s == null ? "" : s).replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+    function pendingCount(){
+      return Object.keys(pendingTierUpdates).length;
+    }
+    function pendingDeleteCount(){
+      return Object.keys(pendingDeleteNames).length;
+    }
+
+    function updateSchoolStatus(total){
+      var p = pendingCount();
+      var d = pendingDeleteCount();
+      qs('school-status').textContent = '共 ' + total + ' 所学校；待推送梯队修改 ' + p + ' 条；待删除 ' + d + ' 条';
+    }
+
+    function setPendingTier(name, oldTier, newTier){
+      if(!name) return;
+      if(!newTier || newTier === oldTier){
+        delete pendingTierUpdates[name];
+      } else {
+        pendingTierUpdates[name] = newTier;
+      }
+      updateSchoolStatus(cacheSchools.length);
+    }
+    function togglePendingDelete(name){
+      if(!name) return;
+      if(pendingDeleteNames[name]){
+        delete pendingDeleteNames[name];
+      }else{
+        pendingDeleteNames[name] = true;
+      }
+      updateSchoolStatus(cacheSchools.length);
+    }
+
+    async function loadSchools(){
+      var q = encodeURIComponent(qs('q').value.trim());
+      var district = encodeURIComponent(qs('f-district').value);
+      var tier = encodeURIComponent(qs('f-tier').value);
+      var type = encodeURIComponent(qs('f-type').value);
+      var url = API + '/api/admin/schools?q=' + q + '&district=' + district + '&tier=' + tier + '&type=' + type;
+      var data = await (await fetch(url)).json();
+      cacheSchools = data.items || [];
+      var tb = qs('school-body');
+      tb.innerHTML = '';
+      cacheSchools.forEach(function(s){
+        var isPendingDelete = !!pendingDeleteNames[s.name];
+        var tr = document.createElement('tr');
+        var tdDistrict = document.createElement('td');
+        tdDistrict.textContent = districtName(s.district);
+
+        var tdName = document.createElement('td');
+        var btn = document.createElement('button');
+        btn.className = 'name-btn';
+        btn.textContent = (s.name || '') + (isPendingDelete ? '（待删除）' : '');
+        btn.onclick = function(ev){ ev.stopPropagation(); showSchoolDetail(s.name); };
+        tdName.appendChild(btn);
+
+        var tdType = document.createElement('td');
+        tdType.innerHTML = '<span class="tag ' + s.type + '">' + typeName(s.type) + '</span>';
+
+        var tdTier = document.createElement('td');
+        var tierSel = document.createElement('select');
+        tierSel.className = 'tier-edit';
+        var originTier = (s.tier || 'T3').toUpperCase();
+        var currentTier = (pendingTierUpdates[s.name] || originTier).toUpperCase();
+        tierSel.innerHTML = '<option value="T1">T1</option><option value="T2">T2</option><option value="T3">T3</option>';
+        tierSel.value = currentTier;
+        tierSel.onchange = function(ev){
+          ev.stopPropagation();
+          setPendingTier(s.name, originTier, tierSel.value);
+          loadSchools();
+        };
+        tierSel.disabled = isPendingDelete;
+        tdTier.appendChild(tierSel);
+        if(currentTier !== originTier){
+          var mark = document.createElement('span');
+          mark.className = 'tier-mark';
+          mark.textContent = '待推送';
+          tdTier.appendChild(mark);
+        }
+
+        var tdRec = document.createElement('td');
+        tdRec.textContent = (s.recommend == null ? "-" : s.recommend);
+
+        var tdOp = document.createElement('td');
+        var delBtn = document.createElement('button');
+        delBtn.className = 'del-btn ' + (isPendingDelete ? 'gray' : 'warn');
+        delBtn.textContent = isPendingDelete ? '撤销删除' : '删除';
+        delBtn.onclick = function(ev){
+          ev.stopPropagation();
+          togglePendingDelete(s.name);
+          loadSchools();
+        };
+        tdOp.appendChild(delBtn);
+
+        tr.className = 'clickable';
+        if(isPendingDelete) tr.classList.add('row-delete');
+        tr.appendChild(tdDistrict);
+        tr.appendChild(tdName);
+        tr.appendChild(tdType);
+        tr.appendChild(tdTier);
+        tr.appendChild(tdRec);
+        tr.appendChild(tdOp);
+        tb.appendChild(tr);
+      });
+      updateSchoolStatus(data.count || 0);
+      renderDistrictOptions(cacheSchools);
+    }
+
+    function renderDistrictOptions(items){
+      var sel = qs('f-district');
+      var current = sel.value;
+      var set = {};
+      items.forEach(function(x){ if(x.district) set[x.district] = true; });
+      var options = Object.keys(set).sort();
+      sel.innerHTML = '<option value="">全部区域</option>' + options.map(function(d){
+        return '<option value="' + d + '">' + districtName(d) + '</option>';
+      }).join('');
+      sel.value = current;
+    }
+
+    async function showSchoolDetail(name){
+      selectedSchoolName = name || '';
+      var url = API + '/api/admin/school-detail?name=' + encodeURIComponent(name);
+      var res = await fetch(url);
+      var data = await res.json();
+      if(!res.ok){
+        qs('school-detail').textContent = data.error || '加载失败';
+        return;
+      }
+      var s = data.item;
+      var p = s.profile || {};
+      var tf = s.tuition || {};
+      qs('school-detail').innerHTML = ''
+        + '<div class="kv"><b>学校：</b>' + esc(s.name) + '</div>'
+        + '<div class="kv"><b>区域：</b>' + districtName(s.district) + '　<b>类型：</b>' + typeName(s.type) + '　<b>梯队：</b>' + esc(s.tier) + '</div>'
+        + '<div class="kv"><b>中签率：</b>' + esc((s.lotteryLow == null ? "-" : s.lotteryLow) + ' ~ ' + (s.lotteryHigh == null ? "-" : s.lotteryHigh)) + '</div>'
+        + '<div class="kv"><b>推荐度：</b>' + esc(s.recommend == null ? "-" : s.recommend) + '　<b>状态：</b>' + esc(s.status || "normal") + '</div>'
+        + '<div class="kv"><b>简介：</b>' + esc(s.desc || "") + '</div>'
+        + '<div class="kv"><b>坐标：</b>' + esc((s.lat == null ? "-" : s.lat) + ', ' + (s.lng == null ? "-" : s.lng)) + '</div>'
+        + '<hr style="border:none;border-top:1px solid #e5e7eb;margin:10px 0">'
+        + '<div class="kv"><b>口碑标签：</b>' + esc(p.tag || "-") + '</div>'
+        + '<div class="kv"><b>Slogan：</b>' + esc(p.slogan || "-") + '</div>'
+        + '<div class="kv"><b>作业/压力：</b>' + esc((p.hw || "-") + " / " + (p.stress || "-")) + '</div>'
+        + '<div class="kv"><b>升学路径：</b><pre class="mono">' + esc((p.path || []).join(' | ')) + '</pre></div>'
+        + '<div class="kv"><b>优点：</b><pre class="mono">' + esc((p.pros || []).join('\n')) + '</pre></div>'
+        + '<div class="kv"><b>注意：</b><pre class="mono">' + esc((p.cons || []).join('\n')) + '</pre></div>'
+        + '<hr style="border:none;border-top:1px solid #e5e7eb;margin:10px 0">'
+        + '<div class="kv"><b>学费信息：</b><pre class="mono">' + esc(Object.keys(tf).length ? j(tf) : "-") + '</pre></div>';
+    }
+
+    async function uploadXlsx(){
+      var file = qs('excel-file').files[0];
+      if(!file){ qs('excel-status').textContent = '请先选择 .xlsx 文件'; return; }
+      var mode = qs('excel-mode').value;
+      var ab = await file.arrayBuffer();
+      var binary = '';
+      var bytes = new Uint8Array(ab);
+      for(var i = 0; i < bytes.length; i++){ binary += String.fromCharCode(bytes[i]); }
+      var b64 = btoa(binary);
+      var res = await fetch(API + '/api/admin/schools/import-xlsx', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({filename:file.name, contentBase64:b64, mode:mode})
+      });
+      var data = await res.json();
+      if(!res.ok){ qs('excel-status').textContent = '上传失败：' + (data.error || '未知错误'); return; }
+      if(mode === 'apply'){
+        qs('excel-status').textContent = '直接入库完成，更新 ' + data.updated + ' 条';
+        loadSchools();
+      }else{
+        qs('excel-status').textContent = '导入待审核成功：新增 ' + data.created + '，跳过 ' + data.skipped;
+        loadQueue();
+      }
+    }
+
+    function selectedIds(){
+      return Array.from(document.querySelectorAll('input[data-id]:checked')).map(function(el){ return Number(el.getAttribute('data-id')); });
+    }
+
+    async function loadQueue(){
+      var data = await (await fetch(API + '/api/admin/proposals?status=pending')).json();
+      var tb = qs('queue-body'); tb.innerHTML = '';
+      (data.items || []).forEach(function(item){
+        var tr = document.createElement('tr');
+        tr.innerHTML = ''
+          + '<td><input type="checkbox" data-id="' + item.id + '"></td>'
+          + '<td class="mono">' + item.id + '</td>'
+          + '<td>' + esc(item.source || '-') + '</td>'
+          + '<td class="mono">' + esc(item.proposalType) + '</td>'
+          + '<td class="mono">' + esc(item.proposalKey) + '</td>'
+          + '<td><pre class="mono">' + esc(j(item.newValue)) + '</pre></td>';
+        tb.appendChild(tr);
+      });
+      qs('queue-status').textContent = '待审核：' + (data.count || 0) + ' 条';
+      qs('check-all').checked = false;
+    }
+
+    async function review(action){
+      var ids = selectedIds();
+      if(!ids.length){ qs('queue-status').textContent = '请先勾选待审核项'; return; }
+      var note = prompt('审核备注（可空）', '') || '';
+      var res = await fetch(API + '/api/admin/proposals/review', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ids:ids, action:action, note:note})
+      });
+      var data = await res.json();
+      qs('queue-status').textContent = data.ok ? (action === 'approve' ? '已通过 ' : '已驳回 ') + data.updated + ' 条' : ('审核失败：' + (data.error || '未知错误'));
+      await loadQueue();
+      if(action === 'approve') await loadSchools();
+    }
+
+    async function pushSchoolChanges(){
+      var names = Object.keys(pendingTierUpdates);
+      var delNames = Object.keys(pendingDeleteNames);
+      if(!names.length && !delNames.length){
+        qs('school-status').textContent = '没有待推送的变更';
+        return;
+      }
+      var updates = names.map(function(name){ return {name:name, tier:pendingTierUpdates[name]}; });
+      var res = await fetch(API + '/api/admin/schools/push-changes', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({tierUpdates: updates, deleteNames: delNames})
+      });
+      var data = await res.json();
+      if(!res.ok || !data.ok){
+        qs('school-status').textContent = '推送失败：' + (data.error || '未知错误');
+        return;
+      }
+      pendingTierUpdates = {};
+      pendingDeleteNames = {};
+      await loadSchools();
+      if(selectedSchoolName){
+        await showSchoolDetail(selectedSchoolName);
+      }
+      var msg = '推送成功：梯队更新 ' + (data.tierUpdated || 0) + ' 所，删除 ' + (data.deleted || 0) + ' 所';
+      if(data.missingTierNames && data.missingTierNames.length){
+        msg += '；梯队未找到 ' + data.missingTierNames.length + ' 所';
+      }
+      if(data.missingDeleteNames && data.missingDeleteNames.length){
+        msg += '；删除未找到 ' + data.missingDeleteNames.length + ' 所';
+      }
+      qs('school-status').textContent = msg;
+    }
+
+    async function loadSources(){
+      var data = await (await fetch(API + '/api/admin/sources')).json();
+      qs('sources-json').value = j({sources: data.sources});
+      qs('sources-status').textContent = '已加载 ' + (data.sources || []).length + ' 个数据源';
+    }
+
+    async function saveSources(){
+      try{
+        var body = JSON.parse(qs('sources-json').value);
+        var res = await fetch(API + '/api/admin/sources', {
+          method:'PUT', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)
+        });
+        var data = await res.json();
+        qs('sources-status').textContent = data.ok ? '保存成功' : ('保存失败：' + (data.error || '未知错误'));
+      }catch(e){
+        qs('sources-status').textContent = 'JSON 格式错误：' + e.message;
+      }
+    }
+
+    async function runCollect(){
+      var res = await fetch(API + '/api/admin/collect/run', {
+        method:'POST', headers:{'Content-Type':'application/json'}, body:'{}'
+      });
+      var data = await res.json();
+      qs('sources-status').textContent = '采集完成：新增' + data.created + '，跳过' + data.skipped + '，错误' + ((data.errors || []).length);
+      loadQueue();
+    }
+
+    async function importProposals(){
+      try{
+        var body = JSON.parse(qs('import-json').value);
+        var res = await fetch(API + '/api/admin/proposals/import', {
+          method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)
+        });
+        var data = await res.json();
+        qs('queue-status').textContent = data.ok ? ('导入成功：新增' + data.created + '，跳过' + data.skipped) : ('导入失败：' + (data.error || '未知错误'));
+        loadQueue();
+      }catch(e){
+        qs('queue-status').textContent = 'JSON 格式错误：' + e.message;
+      }
+    }
+
+    qs('btn-filter').onclick = loadSchools;
+    qs('btn-reset').onclick = function(){
+      qs('q').value = '';
+      qs('f-tier').value = '';
+      qs('f-type').value = '';
+      qs('f-district').value = '';
+      loadSchools();
+    };
+    qs('btn-clear-tier-edits').onclick = function(){
+      pendingTierUpdates = {};
+      pendingDeleteNames = {};
+      loadSchools();
+    };
+    qs('btn-push-tier').onclick = pushSchoolChanges;
+    qs('btn-upload-xlsx').onclick = uploadXlsx;
+    qs('btn-refresh-queue').onclick = loadQueue;
+    qs('btn-approve').onclick = function(){ review('approve'); };
+    qs('btn-reject').onclick = function(){ review('reject'); };
+    qs('check-all').onchange = function(){
+      var checked = qs('check-all').checked;
+      document.querySelectorAll('input[data-id]').forEach(function(el){ el.checked = checked; });
+    };
+    qs('btn-load-sources').onclick = loadSources;
+    qs('btn-save-sources').onclick = saveSources;
+    qs('btn-run-collect').onclick = runCollect;
+    qs('btn-import-proposals').onclick = importProposals;
+
+    loadSchools();
+    loadQueue();
+    loadSources();
+  </script>
+</body>
+</html>
