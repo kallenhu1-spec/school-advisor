@@ -24,9 +24,19 @@ export async function onRequestGet(context) {
     return json({ error: "D1 binding DB is missing" }, 500);
   }
 
-  const row = await db
-    .prepare("SELECT payload_json, updated_at FROM bootstrap_payload WHERE id = 1")
-    .first();
+  let row = null;
+  try {
+    row = await db.prepare("SELECT payload_json, updated_at FROM bootstrap_payload WHERE id = 1").first();
+  } catch (e) {
+    return json(
+      {
+        error: "D1 query failed",
+        detail: String(e),
+        hint: "请先在 D1 执行建表 SQL（bootstrap_payload）",
+      },
+      500,
+    );
+  }
 
   if (!row || !row.payload_json) {
     return json({ error: "No bootstrap payload found in D1" }, 404);

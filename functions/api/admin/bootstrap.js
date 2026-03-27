@@ -51,12 +51,23 @@ export async function onRequestPost(context) {
   if (err) return json({ error: err }, 400);
 
   const now = new Date().toISOString();
-  await db
-    .prepare(
-      "INSERT INTO bootstrap_payload(id, payload_json, updated_at) VALUES(1, ?, ?) ON CONFLICT(id) DO UPDATE SET payload_json=excluded.payload_json, updated_at=excluded.updated_at",
-    )
-    .bind(JSON.stringify(payload), now)
-    .run();
+  try {
+    await db
+      .prepare(
+        "INSERT INTO bootstrap_payload(id, payload_json, updated_at) VALUES(1, ?, ?) ON CONFLICT(id) DO UPDATE SET payload_json=excluded.payload_json, updated_at=excluded.updated_at",
+      )
+      .bind(JSON.stringify(payload), now)
+      .run();
+  } catch (e) {
+    return json(
+      {
+        error: "D1 write failed",
+        detail: String(e),
+        hint: "请先在 D1 执行建表 SQL（bootstrap_payload）",
+      },
+      500,
+    );
+  }
 
   return json(
     {

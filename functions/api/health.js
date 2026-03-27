@@ -23,9 +23,20 @@ export async function onRequestGet(context) {
   if (!db) {
     return json({ ok: false, error: "D1 binding DB is missing" }, 500);
   }
-  const row = await db
-    .prepare("SELECT updated_at FROM bootstrap_payload WHERE id = 1")
-    .first();
+  let row = null;
+  try {
+    row = await db.prepare("SELECT updated_at FROM bootstrap_payload WHERE id = 1").first();
+  } catch (e) {
+    return json(
+      {
+        ok: false,
+        error: "D1 query failed",
+        detail: String(e),
+        hint: "请先在 D1 执行建表 SQL（bootstrap_payload）",
+      },
+      500,
+    );
+  }
   return json(
     {
       ok: true,
