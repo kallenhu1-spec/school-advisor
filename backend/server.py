@@ -164,6 +164,48 @@ def _load_sources() -> list[dict]:
     return sources
 
 
+def _normalize_school_name(name: str) -> str:
+    return re.sub(r"[（(]\s*小学部\s*[）)]", "小学部", name or "")
+
+
+def _normalize_payload_names(payload: dict) -> dict:
+    sd = payload.get("SD", [])
+    pr = payload.get("PR", {})
+    tf = payload.get("TF", {})
+    dn = payload.get("DN", {})
+    updated_at = payload.get("updatedAt")
+
+    name_map: dict[str, str] = {}
+    normalized_sd: list = []
+    for row in sd:
+        if isinstance(row, list) and row:
+            old_name = row[0]
+            new_name = _normalize_school_name(str(old_name))
+            if old_name != new_name:
+                name_map[str(old_name)] = new_name
+            new_row = list(row)
+            new_row[0] = new_name
+            normalized_sd.append(new_row)
+        else:
+            normalized_sd.append(row)
+
+    def _normalize_keyed_map(obj: dict) -> dict:
+        out: dict = {}
+        for k, v in (obj or {}).items():
+            nk = name_map.get(k, _normalize_school_name(k))
+            if nk not in out:
+                out[nk] = v
+        return out
+
+    return {
+        "SD": normalized_sd,
+        "PR": _normalize_keyed_map(pr),
+        "TF": _normalize_keyed_map(tf),
+        "DN": dn,
+        "updatedAt": updated_at,
+    }
+
+
 def _save_sources(sources: list[dict]) -> None:
     SOURCES_PATH.parent.mkdir(parents=True, exist_ok=True)
     SOURCES_PATH.write_text(
@@ -179,16 +221,18 @@ def _get_bootstrap_payload() -> dict:
         ).fetchone()
         if not row:
             return {"SD": [], "PR": {}, "TF": {}, "DN": {}, "updatedAt": None}
-        return {
+        payload = {
             "SD": json.loads(row["sd_json"]),
             "PR": json.loads(row["pr_json"]),
             "TF": json.loads(row["tf_json"]),
             "DN": json.loads(row["dn_json"]),
             "updatedAt": row["updated_at"],
         }
+        return _normalize_payload_names(payload)
 
 
 def _replace_payload(payload: dict) -> None:
+    payload = _normalize_payload_names(payload)
     required = ["SD", "PR", "TF", "DN"]
     missing = [k for k in required if k not in payload]
     if missing:
