@@ -1441,26 +1441,24 @@ function renderStrategy(h,d,t,fList){
 }
 
 function renderTimeline(){
-  var SRC_POLICY='https://shrxbm.edu.sh.gov.cn/zszc/shzs/szszc.html';
+  var SRC_POLICY='https://edu.sh.gov.cn/xxgk2_zdgz_rxgkyzs_02/20260326/ac9f198654cf469da99e1830acf3ce69.html';
   var SRC_DISTRICT='https://shrxbm.edu.sh.gov.cn/zszc/zcsm.html';
   var SRC_SYSTEM='https://shrxbm.edu.sh.gov.cn';
   var months=[
     {month:'3月',color:'#667eea',keyword:'材料准备',nodes:[
       {date:'3月26日',title:'市政策发布 📋',
-       desc:'上海市义务教育入学政策发布后，材料准备进入实操阶段。<br><br><strong>沪籍常见材料：</strong>父母和儿童户口簿、出生证、房产证/租赁备案；居住地入学需办理本市户籍“人户分离”相关凭证。<br><br><strong>非沪籍常见材料：</strong>居住证、社保或灵活就业登记证明、儿童本人合法居住证件等（以当年市级文件为准）。<br><br><a href="'+SRC_POLICY+'" target="_blank">📎 官方来源：上海市招生政策（市教委）↗</a>'}
+       desc:'上海市义务教育入学政策发布后，材料准备进入实操阶段。<br><br><strong>沪籍常见材料：</strong>父母和儿童户口簿、出生证、房产证/租赁备案；居住地入学需办理本市户籍“人户分离”相关凭证。<br><br><strong>非沪籍常见材料：</strong>居住证、社保或灵活就业登记证明、儿童本人合法居住证件等（以当年市级文件为准）。<br><br><a href="'+SRC_POLICY+'" target="_blank">📎 官方来源：2026实施意见（沪教委基〔2026〕9号）↗</a>'}
     ]},
     {month:'4月',color:'#764ba2',keyword:'区政策·校招简章·信息登记',nodes:[
       {date:'4月7日',title:'区政策发布 🏙️',
        desc:'各区公布幼升小具体细则。<br>⚠️ <strong>重点关注：</strong>对口划片、招生计划、录取顺位、公办验证材料要求、人户分离细则、"五年一户"执行情况。<br><a href="'+SRC_DISTRICT+'" target="_blank">📎 官方来源：各区招生政策汇总 ↗</a>'},
-      {date:'4月8日',title:'上实报名开始 ⭐',
-       desc:'上海实验学校招生报名开启，有意向的家庭请提前关注官方公告，准备报名材料。'},
-      {date:'4月11日',title:'报名系统开通 💻',
-       desc:'各区网上报名系统正式开放，可开始预填信息。<br><a href="'+SRC_SYSTEM+'" target="_blank">📎 官方来源：上海市义务教育入学报名系统 ↗</a>'},
-      {date:'4月12日—13日',title:'校园开放日 🏫',
+      {date:'4月上旬',title:'报名系统开通 💻',
+       desc:'各区网上报名系统开放后，可按提示进行信息查询与报名。<br><a href="'+SRC_SYSTEM+'" target="_blank">📎 官方来源：上海市义务教育入学报名系统 ↗</a>'},
+      {date:'4月11日—12日',title:'校园开放日 🏫',
        desc:'各民办小学集中开放参观，可带孩子实地了解校园环境和教育理念，是选校的重要参考窗口。'},
-      {date:'4月14日—27日',title:'幼升小信息登记（草表）📝',
+      {date:'4月13日—26日',title:'幼升小信息登记（草表）📝',
        desc:'填写《上海市小学入学信息登记表》（草表）。<br>⚠️ <strong>重要：</strong>未完成信息登记将直接影响后续报名！<br>• 在本市幼儿园就读的：老师会发草表并协助登记<br>• 在外省市幼儿园就读或未入园的：通过各区教育部门指定方式获取空表再填报'},
-      {date:'4月27日',title:'信息登记截止 & 人户分离申请截止 ⏰',
+      {date:'4月26日',title:'信息登记截止 & 人户分离申请截止 ⏰',
        desc:'两项重要截止日同日：<br>① 《入学信息登记表》截止<br>② 人户分离申请居住地入学手续截止<br><strong>请务必在此日期前完成，逾期将失去资格。</strong>'}
     ]},
     {month:'5月',color:'#f093fb',keyword:'网上报名·公办验证·民办摇号',nodes:[
@@ -1468,15 +1466,15 @@ function renderTimeline(){
        desc:'民办小学集中报名窗口，可填1个志愿 + 1个调剂志愿。<br>⚠️ <strong>公民同招：</strong>公办和民办二选一，选了民办就不能再报公办！'},
       {date:'5月7日—11日',title:'公办小学报名 🏫',
        desc:'公办小学报名窗口（与民办同步，二选一）。选择公办后不可再报民办。'},
-      {date:'5月17日—20日',title:'公办小学第一批验证 ✅',
+      {date:'5月17日—21日',title:'公办小学第一批验证 ✅',
        desc:'学校后台验证家长提交的房产证、居住证等材料。<strong>家长无需操作，</strong>等待通知即可。'},
-      {date:'5月19日—20日',title:'民办小学电脑摇号 🎲',
+      {date:'5月20日—21日',title:'民办小学电脑摇号 🎲',
        desc:'所有民办小学统一上机摇号，公开透明。<br>• 摇中 → 学校通知，等待验证<br>• 未中 → 看调剂志愿能否录取<br>• 全未录取 → 自动回归对口公办<br><a href="'+SRC_POLICY+'" target="_blank">📎 官方来源：市招生政策（摇号安排）↗</a>'},
-      {date:'5月21日',title:'民办录取验证 & 录取告知开始 📬',
+      {date:'5月22日',title:'民办录取验证 & 录取告知开始 📬',
        desc:'各区组织民办学校录取验证；各校陆续发放公、民办录取告知信息。'},
-      {date:'5月22日',title:'民办调剂志愿录取 🔄',
+      {date:'5月23日',title:'民办调剂志愿录取 🔄',
        desc:'第一志愿未中签的，由调剂志愿学校进行录取，学校会通知家长。'},
-      {date:'5月24日—25日',title:'公办小学第二批验证 ✅',
+      {date:'5月30日—31日',title:'公办小学第二批验证 ✅',
        desc:'公办第二批报名的材料验证，学校操作，家长等通知。'}
     ]},
     {month:'8月',color:'#43e97b',keyword:'录取·家访·家长会',nodes:[
@@ -1503,7 +1501,7 @@ function renderTimeline(){
     });
     h+='</div>';
   });
-  h+='<div style="font-size:11px;color:#666;margin-top:16px;padding:10px;background:#f9f9f9;border-radius:6px;line-height:1.7">以上为2026年关键时间点整理（含3月26日市级政策发布时间），请以官方实时公告为准。<br>官方核验入口：<a href="'+SRC_POLICY+'" target="_blank">市招生政策</a> ｜ <a href="'+SRC_DISTRICT+'" target="_blank">各区招生政策</a> ｜ <a href="'+SRC_SYSTEM+'" target="_blank">入学报名系统</a></div>';
+  h+='<div style="font-size:11px;color:#666;margin-top:16px;padding:10px;background:#f9f9f9;border-radius:6px;line-height:1.7">以上为2026年关键时间点整理（按3月26日发布的市级文件同步），请以官方实时公告为准。<br>官方核验入口：<a href="'+SRC_POLICY+'" target="_blank">2026实施意见（沪教委基〔2026〕9号）</a> ｜ <a href="'+SRC_DISTRICT+'" target="_blank">各区招生政策</a> ｜ <a href="'+SRC_SYSTEM+'" target="_blank">入学报名系统</a></div>';
   document.getElementById('tline').innerHTML=h;
 }
 
