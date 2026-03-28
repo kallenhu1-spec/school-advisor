@@ -38,6 +38,7 @@ python3 backend/server.py --host 127.0.0.1 --port 8787
 - Excel 上传导入学校数据（.xlsx）
 - 支持在学校列表直接调整梯队，并一键推送到前台数据
 - 支持小红书链接半自动抓取并入待审核（审核通过后自动写入学校字段）
+- 支持一键“发布到线上”（写回 `data/seed.json` 并执行 git push 到线上仓库）
 
 ## API
 - `GET /api/health`
@@ -56,6 +57,8 @@ python3 backend/server.py --host 127.0.0.1 --port 8787
 - `POST /api/admin/schools/tier-batch-update`
 - `POST /api/admin/schools/push-changes`（梯队调整+删校统一推送）
 - `POST /api/admin/xhs/collect-proposals`（小红书链接抓取 -> 生成待审核提案）
+- `POST /api/admin/publish-online`（本地后台一键发布到线上仓库）
+- `GET /api/admin/publish-online/status?taskId=...`（查询发布任务分步骤进度）
 
 `SD` 学校数组支持扩展字段（可选）：
 - 下标 `11`: `2025录取数`（整数）

@@ -2,9 +2,14 @@
 import argparse
 import base64
 import json
+import os
 import re
 import sqlite3
+import subprocess
+import threading
+import uuid
 from io import BytesIO
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -21,6 +26,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = ROOT / "data" / "school_advisor.db"
 SOURCES_PATH = ROOT / "config" / "sources.json"
 ADMIN_DIR = ROOT / "admin"
+SEED_PATH = ROOT / "data" / "seed.json"
+PUBLISH_TASKS: dict[str, dict] = {}
+PUBLISH_LOCK = threading.Lock()
 
 
 def _now() -> str:
@@ -217,6 +225,243 @@ def _replace_payload(payload: dict) -> None:
         conn.commit()
 
 
+def _write_seed_json(payload: dict) -> None:
+    SEED_PATH.parent.mkdir(parents=True, exist_ok=True)
+    SEED_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def _run_git(args: list[str], extra_env: dict | None = None, timeout_sec: int = 120) -> tuple[int, str]:
+    env = None
+    if extra_env:
+        env = dict(**__import__("os").environ)
+        env.update(extra_env)
+    try:
+        p = subprocess.run(
+            args,
+            cwd=str(ROOT),
+            env=env,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            timeout=timeout_sec,
+        )
+        return p.returncode, p.stdout
+    except subprocess.TimeoutExpired as e:
+        out = (e.stdout or "") + "\n" + (e.stderr or "")
+        return 124, f"命令超时（>{timeout_sec}s）\n{out}".strip()
+
+
+def _publish_online(message: str, remote: str, refspec: str, git_ssh_command: str = "") -> dict:
+    payload = _get_bootstrap_payload()
+    _write_seed_json(payload)
+
+    logs = []
+    env = {}
+    if git_ssh_command.strip():
+        env["GIT_SSH_COMMAND"] = git_ssh_command.strip()
+
+    code, out = _run_git(["git", "add", "data/seed.json"], extra_env=env)
+    logs.append({"cmd": "git add data/seed.json", "code": code, "output": out.strip()})
+    if code != 0:
+        return {"ok": False, "step": "git_add", "logs": logs}
+
+    code, out = _run_git(["git", "diff", "--cached", "--quiet"], extra_env=env)
+    has_changes = code != 0
+    logs.append({"cmd": "git diff --cached --quiet", "code": code, "output": out.strip()})
+
+    committed = False
+    if has_changes:
+        code, out = _run_git(["git", "commit", "-m", message], extra_env=env)
+        logs.append({"cmd": f'git commit -m "{message}"', "code": code, "output": out.strip()})
+        if code != 0:
+            return {"ok": False, "step": "git_commit", "logs": logs}
+        committed = True
+
+    code, out = _run_git(["git", "push", remote, refspec], extra_env=env)
+    logs.append({"cmd": f"git push {remote} {refspec}", "code": code, "output": out.strip()})
+    if code != 0:
+        return {"ok": False, "step": "git_push", "logs": logs, "committed": committed}
+
+    return {"ok": True, "logs": logs, "committed": committed}
+
+
+def _publish_to_cloudflare_api(url: str, token: str, payload: dict, timeout_sec: int = 30) -> tuple[int, str]:
+    if not url or not token:
+        return 400, "cloudflare url/token 不能为空"
+    try:
+        u = urlparse(url)
+        origin = f"{u.scheme}://{u.netloc}" if u.scheme and u.netloc else "https://school-advisor.pages.dev"
+    except Exception:
+        origin = "https://school-advisor.pages.dev"
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=body,
+        method="POST",
+        headers={
+            "Content-Type": "application/json; charset=utf-8",
+            "Accept": "application/json, text/plain, */*",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36",
+            "Origin": origin,
+            "Authorization": f"Bearer {token}",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout_sec) as resp:
+            return resp.getcode(), resp.read().decode("utf-8", errors="ignore")
+    except urllib.error.HTTPError as e:
+        return e.code, e.read().decode("utf-8", errors="ignore")
+    except Exception as e:
+        return 599, str(e)
+
+
+def _new_publish_task(message: str, remote: str, refspec: str, mode: str = "git", cloudflare_url: str = "") -> dict:
+    task_id = str(uuid.uuid4())
+    now = _now()
+    steps = [{"key": "export_seed", "label": "导出数据库到 seed.json", "status": "pending", "detail": ""}]
+    if mode == "api":
+        steps.append({"key": "api_publish", "label": "推送到 Cloudflare API", "status": "pending", "detail": ""})
+    else:
+        steps.extend(
+            [
+                {"key": "git_add", "label": "Git 暂存文件", "status": "pending", "detail": ""},
+                {"key": "git_check", "label": "检查是否有变更", "status": "pending", "detail": ""},
+                {"key": "git_commit", "label": "创建提交", "status": "pending", "detail": ""},
+                {"key": "git_push", "label": "推送到线上仓库", "status": "pending", "detail": ""},
+            ]
+        )
+    task = {
+        "taskId": task_id,
+        "status": "pending",
+        "message": message,
+        "mode": mode,
+        "remote": remote,
+        "refspec": refspec,
+        "cloudflareUrl": cloudflare_url,
+        "createdAt": now,
+        "updatedAt": now,
+        "error": "",
+        "logs": [],
+        "steps": steps,
+    }
+    with PUBLISH_LOCK:
+        PUBLISH_TASKS[task_id] = task
+    return task
+
+
+def _snapshot_publish_task(task_id: str) -> dict | None:
+    with PUBLISH_LOCK:
+        task = PUBLISH_TASKS.get(task_id)
+        if not task:
+            return None
+        return json.loads(json.dumps(task))
+
+
+def _update_publish_task(task_id: str, **kwargs) -> None:
+    with PUBLISH_LOCK:
+        task = PUBLISH_TASKS.get(task_id)
+        if not task:
+            return
+        task.update(kwargs)
+        task["updatedAt"] = _now()
+
+
+def _set_publish_step(task_id: str, key: str, status: str, detail: str = "") -> None:
+    with PUBLISH_LOCK:
+        task = PUBLISH_TASKS.get(task_id)
+        if not task:
+            return
+        for step in task.get("steps", []):
+            if step.get("key") == key:
+                step["status"] = status
+                if detail:
+                    step["detail"] = detail
+                break
+        task["updatedAt"] = _now()
+
+
+def _append_publish_log(task_id: str, cmd: str, code: int, output: str) -> None:
+    with PUBLISH_LOCK:
+        task = PUBLISH_TASKS.get(task_id)
+        if not task:
+            return
+        task["logs"].append({"time": _now(), "cmd": cmd, "code": code, "output": (output or "").strip()})
+        task["updatedAt"] = _now()
+
+
+def _run_publish_task(
+    task_id: str,
+    message: str,
+    remote: str,
+    refspec: str,
+    git_ssh_command: str = "",
+    mode: str = "git",
+    cloudflare_url: str = "",
+    publish_token: str = "",
+) -> None:
+    _update_publish_task(task_id, status="running")
+    env = {}
+    if git_ssh_command.strip():
+        env["GIT_SSH_COMMAND"] = git_ssh_command.strip()
+
+    try:
+        _set_publish_step(task_id, "export_seed", "running")
+        payload = _get_bootstrap_payload()
+        _write_seed_json(payload)
+        _set_publish_step(task_id, "export_seed", "success")
+
+        if mode == "api":
+            _set_publish_step(task_id, "api_publish", "running")
+            code, out = _publish_to_cloudflare_api(cloudflare_url, publish_token, payload, timeout_sec=35)
+            _append_publish_log(task_id, f"POST {cloudflare_url}", code, out)
+            if code < 200 or code >= 300:
+                _set_publish_step(task_id, "api_publish", "failed", "Cloudflare API 推送失败")
+                _update_publish_task(task_id, status="failed", error=(out or "").strip())
+                return
+            _set_publish_step(task_id, "api_publish", "success")
+            _update_publish_task(task_id, status="success")
+            return
+
+        _set_publish_step(task_id, "git_add", "running")
+        code, out = _run_git(["git", "add", "data/seed.json"], extra_env=env)
+        _append_publish_log(task_id, "git add data/seed.json", code, out)
+        if code != 0:
+            _set_publish_step(task_id, "git_add", "failed", "git add 失败")
+            _update_publish_task(task_id, status="failed", error=(out or "").strip())
+            return
+        _set_publish_step(task_id, "git_add", "success")
+
+        _set_publish_step(task_id, "git_check", "running")
+        code, out = _run_git(["git", "diff", "--cached", "--quiet"], extra_env=env)
+        _append_publish_log(task_id, "git diff --cached --quiet", code, out)
+        has_changes = code != 0
+        _set_publish_step(task_id, "git_check", "success", "有变更" if has_changes else "无文件变更，继续执行推送")
+
+        if has_changes:
+            _set_publish_step(task_id, "git_commit", "running")
+            code, out = _run_git(["git", "commit", "-m", message], extra_env=env)
+            _append_publish_log(task_id, f'git commit -m "{message}"', code, out)
+            if code != 0:
+                _set_publish_step(task_id, "git_commit", "failed", "git commit 失败")
+                _update_publish_task(task_id, status="failed", error=(out or "").strip())
+                return
+            _set_publish_step(task_id, "git_commit", "success")
+        else:
+            _set_publish_step(task_id, "git_commit", "success", "无需提交")
+
+        _set_publish_step(task_id, "git_push", "running")
+        code, out = _run_git(["git", "push", remote, refspec], extra_env=env, timeout_sec=90)
+        _append_publish_log(task_id, f"git push {remote} {refspec}", code, out)
+        if code != 0:
+            _set_publish_step(task_id, "git_push", "failed", "git push 失败")
+            _update_publish_task(task_id, status="failed", error=(out or "").strip())
+            return
+        _set_publish_step(task_id, "git_push", "success")
+        _update_publish_task(task_id, status="success")
+    except Exception as e:
+        _update_publish_task(task_id, status="failed", error=str(e))
+
+
 def _to_float(v):
     if v is None:
         return None
@@ -353,9 +598,12 @@ def _apply_school_changes(changes: dict) -> dict:
     tf = payload.get("TF", {})
 
     tier_updates = changes.get("tierUpdates") or []
+    rename_updates = changes.get("renameUpdates") or []
     delete_names = changes.get("deleteNames") or []
     if not isinstance(tier_updates, list):
         raise ValueError("tierUpdates 必须是数组")
+    if not isinstance(rename_updates, list):
+        raise ValueError("renameUpdates 必须是数组")
     if not isinstance(delete_names, list):
         raise ValueError("deleteNames 必须是数组")
 
@@ -368,11 +616,28 @@ def _apply_school_changes(changes: dict) -> dict:
         if name:
             tier_map[name] = tier
 
+    rename_map = {}
+    for item in rename_updates:
+        if not isinstance(item, dict):
+            continue
+        old_name = str(item.get("oldName") or "").strip()
+        new_name = str(item.get("newName") or "").strip()
+        if old_name and new_name and old_name != new_name:
+            rename_map[old_name] = new_name
+
     delete_set = {str(x).strip() for x in delete_names if str(x).strip()}
     existing_names = {row[0] for row in sd if isinstance(row, list) and row}
+    rename_conflicts = []
+    for old_name, new_name in rename_map.items():
+        # 仅允许改成不存在的名字，避免覆盖另一所学校
+        if new_name in existing_names and new_name != old_name:
+            rename_conflicts.append({"oldName": old_name, "newName": new_name, "reason": "newName 已存在"})
+    if rename_conflicts:
+        raise ValueError("存在重名冲突，请先处理： " + ", ".join([f"{x['oldName']}->{x['newName']}" for x in rename_conflicts]))
 
     new_sd = []
     tier_updated = 0
+    renamed = 0
     deleted = 0
     for row in sd:
         if not isinstance(row, list) or not row:
@@ -388,7 +653,27 @@ def _apply_school_changes(changes: dict) -> dict:
             new_tier = tier_map[name]
             if old_tier != new_tier:
                 row[10] = new_tier
+                # 同步 PR.tag 中的梯队文本，避免“列表是T1但详情口碑标签还是T2”
+                if isinstance(pr, dict):
+                    p_node = pr.get(name)
+                    if isinstance(p_node, dict):
+                        old_tag = p_node.get("tag")
+                        if isinstance(old_tag, str) and old_tag.strip():
+                            if re.search(r"\bT[123]\b", old_tag):
+                                p_node["tag"] = re.sub(r"\bT[123]\b", new_tier, old_tag)
+                            else:
+                                p_node["tag"] = (old_tag + "·" + new_tier).strip("·")
+                            pr[name] = p_node
                 tier_updated += 1
+        if name in rename_map:
+            old_name = name
+            new_name = rename_map[name]
+            row[0] = new_name
+            if isinstance(pr, dict) and old_name in pr:
+                pr[new_name] = pr.pop(old_name)
+            if isinstance(tf, dict) and old_name in tf:
+                tf[new_name] = tf.pop(old_name)
+            renamed += 1
         new_sd.append(row)
 
     for name in delete_set:
@@ -398,9 +683,10 @@ def _apply_school_changes(changes: dict) -> dict:
             tf.pop(name, None)
 
     missing_tier_names = [n for n in tier_map.keys() if n not in existing_names]
+    missing_rename_names = [n for n in rename_map.keys() if n not in existing_names]
     missing_delete_names = [n for n in delete_set if n not in existing_names]
 
-    changed = deleted > 0 or tier_updated > 0 or (len(delete_set) > len(missing_delete_names))
+    changed = renamed > 0 or deleted > 0 or tier_updated > 0 or (len(delete_set) > len(missing_delete_names))
     if changed:
         payload["SD"] = new_sd
         payload["PR"] = pr
@@ -408,8 +694,10 @@ def _apply_school_changes(changes: dict) -> dict:
         _replace_payload(payload)
 
     return {
+        "renamed": renamed,
         "tierUpdated": tier_updated,
         "deleted": deleted,
+        "missingRenameNames": missing_rename_names,
         "missingTierNames": missing_tier_names,
         "missingDeleteNames": missing_delete_names,
     }
@@ -891,6 +1179,12 @@ def _serve_admin_static(handler: BaseHTTPRequestHandler, p: str) -> bool:
 
 
 class Handler(BaseHTTPRequestHandler):
+    def _redirect(self, location: str, code: int = 302) -> None:
+        self.send_response(code)
+        self.send_header("Location", location)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.end_headers()
+
     def do_OPTIONS(self) -> None:
         self.send_response(204)
         self.send_header("Access-Control-Allow-Origin", "*")
@@ -900,6 +1194,9 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self) -> None:
         p = urlparse(self.path)
+        if p.path in ("/", "/index.html"):
+            self._redirect("/admin/")
+            return
         if _serve_admin_static(self, p.path):
             return
         if p.path == "/api/health":
@@ -1018,6 +1315,18 @@ class Handler(BaseHTTPRequestHandler):
                     return
             _json_response(self, 404, {"error": "学校不存在"})
             return
+        if p.path == "/api/admin/publish-online/status":
+            q = parse_qs(p.query)
+            task_id = str(q.get("taskId", [""])[0]).strip()
+            if not task_id:
+                _json_response(self, 400, {"error": "taskId 不能为空"})
+                return
+            task = _snapshot_publish_task(task_id)
+            if not task:
+                _json_response(self, 404, {"error": "任务不存在"})
+                return
+            _json_response(self, 200, {"ok": True, "task": task})
+            return
         _json_response(self, 404, {"error": "Not Found"})
 
     def do_PUT(self) -> None:
@@ -1128,6 +1437,32 @@ class Handler(BaseHTTPRequestHandler):
                 _json_response(self, 400, {"error": str(e)})
                 return
             _json_response(self, 200, {"ok": True, **result})
+            return
+
+        if p.path == "/api/admin/publish-online":
+            message = str(body.get("message") or "").strip()
+            if not message:
+                message = "chore: publish latest school data"
+            mode = str(body.get("mode") or "api").strip().lower() or "api"
+            if mode not in ("api", "git"):
+                _json_response(self, 400, {"error": "mode 必须是 api 或 git"})
+                return
+            remote = str(body.get("remote") or "cf").strip() or "cf"
+            refspec = str(body.get("refspec") or "cf-main:main").strip() or "cf-main:main"
+            git_ssh_command = str(body.get("gitSshCommand") or "").strip()
+            cloudflare_url = str(body.get("cloudflareUrl") or "https://school-advisor.pages.dev/api/admin/bootstrap").strip()
+            publish_token = str(body.get("publishToken") or os.getenv("CF_PUBLISH_TOKEN", "")).strip()
+            if mode == "api" and not publish_token:
+                _json_response(self, 400, {"error": "缺少 publishToken（可在前端输入或设置 CF_PUBLISH_TOKEN）"})
+                return
+            task = _new_publish_task(message, remote, refspec, mode=mode, cloudflare_url=cloudflare_url)
+            t = threading.Thread(
+                target=_run_publish_task,
+                args=(task["taskId"], message, remote, refspec, git_ssh_command, mode, cloudflare_url, publish_token),
+                daemon=True,
+            )
+            t.start()
+            _json_response(self, 200, {"ok": True, "taskId": task["taskId"], "task": task})
             return
 
         if p.path == "/api/admin/xhs/collect-proposals":

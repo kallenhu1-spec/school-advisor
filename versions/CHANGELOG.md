@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v8.0.1 (2026-03-28)
+- 优化问卷维度与推荐策略
+- 统一多选下拉样式
+
 ## v8.0.0 (2026-03-26)
 - 架构升级为前后端分离：前端页面从 API 获取 `SD/PR/TF/DN` 数据
 - 新增后端服务：`backend/server.py`（`/api/bootstrap`、`/api/schools`）

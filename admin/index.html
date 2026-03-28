@@ -46,6 +46,15 @@
     @media (max-width: 980px){ .grid2 { grid-template-columns: 1fr; } }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
     pre { margin: 0; white-space: pre-wrap; word-break: break-word; }
+    .publish-wrap { border: 1px solid var(--line); background: #f8fafc; border-radius: 10px; padding: 10px; margin: 8px 0 10px; display: none; }
+    .publish-title { font-size: 13px; color: #374151; margin-bottom: 8px; font-weight: 600; }
+    .publish-steps { display: grid; grid-template-columns: 1fr; gap: 6px; }
+    .publish-step { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4b5563; }
+    .publish-dot { width: 16px; height: 16px; border-radius: 999px; border: 1px solid #cbd5e1; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; }
+    .publish-step.success .publish-dot { background: #16a34a; border-color: #16a34a; color: #fff; }
+    .publish-step.running .publish-dot { background: #2563eb; border-color: #2563eb; color: #fff; }
+    .publish-step.failed .publish-dot { background: #dc2626; border-color: #dc2626; color: #fff; }
+    .publish-log { margin-top: 8px; color: #6b7280; white-space: pre-wrap; }
   </style>
 </head>
 <body>
@@ -61,10 +70,16 @@
         <div class="grow"><select id="f-type"><option value="">全部类型</option><option value="pub">公办</option><option value="pri">民办</option></select></div>
         <button id="btn-filter">筛选</button>
         <button id="btn-reset" class="gray">重置</button>
-        <button id="btn-clear-tier-edits" class="gray">清空梯队暂存</button>
+        <button id="btn-clear-tier-edits" class="gray">清空暂存变更</button>
         <button id="btn-push-tier" class="green">数据推送前台</button>
+        <button id="btn-publish-online" class="orange">发布到线上</button>
       </div>
       <div class="status" id="school-status">加载中...</div>
+      <div id="publish-wrap" class="publish-wrap">
+        <div class="publish-title">线上发布进度</div>
+        <div id="publish-steps" class="publish-steps"></div>
+        <div id="publish-log" class="publish-log mono"></div>
+      </div>
       <table>
         <thead>
           <tr>
@@ -158,8 +173,13 @@
     var API = location.origin;
     var cacheSchools = [];
     var pendingTierUpdates = {};
+    var pendingRenameUpdates = {};
     var pendingDeleteNames = {};
     var selectedSchoolName = '';
+    var publishTaskId = '';
+    var publishTimer = null;
+    var PUBLISH_URL_KEY = 'publish_cloudflare_url';
+    var PUBLISH_TOKEN_KEY = 'publish_cloudflare_token';
 
     function qs(id){ return document.getElementById(id); }
     function j(v){ return JSON.stringify(v, null, 2); }
@@ -171,9 +191,28 @@
     function typeName(t){ return t === "pri" ? "民办" : "公办"; }
 
     function esc(s){ return String(s == null ? "" : s).replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+    function getPublishUrl(){
+      try{
+        return (localStorage.getItem(PUBLISH_URL_KEY) || '').trim() || 'https://school-advisor.pages.dev/api/admin/bootstrap';
+      }catch(e){
+        return 'https://school-advisor.pages.dev/api/admin/bootstrap';
+      }
+    }
+    function getPublishToken(){
+      try{ return (localStorage.getItem(PUBLISH_TOKEN_KEY) || '').trim(); }catch(e){ return ''; }
+    }
+    function savePublishConfig(url, token){
+      try{
+        localStorage.setItem(PUBLISH_URL_KEY, (url || '').trim());
+        if(token) localStorage.setItem(PUBLISH_TOKEN_KEY, token.trim());
+      }catch(e){}
+    }
 
     function pendingCount(){
       return Object.keys(pendingTierUpdates).length;
+    }
+    function pendingRenameCount(){
+      return Object.keys(pendingRenameUpdates).length;
     }
     function pendingDeleteCount(){
       return Object.keys(pendingDeleteNames).length;
@@ -181,8 +220,9 @@
 
     function updateSchoolStatus(total){
       var p = pendingCount();
+      var r = pendingRenameCount();
       var d = pendingDeleteCount();
-      qs('school-status').textContent = '共 ' + total + ' 所学校；待推送梯队修改 ' + p + ' 条；待删除 ' + d + ' 条';
+      qs('school-status').textContent = '共 ' + total + ' 所学校；待推送梯队修改 ' + p + ' 条；待改名 ' + r + ' 条；待删除 ' + d + ' 条';
     }
 
     function setPendingTier(name, oldTier, newTier){
@@ -200,6 +240,16 @@
         delete pendingDeleteNames[name];
       }else{
         pendingDeleteNames[name] = true;
+      }
+      updateSchoolStatus(cacheSchools.length);
+    }
+    function setPendingRename(oldName, newName){
+      if(!oldName) return;
+      newName = (newName || '').trim();
+      if(!newName || newName === oldName){
+        delete pendingRenameUpdates[oldName];
+      }else{
+        pendingRenameUpdates[oldName] = newName;
       }
       updateSchoolStatus(cacheSchools.length);
     }
@@ -223,9 +273,16 @@
         var tdName = document.createElement('td');
         var btn = document.createElement('button');
         btn.className = 'name-btn';
-        btn.textContent = (s.name || '') + (isPendingDelete ? '（待删除）' : '');
+        var displayName = pendingRenameUpdates[s.name] || s.name || '';
+        btn.textContent = displayName + (isPendingDelete ? '（待删除）' : '');
         btn.onclick = function(ev){ ev.stopPropagation(); showSchoolDetail(s.name); };
         tdName.appendChild(btn);
+        if(pendingRenameUpdates[s.name]){
+          var renameMark = document.createElement('span');
+          renameMark.className = 'tier-mark';
+          renameMark.textContent = '待改名';
+          tdName.appendChild(renameMark);
+        }
 
         var tdType = document.createElement('td');
         tdType.innerHTML = '<span class="tag ' + s.type + '">' + typeName(s.type) + '</span>';
@@ -282,6 +339,19 @@
           loadSchools();
         };
         tdOp.appendChild(delBtn);
+        var renameBtn = document.createElement('button');
+        renameBtn.className = 'del-btn gray';
+        renameBtn.style.marginLeft = '6px';
+        renameBtn.textContent = '改名';
+        renameBtn.onclick = function(ev){
+          ev.stopPropagation();
+          var current = pendingRenameUpdates[s.name] || s.name || '';
+          var v = prompt('请输入新学校名', current);
+          if(v == null) return;
+          setPendingRename(s.name, v);
+          loadSchools();
+        };
+        tdOp.appendChild(renameBtn);
 
         tr.className = 'clickable';
         if(isPendingDelete) tr.classList.add('row-delete');
@@ -408,16 +478,18 @@
 
     async function pushSchoolChanges(){
       var names = Object.keys(pendingTierUpdates);
+      var renameOldNames = Object.keys(pendingRenameUpdates);
       var delNames = Object.keys(pendingDeleteNames);
-      if(!names.length && !delNames.length){
+      if(!names.length && !renameOldNames.length && !delNames.length){
         qs('school-status').textContent = '没有待推送的变更';
         return;
       }
       var updates = names.map(function(name){ return {name:name, tier:pendingTierUpdates[name]}; });
+      var renameUpdates = renameOldNames.map(function(oldName){ return {oldName: oldName, newName: pendingRenameUpdates[oldName]}; });
       var res = await fetch(API + '/api/admin/schools/push-changes', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({tierUpdates: updates, deleteNames: delNames})
+        body: JSON.stringify({tierUpdates: updates, renameUpdates: renameUpdates, deleteNames: delNames})
       });
       var data = await res.json();
       if(!res.ok || !data.ok){
@@ -425,12 +497,16 @@
         return;
       }
       pendingTierUpdates = {};
+      pendingRenameUpdates = {};
       pendingDeleteNames = {};
       await loadSchools();
       if(selectedSchoolName){
         await showSchoolDetail(selectedSchoolName);
       }
-      var msg = '推送成功：梯队更新 ' + (data.tierUpdated || 0) + ' 所，删除 ' + (data.deleted || 0) + ' 所';
+      var msg = '推送成功：改名 ' + (data.renamed || 0) + ' 所，梯队更新 ' + (data.tierUpdated || 0) + ' 所，删除 ' + (data.deleted || 0) + ' 所';
+      if(data.missingRenameNames && data.missingRenameNames.length){
+        msg += '；改名未找到 ' + data.missingRenameNames.length + ' 所';
+      }
       if(data.missingTierNames && data.missingTierNames.length){
         msg += '；梯队未找到 ' + data.missingTierNames.length + ' 所';
       }
@@ -438,6 +514,107 @@
         msg += '；删除未找到 ' + data.missingDeleteNames.length + ' 所';
       }
       qs('school-status').textContent = msg;
+    }
+
+    async function publishOnline(){
+      var msg = prompt('请输入本次发布说明', 'chore: publish latest school data');
+      if(msg == null) return;
+      var url = prompt('请输入线上发布 API 地址', getPublishUrl());
+      if(url == null) return;
+      url = (url || '').trim();
+      if(!url){
+        qs('school-status').textContent = '发布失败：API 地址不能为空';
+        return;
+      }
+      var token = getPublishToken();
+      if(!token){
+        token = prompt('请输入 PUBLISH_TOKEN（仅保存在当前浏览器）', '');
+        if(token == null) return;
+        token = (token || '').trim();
+      }
+      if(!token){
+        qs('school-status').textContent = '发布失败：缺少 PUBLISH_TOKEN';
+        return;
+      }
+      savePublishConfig(url, token);
+      qs('school-status').textContent = '已开始发布任务，正在执行...';
+      var res = await fetch(API + '/api/admin/publish-online', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          message: msg || 'chore: publish latest school data',
+          mode: 'api',
+          cloudflareUrl: url,
+          publishToken: token
+        })
+      });
+      var data = await res.json();
+      if(!res.ok || !data.ok){
+        qs('school-status').textContent = '发布失败：' + (data.error || '启动任务失败');
+        return;
+      }
+      publishTaskId = data.taskId || '';
+      renderPublishTask(data.task || null);
+      if(publishTimer){ clearInterval(publishTimer); publishTimer = null; }
+      publishTimer = setInterval(function(){ pollPublishStatus(); }, 1500);
+    }
+
+    async function pollPublishStatus(){
+      if(!publishTaskId){
+        if(publishTimer){ clearInterval(publishTimer); publishTimer = null; }
+        return;
+      }
+      try{
+        var res = await fetch(API + '/api/admin/publish-online/status?taskId=' + encodeURIComponent(publishTaskId));
+        var data = await res.json();
+        if(!res.ok || !data.ok){
+          qs('school-status').textContent = '发布状态查询失败：' + (data.error || '未知错误');
+          if(publishTimer){ clearInterval(publishTimer); publishTimer = null; }
+          return;
+        }
+        var task = data.task;
+        renderPublishTask(task);
+        if(task.status === 'success'){
+          qs('school-status').textContent = '发布成功：已同步到 Cloudflare D1，线上数据已更新';
+          if(publishTimer){ clearInterval(publishTimer); publishTimer = null; }
+        }else if(task.status === 'failed'){
+          qs('school-status').textContent = '发布失败：' + (task.error || '请查看步骤日志');
+          if(publishTimer){ clearInterval(publishTimer); publishTimer = null; }
+        }
+      }catch(e){
+        qs('school-status').textContent = '发布状态查询异常：' + e.message;
+        if(publishTimer){ clearInterval(publishTimer); publishTimer = null; }
+      }
+    }
+
+    function renderPublishTask(task){
+      if(!task) return;
+      var wrap = qs('publish-wrap');
+      var stepsEl = qs('publish-steps');
+      var logEl = qs('publish-log');
+      wrap.style.display = 'block';
+      var steps = task.steps || [];
+      stepsEl.innerHTML = steps.map(function(s){
+        var icon = '·';
+        if(s.status === 'success') icon = '✓';
+        else if(s.status === 'running') icon = '…';
+        else if(s.status === 'failed') icon = '!';
+        var detail = s.detail ? ('（' + esc(s.detail) + '）') : '';
+        return '<div class="publish-step ' + esc(s.status || 'pending') + '">'
+          + '<span class="publish-dot">' + icon + '</span>'
+          + '<span>' + esc(s.label || s.key || '') + detail + '</span>'
+          + '</div>';
+      }).join('');
+
+      var logs = (task.logs || []).slice(-3).map(function(x){
+        var line = '$ ' + (x.cmd || '') + ' -> ' + (x.code == null ? '-' : x.code);
+        var out = (x.output || '').trim();
+        if(out){
+          line += '\n' + out.split('\n').slice(0, 2).join('\n');
+        }
+        return line;
+      });
+      logEl.textContent = logs.length ? logs.join('\n\n') : '等待执行日志...';
     }
 
     async function loadSources(){
@@ -533,10 +710,12 @@
     };
     qs('btn-clear-tier-edits').onclick = function(){
       pendingTierUpdates = {};
+      pendingRenameUpdates = {};
       pendingDeleteNames = {};
       loadSchools();
     };
     qs('btn-push-tier').onclick = pushSchoolChanges;
+    qs('btn-publish-online').onclick = publishOnline;
     qs('btn-upload-xlsx').onclick = uploadXlsx;
     qs('btn-refresh-queue').onclick = loadQueue;
     qs('btn-approve').onclick = function(){ review('approve'); };

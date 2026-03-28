@@ -32,6 +32,9 @@ def post_json(url: str, token: str, payload: dict, timeout: int = 30) -> tuple[i
         method="POST",
         headers={
             "Content-Type": "application/json; charset=utf-8",
+            "Accept": "application/json, text/plain, */*",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36",
+            "Origin": "https://school-advisor.pages.dev",
             "Authorization": f"Bearer {token}",
         },
     )
