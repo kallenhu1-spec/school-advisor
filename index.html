@@ -811,10 +811,8 @@ function setTierFilter(t,btn){
   applyFilters();
 }
 function displaySchoolName(name){
-  return String(name||'')
-    .replace(/[（(]\s*小学部\s*[）)]/g,'')
-    .replace(/小学部$/,'')
-    .trim();
+  // 按官方口径展示：不做“小学部”等后缀清洗，原名直出
+  return String(name||'').trim();
 }
 function renderTable(list){
   // 动态更新学校总数 + 数据来源标识
