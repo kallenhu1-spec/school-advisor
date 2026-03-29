@@ -810,6 +810,12 @@ function setTierFilter(t,btn){
   else document.getElementById('f-all').classList.add('on');
   applyFilters();
 }
+function displaySchoolName(name){
+  return String(name||'')
+    .replace(/[（(]\s*小学部\s*[）)]/g,'')
+    .replace(/小学部$/,'')
+    .trim();
+}
 function renderTable(list){
   // 动态更新学校总数 + 数据来源标识
   updateDataSourceLabel();
@@ -817,12 +823,12 @@ function renderTable(list){
   if(!list||!list.length){tb.innerHTML='<tr><td colspan="6" style="text-align:center;color:#999;padding:24px">\u6682\u65e0\u7b26\u5408\u6761\u4ef6\u7684\u5b66\u6821</td></tr>';return;}
   var h='';
   list.forEach(function(s){
-    var name=s[0],dist=s[1],typ=s[2],lo=s[3],hi=s[4],lat=s[7],lng=s[8],st=s[9],tier=s[10];
+    var name=s[0],showName=displaySchoolName(name),dist=s[1],typ=s[2],lo=s[3],hi=s[4],lat=s[7],lng=s[8],st=s[9],tier=s[10];
     var enc=encodeURIComponent(name);
     var esq=name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-    var cleanName=name.replace(/^(民办|公办|上海市)/,'');
+    var cleanName=showName.replace(/^(民办|公办|上海市)/,'');
     var mapUrl='https://uri.amap.com/search?keyword='+encodeURIComponent(cleanName)+'&city=%E4%B8%8A%E6%B5%B7&src=mypage&callnative=1';
-    var xhsKw=name;
+    var xhsKw=showName;
     var xhsUrl='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(xhsKw)+'&source=web_explore_feed';
     var tierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
     var typBadge=typ==='pub'?'<span class="pub-b">\u516c\u529e</span>':'<span class="pri-b">\u6c11\u529e</span>';
@@ -834,12 +840,12 @@ function renderTable(list){
     else{var pct=lo===hi?lo+'%':lo+'-'+hi+'%';var col=lo<20?'#ef4444':lo<40?'#f97316':'#16a34a';rateHtml='<span style="color:'+col+';font-weight:600">'+pct+'</span>';}
     var stIcon=typ==='pub'?'':(st==='hot'?'🔥':st==='cool'?'🍀':'');
     h+='<tr>';
-    h+='<td><button class="nm-btn" onclick="toggleDetail(\''+esq+'\')">'+stIcon+' '+name+' <span class="expand-hint" id="eh-'+enc+'">\u25be</span></button></td>';
+    h+='<td><button class="nm-btn" onclick="toggleDetail(\''+esq+'\')">'+stIcon+' '+showName+' <span class="expand-hint" id="eh-'+enc+'">\u25be</span></button></td>';
     h+='<td style="text-align:center"><span style="font-size:12px;color:#666">'+(DN[dist]||dist)+'</span></td>';
     h+='<td style="text-align:center">'+tierBadge+'</td><td style="white-space:nowrap;text-align:center">'+typBadge+'</td><td style="white-space:nowrap;text-align:center">'+rateHtml+'</td>';
     h+='<td style="white-space:nowrap;vertical-align:middle;text-align:left;padding:6px 8px"><a class="map-btn" href="'+mapUrl+'" target="_blank"><img src=\"data:image/png;base64,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" style=\"width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle\"> 导航</a>'
-    +' <button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>'
-     +' <button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>'
+    +' <button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+showName+'" type="button">'+XHS_IMG+'口碑</button>'
+     +' <button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+showName+'" type="button">'+DZ_IMG+'点评</button>'
     +'</td>';
     h+='</tr><tr class="dp-row"><td colspan="6"><div class="dp-wrap" id="dpw-'+enc+'" style="display:none"></div></td></tr>';
   });
@@ -849,18 +855,18 @@ function renderTable(list){
   if(cards){
     var ch='';
     list.forEach(function(s){
-      var name=s[0],dist=s[1],typ=s[2],lo=s[3],hi=s[4],lat=s[7],lng=s[8],st=s[9],tier=s[10];
+      var name=s[0],showName=displaySchoolName(name),dist=s[1],typ=s[2],lo=s[3],hi=s[4],lat=s[7],lng=s[8],st=s[9],tier=s[10];
       var enc=encodeURIComponent(name);
       var esq=name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-      var cleanName=name.replace(/^(民办|公办|上海市)/,'');
+      var cleanName=showName.replace(/^(民办|公办|上海市)/,'');
     var mapUrl='https://uri.amap.com/search?keyword='+encodeURIComponent(cleanName)+'&city=%E4%B8%8A%E6%B5%B7&src=mypage&callnative=1';
-      var xhsUrl='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(name)+'&source=web_explore_feed';
+      var xhsUrl='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(showName)+'&source=web_explore_feed';
       var tierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
       var typBadge=typ==='pub'?'<span class="pub-b">公办</span>':'<span class="pri-b">民办</span>';
       var rateStr=typ==='pub'?null:(lo===null||lo===undefined?null:(lo===0&&hi===0?'—':lo+'–'+hi+'%'));
       ch+='<div class="school-card" id="card-'+enc+'">';
       ch+='<div class="sc-header" onclick="openSheet(\''+esq+'\')">';
-      ch+='<span class="sc-name">'+name+'<span class="sc-arrow"> ›</span></span>';
+      ch+='<span class="sc-name">'+showName+'<span class="sc-arrow"> ›</span></span>';
       ch+='<span class="sc-badges">'+tierBadge+typBadge+'</span>';
       ch+='</div>';
       ch+='<div class="sc-meta" onclick="openSheet(\''+esq+'\')">';
@@ -871,8 +877,8 @@ function renderTable(list){
       ch+='</div>';
       ch+='<div class="sc-btns">';
       ch+='<a class="map-btn" href="'+mapUrl+'" target="_blank">'+MAP_IMG+'导航</a>';
-      ch+='<button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+name+'" type="button">'+XHS_IMG+'口碑</button>';
-      ch+='<button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+name+'" type="button">'+DZ_IMG+'点评</button>';
+      ch+='<button class="xhs-btn" onclick="openXHS(this.dataset.name)" data-name="'+showName+'" type="button">'+XHS_IMG+'口碑</button>';
+      ch+='<button class="dz-btn" onclick="openDZ(this.dataset.name)" data-name="'+showName+'" type="button">'+DZ_IMG+'点评</button>';
       ch+='</div>';
       var hintCls=PR[name]?' has-profile':'';
       ch+='<div class="sc-detail-hint'+hintCls+'" onclick="toggleDetail(\''+esq+'\')">';
@@ -906,9 +912,10 @@ function closeDetail(){
 }
 function buildDetail(name){
   var pr=PR[name];
+  var showName=displaySchoolName(name);
   // 没有 profile 时：引导去大众点评
   if(!pr){
-    var dzUrl='https://www.dianping.com/search/keyword/1/0_'+encodeURIComponent(name);
+    var dzUrl='https://www.dianping.com/search/keyword/1/0_'+encodeURIComponent(showName);
     return '<div class="dz-guide">'
       +'<div class="dz-guide-title">📋 查看官方招生简章</div>'
       +'<div class="dz-guide-desc">在大众点评搜索该学校，可查看 <b>官方招生简章</b>、<b>家长真实评价</b> 和 <b>学校环境照片</b></div>'
@@ -918,7 +925,7 @@ function buildDetail(name){
       +'<span class="dz-guide-tag">👩‍👧 家长口碑</span>'
       +'<span class="dz-guide-tag">📞 咨询电话</span>'
       +'</div>'
-      +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(name)+')" type="button">'+DZ_IMG+' 去大众点评查看该校信息</button>'
+      +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(showName)+')" type="button">'+DZ_IMG+' 去大众点评查看该校信息</button>'
       +'</div>';
   }
 
@@ -965,7 +972,7 @@ function buildDetail(name){
   }
 
   // ===== 大众点评引导区块 =====
-  var dzUrl='https://www.dianping.com/search/keyword/1/0_'+encodeURIComponent(name);
+  var dzUrl='https://www.dianping.com/search/keyword/1/0_'+encodeURIComponent(showName);
   var dzGuide='<div class="dz-guide">'
     +'<div class="dz-guide-title">📋 查官方招生简章 & 家长评价</div>'
     +'<div class="dz-guide-desc">在大众点评可查看该校 <b>官方招生简章</b>（招生人数/报名条件/时间）和家长真实口碑</div>'
@@ -976,12 +983,12 @@ function buildDetail(name){
     +'<span class="dz-guide-tag">👩‍👧 家长评价</span>'
     +'<span class="dz-guide-tag">🏫 校园环境</span>'
     +'</div>'
-    +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(name)+')" type="button">'+DZ_IMG+' 去大众点评查看该校详情</button>'
+    +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(showName)+')" type="button">'+DZ_IMG+' 去大众点评查看该校详情</button>'
     +'</div>';
 
   var h='';
   // 学校名+slogan
-  h+='<div style="font-size:15px;font-weight:700;color:#1a1a2e;margin-bottom:4px">'+name+'</div>';
+  h+='<div style="font-size:15px;font-weight:700;color:#1a1a2e;margin-bottom:4px">'+showName+'</div>';
   if(slogan) h+='<div style="font-size:12px;color:#667eea;font-style:italic;margin-bottom:8px">'+slogan+'</div>';
   // 家长关注标签行
   h+='<div class="focus-tags">'+focusTags+'</div>';
@@ -1028,7 +1035,7 @@ function renderLtTable(list){
     var rateColor = lo<30?'#e53e3e':lo<60?'#dd6b20':'#2d6a4f';
     var bg = i%2===0?'#fff':'#fafbff';
     html+='<tr style="background:'+bg+'">';
-    html+='<td style="padding:7px 6px;border-bottom:1px solid #f0f0f0">'+s[0]+'</td>';
+    html+='<td style="padding:7px 6px;border-bottom:1px solid #f0f0f0">'+displaySchoolName(s[0])+'</td>';
     html+='<td style="padding:7px 6px;text-align:center;border-bottom:1px solid #f0f0f0">'+(DN[s[1]]||s[1])+'</td>';
     html+='<td style="padding:7px 6px;text-align:center;border-bottom:1px solid #f0f0f0">'+(s[10]||'—')+'</td>';
     html+='<td style="padding:7px 6px;text-align:center;border-bottom:1px solid #f0f0f0;font-weight:700;color:'+rateColor+'">'+rateStr+'</td>';
@@ -1184,7 +1191,7 @@ function renderStrategy(h,d,t,fList){
     return '<div style="padding:9px 0;border-bottom:1px solid #ffe8cc;cursor:pointer" onclick="showDetail(\''+s[0].replace(/'/g,"\\'")+'\')">'
       +'<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap">'
       +'<span style="font-size:12px;background:#eef2ff;color:#4361ee;border-radius:6px;padding:2px 7px;font-weight:700">'+label+'</span>'
-      +'<a style="font-size:14px;font-weight:700;color:#2b4ce0;text-decoration:none">'+s[0]+'</a>'
+      +'<a style="font-size:14px;font-weight:700;color:#2b4ce0;text-decoration:none">'+displaySchoolName(s[0])+'</a>'
       +'<span style="font-size:11px;background:'+tierColor+'20;color:'+tierColor+';border-radius:4px;padding:1px 6px;font-weight:600">'+(s[10]||'—')+'</span>'
       +'</div>'
       +'<p style="font-size:12px;color:#555;line-height:1.5;margin:0">• '+rate+'<br>• 匹配原因：'+why+'</p>'
@@ -1331,7 +1338,7 @@ function openSheet(name){
   var sheet=document.getElementById('detail-sheet');
   var title=document.getElementById('sheet-title');
   var body=document.getElementById('sheet-body');
-  title.textContent=name;
+  title.textContent=displaySchoolName(name);
   body.innerHTML=buildDetail(name);
   overlay.classList.add('open');
   sheet.classList.add('open');
@@ -1348,7 +1355,7 @@ function closeSheet(){
 
 /* 小红书口碑跳转（微信内复制关键词，外部直接打开） */
 function normalizeSchoolNameForSearch(name){
-  return String(name||'').replace(/[（(]\s*小学部\s*[）)]/g,'小学部').trim();
+  return displaySchoolName(name);
 }
 function openDZ(name){
   var q=normalizeSchoolNameForSearch(name);
