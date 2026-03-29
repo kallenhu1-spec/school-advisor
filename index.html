@@ -937,7 +937,7 @@ function buildDetail(name){
       +'<span class="dz-guide-tag">👩‍👧 家长口碑</span>'
       +'<span class="dz-guide-tag">📞 咨询电话</span>'
       +'</div>'
-      +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(showName)+')" type="button">'+DZ_IMG+' 去大众点评查看该校信息</button>'
+      +'<button class="dz-guide-btn" onclick="openDZ(this.dataset.name)" data-name="'+showName+'" type="button">'+DZ_IMG+' 去大众点评查看该校信息</button>'
       +'</div>';
   }
 
@@ -995,7 +995,7 @@ function buildDetail(name){
     +'<span class="dz-guide-tag">👩‍👧 家长评价</span>'
     +'<span class="dz-guide-tag">🏫 校园环境</span>'
     +'</div>'
-    +'<button class="dz-guide-btn" onclick="openDZ('+JSON.stringify(showName)+')" type="button">'+DZ_IMG+' 去大众点评查看该校详情</button>'
+    +'<button class="dz-guide-btn" onclick="openDZ(this.dataset.name)" data-name="'+showName+'" type="button">'+DZ_IMG+' 去大众点评查看该校详情</button>'
     +'</div>';
 
   var h='';
