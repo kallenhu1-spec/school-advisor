@@ -1233,20 +1233,26 @@ function renderStrategy(h,d,t,fList){
       if(sb!==sa) return sb-sa;
       return da-db;
     })[0];
+    var SAFETY_FLOOR=45; // 第二志愿保底线：低于该中签率不推荐为“稳妥”
     var secondCandidates=priList.filter(function(s){
       if(!first) return true;
       if(s[0]===first[0]) return false;
       var lo=s[3]||0, flo=first[3]||0;
-      return lo>=Math.max(45,flo+10);
+      return lo>=Math.max(SAFETY_FLOOR,flo+10);
     });
     if(!secondCandidates.length){
-      secondCandidates=priList.filter(function(s){ return !first || s[0]!==first[0]; });
+      // 回退：至少满足保底线
+      secondCandidates=priList.filter(function(s){
+        var lo=s[3]||0;
+        return (!first || s[0]!==first[0]) && lo>=SAFETY_FLOOR;
+      });
     }
     var second=secondCandidates.sort(function(a,b){
       var da=(a[3]||0), db=(b[3]||0);
       var sa=scoreTotal(a), sb=scoreTotal(b);
-      if(sb!==sa) return sb-sa;
-      return db-da;
+      // 第二志愿保底优先：先看中签率，再看匹配分
+      if(db!==da) return db-da;
+      return sb-sa;
     })[0];
     recHtml='<div style="margin-top:14px;background:#fff8f0;border-radius:12px;padding:13px 14px;border-left:4px solid #f6933b">';
     recHtml+='<div style="font-size:14px;font-weight:700;color:#c05e00;margin-bottom:10px">🎯 民办志愿推荐（本区小学限定）</div>';
@@ -1254,8 +1260,12 @@ function renderStrategy(h,d,t,fList){
       recHtml+='<p style="font-size:12px;color:#8a5a10;line-height:1.6;margin:0">当前区域暂无可用民办推荐，请在下方列表按“民办”筛选并查看口碑详情。</p>';
     }else{
       if(first) recHtml+=buildRecLine(first,'第一志愿（冲刺）');
-      if(second) recHtml+=buildRecLine(second,'第二志愿（稳妥）');
-      recHtml+='<p style="font-size:12px;color:#8a5a10;line-height:1.6;margin-top:8px">策略说明：第一志愿优先“匹配高 + 中签率低可冲”；第二志愿优先“匹配不错 + 中签率相对更高”。</p>';
+      if(second){
+        recHtml+=buildRecLine(second,'第二志愿（稳妥）');
+      } else {
+        recHtml+='<p style="font-size:12px;color:#8a5a10;line-height:1.7;margin:8px 0 0">⚠️ 当前区域暂无中签率≥'+SAFETY_FLOOR+'%的民办可作为“稳妥第二志愿”。建议优先考虑公办兜底，或在可接受范围内选择本区中签率更高的民办。</p>';
+      }
+      recHtml+='<p style="font-size:12px;color:#8a5a10;line-height:1.6;margin-top:8px">策略说明：第一志愿优先“匹配高 + 可冲”；第二志愿严格执行“保底优先（中签率≥'+SAFETY_FLOOR+'%）”。</p>';
     }
     recHtml+='</div>';
   }
