@@ -724,7 +724,9 @@ function applyFilters(){
   sq=sq.trim().toLowerCase();
   closeDetail();
   curList=SD.filter(function(s){
-    if(sq&&s[0].toLowerCase().indexOf(sq)<0)return false;
+    var raw=(s[0]||'').toLowerCase();
+    var shown=displaySchoolName(s[0]).toLowerCase();
+    if(sq && raw.indexOf(sq)<0 && shown.indexOf(sq)<0) return false;
     if(d&&s[1]!==d)return false;
     if(t==='pub'&&s[2]!=='pub')return false;
     if(t==='pri'&&s[2]!=='pri')return false;
@@ -811,8 +813,20 @@ function setTierFilter(t,btn){
   applyFilters();
 }
 function displaySchoolName(name){
-  // 按官方口径展示：不做“小学部”等后缀清洗，原名直出
-  return String(name||'').trim();
+  var n=String(name||'').replace(/\s+/g,' ').trim();
+  // 官方口径别名映射（仅纠正已确认的历史别名）
+  var OFFICIAL_NAME_MAP={
+    '嘉定世外学校（小学部）':'上海嘉定区世外学校',
+    '嘉定世外学校小学部':'上海嘉定区世外学校',
+    '桃李园实验学校（小学部）':'上海市民办桃李园实验学校',
+    '桃李园实验学校小学部':'上海市民办桃李园实验学校',
+    '华旭双语学校（小学部）':'上海华旭双语学校',
+    '华旭双语学校小学部':'上海华旭双语学校',
+    '怀少学校（小学部）':'上海嘉定民办华盛怀少学校',
+    '怀少学校小学部':'上海嘉定民办华盛怀少学校',
+    '上海嘉定民办怀少学校':'上海嘉定民办华盛怀少学校'
+  };
+  return OFFICIAL_NAME_MAP[n] || n;
 }
 function renderTable(list){
   // 动态更新学校总数 + 数据来源标识
