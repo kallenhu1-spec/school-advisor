@@ -196,10 +196,18 @@ function districtSchoolHints(payload, districtCode) {
     .filter((r) => Array.isArray(r) && r[1] === districtCode)
     .slice(0, 10)
     .map((r) => ({
+      // r[11]=录取数, r[12]=最大摇号数（可选扩展字段）
+      admission: Number.isFinite(Number(r[11])) ? Number(r[11]) : null,
+      maxLottery: Number.isFinite(Number(r[12])) && Number(r[12]) > 0 ? Number(r[12]) : null,
       name: toStr(r[0]),
       type: r[2] === "pub" ? "公办" : r[2] === "pri" ? "民办" : "未知",
       tier: toStr(r[10]) || "未知",
-      lottery: typeof r[3] === "number" ? `${r[3]}%` : "待确认",
+      lottery:
+        Number.isFinite(Number(r[11])) && Number.isFinite(Number(r[12])) && Number(r[12]) > 0
+          ? `${Math.round((Number(r[11]) * 1000) / Number(r[12])) / 10}%`
+          : typeof r[3] === "number" && r[3] > 0
+            ? `${r[3]}%`
+            : "站内暂无中签率",
     }));
 }
 

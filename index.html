@@ -882,6 +882,20 @@ function displaySchoolName(name){
   };
   return OFFICIAL_NAME_MAP[n] || n;
 }
+function getLotteryInfo(s){
+  var typ=s[2], lo=s[3], hi=s[4], st=s[9];
+  var admit=(typeof s[11]==='number'&&isFinite(s[11]))?s[11]:null;
+  var maxNo=(typeof s[12]==='number'&&isFinite(s[12]))?s[12]:null;
+  if(admit===null && s[11]!==null && s[11]!==undefined && s[11]!=='' && !isNaN(Number(s[11]))) admit=Number(s[11]);
+  if(maxNo===null && s[12]!==null && s[12]!==undefined && s[12]!=='' && !isNaN(Number(s[12]))) maxNo=Number(s[12]);
+  var hasCounts=(admit!==null && maxNo!==null && maxNo>0);
+  var pct=null;
+  if(hasCounts) pct=(admit*100/maxNo);
+  else if(typeof lo==='number'&&lo>0) pct=lo;
+  else if(typeof hi==='number'&&hi>0) pct=hi;
+  var isAll=(typ==='pri') && ((hasCounts&&admit===maxNo) || st==='cool' || (typeof lo==='number'&&lo>=99.5));
+  return {admit:admit,maxNo:maxNo,hasCounts:hasCounts,pct:pct,isAll:isAll,lo:lo,hi:hi};
+}
 function renderTable(list){
   // 动态更新学校总数 + 数据来源标识
   updateDataSourceLabel();
@@ -890,6 +904,7 @@ function renderTable(list){
   var h='';
   list.forEach(function(s){
     var name=s[0],showName=displaySchoolName(name),dist=s[1],typ=s[2],lo=s[3],hi=s[4],lat=s[7],lng=s[8],st=s[9],tier=s[10];
+    var li=getLotteryInfo(s);
     var enc=encodeURIComponent(name);
     var esq=name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
     var cleanName=showName.replace(/^(民办|公办|上海市)/,'');
@@ -899,11 +914,24 @@ function renderTable(list){
     var tierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
     var typBadge=typ==='pub'?'<span class="pub-b">\u516c\u529e</span>':'<span class="pri-b">\u6c11\u529e</span>';
     var rateHtml='';
-    if(typ==='pub'){rateHtml='';}  /* 公办无中签率 */
-    else if(lo===null||lo===undefined){rateHtml='';}
-    else if(lo===0&&hi===0){rateHtml='<span class="na-tag">待公布</span>';}
-    else if(lo>=80){rateHtml='<span class="cool-tag">🍀全录</span>';}
-    else{var pct=lo===hi?lo+'%':lo+'-'+hi+'%';var col=lo<20?'#ef4444':lo<40?'#f97316':'#16a34a';rateHtml='<span style="color:'+col+';font-weight:600">'+pct+'</span>';}
+    if(typ==='pub'){rateHtml='';}
+    else if(li.isAll){
+      rateHtml='<span class="cool-tag">🍀全录</span>';
+      if(li.hasCounts) rateHtml+='<div style="font-size:11px;color:#6b7280;line-height:1.2;margin-top:2px">录取'+li.admit+' / 摇号'+li.maxNo+'</div>';
+    }else if(li.hasCounts){
+      var p1=Math.round(li.pct*10)/10;
+      var col1=p1<20?'#ef4444':p1<40?'#f97316':'#16a34a';
+      rateHtml='<span style="color:'+col1+';font-weight:600">'+p1+'%</span><div style="font-size:11px;color:#6b7280;line-height:1.2;margin-top:2px">录取'+li.admit+' / 摇号'+li.maxNo+'</div>';
+    }else if(typeof li.pct==='number'&&li.pct>0){
+      var p2=Math.round(li.pct*10)/10;
+      var col2=p2<20?'#ef4444':p2<40?'#f97316':'#16a34a';
+      rateHtml='<span style="color:'+col2+';font-weight:600">'+p2+'%</span>';
+    }else{
+      rateHtml='<span class="na-tag">—</span>';
+      if(li.admit!==null || li.maxNo!==null){
+        rateHtml+='<div style="font-size:11px;color:#6b7280;line-height:1.2;margin-top:2px">录取'+(li.admit===null?'—':li.admit)+' / 摇号'+(li.maxNo===null?'—':li.maxNo)+'</div>';
+      }
+    }
     var stIcon=typ==='pub'?'':(st==='hot'?'🔥':st==='cool'?'🍀':'');
     h+='<tr>';
     h+='<td><button class="nm-btn" onclick="toggleDetail(\''+esq+'\')">'+stIcon+' '+showName+' <span class="expand-hint" id="eh-'+enc+'">\u25be</span></button></td>';
@@ -922,6 +950,7 @@ function renderTable(list){
     var ch='';
     list.forEach(function(s){
       var name=s[0],showName=displaySchoolName(name),dist=s[1],typ=s[2],lo=s[3],hi=s[4],lat=s[7],lng=s[8],st=s[9],tier=s[10];
+      var li=getLotteryInfo(s);
       var enc=encodeURIComponent(name);
       var esq=name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
       var cleanName=showName.replace(/^(民办|公办|上海市)/,'');
@@ -929,7 +958,13 @@ function renderTable(list){
       var xhsUrl='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(showName)+'&source=web_explore_feed';
       var tierBadge=tier==='T1'?'<span class="t1b">T1</span>':tier==='T2'?'<span class="t2b">T2</span>':'<span class="t3b">T3</span>';
       var typBadge=typ==='pub'?'<span class="pub-b">公办</span>':'<span class="pri-b">民办</span>';
-      var rateStr=typ==='pub'?null:(lo===null||lo===undefined?null:(lo===0&&hi===0?'—':lo+'–'+hi+'%'));
+      var rateStr=null;
+      if(typ!=='pub'){
+        if(li.isAll) rateStr='🍀全录';
+        else if(typeof li.pct==='number'&&li.pct>0) rateStr=(Math.round(li.pct*10)/10)+'%';
+        else rateStr='—';
+        if(li.hasCounts) rateStr+='（录取'+li.admit+'/摇号'+li.maxNo+'）';
+      }
       ch+='<div class="school-card" id="card-'+enc+'">';
       ch+='<div class="sc-header" onclick="openSheet(\''+esq+'\')">';
       ch+='<span class="sc-name">'+showName+'<span class="sc-arrow"> ›</span></span>';
