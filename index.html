@@ -1427,7 +1427,42 @@ function clearAdvisorChat(){
 }
 function pickChatApiBase(){
   var cands=getApiCandidates();
-  return cands.length?cands[0]:window.location.origin;
+  // Prefer current origin first to avoid stale localStorage API base causing hangs.
+  cands=cands.filter(function(x){return !!x;});
+  var curr=normalizeApiBase(window.location.origin);
+  var out=[curr], seen={}; seen[curr]=1;
+  cands.forEach(function(x){
+    x=normalizeApiBase(x);
+    if(!x||seen[x]) return;
+    seen[x]=1;
+    out.push(x);
+  });
+  return out;
+}
+function fetchJsonWithTimeout(url, options, timeoutMs){
+  return new Promise(function(resolve, reject){
+    var done=false;
+    var timer=setTimeout(function(){
+      if(done) return;
+      done=true;
+      reject(new Error('timeout'));
+    }, timeoutMs||15000);
+    fetch(url, options).then(function(res){
+      if(done) return;
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      return res.json();
+    }).then(function(data){
+      if(done) return;
+      done=true;
+      clearTimeout(timer);
+      resolve(data);
+    }).catch(function(err){
+      if(done) return;
+      done=true;
+      clearTimeout(timer);
+      reject(err);
+    });
+  });
 }
 function sendAdvisorMessage(){
   if(advisorState.busy) return;
@@ -1439,31 +1474,40 @@ function sendAdvisorMessage(){
   input.value='';
   renderAdvisor();
   advisorState.busy=true;
-  var endpoint=pickChatApiBase()+'/api/chat/decision';
-  fetch(endpoint,{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({
-      messages:advisorState.messages.slice(-12).map(function(m){return {role:m.role,content:m.content};}),
-      profile:advisorProfile()
-    })
-  }).then(function(res){
-    if(!res.ok) throw new Error('HTTP '+res.status);
-    return res.json();
-  }).then(function(data){
-    var reply=(data&&data.reply)||'我已收到你的信息，建议我们先确认预算、通勤和路径偏好。';
-    if(data&&data.note){
-      reply+='\n\n【系统提示】'+data.note;
-    }
-    advisorState.messages.push({role:'assistant',content:reply,structured:data&&data.structured?data.structured:null});
-    renderAdvisor();
-  }).catch(function(err){
-    advisorState.messages.push({role:'assistant',content:'对话服务暂时不可用，我先给你手动建议：先定预算与通勤上限，再筛3所冲刺+2所稳妥学校。'});
-    renderAdvisor();
-    console.warn('advisor chat failed',err);
-  }).finally(function(){
-    advisorState.busy=false;
+  var apis=pickChatApiBase();
+  var payload=JSON.stringify({
+    messages:advisorState.messages.slice(-12).map(function(m){return {role:m.role,content:m.content};}),
+    profile:advisorProfile()
   });
+  var i=0;
+  function tryNext(){
+    if(i>=apis.length){
+      advisorState.messages.push({role:'assistant',content:'对话服务暂时不可用，我先给你手动建议：先定预算与通勤上限，再筛3所冲刺+2所稳妥学校。'});
+      renderAdvisor();
+      advisorState.busy=false;
+      return;
+    }
+    var api=apis[i++];
+    var endpoint=api+'/api/chat/decision';
+    fetchJsonWithTimeout(endpoint,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:payload
+    },15000).then(function(data){
+      try{ localStorage.setItem('advisor_api_base', api); }catch(e){}
+      var reply=(data&&data.reply)||'我已收到你的信息，建议我们先确认预算、通勤和路径偏好。';
+      if(data&&data.note){
+        reply+='\n\n【系统提示】'+data.note;
+      }
+      advisorState.messages.push({role:'assistant',content:reply,structured:data&&data.structured?data.structured:null});
+      renderAdvisor();
+      advisorState.busy=false;
+    }).catch(function(err){
+      console.warn('advisor chat failed from',api,err);
+      tryNext();
+    });
+  }
+  tryNext();
 }
 
 function renderTimeline(){
