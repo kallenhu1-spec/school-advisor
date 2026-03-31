@@ -143,6 +143,10 @@ tr:hover>td{background:#fafbff}
 .ai-quick button{border:1px solid #d7defc;background:#fff;color:#4361ee;border-radius:14px;font-size:12px;padding:6px 10px;cursor:pointer}
 .ai-quick button:hover{background:#f4f7ff}
 .advisor-chat{background:#f7f9ff;border:1px solid #e6ebff;border-radius:12px;min-height:240px;max-height:420px;overflow:auto;padding:12px;margin-bottom:10px}
+.advisor-status{display:none;align-items:center;gap:8px;font-size:12px;color:#4b5563;background:#eef2ff;border:1px solid #d7defc;border-radius:10px;padding:7px 10px;margin-bottom:8px}
+.advisor-status.show{display:flex}
+.advisor-status-dot{width:8px;height:8px;border-radius:50%;background:#4361ee;animation:advisorPulse 1s ease-in-out infinite}
+@keyframes advisorPulse{0%{opacity:.25;transform:scale(.9)}50%{opacity:1;transform:scale(1)}100%{opacity:.25;transform:scale(.9)}}
 .advisor-msg{margin-bottom:10px}
 .advisor-msg .who{font-size:11px;color:#6b7280;margin-bottom:4px}
 .advisor-msg .bubble{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:10px 11px;font-size:13px;line-height:1.65;color:#2b2b2b}
@@ -154,6 +158,7 @@ tr:hover>td{background:#fafbff}
 .advisor-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
 .advisor-send,.advisor-clear{border:none;border-radius:10px;padding:8px 14px;font-size:13px;cursor:pointer}
 .advisor-send{background:#4361ee;color:#fff}
+.advisor-send[disabled]{opacity:.6;cursor:not-allowed}
 .advisor-clear{background:#f3f4f6;color:#4b5563}
 #res{display:none}
 @media(max-width:600px){.r2,.dp-grid{grid-template-columns:1fr}th,td{padding:7px 6px;font-size:11px}.filter-row{gap:6px}}
@@ -624,11 +629,15 @@ tr:hover>td{background:#fafbff}
         <button type="button" onclick="advisorQuickStart('对比')">学校对比分析</button>
         <button type="button" onclick="advisorQuickStart('路径')">家庭路径建议</button>
       </div>
+      <div id="advisor-status" class="advisor-status">
+        <span class="advisor-status-dot"></span>
+        <span id="advisor-status-text">顾问思考中...</span>
+      </div>
       <div id="advisor-chat" class="advisor-chat"></div>
       <div class="advisor-input">
         <textarea id="advisor-input" rows="3" placeholder="例如：我在闵行，预算每年10-15万，孩子偏内向，帮我做冲稳保方案"></textarea>
         <div class="advisor-actions">
-          <button type="button" class="advisor-send" onclick="sendAdvisorMessage()">发送</button>
+          <button id="advisor-send-btn" type="button" class="advisor-send" onclick="sendAdvisorMessage()">发送</button>
           <button type="button" class="advisor-clear" onclick="clearAdvisorChat()">清空对话</button>
         </div>
       </div>
@@ -1411,6 +1420,21 @@ function renderAdvisor(){
   box.scrollTop=box.scrollHeight;
   saveAdvisor();
 }
+function setAdvisorStatus(show,text){
+  var wrap=document.getElementById('advisor-status');
+  var txt=document.getElementById('advisor-status-text');
+  if(txt && text) txt.textContent=text;
+  if(wrap) wrap.classList.toggle('show',!!show);
+}
+function setAdvisorBusy(busy,text){
+  advisorState.busy=!!busy;
+  var btn=document.getElementById('advisor-send-btn');
+  if(btn){
+    btn.disabled=!!busy;
+    btn.textContent=busy?'发送中...':'发送';
+  }
+  setAdvisorStatus(!!busy, text||'顾问思考中...');
+}
 function advisorQuickStart(kind){
   var profile=advisorProfile();
   var prefix='请基于我的情况';
@@ -1473,7 +1497,7 @@ function sendAdvisorMessage(){
   advisorState.messages.push({role:'user',content:text});
   input.value='';
   renderAdvisor();
-  advisorState.busy=true;
+  setAdvisorBusy(true,'顾问思考中...');
   var apis=pickChatApiBase();
   var payload=JSON.stringify({
     messages:advisorState.messages.slice(-12).map(function(m){return {role:m.role,content:m.content};}),
@@ -1484,10 +1508,11 @@ function sendAdvisorMessage(){
     if(i>=apis.length){
       advisorState.messages.push({role:'assistant',content:'对话服务暂时不可用，我先给你手动建议：先定预算与通勤上限，再筛3所冲刺+2所稳妥学校。'});
       renderAdvisor();
-      advisorState.busy=false;
+      setAdvisorBusy(false);
       return;
     }
     var api=apis[i++];
+    setAdvisorStatus(true, i===1 ? '顾问思考中...' : '连接波动，正在重试...');
     var endpoint=api+'/api/chat/decision';
     fetchJsonWithTimeout(endpoint,{
       method:'POST',
@@ -1501,7 +1526,7 @@ function sendAdvisorMessage(){
       }
       advisorState.messages.push({role:'assistant',content:reply,structured:data&&data.structured?data.structured:null});
       renderAdvisor();
-      advisorState.busy=false;
+      setAdvisorBusy(false);
     }).catch(function(err){
       console.warn('advisor chat failed from',api,err);
       tryNext();
