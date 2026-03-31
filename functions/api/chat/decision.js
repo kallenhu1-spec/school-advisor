@@ -14,6 +14,8 @@ function json(data, status = 200) {
   });
 }
 
+const ENABLE_1V1_DECISION = false; // 线上下线开关：false=下线（保留代码）
+
 const MODEL_PRICING_CNY_PER_M = {
   "qwen-turbo": { in: 0.3, out: 0.6 },
   "qwen-turbo-latest": { in: 0.3, out: 0.6 },
@@ -295,6 +297,17 @@ export async function onRequestOptions() {
 }
 
 export async function onRequestPost(context) {
+  if (!ENABLE_1V1_DECISION) {
+    return json(
+      {
+        ok: false,
+        code: "feature_disabled",
+        reply: "1v1 决策顾问暂时下线，功能迭代完成后会重新开放。",
+      },
+      410,
+    );
+  }
+
   let body;
   try {
     body = await context.request.json();
