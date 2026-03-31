@@ -1672,17 +1672,28 @@ function closeSheet(){
 function normalizeSchoolNameForSearch(name){
   return displaySchoolName(name);
 }
+function buildDZKeyword(name){
+  var q=normalizeSchoolNameForSearch(name).trim();
+  if(!q) return '';
+  if(/(学校|小学|附属小学)$/.test(q)) return q;
+  return q+' 学校';
+}
 function openDZ(name){
-  var q=normalizeSchoolNameForSearch(name);
-  var enc=encodeURIComponent(q);
+  var kw=buildDZKeyword(name);
+  if(!kw){
+    showToast('未识别到学校名称，请稍后重试');
+    return;
+  }
+  var enc=encodeURIComponent(kw);
+  var appScheme='dianping://picassobox?picassoid=pexus-search-shoplist/main-bundle.js&target=searchshoplist&needcity=false&notitlebar=1&source=openclaw&keyword='+enc;
   var webUrl='https://www.dianping.com/search/keyword/1/0_'+enc;
   var ua=navigator.userAgent;
   var isWx=/MicroMessenger/i.test(ua);
+  var isMobileUA=/Android|webOS|iPhone|iPod|iPad|Mobile/i.test(ua) || isMobile();
   if(isWx){
-    /* 微信内（H5或小程序）：无法唤起第三方App，复制关键词提示用户 */
-    var kw=q+' 口碑';
+    /* 微信内：复制关键词提示用户切到大众点评 App 搜索 */
     function doToast(ok){
-      showToast(ok?'已复制「'+kw+'」\n打开大众点评 App 搜索即可 🍴':'请去大众点评 App 搜索：'+kw);
+      showToast(ok?'已复制「'+kw+'」\n请切到大众点评 App 搜索':'请切到大众点评 App 搜索：'+kw);
     }
     if(navigator.clipboard&&navigator.clipboard.writeText){
       navigator.clipboard.writeText(kw).then(function(){doToast(true);}).catch(function(){doToast(false);});
@@ -1694,8 +1705,20 @@ function openDZ(name){
         doToast(true);
       }catch(e){doToast(false);}
     }
+  } else if(isMobileUA){
+    /* 手机端非微信：优先唤起大众点评 App，失败回退网页 */
+    var hidden=false;
+    var onVis=function(){ if(document.hidden) hidden=true; };
+    document.addEventListener('visibilitychange', onVis);
+    window.location.href=appScheme;
+    setTimeout(function(){
+      document.removeEventListener('visibilitychange', onVis);
+      if(hidden) return;
+      var w=window.open(webUrl,'_blank','noopener');
+      if(!w) window.location.href=webUrl;
+    }, 1200);
   } else {
-    /* 非微信：直接打开网页搜索，避免 scheme 在部分浏览器无响应 */
+    /* 电脑端：直接网页搜索 */
     var w=window.open(webUrl,'_blank','noopener');
     if(!w) window.location.href=webUrl;
   }
