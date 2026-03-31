@@ -19,6 +19,12 @@
    - D1 database: 选择刚创建的库
 2. `Environment Variables` 新增：
    - `PUBLISH_TOKEN` = 你自定义的一段长随机字符串（例如 32 位）
+   - `DASHSCOPE_API_KEY` = 你的阿里云百炼 API Key（用于 1v1 对话顾问）
+   - `QWEN_MODEL` = 可选，默认 `qwen-turbo-latest`
+   - `DASHSCOPE_BASE_URL` = 可选，默认 `https://dashscope.aliyuncs.com/compatible-mode/v1`
+   - `CHAT_FREE_PER_IP_PER_DAY` = 可选，每个 IP 每天可用深度对话次数（默认 `3`）
+   - `CHAT_DAILY_BUDGET_CNY` = 可选，每日 API 预算上限（默认 `35` 元）
+   - `CHAT_MAX_ROUNDS` = 可选，对话轮次上限（默认 `8`）
 
 ## 3. 初始化 D1 表结构
 
@@ -42,6 +48,7 @@ CREATE TABLE IF NOT EXISTS bootstrap_payload (
 - `GET /api/health`
 - `GET /api/bootstrap`
 - `POST /api/admin/bootstrap`（需要 `Authorization: Bearer <PUBLISH_TOKEN>`）
+- `POST /api/chat/decision`（1v1 决策对话，未配置 `DASHSCOPE_API_KEY` 时会返回本地兜底草案）
 
 ## 5. 首次发布数据到 D1
 

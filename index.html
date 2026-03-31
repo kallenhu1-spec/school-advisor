@@ -13,6 +13,7 @@ function switchOuterTab(n,btn){
   var el=document.getElementById('ot'+n);
   el.style.display='block';
   if(n===2) renderTimeline();
+  if(n===3) renderAdvisor();
 }
 /**
  * Skipped minification because the original files appears to be already minified.
@@ -137,6 +138,23 @@ tr:hover>td{background:#fafbff}
 .src-tag{display:inline-block;background:#f3f4f6;color:#6b7280;font-size:10px;padding:1px 5px;border-radius:4px;margin-left:4px}
 .xhs-dist-area{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#FFF8F9;border-radius:12px;margin-bottom:12px;flex-wrap:wrap;}
 .xhs-dist-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;background:#FFF0F2;color:#FF2442;border:1px solid #FFCCD5;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;-webkit-appearance:none;}
+.ai-note{font-size:12px;color:#666;line-height:1.7;background:#f8faff;border:1px solid #e7ecff;border-radius:10px;padding:10px 12px;margin-bottom:10px}
+.ai-quick{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.ai-quick button{border:1px solid #d7defc;background:#fff;color:#4361ee;border-radius:14px;font-size:12px;padding:6px 10px;cursor:pointer}
+.ai-quick button:hover{background:#f4f7ff}
+.advisor-chat{background:#f7f9ff;border:1px solid #e6ebff;border-radius:12px;min-height:240px;max-height:420px;overflow:auto;padding:12px;margin-bottom:10px}
+.advisor-msg{margin-bottom:10px}
+.advisor-msg .who{font-size:11px;color:#6b7280;margin-bottom:4px}
+.advisor-msg .bubble{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:10px 11px;font-size:13px;line-height:1.65;color:#2b2b2b}
+.advisor-msg.user .bubble{background:#eef2ff;border-color:#dce4ff}
+.advisor-structured{margin-top:8px;padding:8px;border-radius:8px;background:#fffdf2;border:1px solid #fde68a}
+.advisor-structured b{color:#92400e}
+.advisor-input textarea{width:100%;resize:vertical;padding:10px 12px;border:1.5px solid #dbe2ff;border-radius:10px;font-size:14px;outline:none}
+.advisor-input textarea:focus{border-color:#667eea}
+.advisor-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+.advisor-send,.advisor-clear{border:none;border-radius:10px;padding:8px 14px;font-size:13px;cursor:pointer}
+.advisor-send{background:#4361ee;color:#fff}
+.advisor-clear{background:#f3f4f6;color:#4b5563}
 #res{display:none}
 @media(max-width:600px){.r2,.dp-grid{grid-template-columns:1fr}th,td{padding:7px 6px;font-size:11px}.filter-row{gap:6px}}
 
@@ -450,6 +468,7 @@ tr:hover>td{background:#fafbff}
   <div class="outer-tabs">
     <button class="otb on" onclick="switchOuterTab(1,this)">🏫 我的择校</button>
     <button class="otb" onclick="switchOuterTab(2,this)">📅 关键时间</button>
+    <button class="otb" onclick="switchOuterTab(3,this)">💬 1v1决策</button>
   </div>
 </div>
 <div class="wrap">
@@ -593,6 +612,29 @@ tr:hover>td{background:#fafbff}
     </div>
   </div>
 
+  <!-- Tab3: 1v1 决策 -->
+  <div id="ot3" class="otc" style="display:none">
+    <div class="card">
+      <div class="ct">💬 上海小学择校 1v1 决策顾问</div>
+      <div class="ai-note">
+        先填写「我的择校」表单再来对话，顾问会自动带入你的家庭画像，输出「学校对比 + 路径建议」。
+      </div>
+      <div class="ai-quick">
+        <button type="button" onclick="advisorQuickStart('梳理')">1v1 决策梳理</button>
+        <button type="button" onclick="advisorQuickStart('对比')">学校对比分析</button>
+        <button type="button" onclick="advisorQuickStart('路径')">家庭路径建议</button>
+      </div>
+      <div id="advisor-chat" class="advisor-chat"></div>
+      <div class="advisor-input">
+        <textarea id="advisor-input" rows="3" placeholder="例如：我在闵行，预算每年10-15万，孩子偏内向，帮我做冲稳保方案"></textarea>
+        <div class="advisor-actions">
+          <button type="button" class="advisor-send" onclick="sendAdvisorMessage()">发送</button>
+          <button type="button" class="advisor-clear" onclick="clearAdvisorChat()">清空对话</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 <script>var DZ_IMG='<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAADKklEQVR4nG2UTWjcVRTFf/e+N5OZZMZkbNNmYZqiOGmKGG3qF1hMxUXcdFcoghTponQRa+guC6EILtSU6kIF6c5Q3LQLEVQQLS0ihUJjxVrTxjEljdavlGQ+Mv9577r4T5oWchfv8R6Xc+4997wnZmatW3PY6ZPI3BU0RrAI9SqIQK4r3QFEwSJiRnSeuH0HcuANfH8ZSRauG+8dxf1zC+ssIq2E4DOw82kILeTniwhtoNUaZHPgM2CGNKq0SluQifeR1alx8zMXoFiCpEn0Hnt9Cj+4C4Dk0rfox5NIoUR84nmoXMXNz0K2A9RB9Q5x6ClUb/wI+QKYQbOBjYySGdyFhASJgczIXuL2IeK+Q/iDk1AehmYjbTO0IFdAKlfxGmJadnMVlpfSBABry9JeNZtDYoAQ796uJYqBrh1jXz9h32vY5fO0rl0Cn8GcI7n4Nfw5jzz2DKYOFivg3TpTOzxmRKcw/g6ZLdtItpUJHxzDHnkcWgn2+zXk0Jto92Zacz+hszOQL0IM9wFJOPKCUa8Sdr+IO/I2qo7wxzzMXEinMzKK6+klJk2SU8fx33+BqId8V7szawMd3mOIQm2Z1u69uP3juL6B+9gwAxGsXiUuVojnzqDnP0cyHaCaWiEc3pNCqkJtBSt0E8pPoq8cw5d6wXmiGawsIYUeRAQDWj98iZ56C3GurdFdtSMUupE7f0PPJlypF3Oe5JvPkO/OIsv/QWcRe24M//JBMs+O0Vz6Cz89BQ+U1qeGCLLaIGztx+0fR5wnOfMh7pPj+MUKWq/ibi/gpk+QfPouBmTGXiU8Ogz16j0ViWKrddjxEpovEBZ/Q7+aRku9mAhEwzIeHtyKO3eW1shoasikCar3AEH6IHsfQsyw61eQeg0r9kAI66IbSEce+WgSqa0gzkO2A2/qUseumdVCOoVcZ3sibBgaQvq0ADND48M70y9DPahiCxVMlbi5D8t3pSQbhUhKVF8hDpSR5Oavxomj6L+3IZvDuoqE8jA6exmt1TYGSZGgUSV2b8ImTiLRzMLNWez0FFr5BQktaNSQbB5re2SjMBHiwCAcmCCzfYj/AQaTVPl4QJzoAAAAAElFTkSuQmCC" style="width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle">';
 var MAP_IMG='<img src="data:image/png;base64,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" style="width:18px;height:18px;border-radius:4px;flex-shrink:0;vertical-align:middle">';
@@ -604,6 +646,8 @@ var DN={"pudong": "\u6d66\u4e1c", "minhang": "\u95f5\u884c", "xuhui": "\u5f90\u6
 var curList=[],statusFlt=null,tierFlt='',typeFlt='',openName=null,myChart=null;
 var APP_VERSION='v8.0.0';
 var DATA_SOURCE='embedded';
+var ADVISOR_KEY='advisor_chat_v1';
+var advisorState={messages:[],busy:false};
 console.log('Primary School Advisor', APP_VERSION);
 
 function normalizeApiBase(v){
@@ -704,6 +748,7 @@ document.addEventListener('DOMContentLoaded',function(){
     updateFocusTriggerText();
     applyFilters();
     renderTimeline();
+    initAdvisor();
   });
 });
 document.addEventListener('click',function(e){
@@ -1285,6 +1330,140 @@ function renderStrategy(h,d,t,fList){
   }
 
   document.getElementById('stg').innerHTML=summary+recHtml;
+}
+
+function escapeHtml(s){
+  return String(s||'')
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+function advisorProfile(){
+  var household=(document.getElementById('v1')||{}).value||'';
+  var district=(document.getElementById('v2')||{}).value||'';
+  var intentType=(document.getElementById('v4')||{}).value||'';
+  var focus=getFocusValues();
+  return {household:household,district:district,intentType:intentType,focus:focus};
+}
+function initAdvisor(){
+  try{
+    var raw=localStorage.getItem(ADVISOR_KEY)||'';
+    if(raw){
+      var parsed=JSON.parse(raw);
+      if(parsed&&Array.isArray(parsed.messages)) advisorState.messages=parsed.messages.slice(-20);
+    }
+  }catch(e){}
+  if(!advisorState.messages.length){
+    advisorState.messages=[{role:'assistant',content:'我是你的上海幼升小 1v1 顾问。你可以直接说：家庭情况 + 预算 + 通勤 + 教育偏好，我会给你冲稳保建议。'}];
+  }
+  renderAdvisor();
+  var input=document.getElementById('advisor-input');
+  if(input){
+    input.addEventListener('keydown',function(e){
+      if(e.key==='Enter'&&!e.shiftKey){
+        e.preventDefault();
+        sendAdvisorMessage();
+      }
+    });
+  }
+}
+function saveAdvisor(){
+  try{
+    localStorage.setItem(ADVISOR_KEY,JSON.stringify({messages:advisorState.messages.slice(-20)}));
+  }catch(e){}
+}
+function renderStructured(s){
+  if(!s||typeof s!=='object') return '';
+  var h='';
+  var qs=Array.isArray(s.next_questions)?s.next_questions:[];
+  var rs=Array.isArray(s.risk_alerts)?s.risk_alerts:[];
+  var ps=Array.isArray(s.paths)?s.paths:[];
+  var cs=Array.isArray(s.candidate_schools)?s.candidate_schools:[];
+  if(qs.length){
+    h+='<div><b>下一步确认：</b>'+qs.slice(0,3).map(escapeHtml).join('；')+'</div>';
+  }
+  if(ps.length){
+    h+='<div style="margin-top:4px"><b>路径建议：</b>'+ps.slice(0,3).map(function(x){return escapeHtml((x.name||'方案')+'-'+(x.summary||''));}).join('；')+'</div>';
+  }
+  if(cs.length){
+    h+='<div style="margin-top:4px"><b>候选学校：</b>'+cs.slice(0,5).map(function(x){return escapeHtml(x.name||'');}).filter(Boolean).join('、')+'</div>';
+  }
+  if(rs.length){
+    h+='<div style="margin-top:4px"><b>风险提醒：</b>'+rs.slice(0,3).map(escapeHtml).join('；')+'</div>';
+  }
+  return h?('<div class="advisor-structured">'+h+'</div>'):'';
+}
+function renderAdvisor(){
+  var box=document.getElementById('advisor-chat');
+  if(!box) return;
+  var h='';
+  advisorState.messages.forEach(function(m){
+    var isUser=m.role==='user';
+    h+='<div class="advisor-msg'+(isUser?' user':'')+'">';
+    h+='<div class="who">'+(isUser?'你':'1v1顾问')+'</div>';
+    h+='<div class="bubble">'+escapeHtml(m.content).replace(/\n/g,'<br>')+'</div>';
+    if(!isUser&&m.structured) h+=renderStructured(m.structured);
+    h+='</div>';
+  });
+  box.innerHTML=h;
+  box.scrollTop=box.scrollHeight;
+  saveAdvisor();
+}
+function advisorQuickStart(kind){
+  var profile=advisorProfile();
+  var prefix='请基于我的情况';
+  if(kind==='梳理') prefix+='，做一份 1v1 决策梳理（先问关键3个问题，再给冲稳保建议）。';
+  else if(kind==='对比') prefix+='，做学校对比分析（列出 3 所候选，按录取确定性/风格/成本对比）。';
+  else prefix+='，给家庭路径建议（保守/均衡/冲刺三套路径）。';
+  var detail='我的信息：户籍='+ (profile.household||'未填') +'，区域='+ (profile.district||'未填') +'，意向='+ (profile.intentType||'未填');
+  document.getElementById('advisor-input').value=prefix+'\n'+detail;
+  sendAdvisorMessage();
+}
+function clearAdvisorChat(){
+  advisorState.messages=[{role:'assistant',content:'对话已清空。你可以继续输入新的家庭情况，我会重新给你做方案。'}];
+  renderAdvisor();
+}
+function pickChatApiBase(){
+  var cands=getApiCandidates();
+  return cands.length?cands[0]:window.location.origin;
+}
+function sendAdvisorMessage(){
+  if(advisorState.busy) return;
+  var input=document.getElementById('advisor-input');
+  if(!input) return;
+  var text=(input.value||'').trim();
+  if(!text) return;
+  advisorState.messages.push({role:'user',content:text});
+  input.value='';
+  renderAdvisor();
+  advisorState.busy=true;
+  var endpoint=pickChatApiBase()+'/api/chat/decision';
+  fetch(endpoint,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      messages:advisorState.messages.slice(-12).map(function(m){return {role:m.role,content:m.content};}),
+      profile:advisorProfile()
+    })
+  }).then(function(res){
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    return res.json();
+  }).then(function(data){
+    var reply=(data&&data.reply)||'我已收到你的信息，建议我们先确认预算、通勤和路径偏好。';
+    if(data&&data.note){
+      reply+='\n\n【系统提示】'+data.note;
+    }
+    advisorState.messages.push({role:'assistant',content:reply,structured:data&&data.structured?data.structured:null});
+    renderAdvisor();
+  }).catch(function(err){
+    advisorState.messages.push({role:'assistant',content:'对话服务暂时不可用，我先给你手动建议：先定预算与通勤上限，再筛3所冲刺+2所稳妥学校。'});
+    renderAdvisor();
+    console.warn('advisor chat failed',err);
+  }).finally(function(){
+    advisorState.busy=false;
+  });
 }
 
 function renderTimeline(){
