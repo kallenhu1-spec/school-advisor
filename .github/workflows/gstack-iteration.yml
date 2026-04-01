@@ -1,0 +1,210 @@
+name: GSTACK 多角色自动迭代
+
+on:
+  # 触发方式1：每周一早上9点自动运行（定时迭代）
+  schedule:
+    - cron: '0 1 * * 1'   # UTC 1:00 = 北京时间 9:00，每周一
+
+  # 触发方式2：Issue 被打上 "gstack-iterate" 标签时自动触发
+  issues:
+    types: [labeled]
+
+  # 触发方式3：手动触发（你在 GitHub Actions 页面点击 Run workflow）
+  workflow_dispatch:
+    inputs:
+      focus_area:
+        description: '本次迭代重点（留空=全面审查）'
+        required: false
+        default: ''
+      skip_ceo:
+        description: '跳过 CEO 审查？(true/false)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  # ─────────────────────────────────────────────
+  # 前置检查：只在合适条件下运行
+  # ─────────────────────────────────────────────
+  check-trigger:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - name: 检查触发条件
+        id: check
+        run: |
+          if [ "${{ github.event_name }}" = "issues" ]; then
+            # 只有 label 名称是 "gstack-iterate" 才触发
+            LABEL="${{ github.event.label.name }}"
+            if [ "$LABEL" = "gstack-iterate" ]; then
+              echo "should_run=true" >> $GITHUB_OUTPUT
+            else
+              echo "should_run=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          fi
+
+  # ─────────────────────────────────────────────
+  # Step 1: CEO 战略审查
+  # ─────────────────────────────────────────────
+  ceo-review:
+    needs: check-trigger
+    if: needs.check-trigger.outputs.should_run == 'true' && github.event.inputs.skip_ceo != 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      review_summary: ${{ steps.ceo.outputs.summary }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 运行 CEO 审查 Agent
+        id: ceo
+        uses: openai/codex-action@v1
+        with:
+          prompt: |
+            你是 ceo-reviewer Agent（见 .codex/agents/ceo-reviewer.toml 的 instructions）。
+            请审查当前项目状态，重点关注：
+            ${{ github.event.inputs.focus_area || '全面战略审查' }}
+
+            读取以下文件了解项目上下文：
+            - AGENTS.md（项目说明和约束）
+            - VERSION.json（当前版本）
+            - school-advisor-strategic-review.md（上次的战略建议）
+
+            按照你的 instructions 格式输出审查报告，最后用 JSON 格式输出摘要：
+            {"priority1": "...", "priority2": "...", "priority3": "...", "scope_mode": "..."}
+          agent: ceo-reviewer
+          api-key: ${{ secrets.OPENAI_API_KEY }}
+
+  # ─────────────────────────────────────────────
+  # Step 2: Design 审查（并行，与 CEO 同时可）
+  # ─────────────────────────────────────────────
+  design-review:
+    needs: check-trigger
+    if: needs.check-trigger.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      review_summary: ${{ steps.design.outputs.summary }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 运行 Design 审查 Agent
+        id: design
+        uses: openai/codex-action@v1
+        with:
+          prompt: |
+            你是 design-reviewer Agent（见 .codex/agents/design-reviewer.toml 的 instructions）。
+            请审查 index.html 中的 UX/UI 设计，重点关注：
+            ${{ github.event.inputs.focus_area || '全面 UX 审查，重点检查 AI Slop' }}
+
+            读取 index.html 分析用户体验，按照你的 instructions 格式输出报告。
+          agent: design-reviewer
+          api-key: ${{ secrets.OPENAI_API_KEY }}
+
+  # ─────────────────────────────────────────────
+  # Step 3: 工程实施（汇总 CEO+Design 建议后执行）
+  # ─────────────────────────────────────────────
+  engineering:
+    needs: [ceo-review, design-review]
+    if: always() && needs.check-trigger.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 运行 Engineering Agent（汇总+实施）
+        uses: openai/codex-action@v1
+        with:
+          prompt: |
+            你是 eng-reviewer Agent（见 .codex/agents/eng-reviewer.toml 的 instructions）。
+
+            **CEO 审查摘要：**
+            ${{ needs.ceo-review.outputs.review_summary || '（CEO审查已跳过）' }}
+
+            **Design 审查摘要：**
+            ${{ needs.design-review.outputs.review_summary || '（Design审查结果）' }}
+
+            请执行以下步骤：
+            1. 汇总以上两个审查的建议，选出本次迭代最高优先级的 1-2 个改动
+            2. 按照你的 instructions 实施代码改动（注意编码规范）
+            3. 更新 VERSION.json 和 versions/CHANGELOG.md
+            4. 存档当前版本到 versions/ 目录
+            5. 创建 PR，PR body 中包含 QA 验证清单
+
+            **重点约束：**
+            - 中文必须直接写 UTF-8，禁止 unicode_escape
+            - 禁止修改 .github/workflows/ 下的任何文件
+            - 版本号规则：修复bug→patch+1，新功能→minor+1
+          agent: eng-reviewer
+          api-key: ${{ secrets.OPENAI_API_KEY }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  # ─────────────────────────────────────────────
+  # Step 4: QA 验证（在 Engineering 创建 PR 后自动触发）
+  # ─────────────────────────────────────────────
+  qa-review:
+    needs: engineering
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 运行 QA 验证 Agent
+        uses: openai/codex-action@v1
+        with:
+          prompt: |
+            你是 qa-reviewer Agent（见 .codex/agents/qa-reviewer.toml 的 instructions）。
+
+            Engineering Agent 刚刚对 index.html 做了改动并创建了 PR。
+            请执行完整的 QA 验证流程：
+
+            1. 检查 index.html 的改动（git diff HEAD~1 index.html）
+            2. 逐项执行你的必检清单
+            3. 重点检查：中文编码（无 \u 转义）、数据完整性、版本号更新
+            4. 在 PR 中发表 QA 审查评论（包含 ✅/❌/⚠️ 结果）
+            5. 如果全部通过，approve PR；如有阻断问题，request changes
+
+            你的审查结论会直接影响 PR 是否可以合并。
+          agent: qa-reviewer
+          api-key: ${{ secrets.OPENAI_API_KEY }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  # ─────────────────────────────────────────────
+  # 通知：迭代完成后在 Issue 中汇报结果
+  # ─────────────────────────────────────────────
+  notify:
+    needs: [ceo-review, design-review, engineering, qa-review]
+    if: always() && needs.check-trigger.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 创建迭代汇报 Issue
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const date = new Date().toLocaleDateString('zh-CN');
+            const ceoStatus = '${{ needs.ceo-review.result }}' === 'success' ? '✅' : '⚠️';
+            const designStatus = '${{ needs.design-review.result }}' === 'success' ? '✅' : '⚠️';
+            const engStatus = '${{ needs.engineering.result }}' === 'success' ? '✅' : '❌';
+            const qaStatus = '${{ needs.qa-review.result }}' === 'success' ? '✅' : '⚠️';
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[GSTACK 迭代报告] ${date}`,
+              body: `## GSTACK 多角色自动迭代完成\n\n` +
+                    `| 角色 | 状态 |\n|------|------|\n` +
+                    `| ${ceoStatus} CEO 战略审查 | ${{ needs.ceo-review.result }} |\n` +
+                    `| ${designStatus} Design 审查 | ${{ needs.design-review.result }} |\n` +
+                    `| ${engStatus} 工程实施 | ${{ needs.engineering.result }} |\n` +
+                    `| ${qaStatus} QA 验证 | ${{ needs.qa-review.result }} |\n\n` +
+                    `**下一步：** 请查看新建的 PR，确认后 merge 即可完成本次迭代。\n\n` +
+                    `> 如需手动触发下次迭代，请在 Actions 页面点击 "Run workflow"`,
+              labels: ['gstack-report']
+            });
