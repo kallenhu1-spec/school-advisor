@@ -8,6 +8,16 @@
 - **学校数据**：170+ 所学校，覆盖上海 9 个区
 - **技术栈**：HTML + CSS + JavaScript + Chart.js（内联）
 
+## 数据质量原则（所有 Agent 必须遵守）
+
+> ⚠️ 这个产品帮助真实家长做择校决策，数据诚实是底线。
+
+- **口碑数据（`var PR=`）大部分是 AI 生成的草稿，尚未经真实来源核实**，前端展示时必须附带免责说明
+- **中签率数据**必须标注年份（`rateYear`）和是否为估算值（`rateEstimated`）
+- 所有 Agent 在涉及数据修改时，必须同时更新 `dataSource` 来源字段
+- 来源级别：`official`（官方）> `verified`（已核实）> `community`（社区）> `ai-draft`（AI草稿）
+- 禁止把 `ai-draft` 数据当成真实数据展示，必须有 ⚠️ 标注
+
 ## 核心架构约束
 
 1. **编码规范**：HTML 内 JS 中的中文必须直接写 UTF-8 字符串，**禁止** `unicode_escape` 或 `&#XXXXX;` 数字实体
