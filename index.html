@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>上海幼升小选校助手 2026</title>
 <script>
-var ENABLE_1V1_DECISION=false; // 线上下线开关：false=下线（保留代码）
+var ENABLE_1V1_DECISION=true; // 本地联调默认开启，发布前可改回 false
 
 function switchOuterTab(n,btn){
   if(n===3 && !ENABLE_1V1_DECISION){
@@ -117,6 +117,34 @@ tr:hover>td{background:#fafbff}
 .con-item{color:#dc2626;font-size:13px;margin-bottom:4px;padding-left:4px}
 .sd-row{display:flex;gap:4px;margin-top:6px;align-items:center}
 .sd{width:12px;height:12px;border-radius:50%;background:#e5e7eb}.sd.on{background:#667eea}
+.diag-report{background:#fbfaf8;border:1px solid #ece7de;border-radius:14px;padding:14px}
+.diag-head{text-align:center;margin-bottom:10px}
+.diag-title{font-size:19px;font-weight:700;color:#2f2a24}
+.diag-sub{font-size:12px;color:#7c766e;margin-top:4px;line-height:1.6}
+.diag-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:8px}
+.diag-tag{font-size:11px;padding:3px 8px;border-radius:999px;background:#fff;border:1px solid #e2ddd2;color:#6d675d}
+.diag-alert{background:#f8f0db;border:1px solid #edd8a3;border-radius:10px;padding:10px 12px;margin-bottom:12px}
+.diag-alert ul{margin:0;padding-left:16px;display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+.diag-alert li{font-size:12px;color:#6b5a32;line-height:1.5}
+.diag-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.diag-card{background:#fff;border:1px solid #ece7de;border-radius:12px;padding:11px}
+.diag-school{font-size:15px;font-weight:700;color:#2f2a24}
+.diag-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.diag-badge{font-size:11px;padding:2px 7px;border-radius:999px;background:#f5f3ef;color:#6f6a62}
+.diag-kpis{margin-top:10px}
+.diag-kpi{display:grid;grid-template-columns:88px 1fr 28px;align-items:center;gap:8px;margin:7px 0}
+.diag-kpi-name{font-size:12px;color:#6b655e}
+.diag-bar{height:6px;background:#efe9de;border-radius:999px;overflow:hidden}
+.diag-fill{height:100%;border-radius:999px}
+.diag-score{font-size:12px;font-weight:700;color:#5f5a53;text-align:right}
+.diag-note{margin-top:10px;font-size:12px;color:#56524b;line-height:1.65;background:#faf8f4;border:1px solid #f0ebe2;border-radius:8px;padding:8px}
+.diag-summary{margin-top:12px;background:#fff;border:1px solid #ece7de;border-radius:12px;padding:10px}
+.diag-summary-title{font-size:13px;font-weight:700;color:#463f37;margin-bottom:8px}
+.diag-table{width:100%;border-collapse:collapse}
+.diag-table th{font-size:11px;font-weight:600;color:#8a8379;background:#f7f4ee;padding:7px 6px;border-bottom:1px solid #ece7de;text-align:left}
+.diag-table td{font-size:12px;color:#4f4941;padding:7px 6px;border-bottom:1px solid #f2eee8}
+.diag-rank{font-weight:700;color:#9a5d00}
+.diag-foot{margin-top:8px;font-size:11px;color:#8a8379;line-height:1.6}
 /* 家长关注标签 */
 .focus-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
 .focus-tag{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#f0f4ff;color:#4361ee}
@@ -147,26 +175,49 @@ tr:hover>td{background:#fafbff}
 .ai-quick{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
 .ai-quick button{border:1px solid #d7defc;background:#fff;color:#4361ee;border-radius:14px;font-size:12px;padding:6px 10px;cursor:pointer}
 .ai-quick button:hover{background:#f4f7ff}
-.advisor-chat{background:#f7f9ff;border:1px solid #e6ebff;border-radius:12px;min-height:240px;max-height:420px;overflow:auto;padding:12px;margin-bottom:10px}
-.advisor-status{display:none;align-items:center;gap:8px;font-size:12px;color:#4b5563;background:#eef2ff;border:1px solid #d7defc;border-radius:10px;padding:7px 10px;margin-bottom:8px}
+.advisor-chat{background:#fff;border:1px solid #eceef3;border-radius:12px;min-height:260px;max-height:520px;overflow:auto;padding:14px 14px 8px;margin-bottom:10px}
+.advisor-status{display:none;align-items:center;gap:8px;font-size:12px;color:#6b7280;background:#f8fafc;border:1px solid #eceff4;border-radius:10px;padding:7px 10px;margin-bottom:8px}
 .advisor-status.show{display:flex}
 .advisor-status-dot{width:8px;height:8px;border-radius:50%;background:#4361ee;animation:advisorPulse 1s ease-in-out infinite}
 @keyframes advisorPulse{0%{opacity:.25;transform:scale(.9)}50%{opacity:1;transform:scale(1)}100%{opacity:.25;transform:scale(.9)}}
-.advisor-msg{margin-bottom:10px}
-.advisor-msg .who{font-size:11px;color:#6b7280;margin-bottom:4px}
-.advisor-msg .bubble{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:10px 11px;font-size:13px;line-height:1.65;color:#2b2b2b}
-.advisor-msg.user .bubble{background:#eef2ff;border-color:#dce4ff}
-.advisor-structured{margin-top:8px;padding:8px;border-radius:8px;background:#fffdf2;border:1px solid #fde68a}
-.advisor-structured b{color:#92400e}
-.advisor-input textarea{width:100%;resize:vertical;padding:10px 12px;border:1.5px solid #dbe2ff;border-radius:10px;font-size:14px;outline:none}
-.advisor-input textarea:focus{border-color:#667eea}
+.advisor-msg{margin-bottom:14px}
+.advisor-msg .who{display:none}
+.advisor-msg .bubble{display:inline-block;max-width:84%;background:#f6f7f9;border:1px solid #eceff3;border-radius:14px;padding:11px 13px;font-size:14px;line-height:1.72;color:#1f2937}
+.advisor-msg.user{text-align:right}
+.advisor-msg.user .bubble{background:#edf2ff;border-color:#dbe6ff}
+.advisor-structured{margin:6px 0 0 0;padding:0;border:none;background:transparent}
+.advisor-structured b{color:#111827;font-weight:600}
+.chat-diag{margin-top:8px;border:1px solid #ecdcb6;background:#fffef8;border-radius:10px;padding:8px}
+.chat-diag-head{font-size:13px;font-weight:700;color:#6f4200;margin-bottom:6px}
+.chat-diag-grid{display:grid;grid-template-columns:1fr;gap:8px}
+.chat-diag-card{background:#fff;border:1px solid #eee4cf;border-radius:8px;padding:8px}
+.chat-diag-name{font-size:13px;font-weight:700;color:#3f3a32}
+.chat-diag-meta{margin-top:2px;display:flex;gap:5px;flex-wrap:wrap}
+.chat-diag-chip{font-size:10px;padding:1px 6px;border-radius:999px;background:#f5f2ea;color:#6d6559}
+.chat-diag-kpi{display:grid;grid-template-columns:54px 1fr 24px;gap:6px;align-items:center;margin-top:5px}
+.chat-diag-kpi-name{font-size:11px;color:#6b655e}
+.chat-diag-bar{height:5px;background:#eee8de;border-radius:999px;overflow:hidden}
+.chat-diag-fill{height:100%;border-radius:999px}
+.chat-diag-score{font-size:11px;font-weight:700;color:#5f5a53;text-align:right}
+.chat-diag-note{margin-top:6px;font-size:12px;line-height:1.55;color:#4e4a44}
+.chat-diag-rank{margin-top:8px}
+.chat-diag-table{width:100%;border-collapse:collapse}
+.chat-diag-table th{font-size:11px;padding:5px;border-bottom:1px solid #ece7de;background:#faf7f1;color:#7d756a;text-align:left}
+.chat-diag-table td{font-size:11px;padding:5px;border-bottom:1px solid #f2eee8;color:#4f4941}
+.advisor-input textarea{width:100%;resize:vertical;padding:12px 13px;border:1px solid #dfe3ea;border-radius:14px;font-size:15px;outline:none;line-height:1.6;background:#fff}
+.advisor-input textarea:focus{border-color:#8ea2ff;box-shadow:0 0 0 3px rgba(99,102,241,.08)}
 .advisor-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
 .advisor-send,.advisor-clear{border:none;border-radius:10px;padding:8px 14px;font-size:13px;cursor:pointer}
 .advisor-send{background:#4361ee;color:#fff}
 .advisor-send[disabled]{opacity:.6;cursor:not-allowed}
 .advisor-clear{background:#f3f4f6;color:#4b5563}
 #res{display:none}
-@media(max-width:600px){.r2,.dp-grid{grid-template-columns:1fr}th,td{padding:7px 6px;font-size:11px}.filter-row{gap:6px}}
+@media(max-width:600px){
+  .r2,.dp-grid,.diag-grid{grid-template-columns:1fr}
+  th,td{padding:7px 6px;font-size:11px}
+  .filter-row{gap:6px}
+  .diag-alert ul{grid-template-columns:1fr}
+}
 
 .outer-tabs{display:flex;gap:6px;margin-top:16px;padding:4px;background:rgba(0,0,0,.15);border-radius:14px 14px 0 0;margin-left:-20px;margin-right:-20px;padding-left:16px;padding-right:16px;padding-bottom:0}
 .otb{flex:1;padding:10px 8px;border:none;border-radius:10px 10px 0 0;font-size:14px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,.7);transition:.2s;-webkit-tap-highlight-color:transparent}
@@ -667,7 +718,9 @@ var advisorState={messages:[],busy:false};
 console.log('Primary School Advisor', APP_VERSION);
 
 function normalizeApiBase(v){
-  return (v||'').replace(/\/$/,'');
+  v=(v||'').trim().replace(/\/$/,'');
+  if(!v || v==='null' || v==='undefined') return '';
+  return v;
 }
 function getApiCandidates(){
   var c=[], seen={};
@@ -894,17 +947,31 @@ function displaySchoolName(name){
   };
   return OFFICIAL_NAME_MAP[n] || n;
 }
+// 人工确认修正：当历史导入口径不一致时，优先使用已确认中签率
+var LOTTERY_RATE_OVERRIDE={
+  '上海青浦区世外学校小学部':14.6
+};
 function getLotteryInfo(s){
-  var typ=s[2], lo=s[3], hi=s[4], st=s[9];
+  var typ=s[2], lo=s[3], hi=s[4], st=s[9], schoolName=String(s[0]||'').trim();
   var admit=(typeof s[11]==='number'&&isFinite(s[11]))?s[11]:null;
   var maxNo=(typeof s[12]==='number'&&isFinite(s[12]))?s[12]:null;
   if(admit===null && s[11]!==null && s[11]!==undefined && s[11]!=='' && !isNaN(Number(s[11]))) admit=Number(s[11]);
   if(maxNo===null && s[12]!==null && s[12]!==undefined && s[12]!=='' && !isNaN(Number(s[12]))) maxNo=Number(s[12]);
   var hasCounts=(admit!==null && maxNo!==null && maxNo>0);
+  if(hasCounts && admit>maxNo){
+    // 历史数据里存在“录取数/摇号最大号”字段反向写入，自动纠正一次
+    var t=admit; admit=maxNo; maxNo=t;
+  }
   var pct=null;
   if(hasCounts) pct=(admit*100/maxNo);
   else if(typeof lo==='number'&&lo>0) pct=lo;
   else if(typeof hi==='number'&&hi>0) pct=hi;
+  if(typeof LOTTERY_RATE_OVERRIDE[schoolName]==='number'){
+    pct=LOTTERY_RATE_OVERRIDE[schoolName];
+    hasCounts=false; // 覆盖口径下不展示误导性的“录取/摇号”计数
+  }
+  if(typeof pct==='number' && (!isFinite(pct) || pct<0)) pct=null;
+  if(typeof pct==='number' && pct>100) pct=100;
   var isAll=(typ==='pri') && ((hasCounts&&admit===maxNo) || st==='cool' || (typeof lo==='number'&&lo>=99.5));
   return {admit:admit,maxNo:maxNo,hasCounts:hasCounts,pct:pct,isAll:isAll,lo:lo,hi:hi};
 }
@@ -1253,137 +1320,194 @@ function renderStrategy(h,d,t,fList){
   };
   var focusValues=(Array.isArray(fList)?fList:[]).filter(function(x){return !!focusMap[x];});
   if(!focusValues.length) focusValues=['hw'];
-  var focus=focusMap[focusValues[0]];
   var focusNames=focusValues.map(function(k){ return focusMap[k].icon+' '+focusMap[k].n; }).join(' / ');
 
-  function isPrimarySchoolName(name){
-    return /(小学|小学部|附属小学)/.test(name||'');
-  }
+  function clamp(v,min,max){ return Math.max(min, Math.min(max, v)); }
+  function isPrimarySchoolName(name){ return /(小学|小学部|附属小学)/.test(name||''); }
   function textBlob(s){
     var pr=PR[s[0]]||{};
     var a=[s[0], s[6], pr.tag, pr.slogan];
     if(pr.ideas&&pr.ideas.join) a.push(pr.ideas.join(' '));
     if(pr.pros&&pr.pros.join) a.push(pr.pros.join(' '));
+    if(pr.path&&pr.path.join) a.push(pr.path.join(' '));
     return a.join(' ');
   }
-  function scoreFocus(s){
+  function scoreTier10(s){
+    if(s[10]==='T1') return 9.2;
+    if(s[10]==='T2') return 7.5;
+    if(s[10]==='T3') return 6.2;
+    return 6;
+  }
+  function scoreFocus10(s){
     var pr=PR[s[0]]||{};
-    var txt=textBlob(s), score=0;
+    var txt=textBlob(s), score=4;
     focusValues.forEach(function(f){
       var cfg=focusMap[f];
       if(!cfg) return;
-      cfg.k.forEach(function(k){ if(txt.indexOf(k)>-1) score+=2; });
-      if(f==='hw'){
-        var stress=(typeof pr.stress==='number')?pr.stress:3;
-        score+=(6-stress);
-      }
-      if((f==='bi' || f==='intl') && (txt.indexOf('双语')>-1||txt.indexOf('国际')>-1||txt.indexOf('外语')>-1)) score+=3;
-      if(f==='elite' && (txt.indexOf('精英')>-1||txt.indexOf('竞赛')>-1||txt.indexOf('升学')>-1)) score+=3;
-      if(f==='ai' && (txt.indexOf('科技')>-1||txt.indexOf('科创')>-1||txt.indexOf('STEAM')>-1||txt.indexOf('理工')>-1)) score+=3;
-      if(f==='sports' && (txt.indexOf('体育')>-1 || txt.indexOf('运动')>-1)) score+=3;
+      cfg.k.forEach(function(k){ if(txt.indexOf(k)>-1) score+=0.8; });
+      if((f==='bi' || f==='intl') && /双语|国际|外语/.test(txt)) score+=1.2;
+      if(f==='elite' && /精英|竞赛|升学/.test(txt)) score+=1.2;
+      if(f==='ai' && /科技|科创|STEAM|理工|AI/.test(txt)) score+=1.2;
+      if(f==='sports' && /体育|运动|体能|健康/.test(txt)) score+=1.2;
     });
-    return score;
+    if(typeof pr.stress==='number' && focusValues.indexOf('hw')>-1) score+=(6-pr.stress)*0.6;
+    return clamp(Math.round(score*10)/10,1,10);
   }
-  function scoreTier(s){
-    if(s[10]==='T1') return 3;
-    if(s[10]==='T2') return 2;
-    if(s[10]==='T3') return 1;
-    return 0;
+  function targetStress(){
+    if(focusValues.indexOf('elite')>-1 && focusValues.indexOf('hw')===-1) return 4;
+    if(focusValues.indexOf('hw')>-1) return 2;
+    return 3;
   }
-  function scoreTotal(s){
-    return scoreFocus(s) + scoreTier(s);
-  }
-  function buildRecLine(s,label){
+  function pressureFit10(s){
     var pr=PR[s[0]]||{};
-    var low=s[3]||0, high=s[4]||0;
-    var rate=low&&high?('中签率约 '+low+'%–'+high+'%'):(low?('中签率约 '+low+'%'):'中签率待更新');
-    var why=pr.slogan||s[6]||'';
-    var tierColor=s[10]==='T1'?'#e53e3e':s[10]==='T2'?'#dd6b20':'#999';
-    return '<div style="padding:9px 0;border-bottom:1px solid #ffe8cc;cursor:pointer" onclick="showDetail(\''+s[0].replace(/'/g,"\\'")+'\')">'
-      +'<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap">'
-      +'<span style="font-size:12px;background:#eef2ff;color:#4361ee;border-radius:6px;padding:2px 7px;font-weight:700">'+label+'</span>'
-      +'<a style="font-size:14px;font-weight:700;color:#2b4ce0;text-decoration:none">'+displaySchoolName(s[0])+'</a>'
-      +'<span style="font-size:11px;background:'+tierColor+'20;color:'+tierColor+';border-radius:4px;padding:1px 6px;font-weight:600">'+(s[10]||'—')+'</span>'
-      +'</div>'
-      +'<p style="font-size:12px;color:#555;line-height:1.5;margin:0">• '+rate+'<br>• 匹配原因：'+why+'</p>'
-      +'</div>';
+    var stress=(typeof pr.stress==='number')?pr.stress:3;
+    var target=targetStress();
+    return clamp(Math.round((10-Math.abs(stress-target)*2)*10)/10,1,10);
+  }
+  function pathFit10(s){
+    var pr=PR[s[0]]||{};
+    var txt=textBlob(s), path=(pr.path||[]).join(' ');
+    var score=scoreTier10(s)*0.55;
+    if(/直升|一贯制|升学路径清晰/.test(path)) score+=2.2;
+    if(t==='pri' && s[2]==='pri') score+=1.2;
+    if(t==='pub' && s[2]==='pub') score+=1.2;
+    if(/四大名校|重点初中|名校/.test(txt)) score+=0.9;
+    return clamp(Math.round(score*10)/10,1,10);
+  }
+  function certainty10(s){
+    if(s[2]==='pub'){
+      return clamp(scoreTier10(s)+0.6,1,10);
+    }
+    var li=getLotteryInfo(s);
+    if(li.isAll) return 9.8;
+    if(typeof li.pct==='number' && li.pct>0){
+      return clamp(Math.round((2.5+li.pct*0.075)*10)/10,1,10);
+    }
+    return 5.8;
+  }
+  function overall(k){
+    return clamp(Math.round((k.idea*0.34 + k.pressure*0.2 + k.path*0.26 + k.certainty*0.2)*10)/10,1,10);
+  }
+  function grade(score){
+    if(score>=8.5) return '强匹配';
+    if(score>=7) return '较匹配';
+    return '可考虑';
+  }
+  function metricRow(label,score,color){
+    return '<div class="diag-kpi"><span class="diag-kpi-name">'+label+'</span>'
+      +'<div class="diag-bar"><div class="diag-fill" style="width:'+(score*10)+'%;background:'+color+'"></div></div>'
+      +'<span class="diag-score">'+score+'</span></div>';
   }
 
-  var summary='<div style="background:linear-gradient(135deg,#f0f4ff,#faf0ff);border-radius:10px;padding:11px 13px;margin-bottom:10px;border-left:4px solid #667eea">'
-    +'<span style="font-size:13px;color:#444">您的情况：<b style="color:#667eea">'+hn+'</b> · <b style="color:#667eea">'+dn+'</b> · <b style="color:#667eea">'+tn+'</b> · 重点维度<b style="color:#667eea">'+focusNames+'</b></span></div>';
+  var inDistrictPrimary=SD.filter(function(s){ return s[1]===d && isPrimarySchoolName(s[0]); });
+  if(!inDistrictPrimary.length){
+    document.getElementById('stg').innerHTML='<div style="margin-top:12px;background:#fff8f0;border-radius:12px;padding:12px 14px;border-left:4px solid #f6933b;color:#8a5a10;font-size:13px">当前区域暂无可识别的“小学”数据，请先在下方学校列表查看并手动筛选。</div>';
+    return;
+  }
 
-  var inDistrictPrimary=SD.filter(function(s){
-    return s[1]===d && isPrimarySchoolName(s[0]);
+  function pack(s){
+    var pr=PR[s[0]]||{};
+    var li=getLotteryInfo(s);
+    var k={
+      idea:scoreFocus10(s),
+      pressure:pressureFit10(s),
+      path:pathFit10(s),
+      certainty:certainty10(s)
+    };
+    return {
+      raw:s,
+      name:s[0],
+      showName:displaySchoolName(s[0]),
+      district:DN[s[1]]||s[1],
+      type:s[2]==='pub'?'公办':'民办',
+      tier:s[10]||'—',
+      slogan:pr.slogan||s[6]||'暂无描述',
+      note:(pr.ideas&&pr.ideas[0]) || (pr.pros&&pr.pros[0]) || '建议结合开放日与家长反馈进一步确认。',
+      li:li,
+      k:k,
+      total:overall(k)
+    };
+  }
+
+  var pubList=inDistrictPrimary.filter(function(s){return s[2]==='pub';}).map(pack).sort(function(a,b){return b.total-a.total;});
+  var priList=inDistrictPrimary.filter(function(s){return s[2]==='pri';}).map(pack).sort(function(a,b){return b.total-a.total;});
+  var allList=inDistrictPrimary.map(pack).sort(function(a,b){return b.total-a.total;});
+  var picks=[], used={};
+  function addPick(arr,n){
+    for(var i=0;i<arr.length && n>0;i++){
+      var nm=arr[i].name;
+      if(used[nm]) continue;
+      used[nm]=1;
+      picks.push(arr[i]);
+      n--;
+    }
+  }
+  if(t==='pri'){
+    addPick(priList,2);
+    addPick(pubList,2);
+  }else{
+    addPick(pubList,4);
+  }
+  addPick(allList,4-picks.length);
+  picks=picks.slice(0,4);
+
+  var cardsHtml='';
+  picks.forEach(function(p){
+    var rate=(p.raw[2]==='pub')?'免摇号':(p.li.isAll?'全录':(typeof p.li.pct==='number'&&p.li.pct>0?('中签率约 '+(Math.round(p.li.pct*10)/10)+'%'):'中签率待更新'));
+    cardsHtml+='<div class="diag-card">'
+      +'<div class="diag-school">'+p.showName+'</div>'
+      +'<div class="diag-meta">'
+      +'<span class="diag-badge">'+p.district+'</span>'
+      +'<span class="diag-badge">'+p.type+'</span>'
+      +'<span class="diag-badge">'+p.tier+'</span>'
+      +'<span class="diag-badge">'+rate+'</span>'
+      +'</div>'
+      +'<div class="diag-kpis">'
+      +metricRow('理念匹配',p.k.idea,'#d97706')
+      +metricRow('压力匹配',p.k.pressure,'#0f766e')
+      +metricRow('升学路径',p.k.path,'#14b8a6')
+      +metricRow('综合匹配',p.total,'#2563eb')
+      +'</div>'
+      +'<div class="diag-note"><b>匹配分析：</b>'+escapeHtml(p.slogan)+'<br><b>建议：</b>'+escapeHtml(p.note)+'</div>'
+      +'</div>';
   });
 
-  var recHtml='';
-  if(!inDistrictPrimary.length){
-    recHtml='<div style="margin-top:12px;background:#fff8f0;border-radius:12px;padding:12px 14px;border-left:4px solid #f6933b;color:#8a5a10;font-size:13px">当前区域暂无可识别的“小学”数据，请先在下方学校列表查看并手动筛选。</div>';
-  } else if(t==='pub'){
-    var pubList=inDistrictPrimary.filter(function(s){ return s[2]==='pub' && (s[10]==='T1' || s[10]==='T2'); });
-    if(!pubList.length) pubList=inDistrictPrimary.filter(function(s){ return s[2]==='pub'; });
-    pubList=pubList.sort(function(a,b){ return scoreTotal(b)-scoreTotal(a); }).slice(0,3);
-    recHtml='<div style="margin-top:14px;background:#fff8f0;border-radius:12px;padding:13px 14px;border-left:4px solid #f6933b">';
-    recHtml+='<div style="font-size:14px;font-weight:700;color:#c05e00;margin-bottom:10px">🏫 公办匹配推荐（优先T1/T2，小学限定）</div>';
-    if(!pubList.length){
-      recHtml+='<p style="font-size:12px;color:#8a5a10;line-height:1.6;margin:0">当前区域暂无可用公办推荐，请在下方列表按“公办+T1/T2”手动筛选。</p>';
-    }else{
-      pubList.forEach(function(s,i){ recHtml+=buildRecLine(s,'推荐'+(i+1)); });
-    }
-    recHtml+='</div>';
-  } else {
-    var priList=inDistrictPrimary.filter(function(s){ return s[2]==='pri'; });
-    priList=priList.sort(function(a,b){
-      var sa=scoreTotal(a), sb=scoreTotal(b);
-      if(sb!==sa) return sb-sa;
-      return (scoreTier(b)-scoreTier(a));
-    });
-    var firstCandidates=priList.filter(function(s){ return (s[3]||0)>0 && (s[3]||0)<=35; });
-    if(!firstCandidates.length) firstCandidates=priList.slice();
-    var first=firstCandidates.sort(function(a,b){
-      var da=(a[3]||100), db=(b[3]||100);
-      var sa=scoreTotal(a), sb=scoreTotal(b);
-      if(sb!==sa) return sb-sa;
-      return da-db;
-    })[0];
-    var SAFETY_FLOOR=45; // 第二志愿保底线：低于该中签率不推荐为“稳妥”
-    var secondCandidates=priList.filter(function(s){
-      if(!first) return true;
-      if(s[0]===first[0]) return false;
-      var lo=s[3]||0, flo=first[3]||0;
-      return lo>=Math.max(SAFETY_FLOOR,flo+10);
-    });
-    if(!secondCandidates.length){
-      // 回退：至少满足保底线
-      secondCandidates=priList.filter(function(s){
-        var lo=s[3]||0;
-        return (!first || s[0]!==first[0]) && lo>=SAFETY_FLOOR;
-      });
-    }
-    var second=secondCandidates.sort(function(a,b){
-      var da=(a[3]||0), db=(b[3]||0);
-      var sa=scoreTotal(a), sb=scoreTotal(b);
-      // 第二志愿保底优先：先看中签率，再看匹配分
-      if(db!==da) return db-da;
-      return sb-sa;
-    })[0];
-    recHtml='<div style="margin-top:14px;background:#fff8f0;border-radius:12px;padding:13px 14px;border-left:4px solid #f6933b">';
-    recHtml+='<div style="font-size:14px;font-weight:700;color:#c05e00;margin-bottom:10px">🎯 民办志愿推荐（本区小学限定）</div>';
-    if(!priList.length){
-      recHtml+='<p style="font-size:12px;color:#8a5a10;line-height:1.6;margin:0">当前区域暂无可用民办推荐，请在下方列表按“民办”筛选并查看口碑详情。</p>';
-    }else{
-      if(first) recHtml+=buildRecLine(first,'第一志愿（冲刺）');
-      if(second){
-        recHtml+=buildRecLine(second,'第二志愿（稳妥）');
-      } else {
-        recHtml+='<p style="font-size:12px;color:#8a5a10;line-height:1.7;margin:8px 0 0">⚠️ 当前区域暂无中签率≥'+SAFETY_FLOOR+'%的民办可作为“稳妥第二志愿”。建议优先考虑公办兜底，或在可接受范围内选择本区中签率更高的民办。</p>';
-      }
-      recHtml+='<p style="font-size:12px;color:#8a5a10;line-height:1.6;margin-top:8px">策略说明：第一志愿优先“匹配高 + 可冲”；第二志愿严格执行“保底优先（中签率≥'+SAFETY_FLOOR+'%）”。</p>';
-    }
-    recHtml+='</div>';
-  }
+  var ranked=picks.slice().sort(function(a,b){return b.total-a.total;});
+  var tableRows='';
+  ranked.forEach(function(p,idx){
+    tableRows+='<tr>'
+      +'<td class="diag-rank">#'+(idx+1)+'</td>'
+      +'<td>'+p.showName+'</td>'
+      +'<td>'+p.k.idea+'</td>'
+      +'<td>'+p.k.pressure+'</td>'
+      +'<td>'+p.k.path+'</td>'
+      +'<td><b>'+p.total+'</b></td>'
+      +'<td>'+grade(p.total)+'</td>'
+      +'</tr>';
+  });
 
-  document.getElementById('stg').innerHTML=summary+recHtml;
+  var html=''
+    +'<div class="diag-report">'
+    +'<div class="diag-head">'
+    +'<div class="diag-title">教育理念匹配诊断</div>'
+    +'<div class="diag-sub">基于你的家庭画像，生成 4 所候选学校的理念与路径对比（本地预览版）</div>'
+    +'<div class="diag-tags"><span class="diag-tag">'+hn+'</span><span class="diag-tag">'+dn+'</span><span class="diag-tag">'+tn+'</span><span class="diag-tag">'+focusNames+'</span></div>'
+    +'</div>'
+    +'<div class="diag-alert"><ul>'
+    +'<li>首要策略：'+(t==='pri'?'民办冲稳结合':'公办梯队优先')+'</li>'
+    +'<li>压力目标：'+(targetStress()<=2?'轻压力':'中高挑战')+'</li>'
+    +'<li>筛选范围：'+dn+'小学（优先含画像数据）</li>'
+    +'<li>推荐数量：4 所可对比候选</li>'
+    +'</ul></div>'
+    +'<div class="diag-grid">'+cardsHtml+'</div>'
+    +'<div class="diag-summary">'
+    +'<div class="diag-summary-title">综合匹配排序</div>'
+    +'<table class="diag-table"><thead><tr><th>排名</th><th>学校</th><th>理念</th><th>压力</th><th>路径</th><th>总分</th><th>结论</th></tr></thead><tbody>'+tableRows+'</tbody></table>'
+    +'<div class="diag-foot">评分口径：理念 34% + 压力 20% + 升学路径 26% + 录取确定性 20%。最终选择建议结合开放日与当年招生细则复核。</div>'
+    +'</div>'
+    +'</div>';
+
+  document.getElementById('stg').innerHTML=html;
 }
 
 function escapeHtml(s){
@@ -1430,24 +1554,85 @@ function saveAdvisor(){
 }
 function renderStructured(s){
   if(!s||typeof s!=='object') return '';
-  var h='';
-  var qs=Array.isArray(s.next_questions)?s.next_questions:[];
-  var rs=Array.isArray(s.risk_alerts)?s.risk_alerts:[];
-  var ps=Array.isArray(s.paths)?s.paths:[];
-  var cs=Array.isArray(s.candidate_schools)?s.candidate_schools:[];
-  if(qs.length){
-    h+='<div><b>下一步确认：</b>'+qs.slice(0,3).map(escapeHtml).join('；')+'</div>';
+  function arr(v){ return Array.isArray(v)?v:[]; }
+  function listVals(vals,maxN){
+    vals=arr(vals).map(function(x){return String(x||'').trim();}).filter(Boolean).slice(0,maxN||4);
+    return vals.map(escapeHtml).join('；');
   }
-  if(ps.length){
-    h+='<div style="margin-top:4px"><b>路径建议：</b>'+ps.slice(0,3).map(function(x){return escapeHtml((x.name||'方案')+'-'+(x.summary||''));}).join('；')+'</div>';
+  var blocks=[];
+  var qs=arr(s.next_questions);
+  var rs=arr(s.risk_alerts);
+  var ps=arr(s.paths);
+  var cs=arr(s.candidate_schools);
+  var actions=arr(s.action_items);
+  var assessment=(s&&typeof s.assessment==='object'&&s.assessment)?s.assessment:null;
+  var reports=arr(s.school_reports);
+  var evs=arr(s.evidence_chain);
+  var intro='';
+  var rationale=[];
+  var execution=[];
+  var evidence=[];
+  if(assessment){
+    var kev=arr(assessment.key_evidence);
+    var adv=arr(assessment.advantages);
+    var risks=arr(assessment.risks);
+    var miss=arr(assessment.missing_info);
+    var cf=(assessment.confidence&&typeof assessment.confidence==='object')?assessment.confidence:{};
+    var cfLevel=String(cf.level||'medium');
+    var cfScore=(isFinite(Number(cf.score))?Math.round(Number(cf.score)*100):50);
+    var cfReason=String(cf.reason||'').trim();
+    var l=(assessment.six_layers&&typeof assessment.six_layers==='object')?assessment.six_layers:{};
+    intro=(assessment.one_liner||assessment.comparison_conclusion||'').trim();
+    if(assessment.school_portrait) rationale.push('学校画像：'+assessment.school_portrait);
+    if(assessment.family_fit_advice) rationale.push('适配建议：'+assessment.family_fit_advice);
+    if(adv.length) rationale.push('主要优势：'+listVals(adv,3));
+    if(risks.length) rationale.push('关键风险：'+listVals(risks,3));
+    if(kev.length) evidence.push('关键信息来源：'+listVals(kev,4));
+    if(miss.length) execution.push('还需补充：'+listVals(miss,4));
+    if(l&&Object.keys(l).length){
+      var six=[];
+      if(l.goal_layer) six.push('目标：'+escapeHtml(l.goal_layer));
+      if(l.mechanism_layer) six.push('机制：'+escapeHtml(l.mechanism_layer));
+      if(l.ai_integration_layer) six.push('AI：'+escapeHtml(l.ai_integration_layer));
+      if(l.constraints_layer) six.push('约束：'+escapeHtml(l.constraints_layer));
+      if(l.family_fit_layer) six.push('家庭：'+escapeHtml(l.family_fit_layer));
+      if(six.length) rationale.push('六层摘要：'+six.join('；'));
+    }
+    execution.push('当前判断置信度 '+escapeHtml(cfLevel)+'（'+cfScore+'%）'+(cfReason?('，'+escapeHtml(cfReason)):''));
   }
-  if(cs.length){
-    h+='<div style="margin-top:4px"><b>候选学校：</b>'+cs.slice(0,5).map(function(x){return escapeHtml(x.name||'');}).filter(Boolean).join('、')+'</div>';
+  if(ps.length) execution.push('路径建议：'+ps.slice(0,3).map(function(x){return escapeHtml((x&&x.name?x.name:'方案')+'（'+((x&&x.summary)||'')+'）');}).join('；'));
+  if(cs.length) execution.push('候选学校：'+cs.slice(0,5).map(function(x){return escapeHtml((x&&x.name)||'');}).filter(Boolean).join('、'));
+  if(rs.length) execution.push('风险提醒：'+rs.slice(0,3).map(escapeHtml).join('；'));
+  if(actions.length) execution.push('建议动作：'+actions.slice(0,3).map(escapeHtml).join('；'));
+  if(reports.length){
+    var schoolLines=[];
+    reports.slice(0,4).forEach(function(r){
+      var name=escapeHtml((r&&r.school)||'学校');
+      var pros=arr(r&&r.advantages).slice(0,2).map(escapeHtml).join('；')||'待补充';
+      var cons=arr(r&&r.concerns).slice(0,2).map(escapeHtml).join('；')||'待补充';
+      var judge=escapeHtml((r&&r.judgement)||'待补充');
+      schoolLines.push(name+'：优势'+pros+'；风险'+cons+'；判断'+judge);
+    });
+    if(schoolLines.length) rationale.push('逐校判断：'+schoolLines.join(' | '));
   }
-  if(rs.length){
-    h+='<div style="margin-top:4px"><b>风险提醒：</b>'+rs.slice(0,3).map(escapeHtml).join('；')+'</div>';
+  if(evs.length){
+    var evLines=[];
+    evs.slice(0,3).forEach(function(e){
+      var school=escapeHtml((e&&e.school)||'相关学校');
+      var claim=escapeHtml((e&&e.claim)||'相关论点');
+      var title=escapeHtml((e&&e.title)||'来源');
+      var source=escapeHtml((e&&e.source_type)||'来源');
+      var snippet=escapeHtml((e&&e.snippet)||'');
+      evLines.push('['+source+'] '+school+'：'+claim+'（'+title+'）'+(snippet?(' '+snippet):''));
+    });
+    if(evLines.length) evidence.push('证据参考：'+evLines.join('；'));
   }
-  return h?('<div class="advisor-structured">'+h+'</div>'):'';
+  if(intro) blocks.push('<p style="margin:6px 0 0 0">'+escapeHtml(intro)+'</p>');
+  if(rationale.length) blocks.push('<p style="margin:8px 0 0 0">'+rationale.join('<br>')+'</p>');
+  if(execution.length) blocks.push('<p style="margin:8px 0 0 0">'+execution.join('<br>')+'</p>');
+  if(evidence.length) blocks.push('<p style="margin:8px 0 0 0;color:#4b5563">'+evidence.join('<br>')+'</p>');
+  if(qs.length) blocks.push('<p style="margin:8px 0 0 0"><b>如果你愿意我再精准一档：</b>'+qs[0].replace(/\s+/g,' ').trim()+'</p>');
+  return blocks.length?('<div class="advisor-structured">'+blocks.join('')+'</div>'):'';
 }
 function renderAdvisor(){
   var box=document.getElementById('advisor-chat');
@@ -1496,16 +1681,20 @@ function clearAdvisorChat(){
 }
 function pickChatApiBase(){
   var cands=getApiCandidates();
-  // Prefer current origin first to avoid stale localStorage API base causing hangs.
+  // Prefer explicit API candidates first (query/localStorage/config), then fallback to current origin.
   cands=cands.filter(function(x){return !!x;});
   var curr=normalizeApiBase(window.location.origin);
-  var out=[curr], seen={}; seen[curr]=1;
+  var out=[], seen={};
   cands.forEach(function(x){
     x=normalizeApiBase(x);
     if(!x||seen[x]) return;
     seen[x]=1;
     out.push(x);
   });
+  if(curr && !seen[curr]){
+    seen[curr]=1;
+    out.push(curr);
+  }
   return out;
 }
 function fetchJsonWithTimeout(url, options, timeoutMs){
@@ -1515,11 +1704,20 @@ function fetchJsonWithTimeout(url, options, timeoutMs){
       if(done) return;
       done=true;
       reject(new Error('timeout'));
-    }, timeoutMs||15000);
+    }, timeoutMs||45000);
     fetch(url, options).then(function(res){
       if(done) return;
-      if(!res.ok) throw new Error('HTTP '+res.status);
-      return res.json();
+      return res.text().then(function(txt){
+        var data={};
+        try{ data=txt?JSON.parse(txt):{}; }catch(e){ data={raw:txt||''}; }
+        if(!res.ok){
+          var err=new Error('HTTP '+res.status);
+          err.status=res.status;
+          err.body=data&&typeof data==='object'?data:{};
+          throw err;
+        }
+        return data;
+      });
     }).then(function(data){
       if(done) return;
       done=true;
@@ -1551,7 +1749,7 @@ function sendAdvisorMessage(){
   var i=0;
   function tryNext(){
     if(i>=apis.length){
-      advisorState.messages.push({role:'assistant',content:'对话服务暂时不可用，我先给你手动建议：先定预算与通勤上限，再筛3所冲刺+2所稳妥学校。'});
+      advisorState.messages.push({role:'assistant',content:'当前模型连接暂时不可用，请重试一次。我会在恢复后直接给你完整建议。'});
       renderAdvisor();
       setAdvisorBusy(false);
       return;
@@ -1563,16 +1761,19 @@ function sendAdvisorMessage(){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:payload
-    },15000).then(function(data){
+    },45000).then(function(data){
       try{ localStorage.setItem('advisor_api_base', api); }catch(e){}
       var reply=(data&&data.reply)||'我已收到你的信息，建议我们先确认预算、通勤和路径偏好。';
-      if(data&&data.note){
-        reply+='\n\n【系统提示】'+data.note;
-      }
       advisorState.messages.push({role:'assistant',content:reply,structured:data&&data.structured?data.structured:null});
       renderAdvisor();
       setAdvisorBusy(false);
     }).catch(function(err){
+      if(err && Number(err.status)===410 && err.body && err.body.reply){
+        advisorState.messages.push({role:'assistant',content:'当前模型连接暂时不可用，请重试一次。我会在恢复后直接给你完整建议。'});
+        renderAdvisor();
+        setAdvisorBusy(false);
+        return;
+      }
       console.warn('advisor chat failed from',api,err);
       tryNext();
     });
