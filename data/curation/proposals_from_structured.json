@@ -1,0 +1,5277 @@
+{
+  "source": "data-curator:yangpu:structured-v1",
+  "proposals": [
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "包玉刚实验学校",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "包玉刚实验学校",
+      "newValue": {
+        "desc": "2024实测3%超热，顶流双语，IB体系",
+        "slogan": "不鸡血、不刷题，全人教育标杆",
+        "path": [
+          "包校初中直升",
+          "国际顶尖高中",
+          "海外留学"
+        ],
+        "pros": [
+          "国际化程度顶尖",
+          "英语能力出众",
+          "校友资源强",
+          "晚自习2.5h基本在校完成作业",
+          "80%学生加入运动队",
+          "不排名不横向比较",
+          "注重孩子个体纵向成长"
+        ],
+        "cons": [
+          "中签率极低3-8%",
+          "全英授课适应期长",
+          "费用高昂",
+          "不适合只走高考路线",
+          "纯国际路线，中文体制较弱"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "东展小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "东展小学",
+      "newValue": {
+        "desc": "2024实测68%，长宁相对容易摇",
+        "slogan": "长宁区优质双语学校",
+        "path": [
+          "对口公办初中",
+          "民办初中摇号",
+          "国际路线"
+        ],
+        "pros": [
+          "双语环境好",
+          "国际升学有优势",
+          "师资专业"
+        ],
+        "cons": [
+          "费用较高",
+          "竞争激烈，中签率低"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办新世纪小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办新世纪小学",
+      "newValue": {
+        "desc": "2025全部录取，爆冷",
+        "slogan": "新世纪，新起点，双语奠基未来",
+        "path": [
+          "民办强初中",
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "双语氛围好",
+          "管理规范"
+        ],
+        "cons": [
+          "相比T1名气稍小"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "江苏路第五小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "江苏路第五小学",
+      "newValue": {
+        "desc": "奥数竞赛亮眼，数学思维+科创双强",
+        "slogan": "百年文脉，传承优质教育",
+        "path": [
+          "长宁区重点初中",
+          "延安初中"
+        ],
+        "pros": [
+          "教学质量区内顶尖",
+          "升学路径稳"
+        ],
+        "cons": [
+          "需对口学区房"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "愚园路第一小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "愚园路第一小学",
+      "newValue": {
+        "desc": "70年历史名校，艺术人文见长，对口市三女中",
+        "slogan": "愚园文化，人文气息浓厚",
+        "path": [
+          "长宁区重点初中"
+        ],
+        "pros": [
+          "历史名校底蕴深",
+          "人文氛围好"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "建青实验学校小学部",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "建青实验学校小学部",
+      "newValue": {
+        "desc": "上海老牌十五年一贯制，幼小初直升省心",
+        "slogan": "建青精神，科学实验从娃娃抓起",
+        "path": [
+          "建青初中直升",
+          "长宁区重点初中"
+        ],
+        "pros": [
+          "直升通道稳定",
+          "实验课程优质",
+          "校园环境好"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "长宁实验小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "长宁实验小学",
+      "newValue": {
+        "desc": "教育科研标杆，课程改革先锋",
+        "slogan": "实验引领，扎实育人",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "课程有特色",
+          "管理规范"
+        ],
+        "cons": [
+          "资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "天山路第一小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "天山路第一小学",
+      "newValue": {
+        "desc": "口碑老牌公办，教学质量过硬，校风严谨",
+        "slogan": "天山片区优质小学",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "升学资源一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "新世纪小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "新世纪小学",
+      "newValue": {
+        "desc": "精致小班化，融合北师大课程+双语艺术",
+        "slogan": "新世纪教育，跟上时代步伐",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "口碑稳定",
+          "费用合理"
+        ],
+        "cons": [
+          "特色不突出"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "适存小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "适存小学",
+      "newValue": {
+        "desc": "百年老校，科技+传统文化特色",
+        "slogan": "适应时代，培育全面人才",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "社区配套完善"
+        ],
+        "cons": [
+          "特色不明显"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "绿苑小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "绿苑小学",
+      "newValue": {
+        "desc": "实力公办，性价比高",
+        "slogan": "绿色校园，生态教育先行",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "环境优美",
+          "压力小"
+        ],
+        "cons": [
+          "升学竞争力一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "东展小学（民办）",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "东展小学（民办）",
+      "newValue": {
+        "desc": "摇号中签率较高，民办性价比选择",
+        "slogan": "展翅高飞，稳定入学通道",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "全录无需摇号",
+          "压力小"
+        ],
+        "cons": [
+          "梯队较低",
+          "资源有限"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "法华镇路第三小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "法华镇路第三小学",
+      "newValue": {
+        "desc": "立足基础教学，稳定保障",
+        "slogan": "法华片区社区小学",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "社区配套",
+          "压力极小"
+        ],
+        "cons": [
+          "竞争力弱"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "新虹桥小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "新虹桥小学",
+      "newValue": {
+        "desc": "国际化课程，外教资源丰富",
+        "slogan": "虹桥片区配套小学",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "交通便利"
+        ],
+        "cons": [
+          "资源有限"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办尚外外国语小学",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 171,
+        "maxLottery2025": 417
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办尚外外国语小学",
+      "newValue": {
+        "desc": "虹口T1民办，上外附属系，外语特色，2025超额摇号（中签率41%）",
+        "slogan": "上外品牌，外语教育领跑虹口",
+        "path": [
+          "上外附中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "上外品牌背书强",
+          "外语师资优质",
+          "升学路径清晰",
+          "虹口区外语教育标杆"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "全英授课适应期",
+          "外语学习压力较大"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办宏星小学",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 140,
+        "maxLottery2025": 446
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办宏星小学",
+      "newValue": {
+        "desc": "虹口T1民办，2025超额摇号（中签率31%），升学资源好",
+        "slogan": "宏星精神，育德育才两翼齐飞",
+        "path": [
+          "虹口区重点初中",
+          "民办强初中"
+        ],
+        "pros": [
+          "虹口T1民办口碑好",
+          "管理规范",
+          "升学资源强",
+          "2025摇号热度高"
+        ],
+        "cons": [
+          "摇号竞争较大",
+          "学习节奏快",
+          "需提前了解招生政策"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办四中心实验小学",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 103,
+        "maxLottery2025": 224
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办四中心实验小学",
+      "newValue": {
+        "desc": "虹口T1民办，四中心品牌，2025超额摇号（中签率46%）",
+        "slogan": "四中心品牌，实验精神育人才",
+        "path": [
+          "虹口区重点初中",
+          "民办初中"
+        ],
+        "pros": [
+          "四中心品牌背书",
+          "实验课程有特色",
+          "2025超额热度高"
+        ],
+        "cons": [
+          "摇号竞争有",
+          "需关注招生细则"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办丽英小学",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 124
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办丽英小学",
+      "newValue": {
+        "desc": "虹口民办T2，2025全部录取，走读124+住宿16，稳定入学",
+        "slogan": "丽英精神，稳扎稳打育好苗",
+        "path": [
+          "虹口区普通初中",
+          "民办初中"
+        ],
+        "pros": [
+          "2025全部录取，入学零压力",
+          "费用相对合理",
+          "综合均衡"
+        ],
+        "cons": [
+          "梯队中等",
+          "升学竞争力弱于T1",
+          "社会知名度待提升"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办启东外国语小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办启东外国语小学",
+      "newValue": {
+        "desc": "虹口民办，2025全部录取，外语特色，稳定入学",
+        "slogan": "启东外语，稳定入学无压力",
+        "path": [
+          "虹口区普通初中",
+          "民办初中"
+        ],
+        "pros": [
+          "2025全部录取零压力",
+          "外语特色有亮点",
+          "竞争压力小"
+        ],
+        "cons": [
+          "梯队较低",
+          "升学竞争力一般",
+          "知名度有限"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "虹口区第三中心小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "虹口区第三中心小学",
+      "newValue": {
+        "desc": "虹口公办T1，百年名校，教学成绩稳定，对口资源好",
+        "slogan": "百年三中心，海派文化育英才",
+        "path": [
+          "虹口区重点初中"
+        ],
+        "pros": [
+          "历史底蕴深厚",
+          "教学质量区内顶尖",
+          "升学稳定",
+          "免摇号公办"
+        ],
+        "cons": [
+          "需对口学区",
+          "竞争有压力",
+          "五年一户政策"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "广灵路小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "广灵路小学",
+      "newValue": {
+        "desc": "虹口公办T1，综合实力强，升学通道稳定",
+        "slogan": "广灵路上，综合优质教育标杆",
+        "path": [
+          "虹口区重点初中"
+        ],
+        "pros": [
+          "公办T1实力雄厚",
+          "升学通道稳定",
+          "免摇号"
+        ],
+        "cons": [
+          "需对口",
+          "班级人数较多"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "红旗小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "红旗小学",
+      "newValue": {
+        "desc": "虹口公办T2，老牌名校，综合素质教育口碑好",
+        "slogan": "红旗精神，百年传承综合育人",
+        "path": [
+          "虹口区重点初中"
+        ],
+        "pros": [
+          "老牌名校底蕴",
+          "综合口碑好",
+          "管理规范"
+        ],
+        "cons": [
+          "需对口",
+          "升学资源不如T1"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "曲阳第三小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "曲阳第三小学",
+      "newValue": {
+        "desc": "虹口公办T2，曲阳片区优质公办，教学扎实",
+        "slogan": "曲阳片区教育名片",
+        "path": [
+          "虹口区普通初中"
+        ],
+        "pros": [
+          "曲阳片区口碑好",
+          "教学扎实",
+          "社区配套完善"
+        ],
+        "cons": [
+          "升学资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "崇明路小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "崇明路小学",
+      "newValue": {
+        "desc": "虹口公办T2，科创艺术特色，生源稳定",
+        "slogan": "科创赋能，艺术启智育新苗",
+        "path": [
+          "虹口区普通初中"
+        ],
+        "pros": [
+          "科创艺术特色鲜明",
+          "生源稳定",
+          "校园氛围好"
+        ],
+        "cons": [
+          "综合排名中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "长青小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "长青小学",
+      "newValue": {
+        "desc": "虹口公办T2，均衡发展，社区口碑好",
+        "slogan": "",
+        "path": [],
+        "pros": [],
+        "cons": []
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "中州路小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "中州路小学",
+      "newValue": {
+        "desc": "虹口公办T3，基础扎实，稳定保障",
+        "slogan": "",
+        "path": [],
+        "pros": [],
+        "cons": []
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "虹口实验学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "虹口实验学校",
+      "newValue": {
+        "desc": "虹口公办T2，实验特色，九年一贯制",
+        "slogan": "实验精神传承，九年一贯轻松升学",
+        "path": [
+          "虹口实验学校初中直升",
+          "虹口区普通初中"
+        ],
+        "pros": [
+          "九年一贯直升省心",
+          "实验课程有特色",
+          "综合均衡"
+        ],
+        "cons": [
+          "初中质量需核实",
+          "竞争力不如T1"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "北郊学校小学部",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "北郊学校小学部",
+      "newValue": {
+        "desc": "虹口公办T3，北郊片区基础公办",
+        "slogan": "",
+        "path": [],
+        "pros": [],
+        "cons": []
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "黄浦区第一中心小学民办部",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "黄浦区第一中心小学民办部",
+      "newValue": {
+        "desc": "黄浦优质民办，传统精英",
+        "slogan": "黄浦中心，一中心品牌",
+        "path": [
+          "黄浦区重点初中"
+        ],
+        "pros": [
+          "学区资源好",
+          "品牌认可度高"
+        ],
+        "cons": [
+          "压力较大",
+          "摇号竞争激烈"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海世界外国语学校黄浦分校",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海世界外国语学校黄浦分校",
+      "newValue": {
+        "desc": "世外系，黄浦双语",
+        "slogan": "世外精神黄浦传承，双语国际化",
+        "path": [
+          "世外初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "双语教学优质",
+          "品牌认可",
+          "活动丰富"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "费用较高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "黄浦区逸夫小学民办部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "黄浦区逸夫小学民办部",
+      "newValue": {
+        "desc": "黄浦T2民办",
+        "slogan": "逸夫精神，全面发展的摇篮",
+        "path": [
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "口碑稳定",
+          "综合均衡"
+        ],
+        "cons": [
+          "梯队中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海实验小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海实验小学",
+      "newValue": {
+        "desc": "百年底蕴，语文教学见长，对口敬业初中",
+        "slogan": "百年市实验，上海基础教育标杆",
+        "path": [
+          "上海实验学校初中部",
+          "黄浦区重点初中"
+        ],
+        "pros": [
+          "历史名校地位高",
+          "课程改革前沿",
+          "直升通道"
+        ],
+        "cons": [
+          "需对口",
+          "竞争激烈"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "蓬莱路第二小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "蓬莱路第二小学",
+      "newValue": {
+        "desc": "艺术科技并重，对口市十中学",
+        "slogan": "蓬莱片区顶尖公办，口碑卓著",
+        "path": [
+          "黄浦区重点初中"
+        ],
+        "pros": [
+          "教学质量高",
+          "升学稳定"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "卢湾第二中心小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "卢湾第二中心小学",
+      "newValue": {
+        "desc": "创新教育突出，区重点公办",
+        "slogan": "卢湾精英，传承区域最强公办基因",
+        "path": [
+          "黄浦区重点初中",
+          "知名民办初中"
+        ],
+        "pros": [
+          "升学成绩突出",
+          "竞赛氛围好"
+        ],
+        "cons": [
+          "学习压力较大",
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上外黄浦外国语小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上外黄浦外国语小学",
+      "newValue": {
+        "desc": "外语优势显著，对口大同初中",
+        "slogan": "外语强基，国际视野从这里起步",
+        "path": [
+          "上外附中系",
+          "黄浦区重点初中"
+        ],
+        "pros": [
+          "外语教学优质",
+          "名校品牌"
+        ],
+        "cons": [
+          "需对口",
+          "外语压力有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "曹光彪小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "曹光彪小学",
+      "newValue": {
+        "desc": "特色多元，对口格致初中",
+        "slogan": "名人捐资名校，传承优质教育",
+        "path": [
+          "黄浦区重点初中"
+        ],
+        "pros": [
+          "历史底蕴",
+          "口碑稳定"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "梅溪小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "梅溪小学",
+      "newValue": {
+        "desc": "传承与创新并重，百年名校",
+        "slogan": "梅香溪畔，书香育人",
+        "path": [
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "文化氛围好",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "卢湾第一中心小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "卢湾第一中心小学",
+      "newValue": {
+        "desc": "德学共抓，教学稳定",
+        "slogan": "卢湾片区综合优质，社区口碑好",
+        "path": [
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "社区口碑好",
+          "教学稳定"
+        ],
+        "cons": [
+          "竞争力不如二中心"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "私立永昌学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "私立永昌学校",
+      "newValue": {
+        "desc": "数学科创强，80%可直升市南中学",
+        "slogan": "永昌精神，为孩子提供扎实基础",
+        "path": [
+          "民办初中",
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "学风严谨",
+          "管理规范"
+        ],
+        "cons": [
+          "压力偏大"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "康德双语实验学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "康德双语实验学校",
+      "newValue": {
+        "desc": "国际化特色，双语教学",
+        "slogan": "中德教育理念融合，双语实验",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "双语有特色",
+          "文化融合独特"
+        ],
+        "cons": [
+          "知名度一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "北京东路小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "北京东路小学",
+      "newValue": {
+        "desc": "夯实基础素养，稳定公办",
+        "slogan": "黄浦老城区社区小学",
+        "path": [
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "地段中心",
+          "压力轻"
+        ],
+        "cons": [
+          "资源有限"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "黄浦区第一中心小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "黄浦区第一中心小学",
+      "newValue": {
+        "desc": "教学稳、重个性化培养",
+        "slogan": "第一中心公办部，稳定入学",
+        "path": [
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "中心地段",
+          "社区配套"
+        ],
+        "cons": [
+          "竞争力弱于民办部"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "嘉定区普通小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "嘉定区普通小学",
+      "newValue": {
+        "desc": "百年底蕴，嘉定公办No.1，尚教育理念特色课程",
+        "slogan": "嘉定顶尖公办，稳定优质教育",
+        "path": [
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "区顶尖公办",
+          "升学稳定",
+          "免摇号"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "嘉定世外学校小学部",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "嘉定世外学校小学部",
+      "newValue": {
+        "desc": "国际+本土双轨，双语资源丰富，嘉定民办T1",
+        "slogan": "世外精神嘉定落地，双语名校",
+        "path": [
+          "世外初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "世外品牌",
+          "双语质量高",
+          "升学路径清晰"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "费用较高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "桃李园实验学校小学部",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "桃李园实验学校小学部",
+      "newValue": {
+        "desc": "九年一贯制，艺术教育亮眼，升学稳定",
+        "slogan": "桃李园里育英才，全面综合发展",
+        "path": [
+          "民办强初中",
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "口碑稳定",
+          "升学成绩好",
+          "课程丰富"
+        ],
+        "cons": [
+          "摇号竞争有",
+          "费用较高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "同济大学附属实验学校小学部",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "同济大学附属实验学校小学部",
+      "newValue": {
+        "desc": "同济资源，科技教育领先，嘉定T1",
+        "slogan": "同济品牌，理工实验启蒙",
+        "path": [
+          "同济附中系",
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "同济品牌",
+          "实验资源好",
+          "直升通道"
+        ],
+        "cons": [
+          "需对口",
+          "理工偏向"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "中科院上海实验学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "中科院上海实验学校小学部",
+      "newValue": {
+        "desc": "中科院资源，科创氛围浓厚，嘉定T2",
+        "slogan": "中科院精神，科学探索从小开始",
+        "path": [
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "中科院品牌",
+          "科学课程优质"
+        ],
+        "cons": [
+          "需对口",
+          "科学压力有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "城中路小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "城中路小学",
+      "newValue": {
+        "desc": "传统文化+创新课程，嘉定T2",
+        "slogan": "嘉定城中，综合优质小学",
+        "path": [
+          "嘉定区普通初中"
+        ],
+        "pros": [
+          "社区口碑好",
+          "教学稳定"
+        ],
+        "cons": [
+          "资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上外嘉定外国语学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上外嘉定外国语学校小学部",
+      "newValue": {
+        "desc": "上外系，外语教学突出，嘉定T2",
+        "slogan": "上外品牌嘉定，外语启蒙名校",
+        "path": [
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "上外品牌",
+          "外语氛围好"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "嘉定实验小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "嘉定实验小学",
+      "newValue": {
+        "desc": "艺术+双语特色，升学优势明显，嘉定T2",
+        "slogan": "区实验名校，探索教育前沿",
+        "path": [
+          "嘉定区普通初中"
+        ],
+        "pros": [
+          "实验课程好",
+          "教学前沿"
+        ],
+        "cons": [
+          "资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "华旭双语学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "华旭双语学校小学部",
+      "newValue": {
+        "desc": "依托华东师大资源，民办双语，嘉定T2",
+        "slogan": "华旭双语，平稳务实",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "双语特色",
+          "口碑稳定"
+        ],
+        "cons": [
+          "知名度中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "怀少学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "怀少学校小学部",
+      "newValue": {
+        "desc": "小班化性价比高，嘉定T2",
+        "slogan": "怀少精神，儿童为本",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "儿童友好理念",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "清水路小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "清水路小学",
+      "newValue": {
+        "desc": "嘉定T2，教学质量稳定",
+        "slogan": "清水路片区综合优质",
+        "path": [
+          "嘉定区普通初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色不突出"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "嘉定宋校（宋庆龄学校）",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "嘉定宋校（宋庆龄学校）",
+      "newValue": {
+        "desc": "宋庆龄基金会背景，人文特色突出",
+        "slogan": "宋校精神嘉定传承，品格育人",
+        "path": [
+          "嘉定区普通初中"
+        ],
+        "pros": [
+          "宋校品牌好",
+          "课程有特色",
+          "压力适中"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上大附属嘉定实验学校小学部",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上大附属嘉定实验学校小学部",
+      "newValue": {
+        "desc": "上大资源，嘉定T3，潜力新校",
+        "slogan": "上大附属嘉定，实验探索",
+        "path": [
+          "嘉定区普通初中"
+        ],
+        "pros": [
+          "大学资源",
+          "实验课有特色"
+        ],
+        "cons": [
+          "梯队较低"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海实验学校嘉定分校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海实验学校嘉定分校小学部",
+      "newValue": {
+        "desc": "上实集团赋能，嘉定T2",
+        "slogan": "市实验精神嘉定落地",
+        "path": [
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "市实验品牌",
+          "课程前沿"
+        ],
+        "cons": [
+          "分校资源需观察"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海外国语大学静安外国语小学",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 135,
+        "maxLottery2025": 362
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海外国语大学静安外国语小学",
+      "newValue": {
+        "desc": "2024实测24%，上外系，双语精英",
+        "slogan": "上外品牌，外语起步领先一步",
+        "path": [
+          "上外附中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "外语师资顶尖",
+          "品牌认可度高",
+          "升学路径清晰"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "全英授课压力大"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "童园实验小学",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 119
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "童园实验小学",
+      "newValue": {
+        "desc": "2024实测42%，静安知名民办",
+        "slogan": "童年是实验，在探索中成长",
+        "path": [
+          "民办强初中",
+          "静安区重点初中"
+        ],
+        "pros": [
+          "课程有创意",
+          "儿童中心理念好"
+        ],
+        "cons": [
+          "知名度相对低"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "扬波小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "扬波小学",
+      "newValue": {
+        "desc": "2024实测53%，升学路径好",
+        "slogan": "扬帆起航，波涌向前",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "口碑稳定"
+        ],
+        "cons": [
+          "特色一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "彭浦民办小学",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 159,
+        "maxLottery2025": 518
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "彭浦民办小学",
+      "newValue": {
+        "desc": "2024实测74%，相对容易摇",
+        "slogan": "彭浦片区民办优选",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "区域口碑好"
+        ],
+        "cons": [
+          "梯队中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "静安协和双语学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "静安协和双语学校",
+      "newValue": {
+        "desc": "协和系，静安双语优质校",
+        "slogan": "静安协和系，一贯制双语",
+        "path": [
+          "直升协和初中部",
+          "对口民办摇号初中",
+          "国际路线"
+        ],
+        "pros": [
+          "协和系品牌",
+          "一贯制升学稳定",
+          "双语环境好"
+        ],
+        "cons": [
+          "静安区竞争激烈",
+          "摇中率偏低"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "静教院附校小学部",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "静教院附校小学部",
+      "newValue": {
+        "desc": "九年一贯制，低年级少作业，教学创新超前",
+        "slogan": "静教院品质，课程改革领头羊",
+        "path": [
+          "静教院初中直升",
+          "静安区重点初中"
+        ],
+        "pros": [
+          "教研水平高",
+          "直升通道稳定"
+        ],
+        "cons": [
+          "需对口",
+          "竞争有压力"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海市第一师范附属小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海市第一师范附属小学",
+      "newValue": {
+        "desc": "愉快教育扛把子，全面发展不是梦",
+        "slogan": "百年一师，培育有灵魂的孩子",
+        "path": [
+          "静安区重点初中"
+        ],
+        "pros": [
+          "历史名校底蕴深",
+          "管理规范"
+        ],
+        "cons": [
+          "需对口学区"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "闸北实验小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "闸北实验小学",
+      "newValue": {
+        "desc": "老闸北头牌，实力均衡，教学扎实",
+        "slogan": "扎实学风，竞赛成绩突出",
+        "path": [
+          "静安区重点初中",
+          "知名民办初中"
+        ],
+        "pros": [
+          "竞赛成绩好",
+          "学习氛围浓",
+          "升学有优势"
+        ],
+        "cons": [
+          "压力较大",
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "万航渡路小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "万航渡路小学",
+      "newValue": {
+        "desc": "中央教科所实验校，底子厚，注意超额招生",
+        "slogan": "静安中心，综合优质小学",
+        "path": [
+          "静安区普通初中"
+        ],
+        "pros": [
+          "地段好",
+          "口碑稳定"
+        ],
+        "cons": [
+          "特色不突出"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "静安区第三中心小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "静安区第三中心小学",
+      "newValue": {
+        "desc": "区重点，综合实力稳定",
+        "slogan": "三中心学校，区域综合优质",
+        "path": [
+          "静安区普通初中"
+        ],
+        "pros": [
+          "综合均衡"
+        ],
+        "cons": [
+          "资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "大宁国际小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "大宁国际小学",
+      "newValue": {
+        "desc": "硬件新，国际化氛围浓，师生比优",
+        "slogan": "大宁国际，融合东西现代教育",
+        "path": [
+          "静安区普通初中"
+        ],
+        "pros": [
+          "国际化氛围好",
+          "校园现代",
+          "活动丰富"
+        ],
+        "cons": [
+          "升学竞争力中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "扬波外国语小学",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 118,
+        "maxLottery2025": 326
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "扬波外国语小学",
+      "newValue": {
+        "desc": "外语特色超鲜明，英语教学王牌",
+        "slogan": "静安区优质双语学校",
+        "path": [
+          "对口公办初中",
+          "民办初中摇号",
+          "国际路线"
+        ],
+        "pros": [
+          "双语环境好",
+          "国际升学有优势",
+          "师资专业"
+        ],
+        "cons": [
+          "费用较高",
+          "竞争激烈，中签率低"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "静安实验小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "静安实验小学",
+      "newValue": {
+        "desc": "分层教学，升学向好",
+        "slogan": "实验探索，基础扎实",
+        "path": [
+          "静安区普通初中"
+        ],
+        "pros": [
+          "基础扎实"
+        ],
+        "cons": [
+          "资源一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "陈鹤琴小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "陈鹤琴小学",
+      "newValue": {
+        "desc": "各有特色，教研力量扎实",
+        "slogan": "鹤琴先生精神永续，儿童教育先行",
+        "path": [
+          "静安区普通初中"
+        ],
+        "pros": [
+          "教育理念温和",
+          "压力小"
+        ],
+        "cons": [
+          "竞争力较弱"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "星河湾双语学校",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 147,
+        "maxLottery2025": 206
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "星河湾双语学校",
+      "newValue": {
+        "desc": "闵行顶流，中考成绩TOP，2025中签率72%（爆冷）",
+        "slogan": "星河湾品质，双语精英教育",
+        "path": [
+          "双语初中系",
+          "国际高中",
+          "民办强初中"
+        ],
+        "pros": [
+          "硬件设施豪华",
+          "双语教学顶级",
+          "家长资源强"
+        ],
+        "cons": [
+          "费用极高",
+          "摇号竞争激烈",
+          "压力大"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "七宝德怀特高级中学附属小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "七宝德怀特高级中学附属小学",
+      "newValue": {
+        "desc": "德怀特系，中西融合，出口强",
+        "slogan": "美国德怀特品牌，国际化起跑线",
+        "path": [
+          "德怀特高中直升",
+          "国际顶尖大学"
+        ],
+        "pros": [
+          "国际课程体系完整",
+          "直升通道稳定",
+          "纯国际化"
+        ],
+        "cons": [
+          "费用高昂",
+          "全英环境适应难",
+          "中文相对弱"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "闵行协和双语学校",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "闵行协和双语学校",
+      "newValue": {
+        "desc": "2025超额摇号，协和系，闵行优质双语",
+        "slogan": "协和品牌闵行落地，中西双优",
+        "path": [
+          "协和初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "协和品牌背书",
+          "双语质量高",
+          "口碑稳定"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "费用较高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "万源城协和双语学校",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 116,
+        "maxLottery2025": 216
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "万源城协和双语学校",
+      "newValue": {
+        "desc": "协和系分校，闵行南片",
+        "slogan": "万源城的协和精神，双语优质教育",
+        "path": [
+          "协和初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "协和品牌",
+          "双语资源好",
+          "位置便利"
+        ],
+        "cons": [
+          "摇号竞争有",
+          "费用较高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "博世凯双语学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "博世凯双语学校",
+      "newValue": {
+        "desc": "2025中签率12%，IB课程，竞争激烈",
+        "slogan": "博世凯精神，双语教育稳步前行",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "双语有特色",
+          "口碑上升"
+        ],
+        "cons": [
+          "知名度中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "德英乐实验学校",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 110,
+        "maxLottery2025": 802
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "德英乐实验学校",
+      "newValue": {
+        "desc": "2025超额摇号，德英双语特色",
+        "slogan": "德智并重，英语领航",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "德育扎实",
+          "英语氛围好"
+        ],
+        "cons": [
+          "学术竞争力中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "七宝外国语小学",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 230,
+        "maxLottery2025": 2200
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "七宝外国语小学",
+      "newValue": {
+        "desc": "七宝系，2025超额摇号",
+        "slogan": "闵行双语优质校，七宝系资源",
+        "path": [
+          "对口民办摇号初中",
+          "双语升学路线",
+          "国际路线"
+        ],
+        "pros": [
+          "政府购买学位接近免费",
+          "2025最大顺序号2200+热度爆涨",
+          "七宝系资源背书",
+          "双语环境好",
+          "闵行优质校"
+        ],
+        "cons": [
+          "2025热度暴涨报名超额激烈"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "圣华紫竹双语学校",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 137
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "圣华紫竹双语学校",
+      "newValue": {
+        "desc": "2025摇号，位置偏，竞争相对和缓",
+        "slogan": "闵行双语，紫竹科学园区配套",
+        "path": [
+          "对口民办摇号初中",
+          "双语国际路线"
+        ],
+        "pros": [
+          "竞争相对和缓",
+          "双语环境好",
+          "园区配套设施佳"
+        ],
+        "cons": [
+          "位置偏，紫竹园区内",
+          "知名度不如头部双语校"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "闵行虹桥学校",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "闵行虹桥学校",
+      "newValue": {
+        "desc": "虹桥区域，竞争较小",
+        "slogan": "闵行虹桥区域双语学校",
+        "path": [
+          "对口民办摇号初中",
+          "双语国际路线"
+        ],
+        "pros": [
+          "虹桥区域交通便利",
+          "双语环境适中",
+          "竞争压力较小"
+        ],
+        "cons": [
+          "品牌知名度一般",
+          "升学资源有限"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海世界外国语小学闵行分校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海世界外国语小学闵行分校",
+      "newValue": {
+        "desc": "世外系，闵行分校",
+        "slogan": "世外精神在闵行，双语优质教育",
+        "path": [
+          "世外初中系",
+          "民办初中"
+        ],
+        "pros": [
+          "世外品牌",
+          "双语质量有保证"
+        ],
+        "cons": [
+          "分校资源略逊总校",
+          "摇号有竞争"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "闵行育才中学附属小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "闵行育才中学附属小学",
+      "newValue": {
+        "desc": "一贯制，2025摇号",
+        "slogan": "育才精神附小传承，扎实学风",
+        "path": [
+          "育才初中系",
+          "闵行区重点初中"
+        ],
+        "pros": [
+          "育才品牌",
+          "直升通道",
+          "学风严谨"
+        ],
+        "cons": [
+          "压力较大"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "明强小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "明强小学",
+      "newValue": {
+        "desc": "百年老校，七宝片区标杆，对口七宝二中/三中",
+        "slogan": "七宝重镇，明强精神铸英才",
+        "path": [
+          "闵行区重点初中",
+          "知名民办初中"
+        ],
+        "pros": [
+          "七宝片区顶尖",
+          "竞赛成绩好",
+          "升学稳定"
+        ],
+        "cons": [
+          "压力较大",
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "闵行区实验小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "闵行区实验小学",
+      "newValue": {
+        "desc": "闵行最强公办，四校区，连年A级评估，升学向上实/华育",
+        "slogan": "区实验标杆，课程改革引领",
+        "path": [
+          "闵行区重点初中"
+        ],
+        "pros": [
+          "实验课程前沿",
+          "教学质量高",
+          "口碑稳定"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "七宝实验小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "七宝实验小学",
+      "newValue": {
+        "desc": "游泳/小提琴特色，七宝片区优质公办",
+        "slogan": "七宝实验，扎实学风传承",
+        "path": [
+          "闵行区重点初中",
+          "七宝中学系"
+        ],
+        "pros": [
+          "七宝片区品牌",
+          "直升通道可期"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "七宝文来实验小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "七宝文来实验小学",
+      "newValue": {
+        "desc": "文来系学校，升学成绩稳定",
+        "slogan": "文来基因，实验精神再出发",
+        "path": [
+          "闵行区普通初中",
+          "文来中学系"
+        ],
+        "pros": [
+          "文来品牌背书",
+          "综合均衡"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "田园外国语实验小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "田园外国语实验小学",
+      "newValue": {
+        "desc": "双语课程能打，闵行T2",
+        "slogan": "田园外语，在自然中学好英语",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "外语氛围好",
+          "校园环境优美"
+        ],
+        "cons": [
+          "升学竞争力中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "平南小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "平南小学",
+      "newValue": {
+        "desc": "零缺陷服务，个性化教育，近年成绩稳步提升",
+        "slogan": "平南片区综合优质",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "社区口碑稳定"
+        ],
+        "cons": [
+          "特色不突出"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "闵行区中心小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "闵行区中心小学",
+      "newValue": {
+        "desc": "百年名校底蕴，闵行T2",
+        "slogan": "区中心学校，均衡优质",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "区中心资源",
+          "教学均衡"
+        ],
+        "cons": [
+          "竞争特色不明显"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "莘庄镇小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "莘庄镇小学",
+      "newValue": {
+        "desc": "百年老校，艺术英语并重，闵行南片龙头",
+        "slogan": "莘庄片区教育基石",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "莘庄交通便利",
+          "社区口碑好"
+        ],
+        "cons": [
+          "资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海师范大学附属康城实验学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海师范大学附属康城实验学校",
+      "newValue": {
+        "desc": "上师大资源，教学创新，康城片区优质校",
+        "slogan": "师范教育滋养，康城实验创新",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "师范附校资源",
+          "课程有特色"
+        ],
+        "cons": [
+          "知名度一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "航华第一小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "航华第一小学",
+      "newValue": {
+        "desc": "闵行北部优质公办，教学扎实",
+        "slogan": "航华片区优质小学",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "升学资源一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "交通大学闵行实验学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "交通大学闵行实验学校小学部",
+      "newValue": {
+        "desc": "交大资源，科创特色，闵行T2",
+        "slogan": "交大品牌闵行落地，理工启蒙",
+        "path": [
+          "交大附中系",
+          "闵行区重点初中"
+        ],
+        "pros": [
+          "交大资源",
+          "理工氛围好"
+        ],
+        "cons": [
+          "文科相对弱"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "莘城学校小学部",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "莘城学校小学部",
+      "newValue": {
+        "desc": "九年一贯制，闵行南部稳定公办",
+        "slogan": "莘城学校，社区教育基础",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "压力轻"
+        ],
+        "cons": [
+          "竞争力弱"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "莘光学校小学部",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "莘光学校小学部",
+      "newValue": {
+        "desc": "闵行T3，基础教育扎实",
+        "slogan": "莘光社区小学",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "社区配套"
+        ],
+        "cons": [
+          "资源有限"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "平阳小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "平阳小学",
+      "newValue": {
+        "desc": "闵行T3，社区型基础公办",
+        "slogan": "平阳片区社区小学",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "压力极小"
+        ],
+        "cons": [
+          "竞争力弱"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办平和双语学校",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 128,
+        "maxLottery2025": 298
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办平和双语学校",
+      "newValue": {
+        "desc": "浦东顶流，全市招生，IB体系，藤校资源",
+        "slogan": "平和精神：平静中获得和谐成长",
+        "path": [
+          "平和双语初中直升",
+          "民办强初中"
+        ],
+        "pros": [
+          "双语教学优质",
+          "中英均衡",
+          "口碑稳定",
+          "三年级可独立阅读英文原著",
+          "双语藤校摇篮口碑"
+        ],
+        "cons": [
+          "摇号竞争大",
+          "费用较高",
+          "统招名额极少，摇号最难之一"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办正达外国语小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办正达外国语小学",
+      "newValue": {
+        "desc": "福山系，双语鸡血，难摇",
+        "slogan": "福山系，浦东鸡血双语名校",
+        "path": [
+          "对口民办摇号初中",
+          "双语升学路线"
+        ],
+        "pros": [
+          "福山系品牌强",
+          "双语环境优质",
+          "特色课程丰富"
+        ],
+        "cons": [
+          "极难摇中",
+          "鸡血程度高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "向未来外国语小学",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 153,
+        "maxLottery2025": 275
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "向未来外国语小学",
+      "newValue": {
+        "desc": "上外系，学费低，在读生有浦外面单",
+        "slogan": "上外系，学费超低性价比之王",
+        "path": [
+          "对口民办摇号初中",
+          "浦外/上外直升机会",
+          "国际路线"
+        ],
+        "pros": [
+          "上外系品牌",
+          "学费极低",
+          "外语升学资源好"
+        ],
+        "cons": [
+          "中签率低，难摇",
+          "体制内竞争力一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "未来科技学校",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 163,
+        "maxLottery2025": 857
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "未来科技学校",
+      "newValue": {
+        "desc": "中考成绩惊艳，鸡血，适合高抗压孩子",
+        "slogan": "浦东新秀，中考成绩惊艳",
+        "path": [
+          "直升本校初中部",
+          "四大名校预录",
+          "市重点初中"
+        ],
+        "pros": [
+          "中考成绩突出",
+          "升学资源强",
+          "适合高抗压孩子"
+        ],
+        "cons": [
+          "压力大，开放日曾劝退普娃",
+          "节奏极快"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办协和双语学校",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 172
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办协和双语学校",
+      "newValue": {
+        "desc": "2025爆冷全录，协和系，双语一贯制",
+        "slogan": "协和精神浦东落地，双语中西融合",
+        "path": [
+          "协和初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "协和品牌强",
+          "双语质量高",
+          "管理规范"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "费用较高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办尚德实验学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办尚德实验学校",
+      "newValue": {
+        "desc": "15年一贯制寄宿，700人/年大校",
+        "slogan": "浦东大航母，15年一贯制寄宿",
+        "path": [
+          "直升本校初中/高中",
+          "对口民办初中",
+          "国际路线"
+        ],
+        "pros": [
+          "一贯制省心",
+          "大校资源丰富",
+          "师资活动好"
+        ],
+        "cons": [
+          "班级差距大，家长诟病较多",
+          "午休时间少"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "启能东方外国语学校",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 53
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "启能东方外国语学校",
+      "newValue": {
+        "desc": "豪华硬件，2025超额摇号",
+        "slogan": "浦东豪华硬件国际学校",
+        "path": [
+          "对口国际路线",
+          "民办摇号初中",
+          "出国路线"
+        ],
+        "pros": [
+          "硬件设施豪华",
+          "国际化氛围",
+          "活动丰富"
+        ],
+        "cons": [
+          "网上家长风评一般",
+          "2025超额竞争加剧"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办金苹果学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办金苹果学校",
+      "newValue": {
+        "desc": "建平系，2025首次触发摇号",
+        "slogan": "建平系，2025首次触发摇号",
+        "path": [
+          "对口民办摇号初中",
+          "建平系升学资源",
+          "体制内路线"
+        ],
+        "pros": [
+          "建平系品牌",
+          "作业压力适中",
+          "住宿制生活自理好"
+        ],
+        "cons": [
+          "2025首次摇号，竞争趋势待观察",
+          "班级随机性大"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办向明双语学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办向明双语学校",
+      "newValue": {
+        "desc": "双语路线，2025摇号",
+        "slogan": "向明精神，双语路上稳步前行",
+        "path": [
+          "向明初中系",
+          "民办初中"
+        ],
+        "pros": [
+          "向明品牌",
+          "直升通道可期"
+        ],
+        "cons": [
+          "摇号有竞争"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办筑桥实验小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办筑桥实验小学",
+      "newValue": {
+        "desc": "平和系，素质教育理念，2025首次摇号",
+        "slogan": "筑桥人生，每一步都踏实",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "实验课程有特色",
+          "课程创新",
+          "几乎没有传统书面作业",
+          "适合自驱型孩子",
+          "2025首次超额热度迅速上升"
+        ],
+        "cons": [
+          "知名度中等",
+          "传统学科基础相对薄弱",
+          "不适合需要强结构化管理的孩子"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办万科双语实验学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办万科双语实验学校",
+      "newValue": {
+        "desc": "2025爆冷全录，万科系",
+        "slogan": "万科品质，双语实验精品小学",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "万科品牌背书",
+          "硬件好",
+          "双语有特色"
+        ],
+        "cons": [
+          "知名度中等",
+          "摇号竞争有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办启能东方金融城学校",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办启能东方金融城学校",
+      "newValue": {
+        "desc": "浦东南片，2025摇号",
+        "slogan": "金融城配套，稳定入学通道",
+        "path": [
+          "浦东区普通初中"
+        ],
+        "pros": [
+          "全录稳定",
+          "金融城地段好"
+        ],
+        "cons": [
+          "梯队较低"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "明珠小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "明珠小学",
+      "newValue": {
+        "desc": "浦东公办顶流，课程难度大，学霸云集",
+        "slogan": "明珠熠熠，浦东公办教育明珠",
+        "path": [
+          "浦东区重点初中"
+        ],
+        "pros": [
+          "浦东顶尖公办",
+          "升学成绩好",
+          "口碑卓著"
+        ],
+        "cons": [
+          "需对口",
+          "竞争有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "福山外国语小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "福山外国语小学",
+      "newValue": {
+        "desc": "双语特色鲜明，国际化首选",
+        "slogan": "浦东区优质双语学校",
+        "path": [
+          "对口公办初中",
+          "民办初中摇号",
+          "国际路线"
+        ],
+        "pros": [
+          "双语环境好",
+          "国际升学有优势",
+          "师资专业"
+        ],
+        "cons": [
+          "费用较高",
+          "竞争激烈，中签率低"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "六师附小",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "六师附小",
+      "newValue": {
+        "desc": "百年老校，学科均衡，多人考入上实/浦外",
+        "slogan": "六师附小，百年名校育英才",
+        "path": [
+          "浦东区重点初中"
+        ],
+        "pros": [
+          "历史名校底蕴",
+          "教学质量高"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "正达外国语小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "正达外国语小学",
+      "newValue": {
+        "desc": "民办佼佼者，教学质量过硬",
+        "slogan": "外语强基，打造正达国际化人才",
+        "path": [
+          "外语系初中",
+          "民办强初中"
+        ],
+        "pros": [
+          "外语教学优质",
+          "摇号成绩记录好"
+        ],
+        "cons": [
+          "外语压力大",
+          "摇号竞争有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "平和双语学校",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "平和双语学校",
+      "newValue": {
+        "desc": "知名民办，双语国际化，升学优异",
+        "slogan": "平和理念，在平静中实现和谐成长",
+        "path": [
+          "平和双语初中",
+          "民办强初中"
+        ],
+        "pros": [
+          "双语教学优秀",
+          "口碑极佳",
+          "中英均衡"
+        ],
+        "cons": [
+          "摇号极难",
+          "费用高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "浦东外国语小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "浦东外国语小学",
+      "newValue": {
+        "desc": "外语特色，浦东优质公办",
+        "slogan": "外语强基公办选择，浦东外语摇篮",
+        "path": [
+          "浦东区重点初中"
+        ],
+        "pros": [
+          "外语氛围好",
+          "公办无需摇号"
+        ],
+        "cons": [
+          "需对口",
+          "外语压力有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "竹园小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "竹园小学",
+      "newValue": {
+        "desc": "奥数竞赛超厉害，特色鲜明",
+        "slogan": "竹园片区优质公办",
+        "path": [
+          "浦东区普通初中"
+        ],
+        "pros": [
+          "社区口碑好",
+          "教学稳定"
+        ],
+        "cons": [
+          "资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "海桐小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "海桐小学",
+      "newValue": {
+        "desc": "升学成绩能打，浦东优质公办",
+        "slogan": "海桐花开，芬芳育人",
+        "path": [
+          "浦东区普通初中"
+        ],
+        "pros": [
+          "校园环境好",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上实东校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上实东校",
+      "newValue": {
+        "desc": "寄宿制管理，上实系资源",
+        "slogan": "上实精神东进，品质公办教育",
+        "path": [
+          "上实中学系",
+          "浦东区重点初中"
+        ],
+        "pros": [
+          "上实品牌背书",
+          "课程质量好"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "浦东新区第二中心小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "浦东新区第二中心小学",
+      "newValue": {
+        "desc": "区重点，综合实力均衡",
+        "slogan": "区二中心，均衡优质教育",
+        "path": [
+          "浦东区普通初中"
+        ],
+        "pros": [
+          "区中心资源",
+          "教学均衡"
+        ],
+        "cons": [
+          "竞争特色不明显"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "华二前滩学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "华二前滩学校小学部",
+      "newValue": {
+        "desc": "华二系资源，新建优质校",
+        "slogan": "华二品牌前滩落地，精品教育",
+        "path": [
+          "华二初中系",
+          "浦东区重点初中"
+        ],
+        "pros": [
+          "华二品牌强",
+          "新校硬件好",
+          "直升通道可期"
+        ],
+        "cons": [
+          "新校资源累积中"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "锦绣小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "锦绣小学",
+      "newValue": {
+        "desc": "浦东成熟社区优质公办",
+        "slogan": "锦绣前程，从这里起步",
+        "path": [
+          "浦东区普通初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色不突出"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办惠立学校",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 108,
+        "maxLottery2025": 122
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办惠立学校",
+      "newValue": {
+        "desc": "国际化民办，外语教学突出",
+        "slogan": "惠立精神，国际化小班精品教育",
+        "path": [
+          "民办初中",
+          "国际学校"
+        ],
+        "pros": [
+          "国际化程度高",
+          "小班关注度好"
+        ],
+        "cons": [
+          "费用较高",
+          "知名度中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海市民办光新小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海市民办光新小学",
+      "newValue": {
+        "desc": "普陀T1民办，升学资源好",
+        "slogan": "光新精神，照亮孩子的未来",
+        "path": [
+          "普陀区重点初中",
+          "民办初中"
+        ],
+        "pros": [
+          "民办T1口碑好",
+          "管理规范",
+          "升学稳定"
+        ],
+        "cons": [
+          "摇号竞争较大",
+          "费用较高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "普陀区上大附属实验学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "普陀区上大附属实验学校",
+      "newValue": {
+        "desc": "上大系，一贯制",
+        "slogan": "上大附属，实验课程领航",
+        "path": [
+          "普陀区普通初中",
+          "民办初中"
+        ],
+        "pros": [
+          "大学资源好",
+          "实验课有特色"
+        ],
+        "cons": [
+          "知名度中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海市民办新普陀小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海市民办新普陀小学",
+      "newValue": {
+        "desc": "普陀T2民办",
+        "slogan": "新普陀，新起点，品质民办",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "费用适中",
+          "综合均衡"
+        ],
+        "cons": [
+          "特色不突出"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "华东师范大学附属小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "华东师范大学附属小学",
+      "newValue": {
+        "desc": "普陀公办头牌，背靠华师大，师资强",
+        "slogan": "华师大基因，教育实验的摇篮",
+        "path": [
+          "华师大附属初中",
+          "普陀区重点初中"
+        ],
+        "pros": [
+          "名校师资强",
+          "课程改革前沿",
+          "直升通道"
+        ],
+        "cons": [
+          "需对口",
+          "竞争有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "金洲小学",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 235,
+        "maxLottery2025": 340
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "金洲小学",
+      "newValue": {
+        "desc": "热门民办，双语特色，小班化教学",
+        "slogan": "金色洲际，全面育人的现代学校",
+        "path": [
+          "民办强初中",
+          "普陀区重点初中"
+        ],
+        "pros": [
+          "双语资源好",
+          "管理规范",
+          "升学稳定"
+        ],
+        "cons": [
+          "摇号竞争有",
+          "费用较高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "培佳双语学校",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 200,
+        "maxLottery2025": 316
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "培佳双语学校",
+      "newValue": {
+        "desc": "十二年一贯制，双语天花板，省心之选",
+        "slogan": "培育佳人，双语起航",
+        "path": [
+          "双语初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "双语教学优质",
+          "外教资源好"
+        ],
+        "cons": [
+          "压力有",
+          "费用高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "武宁路小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "武宁路小学",
+      "newValue": {
+        "desc": "老牌优质公办，对口武宁中学",
+        "slogan": "武宁精神，传承百年优质教育",
+        "path": [
+          "普陀区重点初中"
+        ],
+        "pros": [
+          "区内顶尖公办",
+          "教学质量高",
+          "升学稳定"
+        ],
+        "cons": [
+          "需对口",
+          "竞争有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "江宁学校（九年一贯制）",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "江宁学校（九年一贯制）",
+      "newValue": {
+        "desc": "历史沉淀深厚，从小学读到初中省心",
+        "slogan": "九年一贯，稳步提升少操心",
+        "path": [
+          "江宁学校初中直升",
+          "普陀区重点初中"
+        ],
+        "pros": [
+          "直升初中压力小",
+          "管理规范"
+        ],
+        "cons": [
+          "初中质量需核实"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "新普陀小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "新普陀小学",
+      "newValue": {
+        "desc": "近年上升快，梅川校区热度高",
+        "slogan": "新时代普陀教育标杆",
+        "path": [
+          "普陀区重点初中"
+        ],
+        "pros": [
+          "新校硬件好",
+          "教学积极向上"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "朝春中心小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "朝春中心小学",
+      "newValue": {
+        "desc": "艺术学科特色，硬件设施新",
+        "slogan": "春暖朝阳，茁壮成长",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "社区口碑好",
+          "管理规范"
+        ],
+        "cons": [
+          "升学资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "中远实验学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "中远实验学校",
+      "newValue": {
+        "desc": "九年一贯制，综合实力稳定",
+        "slogan": "中远精神，实验教育扎根",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "实验课有特色"
+        ],
+        "cons": [
+          "资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "长征中心小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "长征中心小学",
+      "newValue": {
+        "desc": "长征片区优质公办，教学扎实",
+        "slogan": "长征精神，传承奋进文化",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "红色文化特色",
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色竞争力一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "真如文英小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "真如文英小学",
+      "newValue": {
+        "desc": "普陀区稳定公办",
+        "slogan": "真如片区社区小学",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "压力小",
+          "社区配套"
+        ],
+        "cons": [
+          "竞争力弱"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "晋元附校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "晋元附校小学部",
+      "newValue": {
+        "desc": "晋元高中系，九年一贯制，普陀T2",
+        "slogan": "晋元精神传承，小学打好基础",
+        "path": [
+          "晋元初中系",
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "晋元品牌背书",
+          "直升通道"
+        ],
+        "cons": [
+          "初中质量需核实"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "曹杨第二附属学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "曹杨第二附属学校小学部",
+      "newValue": {
+        "desc": "普陀T2，教学均衡，社区口碑好",
+        "slogan": "曹杨精神，扎根社区教育",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色不明显"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上外普陀外国语小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上外普陀外国语小学",
+      "newValue": {
+        "desc": "上外系资源，外语特色，普陀T2",
+        "slogan": "上外品牌普陀落地，外语启蒙",
+        "path": [
+          "普陀区普通初中",
+          "民办初中"
+        ],
+        "pros": [
+          "外语氛围好",
+          "品牌背书"
+        ],
+        "cons": [
+          "需对口",
+          "外语压力有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "中山北路第一小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "中山北路第一小学",
+      "newValue": {
+        "desc": "普陀T3，基础公办，稳定保障",
+        "slogan": "中山北路社区小学",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "社区配套",
+          "压力小"
+        ],
+        "cons": [
+          "资源有限"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海青浦区世外学校小学部",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 124,
+        "maxLottery2025": 48
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海青浦区世外学校小学部",
+      "newValue": {
+        "desc": "青浦民办热门，2025招生计划182；2025电脑随机录取名单统计124",
+        "slogan": "双语融合，重视学术与综合素养并进",
+        "path": [
+          "青浦区优质民办初中",
+          "区内外重点初中"
+        ],
+        "pros": [
+          "家长关注度高",
+          "课程体系完整",
+          "校内活动丰富"
+        ],
+        "cons": [
+          "入学竞争较大",
+          "家庭配合要求较高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海青浦兰生学校小学部",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 148,
+        "maxLottery2025": 101
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海青浦兰生学校小学部",
+      "newValue": {
+        "desc": "青浦民办热门，2025招生计划210；2025电脑随机录取名单统计148",
+        "slogan": "重视基础学力与学习习惯培养",
+        "path": [
+          "区内民办初中",
+          "区内重点公办初中"
+        ],
+        "pros": [
+          "学习氛围较强",
+          "家校沟通相对紧密",
+          "升学关注度高"
+        ],
+        "cons": [
+          "节奏偏快",
+          "对学生自驱力要求高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海宋庆龄学校小学部",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 23,
+        "maxLottery2025": 23
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海宋庆龄学校小学部",
+      "newValue": {
+        "desc": "青浦民办，2025招生计划56；2025电脑随机录取名单统计23",
+        "slogan": "人文关怀与综合能力并重",
+        "path": [
+          "区内民办初中",
+          "区内公办初中"
+        ],
+        "pros": [
+          "办学理念鲜明",
+          "活动体验丰富",
+          "关注综合素质"
+        ],
+        "cons": [
+          "学位相对有限",
+          "具体班型差异需关注"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海青浦平和双语学校小学部",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 0,
+        "maxLottery2025": 0
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海青浦平和双语学校小学部",
+      "newValue": {
+        "desc": "青浦民办，2025招生计划196；2025电脑随机录取名单统计0（当年该名单未显示录取序号）",
+        "slogan": "双语环境下的全面发展路线",
+        "path": [
+          "区内外民办初中",
+          "国际化教育路径"
+        ],
+        "pros": [
+          "双语氛围较好",
+          "课程选择多元",
+          "校园活动活跃"
+        ],
+        "cons": [
+          "个体差异适配度需评估",
+          "学费与投入需综合考虑"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海青浦区协和双语学校小学部",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 0,
+        "maxLottery2025": 0
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海青浦区协和双语学校小学部",
+      "newValue": {
+        "desc": "青浦民办，2025招生计划236；2025电脑随机录取名单统计0（当年该名单未显示录取序号）",
+        "slogan": "中西融合课程，强调表达与思辨",
+        "path": [
+          "协和体系内升学",
+          "区内外民办初中"
+        ],
+        "pros": [
+          "体系化办学",
+          "语言与表达训练较多",
+          "课程风格鲜明"
+        ],
+        "cons": [
+          "不同班型体验差异较大",
+          "需结合家庭教育预期"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海世界外国语小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海世界外国语小学",
+      "newValue": {
+        "desc": "徐汇最难摇，全市顶流，双语名校",
+        "slogan": "中西融合，培育国际视野",
+        "path": [
+          "SHS上外高中",
+          "民办初中直升"
+        ],
+        "pros": [
+          "英语环境好",
+          "国际化浓",
+          "活动丰富"
+        ],
+        "cons": [
+          "压力不小",
+          "费用高",
+          "摇号难"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海交通大学附属小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海交通大学附属小学",
+      "newValue": {
+        "desc": "交大系，体制内强校，难摇",
+        "slogan": "交大基因，理工思维从小培养",
+        "path": [
+          "交大附中系",
+          "体制内重点初中"
+        ],
+        "pros": [
+          "名校资源丰富",
+          "科创氛围好"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "课业偏重"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "世界外国语小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "世界外国语小学",
+      "newValue": {
+        "desc": "国际化标杆，外语+综合素质双强",
+        "slogan": "双语教育先行者，英语学习绝佳起点",
+        "path": [
+          "SHS世外高中",
+          "民办强初中",
+          "国际学校"
+        ],
+        "pros": [
+          "英语口语突出",
+          "教学稳定"
+        ],
+        "cons": [
+          "摇号极难",
+          "费用较高"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "盛大花园小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "盛大花园小学",
+      "newValue": {
+        "desc": "鸡血民办，数学思维训练突出",
+        "slogan": "小而精，给孩子最细致的关注",
+        "path": [
+          "体制内重点初中",
+          "民办初中"
+        ],
+        "pros": [
+          "班额小关注度高",
+          "师生关系好"
+        ],
+        "cons": [
+          "规模小资源有限"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "逸夫小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "逸夫小学",
+      "newValue": {
+        "desc": "科创+奥数，理科苗子首选",
+        "slogan": "全面发展，奠基孩子美好未来",
+        "path": [
+          "徐汇区强初中",
+          "民办初中"
+        ],
+        "pros": [
+          "均衡发展",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "爱菊小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "爱菊小学",
+      "newValue": {
+        "desc": "艺术特色+学术均衡，民办六边形战士",
+        "slogan": "以菊养德，艺术启智",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "艺术氛围好",
+          "压力小"
+        ],
+        "cons": [
+          "学术竞争力一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "高安路第一小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "高安路第一小学",
+      "newValue": {
+        "desc": "素质教育天花板，对口位育初中",
+        "slogan": "严谨治学，稳步成长",
+        "path": [
+          "徐汇区重点初中",
+          "南洋初级中学"
+        ],
+        "pros": [
+          "教学质量高",
+          "升学通道稳",
+          "免摇号"
+        ],
+        "cons": [
+          "需对口学区",
+          "班级人数多"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "向阳小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "向阳小学",
+      "newValue": {
+        "desc": "快乐教育与学业并重，家校配合度高",
+        "slogan": "向阳而生，培育家国情怀少年",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "压力轻松",
+          "人文氛围好"
+        ],
+        "cons": [
+          "升学资源一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "汇师小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "汇师小学",
+      "newValue": {
+        "desc": "百年名校，语文教学封神，对口徐汇中学",
+        "slogan": "百年汇师，铸造品格育英才",
+        "path": [
+          "徐汇区重点初中"
+        ],
+        "pros": [
+          "历史底蕴深",
+          "教学严谨",
+          "校风好"
+        ],
+        "cons": [
+          "竞争激烈",
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "建襄小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "建襄小学",
+      "newValue": {
+        "desc": "计算机特色全国知名，科技+双语见长",
+        "slogan": "体魄强健，全面发展",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "体育资源好",
+          "孩子健康活跃"
+        ],
+        "cons": [
+          "学术氛围一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海小学",
+      "newValue": {
+        "desc": "百年底蕴，规模大，对口上海中学南校",
+        "slogan": "传统与创新并重，稳健育人",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "教学稳定",
+          "管理规范"
+        ],
+        "cons": [
+          "区域知名度一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上师大第一附属小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上师大第一附属小学",
+      "newValue": {
+        "desc": "师范基因加持，教学体系稳，语文强",
+        "slogan": "师大附校，实验课程摇篮",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "教学改革前沿",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源普通"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "徐汇区第一中心小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "徐汇区第一中心小学",
+      "newValue": {
+        "desc": "全面发展典范，学科+兴趣两手抓",
+        "slogan": "区中心学校，均衡优质",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "师资稳定",
+          "综合均衡"
+        ],
+        "cons": [
+          "竞争特色不明显"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "交大附属小学（徐汇）",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "交大附属小学（徐汇）",
+      "newValue": {
+        "desc": "高校资源，科创氛围浓，理科启蒙",
+        "slogan": "交大底色，理工思维熏陶",
+        "path": [
+          "交大附中系",
+          "徐汇重点初中"
+        ],
+        "pros": [
+          "名校资源",
+          "理工氛围好"
+        ],
+        "cons": [
+          "文科相对弱"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "园南小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "园南小学",
+      "newValue": {
+        "desc": "低调实力派，升学口碑逐年攀升，性价比王",
+        "slogan": "花园般校园，快乐成长",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "环境好",
+          "压力小"
+        ],
+        "cons": [
+          "资源普通"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "田林三小",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "田林三小",
+      "newValue": {
+        "desc": "田林片区顶流，科创特色，竞赛常客",
+        "slogan": "田林片区优质小学",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "社区口碑好",
+          "管理规范"
+        ],
+        "cons": [
+          "升学资源一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "田林四小",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "田林四小",
+      "newValue": {
+        "desc": "素质教育标杆，田林片区认可度高",
+        "slogan": "田林片区配套学校",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "稳定可靠"
+        ],
+        "cons": [
+          "特色不突出"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上汇实验学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上汇实验学校小学部",
+      "newValue": {
+        "desc": "新贵黑马，资源倾斜，教研力量强",
+        "slogan": "实验精神启蒙，探索之旅",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "实验课程有特色"
+        ],
+        "cons": [
+          "知名度一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "复旦附属徐汇实验学校",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "复旦附属徐汇实验学校",
+      "newValue": {
+        "desc": "复旦背书，潜力爆棚，后起之秀",
+        "slogan": "复旦品牌加持，学术氛围浓",
+        "path": [
+          "徐汇区重点初中"
+        ],
+        "pros": [
+          "复旦品牌背书",
+          "学术氛围好"
+        ],
+        "cons": [
+          "竞争压力有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "求知小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "求知小学",
+      "newValue": {
+        "desc": "规模大资源足，素质教育深耕，社团超丰富",
+        "slogan": "求知若渴，探索知识边界",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "学习氛围好"
+        ],
+        "cons": [
+          "资源有限"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "康健外国语小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "康健外国语小学",
+      "newValue": {
+        "desc": "双语特色，与世外合作",
+        "slogan": "外语启蒙，为未来开一扇窗",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "外语氛围好",
+          "压力小"
+        ],
+        "cons": [
+          "学术竞争力一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "东安路第二小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "东安路第二小学",
+      "newValue": {
+        "desc": "地段性价比高，传统文化与体育并重",
+        "slogan": "社区型小学，邻里温情育人",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "压力极小",
+          "邻里氛围好"
+        ],
+        "cons": [
+          "升学竞争力弱"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "徐汇实验小学",
+      "newValue": {
+        "tier": "T3"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "徐汇实验小学",
+      "newValue": {
+        "desc": "后发优势，硬件师资双升级",
+        "slogan": "实验探索，为孩子打好基础",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "基础扎实"
+        ],
+        "cons": [
+          "资源较少"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "宋庆龄学校附属徐汇实验小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "宋庆龄学校附属徐汇实验小学",
+      "newValue": {
+        "desc": "宋校系，十二年制，2025年新开，徐汇T1，极受关注",
+        "slogan": "传承宋校精神，育有爱心国际公民",
+        "path": [
+          "宋庆龄系初中",
+          "徐汇重点初中"
+        ],
+        "pros": [
+          "品牌背书强",
+          "双语资源好"
+        ],
+        "cons": [
+          "需对口"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海市实验学校附属小学",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海市实验学校附属小学",
+      "newValue": {
+        "desc": "上实系，公办T1，师资顶配，徐汇热门公办",
+        "slogan": "实验精神，探索未来",
+        "path": [
+          "上海市实验学校初中部",
+          "徐汇重点初中"
+        ],
+        "pros": [
+          "直升通道稳",
+          "实验课程丰富"
+        ],
+        "cons": [
+          "招生名额有限"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "西南位育附属实验学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "西南位育附属实验学校小学部",
+      "newValue": {
+        "desc": "九年一贯制，位育系，徐汇T2",
+        "slogan": "西南重镇，位育精神传承",
+        "path": [
+          "西南位育初中系",
+          "徐汇重点初中"
+        ],
+        "pros": [
+          "位育初中直升",
+          "教学严谨"
+        ],
+        "cons": [
+          "需在片区"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办打一外国语小学",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 151,
+        "maxLottery2025": 344
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办打一外国语小学",
+      "newValue": {
+        "desc": "打一集团民办校，英语特色，2005年创办",
+        "slogan": "让每一个人都能实现自己的梦想",
+        "path": [
+          "铁岭中学（对口）",
+          "民办初中摇号"
+        ],
+        "pros": [
+          "英语特色教学，外教授课，双语环境",
+          "打一集团资源，师资100%本科，70%中高级职称",
+          "社团丰富：合唱团、头脑OM、德语日语等30+兴趣组"
+        ],
+        "cons": [
+          "仅接受上海户籍",
+          "摇号竞争激烈（2025中签率约44%）"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "杨浦双语学校",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 215,
+        "maxLottery2025": 400
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "杨浦双语学校",
+      "newValue": {
+        "desc": "原上外双语，K12一贯制，双语见长",
+        "slogan": "双语见长、文理并重、综合发展",
+        "path": [
+          "直升初中部",
+          "国际方向"
+        ],
+        "pros": [
+          "原上外附属双语，品牌资源强",
+          "行读华夏实践课程20年积淀",
+          "管乐、击剑、马术等艺体课程丰富，科创社团出小院士"
+        ],
+        "cons": [
+          "费用较高",
+          "摇号竞争激烈（2025中签率约54%）"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海师范大学附属杨浦滨江实验小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海师范大学附属杨浦滨江实验小学",
+      "newValue": {
+        "desc": "杨浦区教育学院集团成员校",
+        "slogan": "杨浦区优质双语学校",
+        "path": [
+          "对口公办初中",
+          "民办初中摇号"
+        ],
+        "pros": [
+          "中高级教师占70%以上",
+          "纳入政府购买学位，实际缴费3850元/学期"
+        ],
+        "cons": [
+          "2025年官方摇号名单中未出现小学部独立招生计划，需确认招生状态"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "同大实验小学",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 147,
+        "maxLottery2025": 324
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "同大实验小学",
+      "newValue": {
+        "desc": "同济系九年制，阅读+科技特色",
+        "slogan": "人文与科学、积淀与创造",
+        "path": [
+          "三门中学（对口）",
+          "同大初中部直升"
+        ],
+        "pros": [
+          "同济大学合作创办，科技教育特色（航天育种、模型火箭）",
+          "阅读伴我成长特色课程",
+          "教育戏剧、财商、博物馆等校本课程丰富"
+        ],
+        "cons": [
+          "知名度低于T1学校",
+          "摇号竞争中等（2025中签率约45%）"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "长阳实验小学",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 153
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "长阳实验小学",
+      "newValue": {
+        "desc": "原控江附属民办，九年一贯制，劳动教育特色",
+        "slogan": "自主创新，完善人格",
+        "path": [
+          "长阳初中部直升",
+          "对口公办初中"
+        ],
+        "pros": [
+          "控江中学教育集团成员校",
+          "上海市劳动教育特色校",
+          "幸福课堂教学科研成果显著，项目化学习"
+        ],
+        "cons": [
+          "小学部2017年才开始招生，办学历史较短"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "沪东外国语学校",
+      "newValue": {
+        "tier": "T2",
+        "admission2025": 118,
+        "maxLottery2025": 162
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "沪东外国语学校",
+      "newValue": {
+        "desc": "1993年创办，上海最早民办校之一，外语特色",
+        "slogan": "国际视野、开放自信、文理并重、多元互动",
+        "path": [
+          "沪东外语初中部直升",
+          "国际方向"
+        ],
+        "pros": [
+          "30年办学历史，上海最早民办之一",
+          "CEO特色课程体系（团结协作+善于表现+开放融合）",
+          "沉浸式英语：Morning Talk、原版读物、英语900句",
+          "大语文：5年读100部名著+背300首唐诗"
+        ],
+        "cons": [
+          "校区面积较小（6942㎡）",
+          "梯队评级偏低但实际教学特色鲜明"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "民办阳浦小学",
+      "newValue": {
+        "tier": "T1",
+        "admission2025": 225
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "民办阳浦小学",
+      "newValue": {
+        "desc": "杨浦小学基础上2006年立校，小班精致教学",
+        "slogan": "大气、开放、精致、创新；关注每一个学生的全面发展",
+        "path": [
+          "对口公办初中",
+          "民办初中摇号"
+        ],
+        "pros": [
+          "小班化教学，精细管理",
+          "阳光课程体系",
+          "多项市级荣誉：素质教育实验校、语言文字规范示范校"
+        ],
+        "cons": [
+          "2025年统招全部录取（报名<=计划），关注度下降"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "二师附小",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "二师附小",
+      "newValue": {
+        "desc": "杨浦公办T1，百年师范附校",
+        "slogan": "二师附小，百年底蕴育英才",
+        "path": [
+          "杨浦区重点初中（对口）"
+        ],
+        "pros": [
+          "杨浦公办头牌",
+          "百年办学底蕴"
+        ],
+        "cons": [
+          "需对口学区房"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "控江二小",
+      "newValue": {
+        "tier": "T1"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "控江二小",
+      "newValue": {
+        "desc": "杨浦公办T1，教学扎实",
+        "slogan": "控江片区教育标杆",
+        "path": [
+          "杨浦区重点初中（对口）"
+        ],
+        "pros": [
+          "区内顶尖公办",
+          "口碑长期稳定"
+        ],
+        "cons": [
+          "需对口学区房"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "打虎山路第一小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "打虎山路第一小学",
+      "newValue": {
+        "desc": "杨浦公办T2，教学质量稳定",
+        "slogan": "打一精神，扎实向前",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "升学资源中等"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "复旦大学附属小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "复旦大学附属小学",
+      "newValue": {
+        "desc": "复旦资源背书，科创氛围浓厚",
+        "slogan": "复旦基因，学术底色的小学时光",
+        "path": [
+          "复旦附中系",
+          "杨浦区重点初中"
+        ],
+        "pros": [
+          "复旦品牌资源",
+          "学术氛围好"
+        ],
+        "cons": [
+          "需对口",
+          "竞争压力有"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海理工大学附属小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海理工大学附属小学",
+      "newValue": {
+        "desc": "高校资源，理工科启蒙特色",
+        "slogan": "理工精神，实践创新从小培养",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "理工科实践课程丰富"
+        ],
+        "cons": [
+          "升学资源一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "杨浦小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "杨浦小学",
+      "newValue": {
+        "desc": "杨浦区优质公办",
+        "slogan": "杨浦区综合优质小学",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "教学稳定",
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色不突出"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "上海音乐学院实验学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "上海音乐学院实验学校小学部",
+      "newValue": {
+        "desc": "上海音乐学院附属，艺术特色突出",
+        "slogan": "音乐滋养，让孩子在美的环境中成长",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "音乐艺术资源突出",
+          "美育氛围好"
+        ],
+        "cons": [
+          "学术竞争力一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "复旦科技园实验学校小学部",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "复旦科技园实验学校小学部",
+      "newValue": {
+        "desc": "科技创新特色，复旦资源赋能",
+        "slogan": "科技园里的未来领袖",
+        "path": [
+          "杨浦区对口初中",
+          "民办初中"
+        ],
+        "pros": [
+          "科技资源丰富",
+          "创新氛围浓"
+        ],
+        "cons": [
+          "知名度一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "齐一小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "齐一小学",
+      "newValue": {
+        "desc": "杨浦T2，社区口碑好",
+        "slogan": "齐心一德，扎实育人",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "德育有特色",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源一般"
+        ]
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_school_fields",
+      "proposalKey": "水丰路小学",
+      "newValue": {
+        "tier": "T2"
+      },
+      "evidenceUrl": ""
+    },
+    {
+      "proposalType": "patch_pr_fields",
+      "proposalKey": "水丰路小学",
+      "newValue": {
+        "desc": "杨浦区稳定公办",
+        "slogan": "水丰路片区综合优质",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色不突出"
+        ]
+      },
+      "evidenceUrl": ""
+    }
+  ]
+}

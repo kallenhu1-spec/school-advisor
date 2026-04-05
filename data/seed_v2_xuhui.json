@@ -1,0 +1,1058 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:47Z",
+  "district": "xuhui",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "上海世界外国语小学",
+      "officialName": "上海世界外国语小学",
+      "district": "xuhui",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1923,
+      "lng": 121.4512,
+      "desc": "徐汇最难摇，全市顶流，双语名校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海世界外国语小学 口碑"
+      },
+      "profile": {
+        "tag": "双语国际·徐汇民办T1",
+        "philosophy": "中西融合，培育国际视野",
+        "path": [
+          "SHS上外高中",
+          "民办初中直升"
+        ],
+        "pros": [
+          "英语环境好",
+          "国际化浓",
+          "活动丰富"
+        ],
+        "cons": [
+          "压力不小",
+          "费用高",
+          "摇号难"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海世界外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海世界外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海世界外国语小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海世界外国语小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海交通大学附属小学",
+      "officialName": "上海交通大学附属小学",
+      "district": "xuhui",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2134,
+      "lng": 121.4334,
+      "desc": "交大系，体制内强校，难摇",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海交通大学附属小学 口碑"
+      },
+      "profile": {
+        "tag": "科创名校·徐汇民办T1",
+        "philosophy": "交大基因，理工思维从小培养",
+        "path": [
+          "交大附中系",
+          "体制内重点初中"
+        ],
+        "pros": [
+          "名校资源丰富",
+          "科创氛围好"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "课业偏重"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海交通大学附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海交通大学附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海交通大学附属小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海交通大学附属小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "世界外国语小学",
+      "officialName": "世界外国语小学",
+      "district": "xuhui",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1831,
+      "lng": 121.4287,
+      "desc": "国际化标杆，外语+综合素质双强",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=世界外国语小学 口碑"
+      },
+      "profile": {
+        "tag": "双语标杆·徐汇民办T1",
+        "philosophy": "双语教育先行者，英语学习绝佳起点",
+        "path": [
+          "SHS世外高中",
+          "民办强初中",
+          "国际学校"
+        ],
+        "pros": [
+          "英语口语突出",
+          "教学稳定"
+        ],
+        "cons": [
+          "摇号极难",
+          "费用较高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=世界外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=世界外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=世界外国语小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "世界外国语小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "盛大花园小学",
+      "officialName": "盛大花园小学",
+      "district": "xuhui",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1799,
+      "lng": 121.4312,
+      "desc": "鸡血民办，数学思维训练突出",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=盛大花园小学 口碑"
+      },
+      "profile": {
+        "tag": "精品小班·徐汇民办T1",
+        "philosophy": "小而精，给孩子最细致的关注",
+        "path": [
+          "体制内重点初中",
+          "民办初中"
+        ],
+        "pros": [
+          "班额小关注度高",
+          "师生关系好"
+        ],
+        "cons": [
+          "规模小资源有限"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=盛大花园小学 口碑; https://www.xiaohongshu.com/search_result?keyword=盛大花园小学 口碑; https://www.xiaohongshu.com/search_result?keyword=盛大花园小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "盛大花园小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "逸夫小学",
+      "officialName": "逸夫小学",
+      "district": "xuhui",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1923,
+      "lng": 121.4421,
+      "desc": "科创+奥数，理科苗子首选",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=逸夫小学 口碑"
+      },
+      "profile": {
+        "tag": "综合优质·徐汇民办T1",
+        "philosophy": "全面发展，奠基孩子美好未来",
+        "path": [
+          "徐汇区强初中",
+          "民办初中"
+        ],
+        "pros": [
+          "均衡发展",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=逸夫小学 口碑; https://www.xiaohongshu.com/search_result?keyword=逸夫小学 口碑; https://www.xiaohongshu.com/search_result?keyword=逸夫小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "逸夫小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "爱菊小学",
+      "officialName": "爱菊小学",
+      "district": "xuhui",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1876,
+      "lng": 121.4367,
+      "desc": "艺术特色+学术均衡，民办六边形战士",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=爱菊小学 口碑"
+      },
+      "profile": {
+        "tag": "艺术特色·徐汇民办T1",
+        "philosophy": "以菊养德，艺术启智",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "艺术氛围好",
+          "压力小"
+        ],
+        "cons": [
+          "学术竞争力一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=爱菊小学 口碑; https://www.xiaohongshu.com/search_result?keyword=爱菊小学 口碑; https://www.xiaohongshu.com/search_result?keyword=爱菊小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "爱菊小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "高安路第一小学",
+      "officialName": "高安路第一小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2045,
+      "lng": 121.4498,
+      "desc": "素质教育天花板，对口位育初中",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=高安路第一小学 口碑"
+      },
+      "profile": {
+        "tag": "徐汇公办T1·学区强校",
+        "philosophy": "严谨治学，稳步成长",
+        "path": [
+          "徐汇区重点初中",
+          "南洋初级中学"
+        ],
+        "pros": [
+          "教学质量高",
+          "升学通道稳",
+          "免摇号"
+        ],
+        "cons": [
+          "需对口学区",
+          "班级人数多"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=高安路第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=高安路第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=高安路第一小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "高安路第一小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "向阳小学",
+      "officialName": "向阳小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.1912,
+      "lng": 121.4489,
+      "desc": "快乐教育与学业并重，家校配合度高",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=向阳小学 口碑"
+      },
+      "profile": {
+        "tag": "徐汇公办T1·红色名校",
+        "philosophy": "向阳而生，培育家国情怀少年",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "压力轻松",
+          "人文氛围好"
+        ],
+        "cons": [
+          "升学资源一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=向阳小学 口碑; https://www.xiaohongshu.com/search_result?keyword=向阳小学 口碑; https://www.xiaohongshu.com/search_result?keyword=向阳小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "向阳小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "汇师小学",
+      "officialName": "汇师小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2034,
+      "lng": 121.4512,
+      "desc": "百年名校，语文教学封神，对口徐汇中学",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=汇师小学 口碑"
+      },
+      "profile": {
+        "tag": "百年名校·徐汇公办T1",
+        "philosophy": "百年汇师，铸造品格育英才",
+        "path": [
+          "徐汇区重点初中"
+        ],
+        "pros": [
+          "历史底蕴深",
+          "教学严谨",
+          "校风好"
+        ],
+        "cons": [
+          "竞争激烈",
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=汇师小学 口碑; https://www.xiaohongshu.com/search_result?keyword=汇师小学 口碑; https://www.xiaohongshu.com/search_result?keyword=汇师小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "汇师小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "建襄小学",
+      "officialName": "建襄小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.1987,
+      "lng": 121.4367,
+      "desc": "计算机特色全国知名，科技+双语见长",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=建襄小学 口碑"
+      },
+      "profile": {
+        "tag": "体育特色·徐汇公办T1",
+        "philosophy": "体魄强健，全面发展",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "体育资源好",
+          "孩子健康活跃"
+        ],
+        "cons": [
+          "学术氛围一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=建襄小学 口碑; https://www.xiaohongshu.com/search_result?keyword=建襄小学 口碑; https://www.xiaohongshu.com/search_result?keyword=建襄小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "建襄小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海小学",
+      "officialName": "上海小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1834,
+      "lng": 121.4523,
+      "desc": "百年底蕴，规模大，对口上海中学南校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海小学 口碑"
+      },
+      "profile": {
+        "tag": "徐汇公办T2",
+        "philosophy": "传统与创新并重，稳健育人",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "教学稳定",
+          "管理规范"
+        ],
+        "cons": [
+          "区域知名度一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上师大第一附属小学",
+      "officialName": "上师大第一附属小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1978,
+      "lng": 121.4234,
+      "desc": "师范基因加持，教学体系稳，语文强",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上师大第一附属小学 口碑"
+      },
+      "profile": {
+        "tag": "师范附属·徐汇公办T2",
+        "philosophy": "师大附校，实验课程摇篮",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "教学改革前沿",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源普通"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上师大第一附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上师大第一附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上师大第一附属小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上师大第一附属小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "徐汇区第一中心小学",
+      "officialName": "徐汇区第一中心小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1823,
+      "lng": 121.4401,
+      "desc": "全面发展典范，学科+兴趣两手抓",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=徐汇区第一中心小学 口碑"
+      },
+      "profile": {
+        "tag": "区一中心·徐汇公办T2",
+        "philosophy": "区中心学校，均衡优质",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "师资稳定",
+          "综合均衡"
+        ],
+        "cons": [
+          "竞争特色不明显"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=徐汇区第一中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=徐汇区第一中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=徐汇区第一中心小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "徐汇区第一中心小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "交大附属小学（徐汇）",
+      "officialName": "交大附属小学（徐汇）",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2012,
+      "lng": 121.4289,
+      "desc": "高校资源，科创氛围浓，理科启蒙",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=交大附属小学 口碑"
+      },
+      "profile": {
+        "tag": "交大系·徐汇公办T2",
+        "philosophy": "交大底色，理工思维熏陶",
+        "path": [
+          "交大附中系",
+          "徐汇重点初中"
+        ],
+        "pros": [
+          "名校资源",
+          "理工氛围好"
+        ],
+        "cons": [
+          "文科相对弱"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=交大附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=交大附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=交大附属小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "交大附属小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "园南小学",
+      "officialName": "园南小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1756,
+      "lng": 121.4478,
+      "desc": "低调实力派，升学口碑逐年攀升，性价比王",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=园南小学 口碑"
+      },
+      "profile": {
+        "tag": "徐汇公办T2",
+        "philosophy": "花园般校园，快乐成长",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "环境好",
+          "压力小"
+        ],
+        "cons": [
+          "资源普通"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=园南小学 口碑; https://www.xiaohongshu.com/search_result?keyword=园南小学 口碑; https://www.xiaohongshu.com/search_result?keyword=园南小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "园南小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "田林三小",
+      "officialName": "田林三小",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1701,
+      "lng": 121.4356,
+      "desc": "田林片区顶流，科创特色，竞赛常客",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=田林三小 口碑"
+      },
+      "profile": {
+        "tag": "徐汇公办T2",
+        "philosophy": "田林片区优质小学",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "社区口碑好",
+          "管理规范"
+        ],
+        "cons": [
+          "升学资源一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=田林三小 口碑; https://www.xiaohongshu.com/search_result?keyword=田林三小 口碑; https://www.xiaohongshu.com/search_result?keyword=田林三小 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "田林三小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "田林四小",
+      "officialName": "田林四小",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1723,
+      "lng": 121.4378,
+      "desc": "素质教育标杆，田林片区认可度高",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=田林四小 口碑"
+      },
+      "profile": {
+        "tag": "徐汇公办T2",
+        "philosophy": "田林片区配套学校",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "稳定可靠"
+        ],
+        "cons": [
+          "特色不突出"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=田林四小 口碑; https://www.xiaohongshu.com/search_result?keyword=田林四小 口碑; https://www.xiaohongshu.com/search_result?keyword=田林四小 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "田林四小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上汇实验学校小学部",
+      "officialName": "上汇实验学校小学部",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1845,
+      "lng": 121.4412,
+      "desc": "新贵黑马，资源倾斜，教研力量强",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上汇实验学校 口碑"
+      },
+      "profile": {
+        "tag": "实验特色·徐汇公办T2",
+        "philosophy": "实验精神启蒙，探索之旅",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "实验课程有特色"
+        ],
+        "cons": [
+          "知名度一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上汇实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=上汇实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=上汇实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上汇实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "复旦附属徐汇实验学校",
+      "officialName": "复旦附属徐汇实验学校",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1912,
+      "lng": 121.4256,
+      "desc": "复旦背书，潜力爆棚，后起之秀",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=复旦附属徐汇实验学校 口碑"
+      },
+      "profile": {
+        "tag": "复旦系·徐汇公办T2",
+        "philosophy": "复旦品牌加持，学术氛围浓",
+        "path": [
+          "徐汇区重点初中"
+        ],
+        "pros": [
+          "复旦品牌背书",
+          "学术氛围好"
+        ],
+        "cons": [
+          "竞争压力有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=复旦附属徐汇实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=复旦附属徐汇实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=复旦附属徐汇实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "复旦附属徐汇实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "求知小学",
+      "officialName": "求知小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1867,
+      "lng": 121.4534,
+      "desc": "规模大资源足，素质教育深耕，社团超丰富",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=求知小学 口碑"
+      },
+      "profile": {
+        "tag": "徐汇公办T2",
+        "philosophy": "求知若渴，探索知识边界",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "学习氛围好"
+        ],
+        "cons": [
+          "资源有限"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=求知小学 口碑; https://www.xiaohongshu.com/search_result?keyword=求知小学 口碑; https://www.xiaohongshu.com/search_result?keyword=求知小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "求知小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "康健外国语小学",
+      "officialName": "康健外国语小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.1623,
+      "lng": 121.4412,
+      "desc": "双语特色，与世外合作",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=康健外国语小学 口碑"
+      },
+      "profile": {
+        "tag": "外语特色·徐汇公办T3",
+        "philosophy": "外语启蒙，为未来开一扇窗",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "外语氛围好",
+          "压力小"
+        ],
+        "cons": [
+          "学术竞争力一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=康健外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=康健外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=康健外国语小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "康健外国语小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "东安路第二小学",
+      "officialName": "东安路第二小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.2001,
+      "lng": 121.4467,
+      "desc": "地段性价比高，传统文化与体育并重",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=东安路第二小学 口碑"
+      },
+      "profile": {
+        "tag": "徐汇公办T3",
+        "philosophy": "社区型小学，邻里温情育人",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "压力极小",
+          "邻里氛围好"
+        ],
+        "cons": [
+          "升学竞争力弱"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=东安路第二小学 口碑; https://www.xiaohongshu.com/search_result?keyword=东安路第二小学 口碑; https://www.xiaohongshu.com/search_result?keyword=东安路第二小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "东安路第二小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "徐汇实验小学",
+      "officialName": "徐汇实验小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.1789,
+      "lng": 121.4289,
+      "desc": "后发优势，硬件师资双升级",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=徐汇实验小学 口碑"
+      },
+      "profile": {
+        "tag": "徐汇公办T3",
+        "philosophy": "实验探索，为孩子打好基础",
+        "path": [
+          "徐汇区普通初中"
+        ],
+        "pros": [
+          "基础扎实"
+        ],
+        "cons": [
+          "资源较少"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=徐汇实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=徐汇实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=徐汇实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "徐汇实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "宋庆龄学校附属徐汇实验小学",
+      "officialName": "宋庆龄学校附属徐汇实验小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.1867,
+      "lng": 121.4234,
+      "desc": "宋校系，十二年制，2025年新开，徐汇T1，极受关注",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=宋庆龄学校附属徐汇实验小学 口碑"
+      },
+      "profile": {
+        "tag": "宋庆龄品牌·徐汇公办T1",
+        "philosophy": "传承宋校精神，育有爱心国际公民",
+        "path": [
+          "宋庆龄系初中",
+          "徐汇重点初中"
+        ],
+        "pros": [
+          "品牌背书强",
+          "双语资源好"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=宋庆龄学校附属徐汇实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=宋庆龄学校附属徐汇实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=宋庆龄学校附属徐汇实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "宋庆龄学校附属徐汇实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海市实验学校附属小学",
+      "officialName": "上海市实验学校附属小学",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.1923,
+      "lng": 121.4312,
+      "desc": "上实系，公办T1，师资顶配，徐汇热门公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海市实验学校附属小学 口碑"
+      },
+      "profile": {
+        "tag": "市实验体系·徐汇公办T1",
+        "philosophy": "实验精神，探索未来",
+        "path": [
+          "上海市实验学校初中部",
+          "徐汇重点初中"
+        ],
+        "pros": [
+          "直升通道稳",
+          "实验课程丰富"
+        ],
+        "cons": [
+          "招生名额有限"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海市实验学校附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海市实验学校附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海市实验学校附属小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海市实验学校附属小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "西南位育附属实验学校小学部",
+      "officialName": "西南位育附属实验学校小学部",
+      "district": "xuhui",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1756,
+      "lng": 121.4156,
+      "desc": "九年一贯制，位育系，徐汇T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=西南位育附属实验学校 口碑"
+      },
+      "profile": {
+        "tag": "位育系·徐汇公办T2",
+        "philosophy": "西南重镇，位育精神传承",
+        "path": [
+          "西南位育初中系",
+          "徐汇重点初中"
+        ],
+        "pros": [
+          "位育初中直升",
+          "教学严谨"
+        ],
+        "cons": [
+          "需在片区"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=西南位育附属实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=西南位育附属实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=西南位育附属实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "西南位育附属实验学校 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 26,
+      "updated": 26
+    }
+  }
+}

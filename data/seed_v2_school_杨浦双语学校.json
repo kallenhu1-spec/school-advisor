@@ -1,0 +1,70 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T01:53:05Z",
+  "district": null,
+  "city": "shanghai",
+  "scope": "school",
+  "schoolName": "杨浦双语学校",
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "杨浦双语学校",
+      "officialName": "杨浦双语学校",
+      "district": "yangpu",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2712,
+      "lng": 121.5334,
+      "desc": "原上外双语，K12一贯制，双语见长",
+      "admission": {
+        "rate": 53.75,
+        "rateYear": 2025,
+        "admitted": 215,
+        "maxLottery": 400,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480893/4029a4517716453883b54ceb8d0d7cd1.pdf"
+      },
+      "profile": {
+        "tag": "双语国际·杨浦民办T1",
+        "philosophy": "双语见长、文理并重、综合发展",
+        "path": [
+          "直升初中部",
+          "国际方向"
+        ],
+        "pros": [
+          "原上外附属双语，品牌资源强",
+          "行读华夏实践课程20年积淀",
+          "管乐、击剑、马术等艺体课程丰富，科创社团出小院士"
+        ],
+        "cons": [
+          "费用较高",
+          "摇号竞争激烈（2025中签率约54%）"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "基于 seed v1 导入，待补充真实来源"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杨浦双语学校 幼升小",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 0,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 0,
+      "matched": 0,
+      "updated": 0
+    }
+  }
+}

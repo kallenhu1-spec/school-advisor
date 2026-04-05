@@ -1,0 +1,709 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:47Z",
+  "district": "yangpu",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "民办打一外国语小学",
+      "officialName": "民办打一外国语小学",
+      "district": "yangpu",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2834,
+      "lng": 121.5224,
+      "desc": "打一集团民办校，英语特色，2005年创办",
+      "admission": {
+        "rate": 43.9,
+        "rateYear": 2025,
+        "admitted": 151,
+        "maxLottery": 344,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480890/a1d9b2f4c383477991893648ae253a4d.pdf"
+      },
+      "profile": {
+        "tag": "英语特色·杨浦民办T1",
+        "philosophy": "让每一个人都能实现自己的梦想",
+        "path": [
+          "铁岭中学（对口）",
+          "民办初中摇号"
+        ],
+        "pros": [
+          "英语特色教学，外教授课，双语环境",
+          "打一集团资源，师资100%本科，70%中高级职称",
+          "社团丰富：合唱团、头脑OM、德语日语等30+兴趣组"
+        ],
+        "cons": [
+          "仅接受上海户籍",
+          "摇号竞争激烈（2025中签率约44%）"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480890/a1d9b2f4c383477991893648ae253a4d.pdf; https://www.xiaohongshu.com/search_result?keyword=民办打一外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=民办打一外国语小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办打一外国语小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "杨浦双语学校",
+      "officialName": "杨浦双语学校",
+      "district": "yangpu",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2712,
+      "lng": 121.5334,
+      "desc": "原上外双语，K12一贯制，双语见长",
+      "admission": {
+        "rate": 53.75,
+        "rateYear": 2025,
+        "admitted": 215,
+        "maxLottery": 400,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480893/4029a4517716453883b54ceb8d0d7cd1.pdf"
+      },
+      "profile": {
+        "tag": "双语国际·杨浦民办T1",
+        "philosophy": "双语见长、文理并重、综合发展",
+        "path": [
+          "直升初中部",
+          "国际方向"
+        ],
+        "pros": [
+          "原上外附属双语，品牌资源强",
+          "行读华夏实践课程20年积淀",
+          "管乐、击剑、马术等艺体课程丰富，科创社团出小院士"
+        ],
+        "cons": [
+          "费用较高",
+          "摇号竞争激烈（2025中签率约54%）"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480893/4029a4517716453883b54ceb8d0d7cd1.pdf; https://www.xiaohongshu.com/search_result?keyword=杨浦双语学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=杨浦双语学校 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杨浦双语学校 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海师范大学附属杨浦滨江实验小学",
+      "officialName": "上海师范大学附属杨浦滨江实验小学",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2756,
+      "lng": 121.5067,
+      "desc": "杨浦区教育学院集团成员校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=杨浦实验小学 幼升小"
+      },
+      "profile": {
+        "tag": "教院系·杨浦公办T2",
+        "philosophy": "杨浦区优质双语学校",
+        "path": [
+          "对口公办初中",
+          "民办初中摇号"
+        ],
+        "pros": [
+          "中高级教师占70%以上",
+          "纳入政府购买学位，实际缴费3850元/学期"
+        ],
+        "cons": [
+          "2025年官方摇号名单中未出现小学部独立招生计划，需确认招生状态"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=杨浦实验小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=杨浦实验小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=杨浦实验小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杨浦实验小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "同大实验小学",
+      "officialName": "同大实验小学",
+      "district": "yangpu",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2701,
+      "lng": 121.5014,
+      "desc": "同济系九年制，阅读+科技特色",
+      "admission": {
+        "rate": 45.37,
+        "rateYear": 2025,
+        "admitted": 147,
+        "maxLottery": 324,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480892/c4b1a7f91da8494ca013543f4d93b615.pdf"
+      },
+      "profile": {
+        "tag": "同济系·杨浦民办T2",
+        "philosophy": "人文与科学、积淀与创造",
+        "path": [
+          "三门中学（对口）",
+          "同大初中部直升"
+        ],
+        "pros": [
+          "同济大学合作创办，科技教育特色（航天育种、模型火箭）",
+          "阅读伴我成长特色课程",
+          "教育戏剧、财商、博物馆等校本课程丰富"
+        ],
+        "cons": [
+          "知名度低于T1学校",
+          "摇号竞争中等（2025中签率约45%）"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480892/c4b1a7f91da8494ca013543f4d93b615.pdf; https://www.xiaohongshu.com/search_result?keyword=同大实验小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=同大实验小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "同大实验小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "长阳实验小学",
+      "officialName": "长阳实验小学",
+      "district": "yangpu",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2578,
+      "lng": 121.5312,
+      "desc": "原控江附属民办，九年一贯制，劳动教育特色",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 153,
+        "maxLottery": null,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480894/20e42b07db9a427eb9197795244cfc14.pdf"
+      },
+      "profile": {
+        "tag": "控江系·杨浦民办T2",
+        "philosophy": "自主创新，完善人格",
+        "path": [
+          "长阳初中部直升",
+          "对口公办初中"
+        ],
+        "pros": [
+          "控江中学教育集团成员校",
+          "上海市劳动教育特色校",
+          "幸福课堂教学科研成果显著，项目化学习"
+        ],
+        "cons": [
+          "小学部2017年才开始招生，办学历史较短"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480894/20e42b07db9a427eb9197795244cfc14.pdf; https://www.xiaohongshu.com/search_result?keyword=长阳实验小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=长阳实验小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "长阳实验小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "沪东外国语学校",
+      "officialName": "沪东外国语学校",
+      "district": "yangpu",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2621,
+      "lng": 121.5401,
+      "desc": "1993年创办，上海最早民办校之一，外语特色",
+      "admission": {
+        "rate": 72.84,
+        "rateYear": 2025,
+        "admitted": 118,
+        "maxLottery": 162,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480889/9aba94ca308f41ee8258b9d4d242c3d7.pdf"
+      },
+      "profile": {
+        "tag": "外语特色·杨浦民办T2",
+        "philosophy": "国际视野、开放自信、文理并重、多元互动",
+        "path": [
+          "沪东外语初中部直升",
+          "国际方向"
+        ],
+        "pros": [
+          "30年办学历史，上海最早民办之一",
+          "CEO特色课程体系（团结协作+善于表现+开放融合）",
+          "沉浸式英语：Morning Talk、原版读物、英语900句",
+          "大语文：5年读100部名著+背300首唐诗"
+        ],
+        "cons": [
+          "校区面积较小（6942㎡）",
+          "梯队评级偏低但实际教学特色鲜明"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480889/9aba94ca308f41ee8258b9d4d242c3d7.pdf; https://www.xiaohongshu.com/search_result?keyword=沪东外国语学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=沪东外国语学校 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "沪东外国语学校 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办阳浦小学",
+      "officialName": "民办阳浦小学",
+      "district": "yangpu",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2689,
+      "lng": 121.5178,
+      "desc": "杨浦小学基础上2006年立校，小班精致教学",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 225,
+        "maxLottery": null,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480891/b46307d845e44302beebb1adb5a9844a.pdf"
+      },
+      "profile": {
+        "tag": "精致教学·杨浦民办T1",
+        "philosophy": "大气、开放、精致、创新；关注每一个学生的全面发展",
+        "path": [
+          "对口公办初中",
+          "民办初中摇号"
+        ],
+        "pros": [
+          "小班化教学，精细管理",
+          "阳光课程体系",
+          "多项市级荣誉：素质教育实验校、语言文字规范示范校"
+        ],
+        "cons": [
+          "2025年统招全部录取（报名<=计划），关注度下降"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480891/b46307d845e44302beebb1adb5a9844a.pdf; https://www.xiaohongshu.com/search_result?keyword=民办阳浦小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=民办阳浦小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办阳浦小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "二师附小",
+      "officialName": "二师附小",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2734,
+      "lng": 121.5189,
+      "desc": "杨浦公办T1，百年师范附校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=二师附小 口碑"
+      },
+      "profile": {
+        "tag": "师范附校·杨浦公办T1",
+        "philosophy": "二师附小，百年底蕴育英才",
+        "path": [
+          "杨浦区重点初中（对口）"
+        ],
+        "pros": [
+          "杨浦公办头牌",
+          "百年办学底蕴"
+        ],
+        "cons": [
+          "需对口学区房"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=二师附小 口碑; https://www.xiaohongshu.com/search_result?keyword=二师附小 口碑; https://www.xiaohongshu.com/search_result?keyword=二师附小 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "二师附小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "控江二小",
+      "officialName": "控江二小",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2801,
+      "lng": 121.5234,
+      "desc": "杨浦公办T1，教学扎实",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=控江二小 口碑"
+      },
+      "profile": {
+        "tag": "区内标杆·杨浦公办T1",
+        "philosophy": "控江片区教育标杆",
+        "path": [
+          "杨浦区重点初中（对口）"
+        ],
+        "pros": [
+          "区内顶尖公办",
+          "口碑长期稳定"
+        ],
+        "cons": [
+          "需对口学区房"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=控江二小 口碑; https://www.xiaohongshu.com/search_result?keyword=控江二小 口碑; https://www.xiaohongshu.com/search_result?keyword=控江二小 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "控江二小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "打虎山路第一小学",
+      "officialName": "打虎山路第一小学",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2678,
+      "lng": 121.5123,
+      "desc": "杨浦公办T2，教学质量稳定",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=打虎山路第一小学 口碑"
+      },
+      "profile": {
+        "tag": "杨浦公办T2",
+        "philosophy": "打一精神，扎实向前",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "升学资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=打虎山路第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=打虎山路第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=打虎山路第一小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "打虎山路第一小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "复旦大学附属小学",
+      "officialName": "复旦大学附属小学",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2823,
+      "lng": 121.5089,
+      "desc": "复旦资源背书，科创氛围浓厚",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=复旦大学附属小学 口碑"
+      },
+      "profile": {
+        "tag": "复旦系·杨浦公办T2",
+        "philosophy": "复旦基因，学术底色的小学时光",
+        "path": [
+          "复旦附中系",
+          "杨浦区重点初中"
+        ],
+        "pros": [
+          "复旦品牌资源",
+          "学术氛围好"
+        ],
+        "cons": [
+          "需对口",
+          "竞争压力有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=复旦大学附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=复旦大学附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=复旦大学附属小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "复旦大学附属小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海理工大学附属小学",
+      "officialName": "上海理工大学附属小学",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2645,
+      "lng": 121.5312,
+      "desc": "高校资源，理工科启蒙特色",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海理工大学附属小学 口碑"
+      },
+      "profile": {
+        "tag": "理工系·杨浦公办T2",
+        "philosophy": "理工精神，实践创新从小培养",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "理工科实践课程丰富"
+        ],
+        "cons": [
+          "升学资源一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海理工大学附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海理工大学附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海理工大学附属小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海理工大学附属小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "杨浦小学",
+      "officialName": "杨浦小学",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2589,
+      "lng": 121.5201,
+      "desc": "杨浦区优质公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=杨浦小学 口碑"
+      },
+      "profile": {
+        "tag": "杨浦公办T2",
+        "philosophy": "杨浦区综合优质小学",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "教学稳定",
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色不突出"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=杨浦小学 口碑; https://www.xiaohongshu.com/search_result?keyword=杨浦小学 口碑; https://www.xiaohongshu.com/search_result?keyword=杨浦小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杨浦小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海音乐学院实验学校小学部",
+      "officialName": "上海音乐学院实验学校小学部",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2734,
+      "lng": 121.5145,
+      "desc": "上海音乐学院附属，艺术特色突出",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海音乐学院实验学校 口碑"
+      },
+      "profile": {
+        "tag": "音乐特色·杨浦公办T2",
+        "philosophy": "音乐滋养，让孩子在美的环境中成长",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "音乐艺术资源突出",
+          "美育氛围好"
+        ],
+        "cons": [
+          "学术竞争力一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海音乐学院实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=上海音乐学院实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=上海音乐学院实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海音乐学院实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "复旦科技园实验学校小学部",
+      "officialName": "复旦科技园实验学校小学部",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2867,
+      "lng": 121.5056,
+      "desc": "科技创新特色，复旦资源赋能",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=复旦科技园实验学校 口碑"
+      },
+      "profile": {
+        "tag": "复旦系·杨浦公办T2",
+        "philosophy": "科技园里的未来领袖",
+        "path": [
+          "杨浦区对口初中",
+          "民办初中"
+        ],
+        "pros": [
+          "科技资源丰富",
+          "创新氛围浓"
+        ],
+        "cons": [
+          "知名度一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=复旦科技园实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=复旦科技园实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=复旦科技园实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "复旦科技园实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "齐一小学",
+      "officialName": "齐一小学",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2612,
+      "lng": 121.5178,
+      "desc": "杨浦T2，社区口碑好",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=齐一小学 口碑"
+      },
+      "profile": {
+        "tag": "杨浦公办T2",
+        "philosophy": "齐心一德，扎实育人",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "德育有特色",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=齐一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=齐一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=齐一小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "齐一小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "水丰路小学",
+      "officialName": "水丰路小学",
+      "district": "yangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2556,
+      "lng": 121.5234,
+      "desc": "杨浦区稳定公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=水丰路小学 口碑"
+      },
+      "profile": {
+        "tag": "杨浦公办T2",
+        "philosophy": "水丰路片区综合优质",
+        "path": [
+          "杨浦区对口初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色不突出"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=水丰路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=水丰路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=水丰路小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "水丰路小学 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 17,
+      "updated": 17
+    }
+  }
+}

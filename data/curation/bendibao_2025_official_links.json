@@ -1,0 +1,230 @@
+{
+  "items": [
+    {
+      "district": "黄浦",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297499.shtm",
+      "title": "2025上海黄浦区民办小学摇号录取名单公布(附查询入口）",
+      "query": "2025上海黄浦民办小学摇号录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/",
+        "https://www.shhuangpu.gov.cn/zw/009002/009002004/009002004004/009002004004003/009002004004003002/20250520/ed2c77ca-588e-4f74-9540-a21de180ff8b.html"
+      ],
+      "pdfUrls": [],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: "
+      ]
+    },
+    {
+      "district": "徐汇",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025519/297477.shtm",
+      "title": "2025上海徐汇民办小学摇号结果公布录取名单一览",
+      "query": "2025上海徐汇民办小学录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/"
+      ],
+      "pdfUrls": [],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: "
+      ]
+    },
+    {
+      "district": "长宁",
+      "bendibaoArticle": "",
+      "title": "",
+      "query": "",
+      "pageUrls": [],
+      "pdfUrls": [],
+      "errors": [
+        "article_not_found"
+      ]
+    },
+    {
+      "district": "静安",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297506.shtm",
+      "title": "2025上海静安区民办小学摇号结果录取名单一览(附查询入口）",
+      "query": "2025上海静安民办小学摇号录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/",
+        "https://www.jingan.gov.cn/sy/004009/004009010/004009010008/004009010008003/004009010008003002/20250520/0113b190-ec6c-42a8-a030-e73250a9b7c6.html"
+      ],
+      "pdfUrls": [],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: "
+      ]
+    },
+    {
+      "district": "普陀",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297511.shtm",
+      "title": "2025上海普陀区民办小学初中摇号结果查询查询入口(附名单）",
+      "query": "2025普陀区民办小学摇号录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/",
+        "https://www.shpt.gov.cn/zhengwu/ywjyzs-jyjrxbkyzs/2025/140/196301.html"
+      ],
+      "pdfUrls": [
+        "https://www.shpt.gov.cn/zhengwu/ywjyzs-jyjrxbkyzs/2025/140/196301/2e34cbab9a63497b91d7ce06ba52100f.pdf",
+        "https://www.shpt.gov.cn/zhengwu/ywjyzs-jyjrxbkyzs/2025/140/196301/4253cff804584a099e8efde1d6bfebce.pdf",
+        "https://www.shpt.gov.cn/zhengwu/ywjyzs-jyjrxbkyzs/2025/140/196301/5508fd8d527647738f65554e025c09de.pdf",
+        "https://www.shpt.gov.cn/zhengwu/ywjyzs-jyjrxbkyzs/2025/140/196301/5598b753f22d4686b5ec4906662ae112.pdf",
+        "https://www.shpt.gov.cn/zhengwu/ywjyzs-jyjrxbkyzs/2025/140/196301/5f0a5e3a8bc0411ab7ed53333376f60b.pdf",
+        "https://www.shpt.gov.cn/zhengwu/ywjyzs-jyjrxbkyzs/2025/140/196301/7920d3b925ee4011818c3d910fe67a6e.pdf",
+        "https://www.shpt.gov.cn/zhengwu/ywjyzs-jyjrxbkyzs/2025/140/196301/983648ab5dd1442c90cee0dd7a1bb5d2.pdf",
+        "https://www.shpt.gov.cn/zhengwu/ywjyzs-jyjrxbkyzs/2025/140/196301/c3707d38eb55471486bd941a5a076990.pdf",
+        "https://www.shpt.gov.cn/zhengwu/ywjyzs-jyjrxbkyzs/2025/140/196301/faf34ac04fc54641b4d91e918ba86c49.pdf"
+      ],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: "
+      ]
+    },
+    {
+      "district": "虹口",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297512.shtm",
+      "title": "2025上海虹口区民办小学摇号录取名单公示(附查询入口）",
+      "query": "2025上海虹口民办小学摇号录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/",
+        "https://www.shhk.gov.cn/hkjy/zfxx/001007/001007008/20250520/bfd6380c-e469-4bf2-a550-406f071acc97.html"
+      ],
+      "pdfUrls": [
+        "https://www.shhk.gov.cn/hkjy_nas/bfd6380c-e469-4bf2-a550-406f071acc97/eeef9016-edf6-430b-bff7-af8c61224452/2025年上海市虹口区民办小学报名志愿电脑随机录取名单.pdf"
+      ],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: "
+      ]
+    },
+    {
+      "district": "杨浦",
+      "bendibaoArticle": "",
+      "title": "",
+      "query": "",
+      "pageUrls": [],
+      "pdfUrls": [],
+      "errors": [
+        "article_not_found"
+      ]
+    },
+    {
+      "district": "浦东",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297516.shtm",
+      "title": "2025上海浦东新区民办小学摇号录取名单公示(附查询入口）",
+      "query": "2025上海浦东民办小学摇号录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/",
+        "https://www.pudong.gov.cn/zwgk/ywjy-jyjzdgz/2025/140/340975.html"
+      ],
+      "pdfUrls": [
+        "https://www.pudong.gov.cn/zwgk/ywjy-jyjzdgz/2025/140/340975/a4e7b40c5d29436da4d251c19ac043fb.pdf"
+      ],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: "
+      ]
+    },
+    {
+      "district": "闵行",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297504.shtm",
+      "title": "2025上海闵行区民办小学摇号录取名单公示(附查询入口）",
+      "query": "2025上海闵行民办小学摇号录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/",
+        "https://zwgk.shmh.gov.cn/mh-xxgk-cms/website/mh_xxgk/xxgk_jyj_ywxx_8_02/content/040f8e2d-2961-4508-8527-b080aa08b3e1.htm"
+      ],
+      "pdfUrls": [],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: "
+      ]
+    },
+    {
+      "district": "宝山",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297509.shtm",
+      "title": "2025上海宝山区民办小学摇号结果录取名单一览",
+      "query": "2025上海宝山民办小学摇号录取名单",
+      "pageUrls": [],
+      "pdfUrls": [],
+      "errors": [
+        "article_fetch_failed:HTTP Error 502: Bad Gateway"
+      ]
+    },
+    {
+      "district": "嘉定",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297485.shtm",
+      "title": "2025上海嘉定区民办小学摇号录取名单(附查询入口）",
+      "query": "2025上海嘉定民办小学摇号录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/",
+        "https://www.jiading.gov.cn/jiaoyu/publicity/zwgkbzml/zdgz/zsks/ywjyu/186940"
+      ],
+      "pdfUrls": [
+        "https://www.jiading.gov.cn/upload/jiaoyu/infopublicity/publicinformation/file/41301a83758c466ea2b0b628b6f07505.pdf"
+      ],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: "
+      ]
+    },
+    {
+      "district": "金山",
+      "bendibaoArticle": "",
+      "title": "",
+      "query": "",
+      "pageUrls": [],
+      "pdfUrls": [],
+      "errors": [
+        "article_not_found"
+      ]
+    },
+    {
+      "district": "松江",
+      "bendibaoArticle": "",
+      "title": "",
+      "query": "",
+      "pageUrls": [],
+      "pdfUrls": [],
+      "errors": [
+        "article_not_found"
+      ]
+    },
+    {
+      "district": "青浦",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297487.shtm",
+      "title": "2025上海青浦区民办小学摇号录取名单一览(附查询入口）",
+      "query": "2025上海青浦民办小学摇号录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/",
+        "https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html"
+      ],
+      "pdfUrls": [
+        "https://www.shqp.gov.cn/edu/edu/upload/202505/0519_152058_311.pdf"
+      ],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: "
+      ]
+    },
+    {
+      "district": "奉贤",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297495.shtm",
+      "title": "2025上海奉贤区民办小学摇号录取名单公示(附查询入口）",
+      "query": "2025上海奉贤民办小学摇号录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/",
+        "https://www.fengxian.gov.cn/jyj/gsgg/20250520/89246.html"
+      ],
+      "pdfUrls": [],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: ",
+        "page_fetch_failed:https://www.fengxian.gov.cn/jyj/gsgg/20250520/89246.html::HTTP Error 404: Not Found"
+      ]
+    },
+    {
+      "district": "崇明",
+      "bendibaoArticle": "http://sh.bendibao.com/edu/2025520/297498.shtm",
+      "title": "2025上海崇明区民办小学摇号录取名单一览",
+      "query": "2025上海崇明民办小学摇号录取名单",
+      "pageUrls": [
+        "https://beian.miit.gov.cn/"
+      ],
+      "pdfUrls": [],
+      "errors": [
+        "page_fetch_failed:https://beian.miit.gov.cn/::HTTP Error 521: "
+      ]
+    }
+  ]
+}

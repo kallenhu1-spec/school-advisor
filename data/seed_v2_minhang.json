@@ -1,0 +1,1035 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:47Z",
+  "district": "minhang",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "星河湾双语学校",
+      "officialName": "星河湾双语学校",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1234,
+      "lng": 121.3823,
+      "desc": "闵行顶流，中考成绩TOP，2025中签率72%（爆冷）",
+      "admission": {
+        "rate": 71.36,
+        "rateYear": 2025,
+        "admitted": 147,
+        "maxLottery": 206,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=星河湾双语学校 口碑"
+      },
+      "profile": {
+        "tag": "闵行民办T1·双语豪华",
+        "philosophy": "星河湾品质，双语精英教育",
+        "path": [
+          "双语初中系",
+          "国际高中",
+          "民办强初中"
+        ],
+        "pros": [
+          "硬件设施豪华",
+          "双语教学顶级",
+          "家长资源强"
+        ],
+        "cons": [
+          "费用极高",
+          "摇号竞争激烈",
+          "压力大"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=星河湾双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=星河湾双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=星河湾双语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "星河湾双语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "七宝德怀特高级中学附属小学",
+      "officialName": "七宝德怀特高级中学附属小学",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1456,
+      "lng": 121.3512,
+      "desc": "德怀特系，中西融合，出口强",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=七宝德怀特附属小学 口碑"
+      },
+      "profile": {
+        "tag": "德怀特系·闵行民办T1",
+        "philosophy": "美国德怀特品牌，国际化起跑线",
+        "path": [
+          "德怀特高中直升",
+          "国际顶尖大学"
+        ],
+        "pros": [
+          "国际课程体系完整",
+          "直升通道稳定",
+          "纯国际化"
+        ],
+        "cons": [
+          "费用高昂",
+          "全英环境适应难",
+          "中文相对弱"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=七宝德怀特附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=七宝德怀特附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=七宝德怀特附属小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "七宝德怀特附属小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "闵行协和双语学校",
+      "officialName": "闵行协和双语学校",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1823,
+      "lng": 121.3923,
+      "desc": "2025超额摇号，协和系，闵行优质双语",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=闵行协和双语学校 口碑"
+      },
+      "profile": {
+        "tag": "协和系·闵行民办T1",
+        "philosophy": "协和品牌闵行落地，中西双优",
+        "path": [
+          "协和初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "协和品牌背书",
+          "双语质量高",
+          "口碑稳定"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "费用较高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=闵行协和双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=闵行协和双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=闵行协和双语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "闵行协和双语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "万源城协和双语学校",
+      "officialName": "万源城协和双语学校",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.0934,
+      "lng": 121.4123,
+      "desc": "协和系分校，闵行南片",
+      "admission": {
+        "rate": 53.7,
+        "rateYear": 2025,
+        "admitted": 116,
+        "maxLottery": 216,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=万源城协和双语学校 口碑"
+      },
+      "profile": {
+        "tag": "协和系·闵行民办T1",
+        "philosophy": "万源城的协和精神，双语优质教育",
+        "path": [
+          "协和初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "协和品牌",
+          "双语资源好",
+          "位置便利"
+        ],
+        "cons": [
+          "摇号竞争有",
+          "费用较高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=万源城协和双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=万源城协和双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=万源城协和双语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "万源城协和双语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "博世凯双语学校",
+      "officialName": "博世凯双语学校",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.1523,
+      "lng": 121.3712,
+      "desc": "2025中签率12%，IB课程，竞争激烈",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=博世凯双语学校 口碑"
+      },
+      "profile": {
+        "tag": "闵行民办T2·双语",
+        "philosophy": "博世凯精神，双语教育稳步前行",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "双语有特色",
+          "口碑上升"
+        ],
+        "cons": [
+          "知名度中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=博世凯双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=博世凯双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=博世凯双语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "博世凯双语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "德英乐实验学校",
+      "officialName": "德英乐实验学校",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.1334,
+      "lng": 121.3612,
+      "desc": "2025超额摇号，德英双语特色",
+      "admission": {
+        "rate": 13.72,
+        "rateYear": 2025,
+        "admitted": 110,
+        "maxLottery": 802,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=德英乐实验学校 口碑"
+      },
+      "profile": {
+        "tag": "闵行民办T2·德育",
+        "philosophy": "德智并重，英语领航",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "德育扎实",
+          "英语氛围好"
+        ],
+        "cons": [
+          "学术竞争力中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=德英乐实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=德英乐实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=德英乐实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "德英乐实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "七宝外国语小学",
+      "officialName": "七宝外国语小学",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.1523,
+      "lng": 121.3512,
+      "desc": "七宝系，2025超额摇号",
+      "admission": {
+        "rate": 10.45,
+        "rateYear": 2025,
+        "admitted": 230,
+        "maxLottery": 2200,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=七宝外国语小学 幼升小"
+      },
+      "profile": {
+        "tag": "双语国际路线",
+        "philosophy": "闵行双语优质校，七宝系资源",
+        "path": [
+          "对口民办摇号初中",
+          "双语升学路线",
+          "国际路线"
+        ],
+        "pros": [
+          "政府购买学位接近免费",
+          "2025最大顺序号2200+热度爆涨",
+          "七宝系资源背书",
+          "双语环境好",
+          "闵行优质校"
+        ],
+        "cons": [
+          "2025热度暴涨报名超额激烈"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=七宝外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=七宝外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=七宝外国语小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "七宝外国语小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "圣华紫竹双语学校",
+      "officialName": "圣华紫竹双语学校",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.0234,
+      "lng": 121.4823,
+      "desc": "2025摇号，位置偏，竞争相对和缓",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 137,
+        "maxLottery": null,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=圣华紫竹双语学校 幼升小"
+      },
+      "profile": {
+        "tag": "双语国际路线",
+        "philosophy": "闵行双语，紫竹科学园区配套",
+        "path": [
+          "对口民办摇号初中",
+          "双语国际路线"
+        ],
+        "pros": [
+          "竞争相对和缓",
+          "双语环境好",
+          "园区配套设施佳"
+        ],
+        "cons": [
+          "位置偏，紫竹园区内",
+          "知名度不如头部双语校"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=圣华紫竹双语学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=圣华紫竹双语学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=圣华紫竹双语学校 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "圣华紫竹双语学校 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "闵行虹桥学校",
+      "officialName": "闵行虹桥学校",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": 31.1934,
+      "lng": 121.3823,
+      "desc": "虹桥区域，竞争较小",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=闵行虹桥学校 幼升小"
+      },
+      "profile": {
+        "tag": "双语国际路线",
+        "philosophy": "闵行虹桥区域双语学校",
+        "path": [
+          "对口民办摇号初中",
+          "双语国际路线"
+        ],
+        "pros": [
+          "虹桥区域交通便利",
+          "双语环境适中",
+          "竞争压力较小"
+        ],
+        "cons": [
+          "品牌知名度一般",
+          "升学资源有限"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=闵行虹桥学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=闵行虹桥学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=闵行虹桥学校 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "闵行虹桥学校 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海世界外国语小学闵行分校",
+      "officialName": "上海世界外国语小学闵行分校",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.1412,
+      "lng": 121.3923,
+      "desc": "世外系，闵行分校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海世界外国语小学闵行分校 口碑"
+      },
+      "profile": {
+        "tag": "世外系·闵行民办T2",
+        "philosophy": "世外精神在闵行，双语优质教育",
+        "path": [
+          "世外初中系",
+          "民办初中"
+        ],
+        "pros": [
+          "世外品牌",
+          "双语质量有保证"
+        ],
+        "cons": [
+          "分校资源略逊总校",
+          "摇号有竞争"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海世界外国语小学闵行分校 口碑; https://www.xiaohongshu.com/search_result?keyword=上海世界外国语小学闵行分校 口碑; https://www.xiaohongshu.com/search_result?keyword=上海世界外国语小学闵行分校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海世界外国语小学闵行分校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "闵行育才中学附属小学",
+      "officialName": "闵行育才中学附属小学",
+      "district": "minhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.1234,
+      "lng": 121.4112,
+      "desc": "一贯制，2025摇号",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=闵行育才中学附属小学 口碑"
+      },
+      "profile": {
+        "tag": "育才系·闵行民办T2",
+        "philosophy": "育才精神附小传承，扎实学风",
+        "path": [
+          "育才初中系",
+          "闵行区重点初中"
+        ],
+        "pros": [
+          "育才品牌",
+          "直升通道",
+          "学风严谨"
+        ],
+        "cons": [
+          "压力较大"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=闵行育才中学附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=闵行育才中学附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=闵行育才中学附属小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "闵行育才中学附属小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "明强小学",
+      "officialName": "明强小学",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.1623,
+      "lng": 121.3489,
+      "desc": "百年老校，七宝片区标杆，对口七宝二中/三中",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=明强小学 口碑"
+      },
+      "profile": {
+        "tag": "闵行公办T1·七宝名校",
+        "philosophy": "七宝重镇，明强精神铸英才",
+        "path": [
+          "闵行区重点初中",
+          "知名民办初中"
+        ],
+        "pros": [
+          "七宝片区顶尖",
+          "竞赛成绩好",
+          "升学稳定"
+        ],
+        "cons": [
+          "压力较大",
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=明强小学 口碑; https://www.xiaohongshu.com/search_result?keyword=明强小学 口碑; https://www.xiaohongshu.com/search_result?keyword=明强小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "明强小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "闵行区实验小学",
+      "officialName": "闵行区实验小学",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.1734,
+      "lng": 121.3812,
+      "desc": "闵行最强公办，四校区，连年A级评估，升学向上实/华育",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=闵行区实验小学 口碑"
+      },
+      "profile": {
+        "tag": "闵行公办T1·区实验",
+        "philosophy": "区实验标杆，课程改革引领",
+        "path": [
+          "闵行区重点初中"
+        ],
+        "pros": [
+          "实验课程前沿",
+          "教学质量高",
+          "口碑稳定"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=闵行区实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=闵行区实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=闵行区实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "闵行区实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "七宝实验小学",
+      "officialName": "七宝实验小学",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1556,
+      "lng": 121.3423,
+      "desc": "游泳/小提琴特色，七宝片区优质公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=七宝实验小学 口碑"
+      },
+      "profile": {
+        "tag": "七宝系·闵行公办T2",
+        "philosophy": "七宝实验，扎实学风传承",
+        "path": [
+          "闵行区重点初中",
+          "七宝中学系"
+        ],
+        "pros": [
+          "七宝片区品牌",
+          "直升通道可期"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=七宝实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=七宝实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=七宝实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "七宝实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "七宝文来实验小学",
+      "officialName": "七宝文来实验小学",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1589,
+      "lng": 121.3467,
+      "desc": "文来系学校，升学成绩稳定",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=七宝文来实验小学 口碑"
+      },
+      "profile": {
+        "tag": "七宝系·闵行公办T2",
+        "philosophy": "文来基因，实验精神再出发",
+        "path": [
+          "闵行区普通初中",
+          "文来中学系"
+        ],
+        "pros": [
+          "文来品牌背书",
+          "综合均衡"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=七宝文来实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=七宝文来实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=七宝文来实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "七宝文来实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "田园外国语实验小学",
+      "officialName": "田园外国语实验小学",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1812,
+      "lng": 121.3756,
+      "desc": "双语课程能打，闵行T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=田园外国语实验小学 口碑"
+      },
+      "profile": {
+        "tag": "外语实验·闵行公办T2",
+        "philosophy": "田园外语，在自然中学好英语",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "外语氛围好",
+          "校园环境优美"
+        ],
+        "cons": [
+          "升学竞争力中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=田园外国语实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=田园外国语实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=田园外国语实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "田园外国语实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "平南小学",
+      "officialName": "平南小学",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1678,
+      "lng": 121.3645,
+      "desc": "零缺陷服务，个性化教育，近年成绩稳步提升",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=平南小学 口碑"
+      },
+      "profile": {
+        "tag": "闵行公办T2",
+        "philosophy": "平南片区综合优质",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "社区口碑稳定"
+        ],
+        "cons": [
+          "特色不突出"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=平南小学 口碑; https://www.xiaohongshu.com/search_result?keyword=平南小学 口碑; https://www.xiaohongshu.com/search_result?keyword=平南小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "平南小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "闵行区中心小学",
+      "officialName": "闵行区中心小学",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1745,
+      "lng": 121.3789,
+      "desc": "百年名校底蕴，闵行T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=闵行区中心小学 口碑"
+      },
+      "profile": {
+        "tag": "闵行公办T2·区中心",
+        "philosophy": "区中心学校，均衡优质",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "区中心资源",
+          "教学均衡"
+        ],
+        "cons": [
+          "竞争特色不明显"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=闵行区中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=闵行区中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=闵行区中心小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "闵行区中心小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "莘庄镇小学",
+      "officialName": "莘庄镇小学",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1423,
+      "lng": 121.3812,
+      "desc": "百年老校，艺术英语并重，闵行南片龙头",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=莘庄镇小学 口碑"
+      },
+      "profile": {
+        "tag": "闵行公办T2",
+        "philosophy": "莘庄片区教育基石",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "莘庄交通便利",
+          "社区口碑好"
+        ],
+        "cons": [
+          "资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=莘庄镇小学 口碑; https://www.xiaohongshu.com/search_result?keyword=莘庄镇小学 口碑; https://www.xiaohongshu.com/search_result?keyword=莘庄镇小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "莘庄镇小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海师范大学附属康城实验学校",
+      "officialName": "上海师范大学附属康城实验学校",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1867,
+      "lng": 121.3934,
+      "desc": "上师大资源，教学创新，康城片区优质校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海师范大学附属康城实验学校 口碑"
+      },
+      "profile": {
+        "tag": "师范附属·闵行公办T2",
+        "philosophy": "师范教育滋养，康城实验创新",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "师范附校资源",
+          "课程有特色"
+        ],
+        "cons": [
+          "知名度一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海师范大学附属康城实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=上海师范大学附属康城实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=上海师范大学附属康城实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海师范大学附属康城实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "航华第一小学",
+      "officialName": "航华第一小学",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1934,
+      "lng": 121.4023,
+      "desc": "闵行北部优质公办，教学扎实",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=航华第一小学 口碑"
+      },
+      "profile": {
+        "tag": "闵行公办T2",
+        "philosophy": "航华片区优质小学",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "升学资源一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=航华第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=航华第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=航华第一小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "航华第一小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "交通大学闵行实验学校小学部",
+      "officialName": "交通大学闵行实验学校小学部",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1534,
+      "lng": 121.3567,
+      "desc": "交大资源，科创特色，闵行T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=交通大学闵行实验学校 口碑"
+      },
+      "profile": {
+        "tag": "交大系·闵行公办T2",
+        "philosophy": "交大品牌闵行落地，理工启蒙",
+        "path": [
+          "交大附中系",
+          "闵行区重点初中"
+        ],
+        "pros": [
+          "交大资源",
+          "理工氛围好"
+        ],
+        "cons": [
+          "文科相对弱"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=交通大学闵行实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=交通大学闵行实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=交通大学闵行实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "交通大学闵行实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "莘城学校小学部",
+      "officialName": "莘城学校小学部",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.1456,
+      "lng": 121.3756,
+      "desc": "九年一贯制，闵行南部稳定公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=莘城学校 口碑"
+      },
+      "profile": {
+        "tag": "闵行公办T3",
+        "philosophy": "莘城学校，社区教育基础",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "压力轻"
+        ],
+        "cons": [
+          "竞争力弱"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=莘城学校 口碑; https://www.xiaohongshu.com/search_result?keyword=莘城学校 口碑; https://www.xiaohongshu.com/search_result?keyword=莘城学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "莘城学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "莘光学校小学部",
+      "officialName": "莘光学校小学部",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.1489,
+      "lng": 121.3789,
+      "desc": "闵行T3，基础教育扎实",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=莘光学校 口碑"
+      },
+      "profile": {
+        "tag": "闵行公办T3",
+        "philosophy": "莘光社区小学",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "社区配套"
+        ],
+        "cons": [
+          "资源有限"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=莘光学校 口碑; https://www.xiaohongshu.com/search_result?keyword=莘光学校 口碑; https://www.xiaohongshu.com/search_result?keyword=莘光学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "莘光学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "平阳小学",
+      "officialName": "平阳小学",
+      "district": "minhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.1512,
+      "lng": 121.3823,
+      "desc": "闵行T3，社区型基础公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=平阳小学 口碑"
+      },
+      "profile": {
+        "tag": "闵行公办T3",
+        "philosophy": "平阳片区社区小学",
+        "path": [
+          "闵行区普通初中"
+        ],
+        "pros": [
+          "压力极小"
+        ],
+        "cons": [
+          "竞争力弱"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=平阳小学 口碑; https://www.xiaohongshu.com/search_result?keyword=平阳小学 口碑; https://www.xiaohongshu.com/search_result?keyword=平阳小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "平阳小学 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 25,
+      "updated": 25
+    }
+  }
+}

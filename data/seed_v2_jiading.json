@@ -1,0 +1,585 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:46Z",
+  "district": "jiading",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "嘉定区普通小学",
+      "officialName": "嘉定区普通小学",
+      "district": "jiading",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.3745,
+      "lng": 121.2634,
+      "desc": "百年底蕴，嘉定公办No.1，尚教育理念特色课程",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=嘉定区普通小学 口碑"
+      },
+      "profile": {
+        "tag": "嘉定公办T1",
+        "philosophy": "嘉定顶尖公办，稳定优质教育",
+        "path": [
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "区顶尖公办",
+          "升学稳定",
+          "免摇号"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=嘉定区普通小学 口碑; https://www.xiaohongshu.com/search_result?keyword=嘉定区普通小学 口碑; https://www.xiaohongshu.com/search_result?keyword=嘉定区普通小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "嘉定区普通小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "嘉定世外学校小学部",
+      "officialName": "嘉定世外学校小学部",
+      "district": "jiading",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.3712,
+      "lng": 121.2589,
+      "desc": "国际+本土双轨，双语资源丰富，嘉定民办T1",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=嘉定世外学校 口碑"
+      },
+      "profile": {
+        "tag": "世外系·嘉定民办T1",
+        "philosophy": "世外精神嘉定落地，双语名校",
+        "path": [
+          "世外初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "世外品牌",
+          "双语质量高",
+          "升学路径清晰"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "费用较高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=嘉定世外学校 口碑; https://www.xiaohongshu.com/search_result?keyword=嘉定世外学校 口碑; https://www.xiaohongshu.com/search_result?keyword=嘉定世外学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "嘉定世外学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "桃李园实验学校小学部",
+      "officialName": "桃李园实验学校小学部",
+      "district": "jiading",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.3678,
+      "lng": 121.2623,
+      "desc": "九年一贯制，艺术教育亮眼，升学稳定",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=桃李园实验学校 口碑"
+      },
+      "profile": {
+        "tag": "嘉定民办T1·综合",
+        "philosophy": "桃李园里育英才，全面综合发展",
+        "path": [
+          "民办强初中",
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "口碑稳定",
+          "升学成绩好",
+          "课程丰富"
+        ],
+        "cons": [
+          "摇号竞争有",
+          "费用较高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=桃李园实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=桃李园实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=桃李园实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "桃李园实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "同济大学附属实验学校小学部",
+      "officialName": "同济大学附属实验学校小学部",
+      "district": "jiading",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.3801,
+      "lng": 121.2556,
+      "desc": "同济资源，科技教育领先，嘉定T1",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=同济大学附属实验学校 口碑"
+      },
+      "profile": {
+        "tag": "同济系·嘉定公办T1",
+        "philosophy": "同济品牌，理工实验启蒙",
+        "path": [
+          "同济附中系",
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "同济品牌",
+          "实验资源好",
+          "直升通道"
+        ],
+        "cons": [
+          "需对口",
+          "理工偏向"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=同济大学附属实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=同济大学附属实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=同济大学附属实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "同济大学附属实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "中科院上海实验学校小学部",
+      "officialName": "中科院上海实验学校小学部",
+      "district": "jiading",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.3756,
+      "lng": 121.2678,
+      "desc": "中科院资源，科创氛围浓厚，嘉定T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=中科院上海实验学校 口碑"
+      },
+      "profile": {
+        "tag": "中科院系·嘉定公办T2",
+        "philosophy": "中科院精神，科学探索从小开始",
+        "path": [
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "中科院品牌",
+          "科学课程优质"
+        ],
+        "cons": [
+          "需对口",
+          "科学压力有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=中科院上海实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=中科院上海实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=中科院上海实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "中科院上海实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "城中路小学",
+      "officialName": "城中路小学",
+      "district": "jiading",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.3689,
+      "lng": 121.2712,
+      "desc": "传统文化+创新课程，嘉定T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=城中路小学 口碑"
+      },
+      "profile": {
+        "tag": "嘉定公办T2",
+        "philosophy": "嘉定城中，综合优质小学",
+        "path": [
+          "嘉定区普通初中"
+        ],
+        "pros": [
+          "社区口碑好",
+          "教学稳定"
+        ],
+        "cons": [
+          "资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=城中路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=城中路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=城中路小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "城中路小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上外嘉定外国语学校小学部",
+      "officialName": "上外嘉定外国语学校小学部",
+      "district": "jiading",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.3823,
+      "lng": 121.2489,
+      "desc": "上外系，外语教学突出，嘉定T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上外嘉定外国语学校 口碑"
+      },
+      "profile": {
+        "tag": "上外系·嘉定公办T2",
+        "philosophy": "上外品牌嘉定，外语启蒙名校",
+        "path": [
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "上外品牌",
+          "外语氛围好"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上外嘉定外国语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=上外嘉定外国语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=上外嘉定外国语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上外嘉定外国语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "嘉定实验小学",
+      "officialName": "嘉定实验小学",
+      "district": "jiading",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.3634,
+      "lng": 121.2756,
+      "desc": "艺术+双语特色，升学优势明显，嘉定T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=嘉定实验小学 口碑"
+      },
+      "profile": {
+        "tag": "嘉定公办T2·区实验",
+        "philosophy": "区实验名校，探索教育前沿",
+        "path": [
+          "嘉定区普通初中"
+        ],
+        "pros": [
+          "实验课程好",
+          "教学前沿"
+        ],
+        "cons": [
+          "资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=嘉定实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=嘉定实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=嘉定实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "嘉定实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "华旭双语学校小学部",
+      "officialName": "华旭双语学校小学部",
+      "district": "jiading",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.3712,
+      "lng": 121.2534,
+      "desc": "依托华东师大资源，民办双语，嘉定T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=华旭双语学校 口碑"
+      },
+      "profile": {
+        "tag": "嘉定民办T2·双语",
+        "philosophy": "华旭双语，平稳务实",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "双语特色",
+          "口碑稳定"
+        ],
+        "cons": [
+          "知名度中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=华旭双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=华旭双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=华旭双语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "华旭双语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "怀少学校小学部",
+      "officialName": "怀少学校小学部",
+      "district": "jiading",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.3667,
+      "lng": 121.2789,
+      "desc": "小班化性价比高，嘉定T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=怀少学校 口碑"
+      },
+      "profile": {
+        "tag": "嘉定民办T2",
+        "philosophy": "怀少精神，儿童为本",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "儿童友好理念",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=怀少学校 口碑; https://www.xiaohongshu.com/search_result?keyword=怀少学校 口碑; https://www.xiaohongshu.com/search_result?keyword=怀少学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "怀少学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "清水路小学",
+      "officialName": "清水路小学",
+      "district": "jiading",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.3589,
+      "lng": 121.2823,
+      "desc": "嘉定T2，教学质量稳定",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=清水路小学 口碑"
+      },
+      "profile": {
+        "tag": "嘉定公办T2",
+        "philosophy": "清水路片区综合优质",
+        "path": [
+          "嘉定区普通初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色不突出"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=清水路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=清水路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=清水路小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "清水路小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "嘉定宋校（宋庆龄学校）",
+      "officialName": "嘉定宋校（宋庆龄学校）",
+      "district": "jiading",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.3756,
+      "lng": 121.2645,
+      "desc": "宋庆龄基金会背景，人文特色突出",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=嘉定宋庆龄学校 口碑"
+      },
+      "profile": {
+        "tag": "宋庆龄品牌·嘉定公办T2",
+        "philosophy": "宋校精神嘉定传承，品格育人",
+        "path": [
+          "嘉定区普通初中"
+        ],
+        "pros": [
+          "宋校品牌好",
+          "课程有特色",
+          "压力适中"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=嘉定宋庆龄学校 口碑; https://www.xiaohongshu.com/search_result?keyword=嘉定宋庆龄学校 口碑; https://www.xiaohongshu.com/search_result?keyword=嘉定宋庆龄学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "嘉定宋庆龄学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上大附属嘉定实验学校小学部",
+      "officialName": "上大附属嘉定实验学校小学部",
+      "district": "jiading",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.3534,
+      "lng": 121.2867,
+      "desc": "上大资源，嘉定T3，潜力新校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上大附属嘉定实验学校 口碑"
+      },
+      "profile": {
+        "tag": "上大系·嘉定公办T3",
+        "philosophy": "上大附属嘉定，实验探索",
+        "path": [
+          "嘉定区普通初中"
+        ],
+        "pros": [
+          "大学资源",
+          "实验课有特色"
+        ],
+        "cons": [
+          "梯队较低"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上大附属嘉定实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=上大附属嘉定实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=上大附属嘉定实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上大附属嘉定实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海实验学校嘉定分校小学部",
+      "officialName": "上海实验学校嘉定分校小学部",
+      "district": "jiading",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.3845,
+      "lng": 121.2512,
+      "desc": "上实集团赋能，嘉定T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海实验学校嘉定分校 口碑"
+      },
+      "profile": {
+        "tag": "市实验系·嘉定公办T2",
+        "philosophy": "市实验精神嘉定落地",
+        "path": [
+          "嘉定区重点初中"
+        ],
+        "pros": [
+          "市实验品牌",
+          "课程前沿"
+        ],
+        "cons": [
+          "分校资源需观察"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海实验学校嘉定分校 口碑; https://www.xiaohongshu.com/search_result?keyword=上海实验学校嘉定分校 口碑; https://www.xiaohongshu.com/search_result?keyword=上海实验学校嘉定分校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海实验学校嘉定分校 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 14,
+      "updated": 14
+    }
+  }
+}

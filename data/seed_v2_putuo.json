@@ -1,0 +1,707 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:47Z",
+  "district": "putuo",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "上海市民办光新小学",
+      "officialName": "上海市民办光新小学",
+      "district": "putuo",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2534,
+      "lng": 121.4012,
+      "desc": "普陀T1民办，升学资源好",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海市民办光新小学 口碑"
+      },
+      "profile": {
+        "tag": "普陀民办T1",
+        "philosophy": "光新精神，照亮孩子的未来",
+        "path": [
+          "普陀区重点初中",
+          "民办初中"
+        ],
+        "pros": [
+          "民办T1口碑好",
+          "管理规范",
+          "升学稳定"
+        ],
+        "cons": [
+          "摇号竞争较大",
+          "费用较高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海市民办光新小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海市民办光新小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海市民办光新小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海市民办光新小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "普陀区上大附属实验学校",
+      "officialName": "普陀区上大附属实验学校",
+      "district": "putuo",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2312,
+      "lng": 121.3834,
+      "desc": "上大系，一贯制",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=普陀区上大附属实验学校 口碑"
+      },
+      "profile": {
+        "tag": "上大系·普陀民办T2",
+        "philosophy": "上大附属，实验课程领航",
+        "path": [
+          "普陀区普通初中",
+          "民办初中"
+        ],
+        "pros": [
+          "大学资源好",
+          "实验课有特色"
+        ],
+        "cons": [
+          "知名度中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=普陀区上大附属实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=普陀区上大附属实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=普陀区上大附属实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "普陀区上大附属实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海市民办新普陀小学",
+      "officialName": "上海市民办新普陀小学",
+      "district": "putuo",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2623,
+      "lng": 121.4123,
+      "desc": "普陀T2民办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海市民办新普陀小学 口碑"
+      },
+      "profile": {
+        "tag": "普陀民办T2",
+        "philosophy": "新普陀，新起点，品质民办",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "费用适中",
+          "综合均衡"
+        ],
+        "cons": [
+          "特色不突出"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海市民办新普陀小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海市民办新普陀小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海市民办新普陀小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海市民办新普陀小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "华东师范大学附属小学",
+      "officialName": "华东师范大学附属小学",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2234,
+      "lng": 121.4023,
+      "desc": "普陀公办头牌，背靠华师大，师资强",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=华东师范大学附属小学 口碑"
+      },
+      "profile": {
+        "tag": "华师大附小·普陀公办T1",
+        "philosophy": "华师大基因，教育实验的摇篮",
+        "path": [
+          "华师大附属初中",
+          "普陀区重点初中"
+        ],
+        "pros": [
+          "名校师资强",
+          "课程改革前沿",
+          "直升通道"
+        ],
+        "cons": [
+          "需对口",
+          "竞争有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=华东师范大学附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=华东师范大学附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=华东师范大学附属小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "华东师范大学附属小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "金洲小学",
+      "officialName": "金洲小学",
+      "district": "putuo",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2267,
+      "lng": 121.3989,
+      "desc": "热门民办，双语特色，小班化教学",
+      "admission": {
+        "rate": 69.12,
+        "rateYear": 2025,
+        "admitted": 235,
+        "maxLottery": 340,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=金洲小学 口碑"
+      },
+      "profile": {
+        "tag": "普陀民办T1",
+        "philosophy": "金色洲际，全面育人的现代学校",
+        "path": [
+          "民办强初中",
+          "普陀区重点初中"
+        ],
+        "pros": [
+          "双语资源好",
+          "管理规范",
+          "升学稳定"
+        ],
+        "cons": [
+          "摇号竞争有",
+          "费用较高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=金洲小学 口碑; https://www.xiaohongshu.com/search_result?keyword=金洲小学 口碑; https://www.xiaohongshu.com/search_result?keyword=金洲小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "金洲小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "培佳双语学校",
+      "officialName": "培佳双语学校",
+      "district": "putuo",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2289,
+      "lng": 121.3956,
+      "desc": "十二年一贯制，双语天花板，省心之选",
+      "admission": {
+        "rate": 63.29,
+        "rateYear": 2025,
+        "admitted": 200,
+        "maxLottery": 316,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=培佳双语学校 口碑"
+      },
+      "profile": {
+        "tag": "普陀民办T1·双语",
+        "philosophy": "培育佳人，双语起航",
+        "path": [
+          "双语初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "双语教学优质",
+          "外教资源好"
+        ],
+        "cons": [
+          "压力有",
+          "费用高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=培佳双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=培佳双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=培佳双语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "培佳双语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "武宁路小学",
+      "officialName": "武宁路小学",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2312,
+      "lng": 121.4078,
+      "desc": "老牌优质公办，对口武宁中学",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=武宁路小学 口碑"
+      },
+      "profile": {
+        "tag": "普陀公办T1·区重点",
+        "philosophy": "武宁精神，传承百年优质教育",
+        "path": [
+          "普陀区重点初中"
+        ],
+        "pros": [
+          "区内顶尖公办",
+          "教学质量高",
+          "升学稳定"
+        ],
+        "cons": [
+          "需对口",
+          "竞争有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=武宁路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=武宁路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=武宁路小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "武宁路小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "江宁学校（九年一贯制）",
+      "officialName": "江宁学校（九年一贯制）",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2178,
+      "lng": 121.4112,
+      "desc": "历史沉淀深厚，从小学读到初中省心",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=江宁学校 口碑"
+      },
+      "profile": {
+        "tag": "九年一贯·普陀公办T1",
+        "philosophy": "九年一贯，稳步提升少操心",
+        "path": [
+          "江宁学校初中直升",
+          "普陀区重点初中"
+        ],
+        "pros": [
+          "直升初中压力小",
+          "管理规范"
+        ],
+        "cons": [
+          "初中质量需核实"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=江宁学校 口碑; https://www.xiaohongshu.com/search_result?keyword=江宁学校 口碑; https://www.xiaohongshu.com/search_result?keyword=江宁学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "江宁学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "新普陀小学",
+      "officialName": "新普陀小学",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2456,
+      "lng": 121.3923,
+      "desc": "近年上升快，梅川校区热度高",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=新普陀小学 口碑"
+      },
+      "profile": {
+        "tag": "普陀公办T1",
+        "philosophy": "新时代普陀教育标杆",
+        "path": [
+          "普陀区重点初中"
+        ],
+        "pros": [
+          "新校硬件好",
+          "教学积极向上"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=新普陀小学 口碑; https://www.xiaohongshu.com/search_result?keyword=新普陀小学 口碑; https://www.xiaohongshu.com/search_result?keyword=新普陀小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "新普陀小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "朝春中心小学",
+      "officialName": "朝春中心小学",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2301,
+      "lng": 121.4056,
+      "desc": "艺术学科特色，硬件设施新",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=朝春中心小学 口碑"
+      },
+      "profile": {
+        "tag": "普陀公办T2",
+        "philosophy": "春暖朝阳，茁壮成长",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "社区口碑好",
+          "管理规范"
+        ],
+        "cons": [
+          "升学资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=朝春中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=朝春中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=朝春中心小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "朝春中心小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "中远实验学校",
+      "officialName": "中远实验学校",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2189,
+      "lng": 121.4089,
+      "desc": "九年一贯制，综合实力稳定",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=中远实验学校 口碑"
+      },
+      "profile": {
+        "tag": "普陀公办T2",
+        "philosophy": "中远精神，实验教育扎根",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "实验课有特色"
+        ],
+        "cons": [
+          "资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=中远实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=中远实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=中远实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "中远实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "长征中心小学",
+      "officialName": "长征中心小学",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2367,
+      "lng": 121.3867,
+      "desc": "长征片区优质公办，教学扎实",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=长征中心小学 口碑"
+      },
+      "profile": {
+        "tag": "普陀公办T2",
+        "philosophy": "长征精神，传承奋进文化",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "红色文化特色",
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色竞争力一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=长征中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=长征中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=长征中心小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "长征中心小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "真如文英小学",
+      "officialName": "真如文英小学",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.2134,
+      "lng": 121.3801,
+      "desc": "普陀区稳定公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=真如文英小学 口碑"
+      },
+      "profile": {
+        "tag": "普陀公办T3",
+        "philosophy": "真如片区社区小学",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "压力小",
+          "社区配套"
+        ],
+        "cons": [
+          "竞争力弱"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=真如文英小学 口碑; https://www.xiaohongshu.com/search_result?keyword=真如文英小学 口碑; https://www.xiaohongshu.com/search_result?keyword=真如文英小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "真如文英小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "晋元附校小学部",
+      "officialName": "晋元附校小学部",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2389,
+      "lng": 121.3934,
+      "desc": "晋元高中系，九年一贯制，普陀T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=晋元附校 口碑"
+      },
+      "profile": {
+        "tag": "晋元系·普陀公办T2",
+        "philosophy": "晋元精神传承，小学打好基础",
+        "path": [
+          "晋元初中系",
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "晋元品牌背书",
+          "直升通道"
+        ],
+        "cons": [
+          "初中质量需核实"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=晋元附校 口碑; https://www.xiaohongshu.com/search_result?keyword=晋元附校 口碑; https://www.xiaohongshu.com/search_result?keyword=晋元附校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "晋元附校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "曹杨第二附属学校小学部",
+      "officialName": "曹杨第二附属学校小学部",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2523,
+      "lng": 121.4012,
+      "desc": "普陀T2，教学均衡，社区口碑好",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=曹杨第二附属学校 口碑"
+      },
+      "profile": {
+        "tag": "普陀公办T2",
+        "philosophy": "曹杨精神，扎根社区教育",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色不明显"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=曹杨第二附属学校 口碑; https://www.xiaohongshu.com/search_result?keyword=曹杨第二附属学校 口碑; https://www.xiaohongshu.com/search_result?keyword=曹杨第二附属学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "曹杨第二附属学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上外普陀外国语小学",
+      "officialName": "上外普陀外国语小学",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2456,
+      "lng": 121.3878,
+      "desc": "上外系资源，外语特色，普陀T2",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上外普陀外国语小学 口碑"
+      },
+      "profile": {
+        "tag": "上外系·普陀公办T2",
+        "philosophy": "上外品牌普陀落地，外语启蒙",
+        "path": [
+          "普陀区普通初中",
+          "民办初中"
+        ],
+        "pros": [
+          "外语氛围好",
+          "品牌背书"
+        ],
+        "cons": [
+          "需对口",
+          "外语压力有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上外普陀外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上外普陀外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上外普陀外国语小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上外普陀外国语小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "中山北路第一小学",
+      "officialName": "中山北路第一小学",
+      "district": "putuo",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.2234,
+      "lng": 121.4145,
+      "desc": "普陀T3，基础公办，稳定保障",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=中山北路第一小学 口碑"
+      },
+      "profile": {
+        "tag": "普陀公办T3",
+        "philosophy": "中山北路社区小学",
+        "path": [
+          "普陀区普通初中"
+        ],
+        "pros": [
+          "社区配套",
+          "压力小"
+        ],
+        "cons": [
+          "资源有限"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=中山北路第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=中山北路第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=中山北路第一小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "中山北路第一小学 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 17,
+      "updated": 17
+    }
+  }
+}

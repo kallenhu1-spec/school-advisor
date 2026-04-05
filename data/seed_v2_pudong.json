@@ -1,0 +1,1059 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:47Z",
+  "district": "pudong",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "民办平和双语学校",
+      "officialName": "民办平和双语学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1945,
+      "lng": 121.5823,
+      "desc": "浦东顶流，全市招生，IB体系，藤校资源",
+      "admission": {
+        "rate": 42.95,
+        "rateYear": 2025,
+        "admitted": 128,
+        "maxLottery": 298,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办平和双语学校 口碑"
+      },
+      "profile": {
+        "tag": "浦东民办T1·双语名校",
+        "philosophy": "平和精神：平静中获得和谐成长",
+        "path": [
+          "平和双语初中直升",
+          "民办强初中"
+        ],
+        "pros": [
+          "双语教学优质",
+          "中英均衡",
+          "口碑稳定",
+          "三年级可独立阅读英文原著",
+          "双语藤校摇篮口碑"
+        ],
+        "cons": [
+          "摇号竞争大",
+          "费用较高",
+          "统招名额极少，摇号最难之一"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办平和双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办平和双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办平和双语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办平和双语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办正达外国语小学",
+      "officialName": "民办正达外国语小学",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1934,
+      "lng": 121.5812,
+      "desc": "福山系，双语鸡血，难摇",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办正达外国语小学 幼升小"
+      },
+      "profile": {
+        "tag": "双语国际路线",
+        "philosophy": "福山系，浦东鸡血双语名校",
+        "path": [
+          "对口民办摇号初中",
+          "双语升学路线"
+        ],
+        "pros": [
+          "福山系品牌强",
+          "双语环境优质",
+          "特色课程丰富"
+        ],
+        "cons": [
+          "极难摇中",
+          "鸡血程度高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办正达外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=民办正达外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=民办正达外国语小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办正达外国语小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "向未来外国语小学",
+      "officialName": "向未来外国语小学",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.1982,
+      "lng": 121.5862,
+      "desc": "上外系，学费低，在读生有浦外面单",
+      "admission": {
+        "rate": 55.64,
+        "rateYear": 2025,
+        "admitted": 153,
+        "maxLottery": 275,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=向未来外国语小学 幼升小"
+      },
+      "profile": {
+        "tag": "双语国际路线",
+        "philosophy": "上外系，学费超低性价比之王",
+        "path": [
+          "对口民办摇号初中",
+          "浦外/上外直升机会",
+          "国际路线"
+        ],
+        "pros": [
+          "上外系品牌",
+          "学费极低",
+          "外语升学资源好"
+        ],
+        "cons": [
+          "中签率低，难摇",
+          "体制内竞争力一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=向未来外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=向未来外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=向未来外国语小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "向未来外国语小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "未来科技学校",
+      "officialName": "未来科技学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2234,
+      "lng": 121.6012,
+      "desc": "中考成绩惊艳，鸡血，适合高抗压孩子",
+      "admission": {
+        "rate": 19.02,
+        "rateYear": 2025,
+        "admitted": 163,
+        "maxLottery": 857,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=未来科技学校 幼升小"
+      },
+      "profile": {
+        "tag": "传统精英路线",
+        "philosophy": "浦东新秀，中考成绩惊艳",
+        "path": [
+          "直升本校初中部",
+          "四大名校预录",
+          "市重点初中"
+        ],
+        "pros": [
+          "中考成绩突出",
+          "升学资源强",
+          "适合高抗压孩子"
+        ],
+        "cons": [
+          "压力大，开放日曾劝退普娃",
+          "节奏极快"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=未来科技学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=未来科技学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=未来科技学校 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "未来科技学校 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办协和双语学校",
+      "officialName": "民办协和双语学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2034,
+      "lng": 121.5723,
+      "desc": "2025爆冷全录，协和系，双语一贯制",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 172,
+        "maxLottery": null,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办协和双语学校 口碑"
+      },
+      "profile": {
+        "tag": "协和系·浦东民办T1",
+        "philosophy": "协和精神浦东落地，双语中西融合",
+        "path": [
+          "协和初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "协和品牌强",
+          "双语质量高",
+          "管理规范"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "费用较高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办协和双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办协和双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办协和双语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办协和双语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办尚德实验学校",
+      "officialName": "民办尚德实验学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.1876,
+      "lng": 121.5734,
+      "desc": "15年一贯制寄宿，700人/年大校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办尚德实验学校 幼升小"
+      },
+      "profile": {
+        "tag": "传统精英路线",
+        "philosophy": "浦东大航母，15年一贯制寄宿",
+        "path": [
+          "直升本校初中/高中",
+          "对口民办初中",
+          "国际路线"
+        ],
+        "pros": [
+          "一贯制省心",
+          "大校资源丰富",
+          "师资活动好"
+        ],
+        "cons": [
+          "班级差距大，家长诟病较多",
+          "午休时间少"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办尚德实验学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=民办尚德实验学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=民办尚德实验学校 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办尚德实验学校 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "启能东方外国语学校",
+      "officialName": "启能东方外国语学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2034,
+      "lng": 121.5923,
+      "desc": "豪华硬件，2025超额摇号",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 53,
+        "maxLottery": null,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=启能东方外国语学校 幼升小"
+      },
+      "profile": {
+        "tag": "双语国际路线",
+        "philosophy": "浦东豪华硬件国际学校",
+        "path": [
+          "对口国际路线",
+          "民办摇号初中",
+          "出国路线"
+        ],
+        "pros": [
+          "硬件设施豪华",
+          "国际化氛围",
+          "活动丰富"
+        ],
+        "cons": [
+          "网上家长风评一般",
+          "2025超额竞争加剧"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=启能东方外国语学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=启能东方外国语学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=启能东方外国语学校 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "启能东方外国语学校 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办金苹果学校",
+      "officialName": "民办金苹果学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2156,
+      "lng": 121.6234,
+      "desc": "建平系，2025首次触发摇号",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办金苹果学校 幼升小"
+      },
+      "profile": {
+        "tag": "传统精英路线",
+        "philosophy": "建平系，2025首次触发摇号",
+        "path": [
+          "对口民办摇号初中",
+          "建平系升学资源",
+          "体制内路线"
+        ],
+        "pros": [
+          "建平系品牌",
+          "作业压力适中",
+          "住宿制生活自理好"
+        ],
+        "cons": [
+          "2025首次摇号，竞争趋势待观察",
+          "班级随机性大"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办金苹果学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=民办金苹果学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=民办金苹果学校 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办金苹果学校 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办向明双语学校",
+      "officialName": "民办向明双语学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.1823,
+      "lng": 121.5612,
+      "desc": "双语路线，2025摇号",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办向明双语学校 口碑"
+      },
+      "profile": {
+        "tag": "向明系·浦东民办T2",
+        "philosophy": "向明精神，双语路上稳步前行",
+        "path": [
+          "向明初中系",
+          "民办初中"
+        ],
+        "pros": [
+          "向明品牌",
+          "直升通道可期"
+        ],
+        "cons": [
+          "摇号有竞争"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办向明双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办向明双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办向明双语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办向明双语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办筑桥实验小学",
+      "officialName": "民办筑桥实验小学",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.1912,
+      "lng": 121.5901,
+      "desc": "平和系，素质教育理念，2025首次摇号",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办筑桥实验小学 口碑"
+      },
+      "profile": {
+        "tag": "浦东民办T2·实验",
+        "philosophy": "筑桥人生，每一步都踏实",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "实验课程有特色",
+          "课程创新",
+          "几乎没有传统书面作业",
+          "适合自驱型孩子",
+          "2025首次超额热度迅速上升"
+        ],
+        "cons": [
+          "知名度中等",
+          "传统学科基础相对薄弱",
+          "不适合需要强结构化管理的孩子"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办筑桥实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办筑桥实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办筑桥实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办筑桥实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办万科双语实验学校",
+      "officialName": "民办万科双语实验学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2312,
+      "lng": 121.6112,
+      "desc": "2025爆冷全录，万科系",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办万科双语实验学校 口碑"
+      },
+      "profile": {
+        "tag": "万科系·浦东民办T2",
+        "philosophy": "万科品质，双语实验精品小学",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "万科品牌背书",
+          "硬件好",
+          "双语有特色"
+        ],
+        "cons": [
+          "知名度中等",
+          "摇号竞争有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办万科双语实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办万科双语实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办万科双语实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办万科双语实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办启能东方金融城学校",
+      "officialName": "民办启能东方金融城学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T3",
+      "lat": 31.1734,
+      "lng": 121.5523,
+      "desc": "浦东南片，2025摇号",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办启能东方金融城学校 口碑"
+      },
+      "profile": {
+        "tag": "浦东民办T3",
+        "philosophy": "金融城配套，稳定入学通道",
+        "path": [
+          "浦东区普通初中"
+        ],
+        "pros": [
+          "全录稳定",
+          "金融城地段好"
+        ],
+        "cons": [
+          "梯队较低"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办启能东方金融城学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办启能东方金融城学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办启能东方金融城学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办启能东方金融城学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "明珠小学",
+      "officialName": "明珠小学",
+      "district": "pudong",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2312,
+      "lng": 121.5234,
+      "desc": "浦东公办顶流，课程难度大，学霸云集",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=明珠小学 口碑"
+      },
+      "profile": {
+        "tag": "浦东公办T1·名校",
+        "philosophy": "明珠熠熠，浦东公办教育明珠",
+        "path": [
+          "浦东区重点初中"
+        ],
+        "pros": [
+          "浦东顶尖公办",
+          "升学成绩好",
+          "口碑卓著"
+        ],
+        "cons": [
+          "需对口",
+          "竞争有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=明珠小学 口碑; https://www.xiaohongshu.com/search_result?keyword=明珠小学 口碑; https://www.xiaohongshu.com/search_result?keyword=明珠小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "明珠小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "福山外国语小学",
+      "officialName": "福山外国语小学",
+      "district": "pudong",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2234,
+      "lng": 121.5189,
+      "desc": "双语特色鲜明，国际化首选",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=福山外国语小学 幼升小"
+      },
+      "profile": {
+        "tag": "双语国际路线",
+        "philosophy": "浦东区优质双语学校",
+        "path": [
+          "对口公办初中",
+          "民办初中摇号",
+          "国际路线"
+        ],
+        "pros": [
+          "双语环境好",
+          "国际升学有优势",
+          "师资专业"
+        ],
+        "cons": [
+          "费用较高",
+          "竞争激烈，中签率低"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=福山外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=福山外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=福山外国语小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "福山外国语小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "六师附小",
+      "officialName": "六师附小",
+      "district": "pudong",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2189,
+      "lng": 121.5267,
+      "desc": "百年老校，学科均衡，多人考入上实/浦外",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=六师附小 口碑"
+      },
+      "profile": {
+        "tag": "六师系·浦东公办T1",
+        "philosophy": "六师附小，百年名校育英才",
+        "path": [
+          "浦东区重点初中"
+        ],
+        "pros": [
+          "历史名校底蕴",
+          "教学质量高"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=六师附小 口碑; https://www.xiaohongshu.com/search_result?keyword=六师附小 口碑; https://www.xiaohongshu.com/search_result?keyword=六师附小 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "六师附小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "正达外国语小学",
+      "officialName": "正达外国语小学",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2267,
+      "lng": 121.5312,
+      "desc": "民办佼佼者，教学质量过硬",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=正达外国语小学 口碑"
+      },
+      "profile": {
+        "tag": "浦东民办T1·外语",
+        "philosophy": "外语强基，打造正达国际化人才",
+        "path": [
+          "外语系初中",
+          "民办强初中"
+        ],
+        "pros": [
+          "外语教学优质",
+          "摇号成绩记录好"
+        ],
+        "cons": [
+          "外语压力大",
+          "摇号竞争有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=正达外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=正达外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=正达外国语小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "正达外国语小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "平和双语学校",
+      "officialName": "平和双语学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2145,
+      "lng": 121.5389,
+      "desc": "知名民办，双语国际化，升学优异",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=平和双语学校 口碑"
+      },
+      "profile": {
+        "tag": "浦东民办T1·双语名校",
+        "philosophy": "平和理念，在平静中实现和谐成长",
+        "path": [
+          "平和双语初中",
+          "民办强初中"
+        ],
+        "pros": [
+          "双语教学优秀",
+          "口碑极佳",
+          "中英均衡"
+        ],
+        "cons": [
+          "摇号极难",
+          "费用高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=平和双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=平和双语学校 口碑; https://www.xiaohongshu.com/search_result?keyword=平和双语学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "平和双语学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "浦东外国语小学",
+      "officialName": "浦东外国语小学",
+      "district": "pudong",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2356,
+      "lng": 121.5456,
+      "desc": "外语特色，浦东优质公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=浦东外国语小学 口碑"
+      },
+      "profile": {
+        "tag": "浦东公办T2·外语",
+        "philosophy": "外语强基公办选择，浦东外语摇篮",
+        "path": [
+          "浦东区重点初中"
+        ],
+        "pros": [
+          "外语氛围好",
+          "公办无需摇号"
+        ],
+        "cons": [
+          "需对口",
+          "外语压力有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=浦东外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=浦东外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=浦东外国语小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "浦东外国语小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "竹园小学",
+      "officialName": "竹园小学",
+      "district": "pudong",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2067,
+      "lng": 121.5534,
+      "desc": "奥数竞赛超厉害，特色鲜明",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=竹园小学 口碑"
+      },
+      "profile": {
+        "tag": "浦东公办T2",
+        "philosophy": "竹园片区优质公办",
+        "path": [
+          "浦东区普通初中"
+        ],
+        "pros": [
+          "社区口碑好",
+          "教学稳定"
+        ],
+        "cons": [
+          "资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=竹园小学 口碑; https://www.xiaohongshu.com/search_result?keyword=竹园小学 口碑; https://www.xiaohongshu.com/search_result?keyword=竹园小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "竹园小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "海桐小学",
+      "officialName": "海桐小学",
+      "district": "pudong",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2289,
+      "lng": 121.5501,
+      "desc": "升学成绩能打，浦东优质公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=海桐小学 口碑"
+      },
+      "profile": {
+        "tag": "浦东公办T2",
+        "philosophy": "海桐花开，芬芳育人",
+        "path": [
+          "浦东区普通初中"
+        ],
+        "pros": [
+          "校园环境好",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=海桐小学 口碑; https://www.xiaohongshu.com/search_result?keyword=海桐小学 口碑; https://www.xiaohongshu.com/search_result?keyword=海桐小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "海桐小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上实东校",
+      "officialName": "上实东校",
+      "district": "pudong",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.1956,
+      "lng": 121.5623,
+      "desc": "寄宿制管理，上实系资源",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上实东校 口碑"
+      },
+      "profile": {
+        "tag": "上实系·浦东公办T2",
+        "philosophy": "上实精神东进，品质公办教育",
+        "path": [
+          "上实中学系",
+          "浦东区重点初中"
+        ],
+        "pros": [
+          "上实品牌背书",
+          "课程质量好"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上实东校 口碑; https://www.xiaohongshu.com/search_result?keyword=上实东校 口碑; https://www.xiaohongshu.com/search_result?keyword=上实东校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上实东校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "浦东新区第二中心小学",
+      "officialName": "浦东新区第二中心小学",
+      "district": "pudong",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2178,
+      "lng": 121.5145,
+      "desc": "区重点，综合实力均衡",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=浦东新区第二中心小学 口碑"
+      },
+      "profile": {
+        "tag": "浦东公办T2·区二中心",
+        "philosophy": "区二中心，均衡优质教育",
+        "path": [
+          "浦东区普通初中"
+        ],
+        "pros": [
+          "区中心资源",
+          "教学均衡"
+        ],
+        "cons": [
+          "竞争特色不明显"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=浦东新区第二中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=浦东新区第二中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=浦东新区第二中心小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "浦东新区第二中心小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "华二前滩学校小学部",
+      "officialName": "华二前滩学校小学部",
+      "district": "pudong",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2023,
+      "lng": 121.5067,
+      "desc": "华二系资源，新建优质校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=华二前滩学校 口碑"
+      },
+      "profile": {
+        "tag": "华二系·浦东公办T2",
+        "philosophy": "华二品牌前滩落地，精品教育",
+        "path": [
+          "华二初中系",
+          "浦东区重点初中"
+        ],
+        "pros": [
+          "华二品牌强",
+          "新校硬件好",
+          "直升通道可期"
+        ],
+        "cons": [
+          "新校资源累积中"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=华二前滩学校 口碑; https://www.xiaohongshu.com/search_result?keyword=华二前滩学校 口碑; https://www.xiaohongshu.com/search_result?keyword=华二前滩学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "华二前滩学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "锦绣小学",
+      "officialName": "锦绣小学",
+      "district": "pudong",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2134,
+      "lng": 121.5534,
+      "desc": "浦东成熟社区优质公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=锦绣小学 口碑"
+      },
+      "profile": {
+        "tag": "浦东公办T2",
+        "philosophy": "锦绣前程，从这里起步",
+        "path": [
+          "浦东区普通初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "特色不突出"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=锦绣小学 口碑; https://www.xiaohongshu.com/search_result?keyword=锦绣小学 口碑; https://www.xiaohongshu.com/search_result?keyword=锦绣小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "锦绣小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办惠立学校",
+      "officialName": "民办惠立学校",
+      "district": "pudong",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2256,
+      "lng": 121.5723,
+      "desc": "国际化民办，外语教学突出",
+      "admission": {
+        "rate": 88.52,
+        "rateYear": 2025,
+        "admitted": 108,
+        "maxLottery": 122,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办惠立学校 口碑"
+      },
+      "profile": {
+        "tag": "浦东民办T2·国际化",
+        "philosophy": "惠立精神，国际化小班精品教育",
+        "path": [
+          "民办初中",
+          "国际学校"
+        ],
+        "pros": [
+          "国际化程度高",
+          "小班关注度好"
+        ],
+        "cons": [
+          "费用较高",
+          "知名度中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办惠立学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办惠立学校 口碑; https://www.xiaohongshu.com/search_result?keyword=民办惠立学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办惠立学校 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 25,
+      "updated": 25
+    }
+  }
+}

@@ -1,0 +1,3 @@
+- [用户熟悉杨浦区](user_district_familiarity.md) — 数据验证从杨浦区开始，用户可以核实
+- [数据迁移先建新文件](feedback_data_migration.md) — 先新建数据文件验证，确认后再替换正式数据
+- [PDF采集SOP](feedback_pdf_extraction_sop.md) — 先拿PDF → 提取学校名 → 再提取录取数，不跳步

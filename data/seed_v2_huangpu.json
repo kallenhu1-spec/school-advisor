@@ -1,0 +1,586 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:46Z",
+  "district": "huangpu",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "黄浦区第一中心小学民办部",
+      "officialName": "黄浦区第一中心小学民办部",
+      "district": "huangpu",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2234,
+      "lng": 121.4912,
+      "desc": "黄浦优质民办，传统精英",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=黄浦区第一中心小学民办部 口碑"
+      },
+      "profile": {
+        "tag": "黄浦民办T1·中心名校",
+        "philosophy": "黄浦中心，一中心品牌",
+        "path": [
+          "黄浦区重点初中"
+        ],
+        "pros": [
+          "学区资源好",
+          "品牌认可度高"
+        ],
+        "cons": [
+          "压力较大",
+          "摇号竞争激烈"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=黄浦区第一中心小学民办部 口碑; https://www.xiaohongshu.com/search_result?keyword=黄浦区第一中心小学民办部 口碑; https://www.xiaohongshu.com/search_result?keyword=黄浦区第一中心小学民办部 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "黄浦区第一中心小学民办部 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海世界外国语学校黄浦分校",
+      "officialName": "上海世界外国语学校黄浦分校",
+      "district": "huangpu",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2312,
+      "lng": 121.4823,
+      "desc": "世外系，黄浦双语",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海世界外国语学校黄浦分校 口碑"
+      },
+      "profile": {
+        "tag": "世外系·黄浦民办T1",
+        "philosophy": "世外精神黄浦传承，双语国际化",
+        "path": [
+          "世外初中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "双语教学优质",
+          "品牌认可",
+          "活动丰富"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "费用较高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海世界外国语学校黄浦分校 口碑; https://www.xiaohongshu.com/search_result?keyword=上海世界外国语学校黄浦分校 口碑; https://www.xiaohongshu.com/search_result?keyword=上海世界外国语学校黄浦分校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海世界外国语学校黄浦分校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "黄浦区逸夫小学民办部",
+      "officialName": "黄浦区逸夫小学民办部",
+      "district": "huangpu",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2156,
+      "lng": 121.4734,
+      "desc": "黄浦T2民办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=黄浦区逸夫小学民办部 口碑"
+      },
+      "profile": {
+        "tag": "黄浦民办T2",
+        "philosophy": "逸夫精神，全面发展的摇篮",
+        "path": [
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "口碑稳定",
+          "综合均衡"
+        ],
+        "cons": [
+          "梯队中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=黄浦区逸夫小学民办部 口碑; https://www.xiaohongshu.com/search_result?keyword=黄浦区逸夫小学民办部 口碑; https://www.xiaohongshu.com/search_result?keyword=黄浦区逸夫小学民办部 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "黄浦区逸夫小学民办部 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海实验小学",
+      "officialName": "上海实验小学",
+      "district": "huangpu",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2289,
+      "lng": 121.4756,
+      "desc": "百年底蕴，语文教学见长，对口敬业初中",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海实验小学 口碑"
+      },
+      "profile": {
+        "tag": "黄浦公办T1·市实验名校",
+        "philosophy": "百年市实验，上海基础教育标杆",
+        "path": [
+          "上海实验学校初中部",
+          "黄浦区重点初中"
+        ],
+        "pros": [
+          "历史名校地位高",
+          "课程改革前沿",
+          "直升通道"
+        ],
+        "cons": [
+          "需对口",
+          "竞争激烈"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "蓬莱路第二小学",
+      "officialName": "蓬莱路第二小学",
+      "district": "huangpu",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2134,
+      "lng": 121.4823,
+      "desc": "艺术科技并重，对口市十中学",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=蓬莱路第二小学 口碑"
+      },
+      "profile": {
+        "tag": "黄浦公办T1",
+        "philosophy": "蓬莱片区顶尖公办，口碑卓著",
+        "path": [
+          "黄浦区重点初中"
+        ],
+        "pros": [
+          "教学质量高",
+          "升学稳定"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=蓬莱路第二小学 口碑; https://www.xiaohongshu.com/search_result?keyword=蓬莱路第二小学 口碑; https://www.xiaohongshu.com/search_result?keyword=蓬莱路第二小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "蓬莱路第二小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "卢湾第二中心小学",
+      "officialName": "卢湾第二中心小学",
+      "district": "huangpu",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2167,
+      "lng": 121.4745,
+      "desc": "创新教育突出，区重点公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=卢湾第二中心小学 口碑"
+      },
+      "profile": {
+        "tag": "黄浦公办T1·卢湾名校",
+        "philosophy": "卢湾精英，传承区域最强公办基因",
+        "path": [
+          "黄浦区重点初中",
+          "知名民办初中"
+        ],
+        "pros": [
+          "升学成绩突出",
+          "竞赛氛围好"
+        ],
+        "cons": [
+          "学习压力较大",
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=卢湾第二中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=卢湾第二中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=卢湾第二中心小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "卢湾第二中心小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上外黄浦外国语小学",
+      "officialName": "上外黄浦外国语小学",
+      "district": "huangpu",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2289,
+      "lng": 121.4867,
+      "desc": "外语优势显著，对口大同初中",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上外黄浦外国语小学 口碑"
+      },
+      "profile": {
+        "tag": "上外系·黄浦公办T1",
+        "philosophy": "外语强基，国际视野从这里起步",
+        "path": [
+          "上外附中系",
+          "黄浦区重点初中"
+        ],
+        "pros": [
+          "外语教学优质",
+          "名校品牌"
+        ],
+        "cons": [
+          "需对口",
+          "外语压力有"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上外黄浦外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上外黄浦外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上外黄浦外国语小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上外黄浦外国语小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "曹光彪小学",
+      "officialName": "曹光彪小学",
+      "district": "huangpu",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2245,
+      "lng": 121.4801,
+      "desc": "特色多元，对口格致初中",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=曹光彪小学 口碑"
+      },
+      "profile": {
+        "tag": "黄浦公办T1",
+        "philosophy": "名人捐资名校，传承优质教育",
+        "path": [
+          "黄浦区重点初中"
+        ],
+        "pros": [
+          "历史底蕴",
+          "口碑稳定"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=曹光彪小学 口碑; https://www.xiaohongshu.com/search_result?keyword=曹光彪小学 口碑; https://www.xiaohongshu.com/search_result?keyword=曹光彪小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "曹光彪小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "梅溪小学",
+      "officialName": "梅溪小学",
+      "district": "huangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2178,
+      "lng": 121.4678,
+      "desc": "传承与创新并重，百年名校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=梅溪小学 口碑"
+      },
+      "profile": {
+        "tag": "黄浦公办T2",
+        "philosophy": "梅香溪畔，书香育人",
+        "path": [
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "文化氛围好",
+          "压力适中"
+        ],
+        "cons": [
+          "升学资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=梅溪小学 口碑; https://www.xiaohongshu.com/search_result?keyword=梅溪小学 口碑; https://www.xiaohongshu.com/search_result?keyword=梅溪小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "梅溪小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "卢湾第一中心小学",
+      "officialName": "卢湾第一中心小学",
+      "district": "huangpu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2134,
+      "lng": 121.4734,
+      "desc": "德学共抓，教学稳定",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=卢湾第一中心小学 口碑"
+      },
+      "profile": {
+        "tag": "黄浦公办T2·卢湾",
+        "philosophy": "卢湾片区综合优质，社区口碑好",
+        "path": [
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "社区口碑好",
+          "教学稳定"
+        ],
+        "cons": [
+          "竞争力不如二中心"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=卢湾第一中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=卢湾第一中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=卢湾第一中心小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "卢湾第一中心小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "私立永昌学校",
+      "officialName": "私立永昌学校",
+      "district": "huangpu",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2189,
+      "lng": 121.4789,
+      "desc": "数学科创强，80%可直升市南中学",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=私立永昌学校 口碑"
+      },
+      "profile": {
+        "tag": "黄浦民办T2",
+        "philosophy": "永昌精神，为孩子提供扎实基础",
+        "path": [
+          "民办初中",
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "学风严谨",
+          "管理规范"
+        ],
+        "cons": [
+          "压力偏大"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=私立永昌学校 口碑; https://www.xiaohongshu.com/search_result?keyword=私立永昌学校 口碑; https://www.xiaohongshu.com/search_result?keyword=私立永昌学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "私立永昌学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "康德双语实验学校",
+      "officialName": "康德双语实验学校",
+      "district": "huangpu",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2212,
+      "lng": 121.4823,
+      "desc": "国际化特色，双语教学",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=康德双语实验学校 口碑"
+      },
+      "profile": {
+        "tag": "黄浦民办T2·双语",
+        "philosophy": "中德教育理念融合，双语实验",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "双语有特色",
+          "文化融合独特"
+        ],
+        "cons": [
+          "知名度一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=康德双语实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=康德双语实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=康德双语实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "康德双语实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "北京东路小学",
+      "officialName": "北京东路小学",
+      "district": "huangpu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.2401,
+      "lng": 121.4867,
+      "desc": "夯实基础素养，稳定公办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=北京东路小学 口碑"
+      },
+      "profile": {
+        "tag": "黄浦公办T3",
+        "philosophy": "黄浦老城区社区小学",
+        "path": [
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "地段中心",
+          "压力轻"
+        ],
+        "cons": [
+          "资源有限"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=北京东路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=北京东路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=北京东路小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "北京东路小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "黄浦区第一中心小学",
+      "officialName": "黄浦区第一中心小学",
+      "district": "huangpu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.2312,
+      "lng": 121.4812,
+      "desc": "教学稳、重个性化培养",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=黄浦区第一中心小学 口碑"
+      },
+      "profile": {
+        "tag": "黄浦公办T3",
+        "philosophy": "第一中心公办部，稳定入学",
+        "path": [
+          "黄浦区普通初中"
+        ],
+        "pros": [
+          "中心地段",
+          "社区配套"
+        ],
+        "cons": [
+          "竞争力弱于民办部"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=黄浦区第一中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=黄浦区第一中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=黄浦区第一中心小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "黄浦区第一中心小学 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 14,
+      "updated": 14
+    }
+  }
+}

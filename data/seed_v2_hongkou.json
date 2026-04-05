@@ -1,0 +1,566 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:46Z",
+  "district": "hongkou",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "民办尚外外国语小学",
+      "officialName": "民办尚外外国语小学",
+      "district": "hongkou",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2612,
+      "lng": 121.4823,
+      "desc": "虹口T1民办，上外附属系，外语特色，2025超额摇号（中签率41%）",
+      "admission": {
+        "rate": 41.01,
+        "rateYear": 2025,
+        "admitted": 171,
+        "maxLottery": 417,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办尚外外国语小学 口碑"
+      },
+      "profile": {
+        "tag": "上外系·虹口民办T1",
+        "philosophy": "上外品牌，外语教育领跑虹口",
+        "path": [
+          "上外附中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "上外品牌背书强",
+          "外语师资优质",
+          "升学路径清晰",
+          "虹口区外语教育标杆"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "全英授课适应期",
+          "外语学习压力较大"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办尚外外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办尚外外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办尚外外国语小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办尚外外国语小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办宏星小学",
+      "officialName": "民办宏星小学",
+      "district": "hongkou",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2534,
+      "lng": 121.4756,
+      "desc": "虹口T1民办，2025超额摇号（中签率31%），升学资源好",
+      "admission": {
+        "rate": 31.39,
+        "rateYear": 2025,
+        "admitted": 140,
+        "maxLottery": 446,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办宏星小学 口碑"
+      },
+      "profile": {
+        "tag": "虹口民办T1·综合精英",
+        "philosophy": "宏星精神，育德育才两翼齐飞",
+        "path": [
+          "虹口区重点初中",
+          "民办强初中"
+        ],
+        "pros": [
+          "虹口T1民办口碑好",
+          "管理规范",
+          "升学资源强",
+          "2025摇号热度高"
+        ],
+        "cons": [
+          "摇号竞争较大",
+          "学习节奏快",
+          "需提前了解招生政策"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办宏星小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办宏星小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办宏星小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办宏星小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办四中心实验小学",
+      "officialName": "民办四中心实验小学",
+      "district": "hongkou",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2589,
+      "lng": 121.4912,
+      "desc": "虹口T1民办，四中心品牌，2025超额摇号（中签率46%）",
+      "admission": {
+        "rate": 45.98,
+        "rateYear": 2025,
+        "admitted": 103,
+        "maxLottery": 224,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办四中心实验小学 口碑"
+      },
+      "profile": {
+        "tag": "四中心系·虹口民办T1",
+        "philosophy": "四中心品牌，实验精神育人才",
+        "path": [
+          "虹口区重点初中",
+          "民办初中"
+        ],
+        "pros": [
+          "四中心品牌背书",
+          "实验课程有特色",
+          "2025超额热度高"
+        ],
+        "cons": [
+          "摇号竞争有",
+          "需关注招生细则"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办四中心实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办四中心实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办四中心实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办四中心实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办丽英小学",
+      "officialName": "民办丽英小学",
+      "district": "hongkou",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2478,
+      "lng": 121.4834,
+      "desc": "虹口民办T2，2025全部录取，走读124+住宿16，稳定入学",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 124,
+        "maxLottery": null,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办丽英小学 口碑"
+      },
+      "profile": {
+        "tag": "虹口民办T2·2025爆冷",
+        "philosophy": "丽英精神，稳扎稳打育好苗",
+        "path": [
+          "虹口区普通初中",
+          "民办初中"
+        ],
+        "pros": [
+          "2025全部录取，入学零压力",
+          "费用相对合理",
+          "综合均衡"
+        ],
+        "cons": [
+          "梯队中等",
+          "升学竞争力弱于T1",
+          "社会知名度待提升"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办丽英小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办丽英小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办丽英小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办丽英小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "启东启迪外国语小学",
+      "officialName": "启东启迪外国语小学",
+      "district": "hongkou",
+      "type": "pri",
+      "tier": "T3",
+      "lat": 31.2601,
+      "lng": 121.4878,
+      "desc": "虹口民办，2025全部录取，外语特色，稳定入学",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=启东启迪外国语小学 口碑"
+      },
+      "profile": {
+        "tag": "虹口民办T3·外语全录",
+        "philosophy": "启东外语，稳定入学无压力",
+        "path": [
+          "虹口区普通初中",
+          "民办初中"
+        ],
+        "pros": [
+          "2025全部录取零压力",
+          "外语特色有亮点",
+          "竞争压力小"
+        ],
+        "cons": [
+          "梯队较低",
+          "升学竞争力一般",
+          "知名度有限"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=启东启迪外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=启东启迪外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=启东启迪外国语小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "启东启迪外国语小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "虹口区第三中心小学",
+      "officialName": "虹口区第三中心小学",
+      "district": "hongkou",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2601,
+      "lng": 121.4867,
+      "desc": "虹口公办T1，百年名校，教学成绩稳定，对口资源好",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=虹口区第三中心小学 口碑"
+      },
+      "profile": {
+        "tag": "百年名校·虹口公办T1",
+        "philosophy": "百年三中心，海派文化育英才",
+        "path": [
+          "虹口区重点初中"
+        ],
+        "pros": [
+          "历史底蕴深厚",
+          "教学质量区内顶尖",
+          "升学稳定",
+          "免摇号公办"
+        ],
+        "cons": [
+          "需对口学区",
+          "竞争有压力",
+          "五年一户政策"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=虹口区第三中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=虹口区第三中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=虹口区第三中心小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "虹口区第三中心小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "广灵路小学",
+      "officialName": "广灵路小学",
+      "district": "hongkou",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2645,
+      "lng": 121.4923,
+      "desc": "虹口公办T1，综合实力强，升学通道稳定",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=广灵路小学 口碑"
+      },
+      "profile": {
+        "tag": "虹口公办T1·综合强校",
+        "philosophy": "广灵路上，综合优质教育标杆",
+        "path": [
+          "虹口区重点初中"
+        ],
+        "pros": [
+          "公办T1实力雄厚",
+          "升学通道稳定",
+          "免摇号"
+        ],
+        "cons": [
+          "需对口",
+          "班级人数较多"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=广灵路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=广灵路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=广灵路小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "广灵路小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "红旗小学",
+      "officialName": "红旗小学",
+      "district": "hongkou",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2523,
+      "lng": 121.4778,
+      "desc": "虹口公办T2，老牌名校，综合素质教育口碑好",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=红旗小学 口碑"
+      },
+      "profile": {
+        "tag": "虹口公办T2·老牌名校",
+        "philosophy": "红旗精神，百年传承综合育人",
+        "path": [
+          "虹口区重点初中"
+        ],
+        "pros": [
+          "老牌名校底蕴",
+          "综合口碑好",
+          "管理规范"
+        ],
+        "cons": [
+          "需对口",
+          "升学资源不如T1"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=红旗小学 口碑; https://www.xiaohongshu.com/search_result?keyword=红旗小学 口碑; https://www.xiaohongshu.com/search_result?keyword=红旗小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "红旗小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "曲阳第三小学",
+      "officialName": "曲阳第三小学",
+      "district": "hongkou",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2712,
+      "lng": 121.5012,
+      "desc": "虹口公办T2，曲阳片区优质公办，教学扎实",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=曲阳第三小学 口碑"
+      },
+      "profile": {
+        "tag": "虹口公办T2·曲阳名校",
+        "philosophy": "曲阳片区教育名片",
+        "path": [
+          "虹口区普通初中"
+        ],
+        "pros": [
+          "曲阳片区口碑好",
+          "教学扎实",
+          "社区配套完善"
+        ],
+        "cons": [
+          "升学资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=曲阳第三小学 口碑; https://www.xiaohongshu.com/search_result?keyword=曲阳第三小学 口碑; https://www.xiaohongshu.com/search_result?keyword=曲阳第三小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "曲阳第三小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "崇明路小学",
+      "officialName": "崇明路小学",
+      "district": "hongkou",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2556,
+      "lng": 121.4934,
+      "desc": "虹口公办T2，科创艺术特色，生源稳定",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=崇明路小学 口碑"
+      },
+      "profile": {
+        "tag": "虹口公办T2·科创特色",
+        "philosophy": "科创赋能，艺术启智育新苗",
+        "path": [
+          "虹口区普通初中"
+        ],
+        "pros": [
+          "科创艺术特色鲜明",
+          "生源稳定",
+          "校园氛围好"
+        ],
+        "cons": [
+          "综合排名中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=崇明路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=崇明路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=崇明路小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "崇明路小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "长青小学",
+      "officialName": "长青小学",
+      "district": "hongkou",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2489,
+      "lng": 121.4801,
+      "desc": "虹口公办T2，均衡发展，社区口碑好",
+      "admission": null,
+      "profile": {
+        "tag": "",
+        "philosophy": null,
+        "path": [],
+        "pros": [],
+        "cons": [],
+        "sourceLevel": "ai-draft",
+        "sourceNote": ""
+      },
+      "links": {
+        "map": null,
+        "xhs": null,
+        "dianping": null
+      }
+    },
+    {
+      "name": "中州路小学",
+      "officialName": "中州路小学",
+      "district": "hongkou",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.2612,
+      "lng": 121.5056,
+      "desc": "虹口公办T3，基础扎实，稳定保障",
+      "admission": null,
+      "profile": {
+        "tag": "",
+        "philosophy": null,
+        "path": [],
+        "pros": [],
+        "cons": [],
+        "sourceLevel": "ai-draft",
+        "sourceNote": ""
+      },
+      "links": {
+        "map": null,
+        "xhs": null,
+        "dianping": null
+      }
+    },
+    {
+      "name": "虹口实验学校",
+      "officialName": "虹口实验学校",
+      "district": "hongkou",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2534,
+      "lng": 121.4856,
+      "desc": "虹口公办T2，实验特色，九年一贯制",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=虹口实验学校 口碑"
+      },
+      "profile": {
+        "tag": "虹口公办T2·一贯制",
+        "philosophy": "实验精神传承，九年一贯轻松升学",
+        "path": [
+          "虹口实验学校初中直升",
+          "虹口区普通初中"
+        ],
+        "pros": [
+          "九年一贯直升省心",
+          "实验课程有特色",
+          "综合均衡"
+        ],
+        "cons": [
+          "初中质量需核实",
+          "竞争力不如T1"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=虹口实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=虹口实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=虹口实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "虹口实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "北郊学校小学部",
+      "officialName": "北郊学校小学部",
+      "district": "hongkou",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.2867,
+      "lng": 121.5023,
+      "desc": "虹口公办T3，北郊片区基础公办",
+      "admission": null,
+      "profile": {
+        "tag": "",
+        "philosophy": null,
+        "path": [],
+        "pros": [],
+        "cons": [],
+        "sourceLevel": "ai-draft",
+        "sourceNote": ""
+      },
+      "links": {
+        "map": null,
+        "xhs": null,
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 14,
+      "updated": 14
+    }
+  }
+}

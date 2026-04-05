@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "district": "黄浦",
+      "pageUrl": "http://sh.bendibao.com/edu/2025520/297499.shtm",
+      "title": "2025上海黄浦区民办小学摇号录取名单公布(附查询入口）",
+      "query": "2025上海黄浦民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "徐汇",
+      "pageUrl": "http://sh.bendibao.com/edu/2025519/297477.shtm",
+      "title": "2025上海徐汇民办小学摇号结果公布录取名单一览",
+      "query": "2025上海徐汇民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "长宁",
+      "pageUrl": "",
+      "title": "",
+      "query": "2025上海长宁民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "静安",
+      "pageUrl": "http://sh.bendibao.com/edu/2025520/297506.shtm",
+      "title": "2025上海静安区民办小学摇号结果录取名单一览(附查询入口）",
+      "query": "2025上海静安民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "普陀",
+      "pageUrl": "",
+      "title": "",
+      "query": "2025上海普陀民办小学摇号录取名单",
+      "error": "The read operation timed out"
+    },
+    {
+      "district": "虹口",
+      "pageUrl": "http://sh.bendibao.com/edu/2025520/297512.shtm",
+      "title": "2025上海虹口区民办小学摇号录取名单公示(附查询入口）",
+      "query": "2025上海虹口民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "杨浦",
+      "pageUrl": "",
+      "title": "",
+      "query": "2025上海杨浦民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "浦东",
+      "pageUrl": "http://sh.bendibao.com/edu/2025520/297516.shtm",
+      "title": "2025上海浦东新区民办小学摇号录取名单公示(附查询入口）",
+      "query": "2025上海浦东民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "闵行",
+      "pageUrl": "http://sh.bendibao.com/edu/2025520/297504.shtm",
+      "title": "2025上海闵行区民办小学摇号录取名单公示(附查询入口）",
+      "query": "2025上海闵行民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "宝山",
+      "pageUrl": "",
+      "title": "",
+      "query": "2025上海宝山民办小学摇号录取名单",
+      "error": "The read operation timed out"
+    },
+    {
+      "district": "嘉定",
+      "pageUrl": "http://sh.bendibao.com/edu/2025520/297485.shtm",
+      "title": "2025上海嘉定区民办小学摇号录取名单(附查询入口）",
+      "query": "2025上海嘉定民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "金山",
+      "pageUrl": "http://sh.bendibao.com/edu/2025519/297476.shtm",
+      "title": "2025上海金山民办小学摇号结果公布录取名单一览",
+      "query": "2025上海金山民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "松江",
+      "pageUrl": "",
+      "title": "",
+      "query": "2025上海松江民办小学摇号录取名单",
+      "error": "The read operation timed out"
+    },
+    {
+      "district": "青浦",
+      "pageUrl": "http://sh.bendibao.com/edu/2025520/297487.shtm",
+      "title": "2025上海青浦区民办小学摇号录取名单一览(附查询入口）",
+      "query": "2025上海青浦民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "奉贤",
+      "pageUrl": "http://sh.bendibao.com/edu/2025520/297495.shtm",
+      "title": "2025上海奉贤区民办小学摇号录取名单公示(附查询入口）",
+      "query": "2025上海奉贤民办小学摇号录取名单",
+      "hits": 40
+    },
+    {
+      "district": "崇明",
+      "pageUrl": "http://sh.bendibao.com/edu/2025520/297498.shtm",
+      "title": "2025上海崇明区民办小学摇号录取名单一览",
+      "query": "2025上海崇明民办小学摇号录取名单",
+      "hits": 40
+    }
+  ]
+}

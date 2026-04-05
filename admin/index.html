@@ -32,6 +32,10 @@
     .tag.t1 { background:#fef2f2; color:#dc2626; border-color:#fecaca; }
     .tag.t2 { background:#fff7ed; color:#c2410c; border-color:#fed7aa; }
     .tag.t3 { background:#f7fee7; color:#4d7c0f; border-color:#d9f99d; }
+    .tag.official { background:#f0fdf4; color:#15803d; border-color:#bbf7d0; }
+    .tag.candidate { background:#fff7ed; color:#c2410c; border-color:#fed7aa; }
+    .tag.missing { background:#fef2f2; color:#dc2626; border-color:#fecaca; }
+    .tag.not_applicable { background:#eff6ff; color:#1d4ed8; border-color:#bfdbfe; }
     .tier-edit { width: 86px; min-height: 30px; font-size: 12px; }
     .name-btn { border:0; background:transparent; color:#2563eb; cursor:pointer; padding:0; text-align:left; font-size:13px; }
     .name-btn:hover { text-decoration: underline; }
@@ -55,12 +59,31 @@
     .publish-step.running .publish-dot { background: #2563eb; border-color: #2563eb; color: #fff; }
     .publish-step.failed .publish-dot { background: #dc2626; border-color: #dc2626; color: #fff; }
     .publish-log { margin-top: 8px; color: #6b7280; white-space: pre-wrap; }
+    .lvl { display:inline-block; padding:2px 6px; border-radius:999px; font-size:11px; border:1px solid transparent; }
+    .lvl.official { background:#f0fdf4; color:#15803d; border-color:#bbf7d0; }
+    .lvl.verified { background:#eff6ff; color:#1d4ed8; border-color:#bfdbfe; }
+    .lvl.community { background:#fff7ed; color:#c2410c; border-color:#fed7aa; }
+    .lvl.ai-draft { background:#fef2f2; color:#dc2626; border-color:#fecaca; }
+    .pager { display:flex; align-items:center; justify-content:flex-end; gap:8px; margin-top:10px; }
+    .pager-info { color:#6b7280; font-size:12px; min-width:140px; text-align:center; }
+    .drawer-mask { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.35); z-index: 30; display:none; }
+    .drawer-mask.open { display:block; }
+    .drawer { position: fixed; top: 0; right: 0; height: 100vh; width: min(860px, 96vw); background: #fff; border-left: 1px solid #e5e7eb; box-shadow: -8px 0 30px rgba(0,0,0,.12); z-index: 40; transform: translateX(100%); transition: transform .24s ease-out; display:flex; flex-direction:column; }
+    .drawer.open { transform: translateX(0); }
+    .drawer-head { padding: 12px; border-bottom: 1px solid #e5e7eb; display:flex; justify-content:space-between; align-items:center; }
+    .drawer-body { padding: 12px; overflow:auto; }
+    .source-matrix td, .source-matrix th { font-size: 12px; }
+    .source-matrix th { white-space: nowrap; }
+    .src-links { margin-top: 6px; display:flex; gap:6px; flex-wrap:wrap; }
+    .src-link { display:inline-block; border:1px solid #cbd5e1; background:#f8fafc; color:#1d4ed8; border-radius:999px; padding:2px 8px; text-decoration:none; font-size:11px; }
+    .src-empty { color:#9ca3af; font-size:11px; }
+    .src-note { color:#6b7280; font-size:11px; margin-top:4px; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>学校数据管理台（本地）</h1>
-    <div class="sub">学校列表筛选、学校详情查看、Excel 导入、待审核批量通过/驳回</div>
+    <div class="sub">学校列表筛选、学校详情查看、证据抓取与发布</div>
 
     <div class="card">
       <div class="row">
@@ -89,89 +112,54 @@
             <th style="width:11%">梯队（可调）</th>
             <th style="width:10%">2025录取数</th>
             <th style="width:10%">2025最大摇号数</th>
-            <th style="width:12%">推荐度</th>
             <th style="width:8%">来源</th>
             <th style="width:6%">操作</th>
           </tr>
         </thead>
         <tbody id="school-body"></tbody>
       </table>
-    </div>
-
-    <div class="card">
-      <div class="status">学校详情（点击上方任一学校）</div>
-      <div id="school-detail" class="detail">尚未选择学校</div>
-    </div>
-
-    <div class="grid2">
-      <div class="card">
-        <div class="row">
-          <input id="excel-file" type="file" accept=".xlsx" />
-          <select id="excel-mode">
-            <option value="proposals">导入到待审核队列（推荐）</option>
-            <option value="apply">直接写入正式数据（谨慎）</option>
-          </select>
-          <button id="btn-upload-xlsx" class="orange">上传 Excel</button>
-        </div>
-        <div class="status" id="excel-status">Excel 模板字段建议：学校名称、区域、类型、梯队、中签率低、中签率高、推荐度、描述、纬度、经度、状态、2025录取数、2025最大摇号数、参考信息来源网址</div>
+      <div class="pager">
+        <button id="btn-prev-page" class="gray">上一页</button>
+        <div class="pager-info" id="page-info">第 1 / 1 页</div>
+        <button id="btn-next-page" class="gray">下一页</button>
       </div>
-
-      <div class="card">
-        <div class="row">
-          <button id="btn-refresh-queue">刷新待审核</button>
-          <button id="btn-approve" class="green">批量通过</button>
-          <button id="btn-reject" class="gray">批量驳回</button>
-        </div>
-        <div class="status" id="queue-status">待加载</div>
-        <table>
-          <thead>
-            <tr>
-              <th><input type="checkbox" id="check-all" /></th>
-              <th>ID</th>
-              <th>来源</th>
-              <th>类型</th>
-              <th>键</th>
-              <th>新值</th>
-            </tr>
-          </thead>
-          <tbody id="queue-body"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="card">
-        <div class="row">
-          <button id="btn-load-sources">加载数据源配置</button>
-          <button id="btn-save-sources" class="green">保存数据源配置</button>
-          <button id="btn-run-collect" class="orange">触发自动采集</button>
-        </div>
-        <div class="status" id="sources-status">未加载</div>
-        <textarea id="sources-json"></textarea>
-      </div>
-      <div class="card">
-        <div class="row"><button id="btn-import-proposals">手动导入提案</button></div>
-        <div class="status">格式：{"source":"manual","proposals":[...]}</div>
-        <textarea id="import-json"></textarea>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="row">
-        <select id="xhs-purpose">
-          <option value="tier2026">小红书梯队参考（2026）</option>
-          <option value="admission2025">小红书中签/录取参考（2025）</option>
-        </select>
-        <button id="btn-xhs-collect" class="orange">抓取并入待审核</button>
-      </div>
-      <div class="status" id="xhs-status">每行格式：学校名, 小红书链接, 梯队(可空), 2025录取数(可空), 2025最大摇号数(可空), 备注(可空)</div>
-      <textarea id="xhs-lines" placeholder="示例：上海青浦兰生学校（小学）,https://www.xiaohongshu.com/explore/xxxx,T1,148,101,2026家长口碑贴"></textarea>
     </div>
   </div>
+  <div id="detail-mask" class="drawer-mask"></div>
+  <aside id="detail-drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <b>学校详情</b>
+      <button id="btn-close-drawer" class="gray">关闭</button>
+    </div>
+    <div class="drawer-body">
+      <div id="school-detail" class="detail">尚未选择学校</div>
+      <div style="height:8px"></div>
+      <div class="row">
+        <button id="btn-evidence-collect" class="orange">抓取该校证据</button>
+        <input id="evidence-top" style="width:90px" value="3" />
+        <div class="grow"><input id="evidence-queries" placeholder="可选：自定义扩展词（用 ; 分隔）" /></div>
+      </div>
+      <div class="status" id="evidence-status">证据语料：请选择学校后查看</div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:18%">查询词</th>
+            <th style="width:30%">标题</th>
+            <th style="width:20%">来源类型</th>
+            <th style="width:20%">采集时间</th>
+            <th style="width:12%">链接</th>
+          </tr>
+        </thead>
+        <tbody id="evidence-body"></tbody>
+      </table>
+    </div>
+  </aside>
 
   <script>
     var API = location.origin;
     var cacheSchools = [];
+    var currentPage = 1;
+    var pageSize = 30;
     var pendingTierUpdates = {};
     var pendingRenameUpdates = {};
     var pendingDeleteNames = {};
@@ -191,6 +179,137 @@
     function typeName(t){ return t === "pri" ? "民办" : "公办"; }
 
     function esc(s){ return String(s == null ? "" : s).replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+    function levelLabel(level){
+      var lv = String(level || 'ai-draft');
+      var map = {official:'官方', verified:'已核实', community:'社区', 'ai-draft':'AI草稿'};
+      return '<span class="lvl ' + esc(lv) + '">' + (map[lv] || lv) + '</span>';
+    }
+    function targetLevel(field){
+      if(field === 'enrollment' || field === 'rate') return 'official';
+      if(field === 'reputation' || field === 'philosophy') return 'verified';
+      return 'verified';
+    }
+    function fmtValue(v){
+      if(Array.isArray(v)) return v.length ? v.join(' | ') : '-';
+      if(v == null || v === '') return '-';
+      if(typeof v === 'object') return j(v);
+      return String(v);
+    }
+    function renderLinksCell(url, label){
+      if(!url) return '<div class="src-empty">来源链接待补充</div>';
+      return '<div class="src-links"><a class="src-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + esc(label || '查看来源') + '</a></div>';
+    }
+    function splitByMode(items){
+      var arr = Array.isArray(items) ? items : [];
+      return {
+        evidence: arr.filter(function(x){ return (x && x.mode) === 'evidence'; }),
+        lead: arr.filter(function(x){ return (x && x.mode) !== 'evidence'; })
+      };
+    }
+    function renderGroupedSourceTitle(title, items){
+      return '<div class="kv"><b>' + esc(title) + '</b></div>' + (!items.length ? '<div class="src-empty">暂无</div>' : '');
+    }
+    function renderSourcesSection(sources){
+      var src = sources && typeof sources === 'object' ? sources : {};
+      var summary = src.summary || {};
+      var schoolSources = Array.isArray(src.schoolSources) ? src.schoolSources : [];
+      var fieldSources = Array.isArray(src.fieldSources) ? src.fieldSources : [];
+      var evidenceSources = Array.isArray(src.evidenceSources) ? src.evidenceSources : [];
+      var schoolGroups = splitByMode(schoolSources);
+      var fieldGroups = splitByMode(fieldSources);
+      var html = '<hr style="border:none;border-top:1px solid #e5e7eb;margin:10px 0">';
+      html += '<div class="kv"><b>来源总览</b></div>';
+      html += '<div class="status">学校级来源 ' + esc(summary.schoolSourceCount || 0) + ' 条，字段级来源 ' + esc(summary.fieldSourceCount || 0) + ' 条，证据库 ' + esc(summary.evidenceCount || 0) + ' 条。真实证据与检索入口已分开展示。</div>';
+
+      html += renderGroupedSourceTitle('学校级真实证据', schoolGroups.evidence);
+      if(schoolGroups.evidence.length){
+        html += '<table class="source-matrix"><thead><tr><th style="width:18%">标题</th><th style="width:18%">级别</th><th style="width:18%">来源类型</th><th style="width:18%">出处</th><th style="width:28%">链接</th></tr></thead><tbody>';
+        schoolGroups.evidence.forEach(function(it){
+          html += '<tr>'
+            + '<td><b>' + esc(it.title || '-') + '</b>' + ((it.note || '') ? '<div class="src-note">' + esc(it.note) + '</div>' : '') + '</td>'
+            + '<td>' + levelLabel(it.level || 'ai-draft') + '</td>'
+            + '<td>' + esc(it.sourceType || '-') + '</td>'
+            + '<td>' + esc(it.origin || '-') + '</td>'
+            + '<td>' + renderLinksCell(it.url, '打开来源') + '</td>'
+            + '</tr>';
+        });
+        html += '</tbody></table>';
+      }
+
+      html += '<div style="height:8px"></div>';
+      html += renderGroupedSourceTitle('学校级检索入口', schoolGroups.lead);
+      if(schoolGroups.lead.length){
+        html += '<table class="source-matrix"><thead><tr><th style="width:18%">标题</th><th style="width:18%">级别</th><th style="width:18%">来源类型</th><th style="width:18%">出处</th><th style="width:28%">链接</th></tr></thead><tbody>';
+        schoolGroups.lead.forEach(function(it){
+          html += '<tr>'
+            + '<td><b>' + esc(it.title || '-') + '</b>' + ((it.note || '') ? '<div class="src-note">' + esc(it.note) + '</div>' : '') + '</td>'
+            + '<td>' + levelLabel(it.level || 'ai-draft') + '</td>'
+            + '<td>' + esc(it.sourceType || '-') + '</td>'
+            + '<td>' + esc(it.origin || '-') + '</td>'
+            + '<td>' + renderLinksCell(it.url, '打开入口') + '</td>'
+            + '</tr>';
+        });
+        html += '</tbody></table>';
+      }
+
+      html += '<div style="height:8px"></div>';
+      html += renderGroupedSourceTitle('字段级真实证据', fieldGroups.evidence);
+      if(fieldGroups.evidence.length){
+        html += '<table class="source-matrix"><thead><tr><th style="width:14%">字段</th><th style="width:20%">值</th><th style="width:18%">current/target</th><th style="width:20%">出处</th><th style="width:28%">链接</th></tr></thead><tbody>';
+        fieldGroups.evidence.forEach(function(it){
+          html += '<tr>'
+            + '<td><b>' + esc(it.fieldLabel || '-') + '</b><div class="src-note">' + esc(it.category || '-') + ' / ' + esc(it.fieldKey || '-') + '</div></td>'
+            + '<td>' + esc(fmtValue(it.value)) + '</td>'
+            + '<td>' + levelLabel(it.currentLevel || 'ai-draft') + '<div class="src-note">target: ' + esc(it.targetLevel || '-') + '</div></td>'
+            + '<td>' + esc(it.origin || '-') + '<div class="src-note">' + esc(it.method || '-') + '</div></td>'
+            + '<td>' + renderLinksCell(it.url, it.linkLabel || '打开来源') + '</td>'
+            + '</tr>';
+        });
+        html += '</tbody></table>';
+      }
+
+      html += '<div style="height:8px"></div>';
+      html += renderGroupedSourceTitle('字段级检索入口', fieldGroups.lead);
+      if(fieldGroups.lead.length){
+        html += '<table class="source-matrix"><thead><tr><th style="width:14%">字段</th><th style="width:20%">值</th><th style="width:18%">current/target</th><th style="width:20%">出处</th><th style="width:28%">链接</th></tr></thead><tbody>';
+        fieldGroups.lead.forEach(function(it){
+          html += '<tr>'
+            + '<td><b>' + esc(it.fieldLabel || '-') + '</b><div class="src-note">' + esc(it.category || '-') + ' / ' + esc(it.fieldKey || '-') + '</div></td>'
+            + '<td>' + esc(fmtValue(it.value)) + '</td>'
+            + '<td>' + levelLabel(it.currentLevel || 'ai-draft') + '<div class="src-note">target: ' + esc(it.targetLevel || '-') + '</div></td>'
+            + '<td>' + esc(it.origin || '-') + '<div class="src-note">' + esc(it.method || '-') + '</div></td>'
+            + '<td>' + renderLinksCell(it.url, it.linkLabel || '打开入口') + '</td>'
+            + '</tr>';
+        });
+        html += '</tbody></table>';
+      }
+
+      if(evidenceSources.length){
+        html += '<div style="height:8px"></div><div class="kv"><b>证据库来源</b></div>';
+        html += '<table class="source-matrix"><thead><tr><th style="width:18%">标题</th><th style="width:15%">查询词</th><th style="width:14%">来源类型</th><th style="width:15%">采集时间</th><th style="width:38%">链接</th></tr></thead><tbody>';
+        evidenceSources.forEach(function(it){
+          html += '<tr>'
+            + '<td><b>' + esc(it.title || '-') + '</b>' + ((it.snippet || '') ? '<div class="src-note">' + esc(it.snippet) + '</div>' : '') + '</td>'
+            + '<td>' + esc(it.queryText || '-') + '</td>'
+            + '<td>' + esc(it.sourceType || '-') + '</td>'
+            + '<td>' + esc(it.collectedAt || '-') + '</td>'
+            + '<td>' + renderLinksCell(it.url, '打开证据') + '</td>'
+            + '</tr>';
+        });
+        html += '</tbody></table>';
+      }
+      return html;
+    }
+    function openDrawer(){
+      qs('detail-mask').classList.add('open');
+      qs('detail-drawer').classList.add('open');
+      qs('detail-drawer').setAttribute('aria-hidden', 'false');
+    }
+    function closeDrawer(){
+      qs('detail-mask').classList.remove('open');
+      qs('detail-drawer').classList.remove('open');
+      qs('detail-drawer').setAttribute('aria-hidden', 'true');
+    }
     function getPublishUrl(){
       try{
         return (localStorage.getItem(PUBLISH_URL_KEY) || '').trim() || 'https://school-advisor.pages.dev/api/admin/bootstrap';
@@ -222,7 +341,8 @@
       var p = pendingCount();
       var r = pendingRenameCount();
       var d = pendingDeleteCount();
-      qs('school-status').textContent = '共 ' + total + ' 所学校；待推送梯队修改 ' + p + ' 条；待改名 ' + r + ' 条；待删除 ' + d + ' 条';
+      var coverage = qs('school-status').dataset.coverage || '';
+      qs('school-status').textContent = '共 ' + total + ' 所学校；待推送梯队修改 ' + p + ' 条；待改名 ' + r + ' 条；待删除 ' + d + ' 条' + (coverage ? '；' + coverage : '');
     }
 
     function setPendingTier(name, oldTier, newTier){
@@ -262,9 +382,24 @@
       var url = API + '/api/admin/schools?q=' + q + '&district=' + district + '&tier=' + tier + '&type=' + type;
       var data = await (await fetch(url)).json();
       cacheSchools = data.items || [];
+      var cov = data.admissionCoverage || {};
+      qs('school-status').dataset.coverage = '录取数覆盖：官方 ' + (cov.official || 0) + '，候选 ' + (cov.candidate || 0) + '，缺失 ' + (cov.missing || 0) + '，公办不适用 ' + (cov.notApplicable || 0);
+      currentPage = 1;
+      renderDistrictOptions(cacheSchools);
+      renderSchoolPage();
+    }
+
+    function renderSchoolPage(){
+      var total = cacheSchools.length;
+      var totalPages = Math.max(1, Math.ceil(total / pageSize));
+      if(currentPage > totalPages) currentPage = totalPages;
+      if(currentPage < 1) currentPage = 1;
+      var start = (currentPage - 1) * pageSize;
+      var end = Math.min(start + pageSize, total);
+      var pageRows = cacheSchools.slice(start, end);
       var tb = qs('school-body');
       tb.innerHTML = '';
-      cacheSchools.forEach(function(s){
+      pageRows.forEach(function(s){
         var isPendingDelete = !!pendingDeleteNames[s.name];
         var tr = document.createElement('tr');
         var tdDistrict = document.createElement('td');
@@ -308,22 +443,23 @@
           tdTier.appendChild(mark);
         }
 
-        var tdRec = document.createElement('td');
-        tdRec.textContent = (s.recommend == null ? "-" : s.recommend);
-
         var tdAdmission2025 = document.createElement('td');
-        tdAdmission2025.textContent = (s.admission2025 == null ? "-" : s.admission2025);
+        tdAdmission2025.innerHTML = (s.admission2025 == null ? "-" : esc(s.admission2025))
+          + '<div class="status" style="margin-top:4px"><span class="tag ' + esc(s.admission2025Status || 'missing') + '">'
+          + esc(({official:'官方', candidate:'候选', missing:'缺失', not_applicable:'公办不适用'})[s.admission2025Status || 'missing'])
+          + '</span></div>';
 
         var tdMaxLottery2025 = document.createElement('td');
         tdMaxLottery2025.textContent = (s.maxLottery2025 == null ? "-" : s.maxLottery2025);
 
         var tdSource = document.createElement('td');
-        if(s.sourceUrl){
+        var sourceHref = s.admission2025EvidenceUrl || s.sourceUrl;
+        if(sourceHref){
           var a = document.createElement('a');
-          a.href = s.sourceUrl;
+          a.href = sourceHref;
           a.target = '_blank';
           a.rel = 'noopener noreferrer';
-          a.textContent = '查看';
+          a.textContent = (s.admission2025Status === 'candidate' ? '候选来源' : '查看');
           tdSource.appendChild(a);
         }else{
           tdSource.textContent = '-';
@@ -361,13 +497,14 @@
         tr.appendChild(tdTier);
         tr.appendChild(tdAdmission2025);
         tr.appendChild(tdMaxLottery2025);
-        tr.appendChild(tdRec);
         tr.appendChild(tdSource);
         tr.appendChild(tdOp);
         tb.appendChild(tr);
       });
-      updateSchoolStatus(data.count || 0);
-      renderDistrictOptions(cacheSchools);
+      updateSchoolStatus(total);
+      qs('page-info').textContent = '第 ' + currentPage + ' / ' + totalPages + ' 页';
+      qs('btn-prev-page').disabled = currentPage <= 1;
+      qs('btn-next-page').disabled = currentPage >= totalPages;
     }
 
     function renderDistrictOptions(items){
@@ -391,27 +528,118 @@
         qs('school-detail').textContent = data.error || '加载失败';
         return;
       }
+      openDrawer();
       var s = data.item;
       var p = s.profile || {};
       var tf = s.tuition || {};
-      qs('school-detail').innerHTML = ''
-        + '<div class="kv"><b>学校：</b>' + esc(s.name) + '</div>'
-        + '<div class="kv"><b>区域：</b>' + districtName(s.district) + '　<b>类型：</b>' + typeName(s.type) + '　<b>梯队：</b>' + esc(s.tier) + '</div>'
-        + '<div class="kv"><b>中签率：</b>' + esc((s.lotteryLow == null ? "-" : s.lotteryLow) + ' ~ ' + (s.lotteryHigh == null ? "-" : s.lotteryHigh)) + '</div>'
-        + '<div class="kv"><b>2025录取数：</b>' + esc(s.admission2025 == null ? "-" : s.admission2025) + '　<b>2025最大摇号数：</b>' + esc(s.maxLottery2025 == null ? "-" : s.maxLottery2025) + '</div>'
-        + '<div class="kv"><b>参考来源：</b>' + (s.sourceUrl ? ('<a href=\"' + esc(s.sourceUrl) + '\" target=\"_blank\" rel=\"noopener noreferrer\">' + esc(s.sourceUrl) + '</a>') : '-') + '</div>'
-        + '<div class="kv"><b>推荐度：</b>' + esc(s.recommend == null ? "-" : s.recommend) + '　<b>状态：</b>' + esc(s.status || "normal") + '</div>'
-        + '<div class="kv"><b>简介：</b>' + esc(s.desc || "") + '</div>'
-        + '<div class="kv"><b>坐标：</b>' + esc((s.lat == null ? "-" : s.lat) + ', ' + (s.lng == null ? "-" : s.lng)) + '</div>'
-        + '<hr style="border:none;border-top:1px solid #e5e7eb;margin:10px 0">'
-        + '<div class="kv"><b>口碑标签：</b>' + esc(p.tag || "-") + '</div>'
-        + '<div class="kv"><b>Slogan：</b>' + esc(p.slogan || "-") + '</div>'
-        + '<div class="kv"><b>作业/压力：</b>' + esc((p.hw || "-") + " / " + (p.stress || "-")) + '</div>'
-        + '<div class="kv"><b>升学路径：</b><pre class="mono">' + esc((p.path || []).join(' | ')) + '</pre></div>'
-        + '<div class="kv"><b>优点：</b><pre class="mono">' + esc((p.pros || []).join('\n')) + '</pre></div>'
-        + '<div class="kv"><b>注意：</b><pre class="mono">' + esc((p.cons || []).join('\n')) + '</pre></div>'
-        + '<hr style="border:none;border-top:1px solid #e5e7eb;margin:10px 0">'
-        + '<div class="kv"><b>学费信息：</b><pre class="mono">' + esc(Object.keys(tf).length ? j(tf) : "-") + '</pre></div>';
+      var sections = Array.isArray(data.fieldSections) ? data.fieldSections : [];
+      var sources = data.sources || {};
+      var html = '<div class="kv"><b>学校详情：</b>' + esc(s.name || '-') + '</div>';
+      sections.forEach(function(sec){
+        var title = sec && sec.title ? sec.title : '字段分组';
+        var fields = Array.isArray(sec && sec.fields) ? sec.fields : [];
+        html += '<hr style="border:none;border-top:1px solid #e5e7eb;margin:10px 0">';
+        html += '<div class="kv"><b>' + esc(title) + '</b></div>';
+        html += '<table class="source-matrix"><thead><tr><th style="width:16%">字段</th><th style="width:32%">值</th><th style="width:34%">数据来源</th><th style="width:18%">target/current</th></tr></thead><tbody>';
+        fields.forEach(function(f){
+          var src = (f && f.source) ? f.source : {};
+          var links = Array.isArray(src.links) ? src.links : [];
+          if(!links.length && src.url){
+            links = [{label:'主来源', url:src.url}];
+          }
+          var linkHtml = links.length
+            ? ('<div class="src-links">' + links.map(function(x){
+                var label = (x && x.label) ? x.label : '来源';
+                var url = (x && x.url) ? x.url : '';
+                if(!url) return '';
+                return '<a class="src-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + '</a>';
+              }).join('') + '</div>')
+            : '<div class="src-empty">来源链接待补充</div>';
+          html += '<tr>'
+            + '<td><b>' + esc((f && f.label) || '-') + '</b></td>'
+            + '<td>' + esc(fmtValue(f ? f.value : null)) + '</td>'
+            + '<td>'
+            + levelLabel(src.currentLevel || 'ai-draft')
+            + '<div class="status">' + esc(src.origin || '-') + '</div>'
+            + '<div class="status">' + esc(src.method || '-') + '</div>'
+            + linkHtml
+            + '</td>'
+            + '<td>' + levelLabel(src.targetLevel || targetLevel((f && f.key) || '')) + '<div class="status">current: ' + esc(src.currentLevel || 'ai-draft') + '</div></td>'
+            + '</tr>';
+        });
+        html += '</tbody></table>';
+      });
+      html += renderSourcesSection(sources);
+      html += '<hr style="border:none;border-top:1px solid #e5e7eb;margin:10px 0">';
+      html += '<div class="kv"><b>原始数据快照（便于核对）</b></div>';
+      html += '<div class="kv"><b>Slogan：</b>' + esc(p.slogan || '-') + '</div>';
+      html += '<div class="kv"><b>作业/压力：</b>' + esc((p.hw || '-') + ' / ' + (p.stress || '-')) + '</div>';
+      html += '<div class="kv"><b>升学路径：</b><pre class="mono">' + esc((p.path || []).join(' | ')) + '</pre></div>';
+      html += '<div class="kv"><b>优点：</b><pre class="mono">' + esc((p.pros || []).join('\n')) + '</pre></div>';
+      html += '<div class="kv"><b>注意：</b><pre class="mono">' + esc((p.cons || []).join('\n')) + '</pre></div>';
+      html += '<div class="kv"><b>学费信息：</b><pre class="mono">' + esc(Object.keys(tf).length ? j(tf) : '-') + '</pre></div>';
+      qs('school-detail').innerHTML = html;
+      loadSchoolEvidence(name);
+    }
+
+    async function loadSchoolEvidence(name){
+      var school = (name || selectedSchoolName || '').trim();
+      if(!school){
+        qs('evidence-body').innerHTML = '';
+        qs('evidence-status').textContent = '证据语料：请选择学校后查看';
+        return;
+      }
+      var res = await fetch(API + '/api/admin/school-evidence?name=' + encodeURIComponent(school) + '&limit=60');
+      var data = await res.json();
+      if(!res.ok || !data.ok){
+        qs('evidence-status').textContent = '加载失败：' + (data.error || '未知错误');
+        return;
+      }
+      var items = data.items || [];
+      var tb = qs('evidence-body');
+      tb.innerHTML = '';
+      items.forEach(function(it){
+        var tr = document.createElement('tr');
+        tr.innerHTML = ''
+          + '<td class="mono">' + esc(it.queryText || '-') + '</td>'
+          + '<td>' + esc(it.title || '-') + '<div class="status" style="margin:2px 0 0">' + esc(it.snippet || '') + '</div></td>'
+          + '<td>' + esc(it.sourceType || '-') + '</td>'
+          + '<td class="mono">' + esc(it.collectedAt || '-') + '</td>'
+          + '<td>' + (it.url ? ('<a href="' + esc(it.url) + '" target="_blank" rel="noopener noreferrer">查看</a>') : '-') + '</td>';
+        tb.appendChild(tr);
+      });
+      qs('evidence-status').textContent = '证据语料：' + school + '，共 ' + (data.count || 0) + ' 条';
+    }
+
+    async function collectSchoolEvidence(){
+      var school = (selectedSchoolName || '').trim();
+      if(!school){
+        qs('evidence-status').textContent = '请先在上方列表点击一个学校';
+        return;
+      }
+      var top = Number((qs('evidence-top').value || '3').trim());
+      if(!Number.isFinite(top) || top < 1) top = 3;
+      if(top > 8) top = 8;
+      var queryRaw = (qs('evidence-queries').value || '').trim();
+      var queries = queryRaw ? queryRaw.split(';').map(function(x){ return x.trim(); }).filter(Boolean) : [];
+      qs('evidence-status').textContent = '正在抓取证据，请稍候...';
+      var res = await fetch(API + '/api/admin/school-evidence/collect', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({schoolName: school, top: top, queries: queries})
+      });
+      var data = await res.json();
+      if(!res.ok || !data.ok){
+        qs('evidence-status').textContent = '抓取失败：' + (data.error || '未知错误');
+        return;
+      }
+      var one = (data.results || [])[0] || {};
+      var msg = '抓取完成：查询 ' + (one.queries || 0) + ' 组，拉取 ' + (one.fetched || 0) + ' 条，入库 ' + (one.saved || 0) + ' 条';
+      if(one.errors && one.errors.length){
+        msg += '；错误 ' + one.errors.length + ' 条';
+      }
+      qs('evidence-status').textContent = msg;
+      await loadSchoolEvidence(school);
     }
 
     async function uploadXlsx(){
@@ -701,6 +929,8 @@
     }
 
     qs('btn-filter').onclick = loadSchools;
+    qs('btn-prev-page').onclick = function(){ currentPage = Math.max(1, currentPage - 1); renderSchoolPage(); };
+    qs('btn-next-page').onclick = function(){ currentPage += 1; renderSchoolPage(); };
     qs('btn-reset').onclick = function(){
       qs('q').value = '';
       qs('f-tier').value = '';
@@ -716,23 +946,10 @@
     };
     qs('btn-push-tier').onclick = pushSchoolChanges;
     qs('btn-publish-online').onclick = publishOnline;
-    qs('btn-upload-xlsx').onclick = uploadXlsx;
-    qs('btn-refresh-queue').onclick = loadQueue;
-    qs('btn-approve').onclick = function(){ review('approve'); };
-    qs('btn-reject').onclick = function(){ review('reject'); };
-    qs('check-all').onchange = function(){
-      var checked = qs('check-all').checked;
-      document.querySelectorAll('input[data-id]').forEach(function(el){ el.checked = checked; });
-    };
-    qs('btn-load-sources').onclick = loadSources;
-    qs('btn-save-sources').onclick = saveSources;
-    qs('btn-run-collect').onclick = runCollect;
-    qs('btn-import-proposals').onclick = importProposals;
-    qs('btn-xhs-collect').onclick = collectXhs;
-
+    qs('btn-evidence-collect').onclick = collectSchoolEvidence;
+    qs('btn-close-drawer').onclick = closeDrawer;
+    qs('detail-mask').onclick = closeDrawer;
     loadSchools();
-    loadQueue();
-    loadSources();
   </script>
 </body>
 </html>

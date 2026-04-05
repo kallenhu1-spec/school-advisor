@@ -1,0 +1,66 @@
+{
+  "year": 2025,
+  "query": "from bendibao district articles",
+  "items": [
+    {
+      "district": "黄浦",
+      "articleUrl": "http://sh.bendibao.com/edu/2025520/297499.shtm",
+      "pageUrl": "https://www.shhuangpu.gov.cn/zw/009002/009002004/009002004004/009002004004003/009002004004003002/20250520/ed2c77ca-588e-4f74-9540-a21de180ff8b.html",
+      "pdfUrl": ""
+    },
+    {
+      "district": "徐汇",
+      "articleUrl": "http://sh.bendibao.com/edu/2025519/297477.shtm",
+      "pageUrl": "https://beian.miit.gov.cn/",
+      "pdfUrl": ""
+    },
+    {
+      "district": "静安",
+      "articleUrl": "http://sh.bendibao.com/edu/2025520/297506.shtm",
+      "pageUrl": "https://www.jingan.gov.cn/sy/004009/004009010/004009010008/004009010008003/004009010008003002/20250520/0113b190-ec6c-42a8-a030-e73250a9b7c6.html",
+      "pdfUrl": ""
+    },
+    {
+      "district": "虹口",
+      "articleUrl": "http://sh.bendibao.com/edu/2025520/297512.shtm",
+      "pageUrl": "https://www.shhk.gov.cn/hkjy/zfxx/001007/001007008/20250520/bfd6380c-e469-4bf2-a550-406f071acc97.html",
+      "pdfUrl": ""
+    },
+    {
+      "district": "浦东",
+      "articleUrl": "http://sh.bendibao.com/edu/2025520/297516.shtm",
+      "pageUrl": "https://www.pudong.gov.cn/zwgk/ywjy-jyjzdgz/2025/140/340975.html",
+      "pdfUrl": ""
+    },
+    {
+      "district": "闵行",
+      "articleUrl": "http://sh.bendibao.com/edu/2025520/297504.shtm",
+      "pageUrl": "https://zwgk.shmh.gov.cn/mh-xxgk-cms/website/mh_xxgk/xxgk_jyj_ywxx_8_02/content/040f8e2d-2961-4508-8527-b080aa08b3e1.htm",
+      "pdfUrl": ""
+    },
+    {
+      "district": "金山",
+      "articleUrl": "http://sh.bendibao.com/edu/2025519/297476.shtm",
+      "pageUrl": "https://beian.miit.gov.cn/",
+      "pdfUrl": ""
+    },
+    {
+      "district": "青浦",
+      "articleUrl": "http://sh.bendibao.com/edu/2025520/297487.shtm",
+      "pageUrl": "https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html",
+      "pdfUrl": ""
+    },
+    {
+      "district": "奉贤",
+      "articleUrl": "http://sh.bendibao.com/edu/2025520/297495.shtm",
+      "pageUrl": "https://www.fengxian.gov.cn/jyj/gsgg/20250520/89246.html",
+      "pdfUrl": ""
+    },
+    {
+      "district": "崇明",
+      "articleUrl": "http://sh.bendibao.com/edu/2025520/297498.shtm",
+      "pageUrl": "https://beian.miit.gov.cn/",
+      "pdfUrl": ""
+    }
+  ]
+}

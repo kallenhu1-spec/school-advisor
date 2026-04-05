@@ -1,0 +1,238 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:47Z",
+  "district": "qingpu",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "上海青浦区世外学校小学部",
+      "officialName": "上海青浦区世外学校小学部",
+      "district": "qingpu",
+      "type": "pri",
+      "tier": "T1",
+      "lat": null,
+      "lng": null,
+      "desc": "青浦民办热门，2025招生计划182；2025电脑随机录取名单统计124",
+      "admission": {
+        "rate": 258.33,
+        "rateYear": 2025,
+        "admitted": 124,
+        "maxLottery": 48,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276480.html；https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html"
+      },
+      "profile": {
+        "tag": "青浦民办T1·双语强校",
+        "philosophy": "双语融合，重视学术与综合素养并进",
+        "path": [
+          "青浦区优质民办初中",
+          "区内外重点初中"
+        ],
+        "pros": [
+          "家长关注度高",
+          "课程体系完整",
+          "校内活动丰富"
+        ],
+        "cons": [
+          "入学竞争较大",
+          "家庭配合要求较高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276480.html；https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html; https://www.xiaohongshu.com/search_result?keyword=青浦世外 小学 口碑; https://www.xiaohongshu.com/search_result?keyword=青浦世外 小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "青浦世外 小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海青浦兰生学校小学部",
+      "officialName": "上海青浦兰生学校小学部",
+      "district": "qingpu",
+      "type": "pri",
+      "tier": "T1",
+      "lat": null,
+      "lng": null,
+      "desc": "青浦民办热门，2025招生计划210；2025电脑随机录取名单统计148",
+      "admission": {
+        "rate": 146.53,
+        "rateYear": 2025,
+        "admitted": 148,
+        "maxLottery": 101,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276480.html；https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html"
+      },
+      "profile": {
+        "tag": "青浦民办T1·学术导向",
+        "philosophy": "重视基础学力与学习习惯培养",
+        "path": [
+          "区内民办初中",
+          "区内重点公办初中"
+        ],
+        "pros": [
+          "学习氛围较强",
+          "家校沟通相对紧密",
+          "升学关注度高"
+        ],
+        "cons": [
+          "节奏偏快",
+          "对学生自驱力要求高"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276480.html；https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html; https://www.xiaohongshu.com/search_result?keyword=青浦兰生 小学 口碑; https://www.xiaohongshu.com/search_result?keyword=青浦兰生 小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "青浦兰生 小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海宋庆龄学校小学部",
+      "officialName": "上海宋庆龄学校小学部",
+      "district": "qingpu",
+      "type": "pri",
+      "tier": "T1",
+      "lat": null,
+      "lng": null,
+      "desc": "青浦民办，2025招生计划56；2025电脑随机录取名单统计23",
+      "admission": {
+        "rate": 100.0,
+        "rateYear": 2025,
+        "admitted": 23,
+        "maxLottery": 23,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276480.html；https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html"
+      },
+      "profile": {
+        "tag": "青浦民办T2·特色办学·T1",
+        "philosophy": "人文关怀与综合能力并重",
+        "path": [
+          "区内民办初中",
+          "区内公办初中"
+        ],
+        "pros": [
+          "办学理念鲜明",
+          "活动体验丰富",
+          "关注综合素质"
+        ],
+        "cons": [
+          "学位相对有限",
+          "具体班型差异需关注"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276480.html；https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html; https://www.xiaohongshu.com/search_result?keyword=青浦宋庆龄 小学 口碑; https://www.xiaohongshu.com/search_result?keyword=青浦宋庆龄 小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "青浦宋庆龄 小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海青浦平和双语学校小学部",
+      "officialName": "上海青浦平和双语学校小学部",
+      "district": "qingpu",
+      "type": "pri",
+      "tier": "T2",
+      "lat": null,
+      "lng": null,
+      "desc": "青浦民办，2025招生计划196；2025电脑随机录取名单统计0（当年该名单未显示录取序号）",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 0,
+        "maxLottery": 0,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276480.html；https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html"
+      },
+      "profile": {
+        "tag": "青浦民办T2·双语体系",
+        "philosophy": "双语环境下的全面发展路线",
+        "path": [
+          "区内外民办初中",
+          "国际化教育路径"
+        ],
+        "pros": [
+          "双语氛围较好",
+          "课程选择多元",
+          "校园活动活跃"
+        ],
+        "cons": [
+          "个体差异适配度需评估",
+          "学费与投入需综合考虑"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276480.html；https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html; https://www.xiaohongshu.com/search_result?keyword=青浦平和 小学 口碑; https://www.xiaohongshu.com/search_result?keyword=青浦平和 小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "青浦平和 小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海青浦区协和双语学校小学部",
+      "officialName": "上海青浦区协和双语学校小学部",
+      "district": "qingpu",
+      "type": "pri",
+      "tier": "T2",
+      "lat": null,
+      "lng": null,
+      "desc": "青浦民办，2025招生计划236；2025电脑随机录取名单统计0（当年该名单未显示录取序号）",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 0,
+        "maxLottery": 0,
+        "admissionSource": "official",
+        "admissionUrl": "https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276480.html；https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html"
+      },
+      "profile": {
+        "tag": "青浦民办T2·协和体系",
+        "philosophy": "中西融合课程，强调表达与思辨",
+        "path": [
+          "协和体系内升学",
+          "区内外民办初中"
+        ],
+        "pros": [
+          "体系化办学",
+          "语言与表达训练较多",
+          "课程风格鲜明"
+        ],
+        "cons": [
+          "不同班型体验差异较大",
+          "需结合家庭教育预期"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276480.html；https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html; https://www.xiaohongshu.com/search_result?keyword=青浦协和 小学 口碑; https://www.xiaohongshu.com/search_result?keyword=青浦协和 小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "青浦协和 小学 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 5,
+      "updated": 5
+    }
+  }
+}

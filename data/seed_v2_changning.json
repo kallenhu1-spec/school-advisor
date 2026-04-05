@@ -1,0 +1,591 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:46Z",
+  "district": "changning",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "包玉刚实验学校",
+      "officialName": "包玉刚实验学校",
+      "district": "changning",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2134,
+      "lng": 121.4012,
+      "desc": "2024实测3%超热，顶流双语，IB体系",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=包玉刚实验学校 口碑"
+      },
+      "profile": {
+        "tag": "双语旗舰·长宁民办T1",
+        "philosophy": "不鸡血、不刷题，全人教育标杆",
+        "path": [
+          "包校初中直升",
+          "国际顶尖高中",
+          "海外留学"
+        ],
+        "pros": [
+          "国际化程度顶尖",
+          "英语能力出众",
+          "校友资源强",
+          "晚自习2.5h基本在校完成作业",
+          "80%学生加入运动队",
+          "不排名不横向比较",
+          "注重孩子个体纵向成长"
+        ],
+        "cons": [
+          "中签率极低3-8%",
+          "全英授课适应期长",
+          "费用高昂",
+          "不适合只走高考路线",
+          "纯国际路线，中文体制较弱"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=包玉刚实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=包玉刚实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=包玉刚实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "包玉刚实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "东展小学",
+      "officialName": "东展小学",
+      "district": "changning",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2234,
+      "lng": 121.3923,
+      "desc": "2024实测68%，长宁相对容易摇",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=东展小学 幼升小"
+      },
+      "profile": {
+        "tag": "双语国际路线",
+        "philosophy": "长宁区优质双语学校",
+        "path": [
+          "对口公办初中",
+          "民办初中摇号",
+          "国际路线"
+        ],
+        "pros": [
+          "双语环境好",
+          "国际升学有优势",
+          "师资专业"
+        ],
+        "cons": [
+          "费用较高",
+          "竞争激烈，中签率低"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=东展小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=东展小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=东展小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "东展小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "民办新世纪小学",
+      "officialName": "民办新世纪小学",
+      "district": "changning",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2312,
+      "lng": 121.4134,
+      "desc": "2025全部录取，爆冷",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=民办新世纪小学 口碑"
+      },
+      "profile": {
+        "tag": "长宁民办T2·双语",
+        "philosophy": "新世纪，新起点，双语奠基未来",
+        "path": [
+          "民办强初中",
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "双语氛围好",
+          "管理规范"
+        ],
+        "cons": [
+          "相比T1名气稍小"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=民办新世纪小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办新世纪小学 口碑; https://www.xiaohongshu.com/search_result?keyword=民办新世纪小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "民办新世纪小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "江苏路第五小学",
+      "officialName": "江苏路第五小学",
+      "district": "changning",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2178,
+      "lng": 121.4089,
+      "desc": "奥数竞赛亮眼，数学思维+科创双强",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=江苏路第五小学 口碑"
+      },
+      "profile": {
+        "tag": "长宁公办T1·区重点",
+        "philosophy": "百年文脉，传承优质教育",
+        "path": [
+          "长宁区重点初中",
+          "延安初中"
+        ],
+        "pros": [
+          "教学质量区内顶尖",
+          "升学路径稳"
+        ],
+        "cons": [
+          "需对口学区房"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=江苏路第五小学 口碑; https://www.xiaohongshu.com/search_result?keyword=江苏路第五小学 口碑; https://www.xiaohongshu.com/search_result?keyword=江苏路第五小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "江苏路第五小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "愚园路第一小学",
+      "officialName": "愚园路第一小学",
+      "district": "changning",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2201,
+      "lng": 121.4023,
+      "desc": "70年历史名校，艺术人文见长，对口市三女中",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=愚园路第一小学 口碑"
+      },
+      "profile": {
+        "tag": "愚园路名校·长宁公办T1",
+        "philosophy": "愚园文化，人文气息浓厚",
+        "path": [
+          "长宁区重点初中"
+        ],
+        "pros": [
+          "历史名校底蕴深",
+          "人文氛围好"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=愚园路第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=愚园路第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=愚园路第一小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "愚园路第一小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "建青实验学校小学部",
+      "officialName": "建青实验学校小学部",
+      "district": "changning",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2134,
+      "lng": 121.3912,
+      "desc": "上海老牌十五年一贯制，幼小初直升省心",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=建青实验学校 口碑"
+      },
+      "profile": {
+        "tag": "实验名校·长宁公办T1",
+        "philosophy": "建青精神，科学实验从娃娃抓起",
+        "path": [
+          "建青初中直升",
+          "长宁区重点初中"
+        ],
+        "pros": [
+          "直升通道稳定",
+          "实验课程优质",
+          "校园环境好"
+        ],
+        "cons": [
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=建青实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=建青实验学校 口碑; https://www.xiaohongshu.com/search_result?keyword=建青实验学校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "建青实验学校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "长宁实验小学",
+      "officialName": "长宁实验小学",
+      "district": "changning",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2089,
+      "lng": 121.4234,
+      "desc": "教育科研标杆，课程改革先锋",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=长宁实验小学 口碑"
+      },
+      "profile": {
+        "tag": "长宁公办T2·区实验",
+        "philosophy": "实验引领，扎实育人",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "课程有特色",
+          "管理规范"
+        ],
+        "cons": [
+          "资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=长宁实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=长宁实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=长宁实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "长宁实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "天山路第一小学",
+      "officialName": "天山路第一小学",
+      "district": "changning",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2056,
+      "lng": 121.3867,
+      "desc": "口碑老牌公办，教学质量过硬，校风严谨",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=天山路第一小学 口碑"
+      },
+      "profile": {
+        "tag": "长宁公办T2",
+        "philosophy": "天山片区优质小学",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "社区口碑好"
+        ],
+        "cons": [
+          "升学资源一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=天山路第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=天山路第一小学 口碑; https://www.xiaohongshu.com/search_result?keyword=天山路第一小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "天山路第一小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "新世纪小学",
+      "officialName": "新世纪小学",
+      "district": "changning",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2123,
+      "lng": 121.4156,
+      "desc": "精致小班化，融合北师大课程+双语艺术",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=新世纪小学 口碑"
+      },
+      "profile": {
+        "tag": "长宁民办T2",
+        "philosophy": "新世纪教育，跟上时代步伐",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "口碑稳定",
+          "费用合理"
+        ],
+        "cons": [
+          "特色不突出"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=新世纪小学 口碑; https://www.xiaohongshu.com/search_result?keyword=新世纪小学 口碑; https://www.xiaohongshu.com/search_result?keyword=新世纪小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "新世纪小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "适存小学",
+      "officialName": "适存小学",
+      "district": "changning",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2067,
+      "lng": 121.4189,
+      "desc": "百年老校，科技+传统文化特色",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=适存小学 口碑"
+      },
+      "profile": {
+        "tag": "长宁公办T2",
+        "philosophy": "适应时代，培育全面人才",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "社区配套完善"
+        ],
+        "cons": [
+          "特色不明显"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=适存小学 口碑; https://www.xiaohongshu.com/search_result?keyword=适存小学 口碑; https://www.xiaohongshu.com/search_result?keyword=适存小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "适存小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "绿苑小学",
+      "officialName": "绿苑小学",
+      "district": "changning",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2034,
+      "lng": 121.3989,
+      "desc": "实力公办，性价比高",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=绿苑小学 口碑"
+      },
+      "profile": {
+        "tag": "长宁公办T2·生态",
+        "philosophy": "绿色校园，生态教育先行",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "环境优美",
+          "压力小"
+        ],
+        "cons": [
+          "升学竞争力一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=绿苑小学 口碑; https://www.xiaohongshu.com/search_result?keyword=绿苑小学 口碑; https://www.xiaohongshu.com/search_result?keyword=绿苑小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "绿苑小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "东展小学（民办）",
+      "officialName": "东展小学（民办）",
+      "district": "changning",
+      "type": "pri",
+      "tier": "T3",
+      "lat": 31.2156,
+      "lng": 121.4067,
+      "desc": "摇号中签率较高，民办性价比选择",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=东展小学 口碑"
+      },
+      "profile": {
+        "tag": "长宁民办T3·全录",
+        "philosophy": "展翅高飞，稳定入学通道",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "全录无需摇号",
+          "压力小"
+        ],
+        "cons": [
+          "梯队较低",
+          "资源有限"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=东展小学 口碑; https://www.xiaohongshu.com/search_result?keyword=东展小学 口碑; https://www.xiaohongshu.com/search_result?keyword=东展小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "东展小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "法华镇路第三小学",
+      "officialName": "法华镇路第三小学",
+      "district": "changning",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.2089,
+      "lng": 121.4134,
+      "desc": "立足基础教学，稳定保障",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=法华镇路第三小学 口碑"
+      },
+      "profile": {
+        "tag": "长宁公办T3",
+        "philosophy": "法华片区社区小学",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "社区配套",
+          "压力极小"
+        ],
+        "cons": [
+          "竞争力弱"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=法华镇路第三小学 口碑; https://www.xiaohongshu.com/search_result?keyword=法华镇路第三小学 口碑; https://www.xiaohongshu.com/search_result?keyword=法华镇路第三小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "法华镇路第三小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "新虹桥小学",
+      "officialName": "新虹桥小学",
+      "district": "changning",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.1967,
+      "lng": 121.3756,
+      "desc": "国际化课程，外教资源丰富",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=新虹桥小学 口碑"
+      },
+      "profile": {
+        "tag": "长宁公办T3",
+        "philosophy": "虹桥片区配套小学",
+        "path": [
+          "长宁区普通初中"
+        ],
+        "pros": [
+          "交通便利"
+        ],
+        "cons": [
+          "资源有限"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=新虹桥小学 口碑; https://www.xiaohongshu.com/search_result?keyword=新虹桥小学 口碑; https://www.xiaohongshu.com/search_result?keyword=新虹桥小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "新虹桥小学 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 14,
+      "updated": 14
+    }
+  }
+}

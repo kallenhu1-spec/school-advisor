@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>上海幼升小选校助手 2026</title>
 <script>
-var ENABLE_1V1_DECISION=true; // 本地联调默认开启，发布前可改回 false
+var ENABLE_1V1_DECISION=false; // 1v1 决策暂时下线，保留代码结构待后续恢复
 
 function switchOuterTab(n,btn){
   if(n===3 && !ENABLE_1V1_DECISION){
@@ -529,7 +529,7 @@ tr:hover>td{background:#fafbff}
   <div class="outer-tabs">
     <button class="otb on" onclick="switchOuterTab(1,this)">🏫 我的择校</button>
     <button class="otb" onclick="switchOuterTab(2,this)">📅 关键时间</button>
-    <button class="otb" id="otb-1v1" onclick="switchOuterTab(3,this)">💬 1v1决策</button>
+    <button class="otb" id="otb-1v1" onclick="switchOuterTab(3,this)" style="display:none">💬 1v1决策</button>
   </div>
 </div>
 <div class="wrap">

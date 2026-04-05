@@ -1,0 +1,33 @@
+{
+  "source": "official_admission_extract_2025.jsonl",
+  "count": 3,
+  "items": [
+    {
+      "district": "杨浦",
+      "schoolName": "上海民办打一外国语小学统招（走读）",
+      "admission2025": 151,
+      "pdfUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250520/480890/a1d9b2f4c383477991893648ae253a4d.pdf",
+      "pageHint": "",
+      "reviewerNote": "auto_extract:max_row_serial",
+      "extractionStatus": "extracted"
+    },
+    {
+      "district": "长宁",
+      "schoolName": "上海民办包玉刚实验学校(小学)统招（走读）",
+      "admission2025": 143,
+      "pdfUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/155/77856/57f63d9c6034473fa279e9e407b34174.pdf",
+      "pageHint": "",
+      "reviewerNote": "auto_extract:max_row_serial",
+      "extractionStatus": "extracted"
+    },
+    {
+      "district": "青浦",
+      "schoolName": "上海青浦兰生学校(小学)统招（走读）",
+      "admission2025": 101,
+      "pdfUrl": "https://www.shqp.gov.cn/edu/edu/upload/202505/0519_152058_311.pdf",
+      "pageHint": "https://www.shqp.gov.cn/edu/eduzwgk/gs/20250519/1281134.html",
+      "reviewerNote": "auto_extract:max_row_serial",
+      "extractionStatus": "extracted"
+    }
+  ]
+}

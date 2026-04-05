@@ -1,0 +1,588 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-03T05:19:47Z",
+  "district": "jingan",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator pipeline 生成：seed_v1 + official_extract + structured_v1",
+  "schools": [
+    {
+      "name": "上海外国语大学静安外国语小学",
+      "officialName": "上海外国语大学静安外国语小学",
+      "district": "jingan",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2434,
+      "lng": 121.4512,
+      "desc": "2024实测24%，上外系，双语精英",
+      "admission": {
+        "rate": 37.29,
+        "rateYear": 2025,
+        "admitted": 135,
+        "maxLottery": 362,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海外国语大学静安外国语小学 口碑"
+      },
+      "profile": {
+        "tag": "上外系·静安民办T1",
+        "philosophy": "上外品牌，外语起步领先一步",
+        "path": [
+          "上外附中系",
+          "民办强初中"
+        ],
+        "pros": [
+          "外语师资顶尖",
+          "品牌认可度高",
+          "升学路径清晰"
+        ],
+        "cons": [
+          "摇号竞争激烈",
+          "全英授课压力大"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海外国语大学静安外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海外国语大学静安外国语小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海外国语大学静安外国语小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海外国语大学静安外国语小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "童园实验小学",
+      "officialName": "童园实验小学",
+      "district": "jingan",
+      "type": "pri",
+      "tier": "T1",
+      "lat": 31.2512,
+      "lng": 121.4423,
+      "desc": "2024实测42%，静安知名民办",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 119,
+        "maxLottery": null,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=童园实验小学 口碑"
+      },
+      "profile": {
+        "tag": "静安民办T1·实验",
+        "philosophy": "童年是实验，在探索中成长",
+        "path": [
+          "民办强初中",
+          "静安区重点初中"
+        ],
+        "pros": [
+          "课程有创意",
+          "儿童中心理念好"
+        ],
+        "cons": [
+          "知名度相对低"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=童园实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=童园实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=童园实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "童园实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "扬波小学",
+      "officialName": "扬波小学",
+      "district": "jingan",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2334,
+      "lng": 121.4634,
+      "desc": "2024实测53%，升学路径好",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=扬波小学 口碑"
+      },
+      "profile": {
+        "tag": "静安民办T2",
+        "philosophy": "扬帆起航，波涌向前",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "口碑稳定"
+        ],
+        "cons": [
+          "特色一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=扬波小学 口碑; https://www.xiaohongshu.com/search_result?keyword=扬波小学 口碑; https://www.xiaohongshu.com/search_result?keyword=扬波小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "扬波小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "彭浦民办小学",
+      "officialName": "彭浦民办小学",
+      "district": "jingan",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2623,
+      "lng": 121.4312,
+      "desc": "2024实测74%，相对容易摇",
+      "admission": {
+        "rate": 30.69,
+        "rateYear": 2025,
+        "admitted": 159,
+        "maxLottery": 518,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=彭浦民办小学 口碑"
+      },
+      "profile": {
+        "tag": "静安民办T2·彭浦",
+        "philosophy": "彭浦片区民办优选",
+        "path": [
+          "民办初中"
+        ],
+        "pros": [
+          "区域口碑好"
+        ],
+        "cons": [
+          "梯队中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=彭浦民办小学 口碑; https://www.xiaohongshu.com/search_result?keyword=彭浦民办小学 口碑; https://www.xiaohongshu.com/search_result?keyword=彭浦民办小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "彭浦民办小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "协和双语培明学校",
+      "officialName": "协和双语培明学校",
+      "district": "jingan",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2534,
+      "lng": 121.4612,
+      "desc": "协和系，静安双语优质校",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=协和双语培明学校 幼升小"
+      },
+      "profile": {
+        "tag": "双语国际路线",
+        "philosophy": "静安协和系，一贯制双语",
+        "path": [
+          "直升协和初中部",
+          "对口民办摇号初中",
+          "国际路线"
+        ],
+        "pros": [
+          "协和系品牌",
+          "一贯制升学稳定",
+          "双语环境好"
+        ],
+        "cons": [
+          "静安区竞争激烈",
+          "摇中率偏低"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=协和双语培明学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=协和双语培明学校 幼升小; https://www.xiaohongshu.com/search_result?keyword=协和双语培明学校 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "协和双语培明学校 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "静教院附校小学部",
+      "officialName": "静教院附校小学部",
+      "district": "jingan",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2401,
+      "lng": 121.4578,
+      "desc": "九年一贯制，低年级少作业，教学创新超前",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=静教院附校 口碑"
+      },
+      "profile": {
+        "tag": "静安公办T1·教研龙头",
+        "philosophy": "静教院品质，课程改革领头羊",
+        "path": [
+          "静教院初中直升",
+          "静安区重点初中"
+        ],
+        "pros": [
+          "教研水平高",
+          "直升通道稳定"
+        ],
+        "cons": [
+          "需对口",
+          "竞争有压力"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=静教院附校 口碑; https://www.xiaohongshu.com/search_result?keyword=静教院附校 口碑; https://www.xiaohongshu.com/search_result?keyword=静教院附校 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "静教院附校 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海市第一师范附属小学",
+      "officialName": "上海市第一师范附属小学",
+      "district": "jingan",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2467,
+      "lng": 121.4534,
+      "desc": "愉快教育扛把子，全面发展不是梦",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=上海市第一师范附属小学 口碑"
+      },
+      "profile": {
+        "tag": "一师附小·静安公办T1",
+        "philosophy": "百年一师，培育有灵魂的孩子",
+        "path": [
+          "静安区重点初中"
+        ],
+        "pros": [
+          "历史名校底蕴深",
+          "管理规范"
+        ],
+        "cons": [
+          "需对口学区"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=上海市第一师范附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海市第一师范附属小学 口碑; https://www.xiaohongshu.com/search_result?keyword=上海市第一师范附属小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "上海市第一师范附属小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "闸北实验小学",
+      "officialName": "闸北实验小学",
+      "district": "jingan",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 31.2534,
+      "lng": 121.4623,
+      "desc": "老闸北头牌，实力均衡，教学扎实",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=闸北实验小学 口碑"
+      },
+      "profile": {
+        "tag": "静安公办T1·竞赛强",
+        "philosophy": "扎实学风，竞赛成绩突出",
+        "path": [
+          "静安区重点初中",
+          "知名民办初中"
+        ],
+        "pros": [
+          "竞赛成绩好",
+          "学习氛围浓",
+          "升学有优势"
+        ],
+        "cons": [
+          "压力较大",
+          "需对口"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=闸北实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=闸北实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=闸北实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "闸北实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "万航渡路小学",
+      "officialName": "万航渡路小学",
+      "district": "jingan",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2378,
+      "lng": 121.4412,
+      "desc": "中央教科所实验校，底子厚，注意超额招生",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=万航渡路小学 口碑"
+      },
+      "profile": {
+        "tag": "静安公办T2",
+        "philosophy": "静安中心，综合优质小学",
+        "path": [
+          "静安区普通初中"
+        ],
+        "pros": [
+          "地段好",
+          "口碑稳定"
+        ],
+        "cons": [
+          "特色不突出"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=万航渡路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=万航渡路小学 口碑; https://www.xiaohongshu.com/search_result?keyword=万航渡路小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "万航渡路小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "静安区第三中心小学",
+      "officialName": "静安区第三中心小学",
+      "district": "jingan",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2423,
+      "lng": 121.4545,
+      "desc": "区重点，综合实力稳定",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=静安区第三中心小学 口碑"
+      },
+      "profile": {
+        "tag": "静安公办T2",
+        "philosophy": "三中心学校，区域综合优质",
+        "path": [
+          "静安区普通初中"
+        ],
+        "pros": [
+          "综合均衡"
+        ],
+        "cons": [
+          "资源中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=静安区第三中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=静安区第三中心小学 口碑; https://www.xiaohongshu.com/search_result?keyword=静安区第三中心小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "静安区第三中心小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "大宁国际小学",
+      "officialName": "大宁国际小学",
+      "district": "jingan",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 31.2678,
+      "lng": 121.4467,
+      "desc": "硬件新，国际化氛围浓，师生比优",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=大宁国际小学 口碑"
+      },
+      "profile": {
+        "tag": "国际化·静安公办T2",
+        "philosophy": "大宁国际，融合东西现代教育",
+        "path": [
+          "静安区普通初中"
+        ],
+        "pros": [
+          "国际化氛围好",
+          "校园现代",
+          "活动丰富"
+        ],
+        "cons": [
+          "升学竞争力中等"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=大宁国际小学 口碑; https://www.xiaohongshu.com/search_result?keyword=大宁国际小学 口碑; https://www.xiaohongshu.com/search_result?keyword=大宁国际小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "大宁国际小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "扬波外国语小学",
+      "officialName": "扬波外国语小学",
+      "district": "jingan",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 31.2512,
+      "lng": 121.4589,
+      "desc": "外语特色超鲜明，英语教学王牌",
+      "admission": {
+        "rate": 36.2,
+        "rateYear": 2025,
+        "admitted": 118,
+        "maxLottery": 326,
+        "admissionSource": "community",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=扬波外国语小学 幼升小"
+      },
+      "profile": {
+        "tag": "双语国际路线",
+        "philosophy": "静安区优质双语学校",
+        "path": [
+          "对口公办初中",
+          "民办初中摇号",
+          "国际路线"
+        ],
+        "pros": [
+          "双语环境好",
+          "国际升学有优势",
+          "师资专业"
+        ],
+        "cons": [
+          "费用较高",
+          "竞争激烈，中签率低"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=扬波外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=扬波外国语小学 幼升小; https://www.xiaohongshu.com/search_result?keyword=扬波外国语小学 幼升小"
+      },
+      "links": {
+        "map": null,
+        "xhs": "扬波外国语小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "静安实验小学",
+      "officialName": "静安实验小学",
+      "district": "jingan",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.2456,
+      "lng": 121.4501,
+      "desc": "分层教学，升学向好",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=静安实验小学 口碑"
+      },
+      "profile": {
+        "tag": "静安公办T3",
+        "philosophy": "实验探索，基础扎实",
+        "path": [
+          "静安区普通初中"
+        ],
+        "pros": [
+          "基础扎实"
+        ],
+        "cons": [
+          "资源一般"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=静安实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=静安实验小学 口碑; https://www.xiaohongshu.com/search_result?keyword=静安实验小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "静安实验小学 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "陈鹤琴小学",
+      "officialName": "陈鹤琴小学",
+      "district": "jingan",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 31.2345,
+      "lng": 121.4456,
+      "desc": "各有特色，教研力量扎实",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": null,
+        "maxLottery": null,
+        "admissionSource": "ai-draft",
+        "admissionUrl": "https://www.xiaohongshu.com/search_result?keyword=陈鹤琴小学 口碑"
+      },
+      "profile": {
+        "tag": "名人纪念·静安公办T3",
+        "philosophy": "鹤琴先生精神永续，儿童教育先行",
+        "path": [
+          "静安区普通初中"
+        ],
+        "pros": [
+          "教育理念温和",
+          "压力小"
+        ],
+        "cons": [
+          "竞争力较弱"
+        ],
+        "sourceLevel": "official",
+        "sourceNote": "结构化证据来源：https://www.xiaohongshu.com/search_result?keyword=陈鹤琴小学 口碑; https://www.xiaohongshu.com/search_result?keyword=陈鹤琴小学 口碑; https://www.xiaohongshu.com/search_result?keyword=陈鹤琴小学 口碑"
+      },
+      "links": {
+        "map": null,
+        "xhs": "陈鹤琴小学 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": "data/seed.json",
+    "officialExtract": "data/curation/official_admission_extract_2025.jsonl",
+    "structuredInput": "data/curation/schools_structured_v1.jsonl",
+    "officialStats": {
+      "rows": 22,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 185,
+      "matched": 14,
+      "updated": 14
+    }
+  }
+}

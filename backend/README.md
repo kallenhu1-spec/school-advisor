@@ -17,6 +17,24 @@ python3 backend/tools/seed_db.py
 python3 backend/tools/update_bootstrap.py --file /你的路径/new-data.json
 ```
 
+## 结构化运营数据导入（推荐）
+当运营产出 `schools_structured_v1.jsonl` 后，可先转换为提案再导入审核队列：
+
+```bash
+python3 backend/tools/structured_to_proposals.py \
+  --input data/curation/schools_structured_v1.jsonl \
+  --output data/curation/proposals_from_structured.json \
+  --source data-curator:structured-v1
+
+curl http://127.0.0.1:8787/api/admin/proposals/import \
+  -H "Content-Type: application/json" \
+  -d @data/curation/proposals_from_structured.json
+```
+
+说明：
+- 转换脚本会生成以下提案类型：`patch_school_fields`、`patch_pr_fields`、`patch_tf_fields`
+- `patch_*` 为字段级 merge，不会整条覆盖旧数据，便于新旧对比后再审核通过
+
 ## 启动 API
 ```bash
 python3 backend/server.py --host 127.0.0.1 --port 8787
