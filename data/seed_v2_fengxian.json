@@ -1,0 +1,55 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-09T01:21:49Z",
+  "district": "fengxian",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator 生成：奉贤本地宝镜像 + 区级查询入口",
+  "schools": [
+    {
+      "name": "上海奉贤区世外教育附属临港外国语学校小学部",
+      "officialName": "上海奉贤区世外教育附属临港外国语学校(小学)",
+      "district": "fengxian",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025区级录取结果公示已可查，学校名单已从本地宝镜像抽取",
+      "admission": null,
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海奉贤区世外教育附属临港外国语学校 幼升小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海奉贤区世外学校小学部",
+      "officialName": "上海奉贤区世外学校(小学)",
+      "district": "fengxian",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025区级录取结果公示已可查，学校名单已从本地宝镜像抽取",
+      "admission": null,
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海奉贤区世外学校 幼升小 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "sourceRefs": [
+      "http://sh.bendibao.com/edu/2025520/297495.shtm",
+      "https://www.fengxian.gov.cn/jyj/zwgk/xxgkml/gsgg/20250520/89246.html",
+      "data/curation/songjiang_baoshan_fengxian_gap_report.md"
+    ],
+    "note": "奉贤区级官方页当前 404，本地宝镜像保留了学校计划标题。"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-09T01:21:49Z",
+  "district": "baoshan",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator 生成：宝山本地宝图片页 OCR + 区级查询入口",
+  "schools": [
+    {
+      "name": "上海宝山区世外学校小学部",
+      "officialName": "上海宝山区世外学校（小学）",
+      "district": "baoshan",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025录取结果公示已可查，统招名单已从图片页 OCR 提取",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 113,
+        "maxLottery": null,
+        "admissionSource": "verified",
+        "admissionUrl": "http://sh.bendibao.com/edu/2025520/297509.shtm"
+      },
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海宝山区世外学校 幼升小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海金瑞学校小学部",
+      "officialName": "上海金瑞学校（小学）",
+      "district": "baoshan",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025录取结果公示已可查，当前未抽出学校级录取数",
+      "admission": null,
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海金瑞学校 幼升小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海民办华曜宝山实验学校小学部",
+      "officialName": "上海民办华曜宝山实验学校（小学）",
+      "district": "baoshan",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025录取结果公示已可查，统招名单已从图片页 OCR 提取",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 125,
+        "maxLottery": null,
+        "admissionSource": "verified",
+        "admissionUrl": "http://sh.bendibao.com/edu/2025520/297509.shtm"
+      },
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海民办华曜宝山实验学校 幼升小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海民办至德实验学校小学部",
+      "officialName": "上海民办至德实验学校（小学）",
+      "district": "baoshan",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025录取结果公示已可查，当前未抽出学校级录取数",
+      "admission": null,
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海民办至德实验学校 幼升小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海市民办锦秋学校小学部",
+      "officialName": "上海市民办锦秋学校（小学）",
+      "district": "baoshan",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025录取结果公示已可查，当前未抽出学校级录取数",
+      "admission": null,
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海市民办锦秋学校 幼升小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海市同洲模范学校小学部",
+      "officialName": "上海市同洲模范学校（小学）",
+      "district": "baoshan",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025录取结果公示已可查，统招名单已从图片页 OCR 提取",
+      "admission": {
+        "rate": null,
+        "rateYear": 2025,
+        "admitted": 128,
+        "maxLottery": null,
+        "admissionSource": "verified",
+        "admissionUrl": "http://sh.bendibao.com/edu/2025520/297509.shtm"
+      },
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海市同洲模范学校 幼升小 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "sourceRefs": [
+      "data/curation/baoshan_ocr_pages.json",
+      "data/curation/songjiang_baoshan_fengxian_gap_report.md",
+      "http://sh.bendibao.com/edu/2025520/297509.shtm"
+    ],
+    "note": "宝山页面为图片列表页，使用 OCR 提取学校名；录取数仅对能识别出顺序号的学校做了保守汇总。"
+  }
+}

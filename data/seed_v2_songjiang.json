@@ -1,0 +1,71 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-09T01:21:49Z",
+  "district": "songjiang",
+  "city": "shanghai",
+  "scope": "district",
+  "schoolName": null,
+  "dataNote": "由 data-curator 生成：松江区级官方 PDF + 学校计划标题抽取",
+  "schools": [
+    {
+      "name": "上海赫贤学校小学部",
+      "officialName": "上海赫贤学校（小学）",
+      "district": "songjiang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025区级录取结果公示已可查，学校名单已从官方 PDF 抽取",
+      "admission": null,
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海赫贤学校 幼升小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海市西外外国语学校小学部",
+      "officialName": "上海市西外外国语学校(小学)",
+      "district": "songjiang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025区级录取结果公示已可查，学校名单已从官方 PDF 抽取",
+      "admission": null,
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海市西外外国语学校 幼升小 口碑",
+        "dianping": null
+      }
+    },
+    {
+      "name": "上海松江区爱菊学校小学部",
+      "officialName": "上海松江区爱菊学校(小学)",
+      "district": "songjiang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "2025区级录取结果公示已可查，学校名单已从官方 PDF 抽取",
+      "admission": null,
+      "profile": null,
+      "links": {
+        "map": null,
+        "xhs": "上海松江区爱菊学校 幼升小 口碑",
+        "dianping": null
+      }
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "sourceRefs": [
+      "data/curation/pdfs_2025/2025_E5_B9_B4_E6_9D_BE_E6_B1_9F_E5_8C_BA_E6_B0_91_E5_8A_9E_E5_B0%8F_E5_AD_A6_E5_BD_95_E5%8F%96_E7%BB%93_E6%9E%9C_E5%85%AC_E7%A4%BA.pdf",
+      "data/curation/songjiang_baoshan_fengxian_gap_report.md"
+    ],
+    "note": "松江只有学校名单级信息，当前未抽出学校级录取数。"
+  }
+}
