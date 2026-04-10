@@ -183,9 +183,10 @@ tr:hover>td{background:#fafbff}
 .advisor-msg{margin-bottom:14px}
 .advisor-msg .who{display:none}
 .advisor-msg .bubble{display:inline-block;max-width:84%;background:#f6f7f9;border:1px solid #eceff3;border-radius:14px;padding:11px 13px;font-size:14px;line-height:1.72;color:#1f2937}
+.advisor-msg.assistant .bubble{display:block;max-width:none;padding:14px 16px}
 .advisor-msg.user{text-align:right}
 .advisor-msg.user .bubble{background:#edf2ff;border-color:#dbe6ff}
-.advisor-structured{margin:6px 0 0 0;padding:0;border:none;background:transparent}
+.advisor-structured{margin:12px 0 0 0;padding:0;border:none;background:transparent}
 .advisor-structured b{color:#111827;font-weight:600}
 .chat-diag{margin-top:8px;border:1px solid #ecdcb6;background:#fffef8;border-radius:10px;padding:8px}
 .chat-diag-head{font-size:13px;font-weight:700;color:#6f4200;margin-bottom:6px}
@@ -1161,6 +1162,18 @@ function displaySchoolName(name){
   };
   return OFFICIAL_NAME_MAP[n] || n;
 }
+function getSchoolSearchName(name){
+  var pr=PR&&PR[name];
+  if(pr&&pr.searchName) return String(pr.searchName||'').trim();
+  return displaySchoolName(name);
+}
+function normalizeSchoolNameForSearch(name){
+  var n=String(name||'').replace(/\s+/g,' ').trim();
+  n=n.replace(/[（(]\s*小学\s*[）)]/g,'');
+  n=n.replace(/小学部$/,'');
+  n=n.replace(/\s+/g,' ').trim();
+  return n;
+}
 // 人工确认修正：当历史导入口径不一致时，优先使用已确认中签率
 var LOTTERY_RATE_OVERRIDE={
   '上海青浦区世外学校小学部':14.6
@@ -1305,29 +1318,35 @@ function closeDetail(){
 function buildDetail(name){
   var pr=PR[name];
   var showName=displaySchoolName(name);
+  var searchName=normalizeSchoolNameForSearch(getSchoolSearchName(name));
   // 没有 profile 时：引导去大众点评
   if(!pr){
-    var dzUrl=buildDianpingWebUrl(showName);
+    var dzUrl=buildDianpingWebUrl(searchName);
     return '<div class="dz-guide">'
-      +'<div class="dz-guide-title">📋 查看官方招生简章</div>'
-      +'<div class="dz-guide-desc">在大众点评搜索该学校，可查看 <b>官方招生简章</b>、<b>家长真实评价</b> 和 <b>学校环境照片</b></div>'
+      +'<div class="dz-guide-title">📋 当前暂无结构化画像</div>'
+      +'<div class="dz-guide-desc">先通过大众点评/小红书查看该校的 <b>口碑线索</b>、<b>校园照片</b> 和 <b>家长评价</b>，后续再补官方招生简章与完整画像。</div>'
       +'<div class="dz-guide-tags">'
-      +'<span class="dz-guide-tag">📅 招生简章</span>'
       +'<span class="dz-guide-tag">📍 学校地址</span>'
       +'<span class="dz-guide-tag">👩‍👧 家长口碑</span>'
-      +'<span class="dz-guide-tag">📞 咨询电话</span>'
+      +'<span class="dz-guide-tag">📷 校园照片</span>'
+      +'<span class="dz-guide-tag">🧭 待补官方来源</span>'
       +'</div>'
       +'<button class="dz-guide-btn" onclick="openDZ(this.dataset.name)" data-name="'+showName+'" type="button">'+DZ_IMG+' 去大众点评查看该校信息</button>'
       +'</div>';
   }
 
-  var stress=pr.stress||3, hw=pr.hw||'', slogan=pr.slogan||'';
+  var stress=typeof pr.stress==='number'?pr.stress:3;
+  var hw=pr.hw||'作业压力待补官方来源';
+  var slogan=pr.slogan||pr.philosophy||'';
+  var eduText=(pr.philosophy||'').trim() || (pr.ideas&&pr.ideas.join?pr.ideas.join('<br>• '):'当前暂无结构化画像，待补官方来源');
+  var sourceLevel=pr.sourceLevel||'';
+  var sourceNote=pr.sourceNote||'';
   var dots=''; for(var i=1;i<=5;i++) dots+='<div class="sd'+(i<=stress?' on':'')+'"></div>';
   var sl=['','💚轻松','💚轻松','🧟适中','🟠假单多','🔴压力大'];
   var paths=(pr.path||[]).map(function(p){return '<span class="path-chip">'+p+'</span>';}).join('');
 
   // 学费信息
-  var tfData=TF[name], tfHtml='';
+  var tfData=TF[name]||TF[showName]||TF[searchName], tfHtml='';
   if(tfData){
     var termFee=tfData.term;
     var feeColor=termFee===0?'#059669':termFee<20000?'#059669':termFee<50000?'#ea580c':'#dc2626';
@@ -1335,11 +1354,22 @@ function buildDetail(name){
     tfHtml='<div class="dp-sec" style="grid-column:1/-1"><h4>💰 学费参考</h4>'
       +'<p><span style="color:'+feeColor+';font-weight:700;font-size:14px">'+feeLabel+'</span>'
       +'<span style="font-size:11px;color:#bbb;margin-left:8px">'+tfData.note+'</span></p></div>';
+  } else {
+    tfHtml='<div class="dp-sec" style="grid-column:1/-1"><h4>💰 学费参考</h4>'
+      +'<p><span style="color:#b45309;font-weight:700;font-size:14px">学费待补官方来源</span>'
+      +'<span style="font-size:11px;color:#bbb;margin-left:8px">当前先不把未核实费用当成已确认事实</span></p></div>';
   }
 
   var pros=(pr.pros||[]).map(function(p){return '<div class="pro-item">✔ '+p+'</div>';}).join('');
   var cons=(pr.cons||[]).map(function(p){return '<div class="con-item">⚠ '+p+'</div>';}).join('');
-  var ideas=(pr.ideas||[]).join('<br>• ');
+  var sourceHtml='';
+  if(sourceLevel || sourceNote){
+    var levelLabel=sourceLevel==='official'?'官方来源':(sourceLevel==='verified'?'已核实':(sourceLevel==='community'?'社区口碑':(sourceLevel==='ai-draft'?'AI总结':'')));
+    sourceHtml='<div class="dp-sec" style="grid-column:1/-1"><h4>🧭 来源说明</h4><p>'
+      +(levelLabel?'<span style="display:inline-block;padding:2px 8px;border-radius:999px;background:#f5f3ef;color:#6f6a62;font-size:11px;margin-right:8px">'+levelLabel+'</span>':'')
+      +(sourceNote||'')
+      +'</p></div>';
+  }
 
   // ===== 家长最关心的标签 =====
   var focusTags='';
@@ -1364,7 +1394,7 @@ function buildDetail(name){
   }
 
   // ===== 大众点评引导区块 =====
-  var dzUrl=buildDianpingWebUrl(showName);
+  var dzUrl=buildDianpingWebUrl(searchName);
   var dzGuide='<div class="dz-guide">'
     +'<div class="dz-guide-title">📋 查官方招生简章 & 家长评价</div>'
     +'<div class="dz-guide-desc">在大众点评可查看该校 <b>官方招生简章</b>（招生人数/报名条件/时间）和家长真实口碑</div>'
@@ -1385,11 +1415,12 @@ function buildDetail(name){
   // 家长关注标签行
   h+='<div class="focus-tags">'+focusTags+'</div>';
   h+='<div class="dp-grid">';
-  h+='<div class="dp-sec"><h4>📚 教育理念</h4><p>• '+ideas+'</p></div>';
+  h+='<div class="dp-sec"><h4>📚 教育理念</h4><p>• '+eduText+'</p></div>';
   h+='<div class="dp-sec"><h4>📝 作业/压力</h4><p>'+hw+'</p><div class="sd-row">'+dots+'<span style="font-size:12px;color:#667eea;margin-left:6px;font-weight:600">'+sl[stress]+'</span></div></div>';
   h+='<div class="dp-sec" style="grid-column:1/-1"><h4>🎓 升学路径</h4><p>'+paths+'</p></div>';
   h+=tfHtml;
   h+='<div class="dp-sec" style="grid-column:1/-1"><h4>✔ 优点 / ⚠ 注意</h4>'+pros+cons+'</div>';
+  h+=sourceHtml;
   h+='</div>';
   // 大众点评引导
   h+=dzGuide;
@@ -1800,6 +1831,14 @@ function hydrateAssistantMessage(content, structured){
   }
   return out;
 }
+function formatAssistantText(text){
+  var raw=String(text||'').trim();
+  if(!raw) return '';
+  return escapeHtml(raw)
+    .replace(/\n{3,}/g,'\n\n')
+    .replace(/\n\n/g,'<br><br>')
+    .replace(/\n/g,'<br>');
+}
 function renderStructured(s){
   if(!s||typeof s!=='object') return '';
   function arr(v){ return Array.isArray(v)?v:[]; }
@@ -1835,7 +1874,6 @@ function renderStructured(s){
     return vals.map(escapeHtml).join('；');
   }
   var blocks=[];
-  var qs=arr(s.next_questions);
   var rs=arr(s.risk_alerts);
   var ps=arr(s.paths);
   var cs=arr(s.candidate_schools);
@@ -1918,7 +1956,6 @@ function renderStructured(s){
   if(reportCards.length) blocks.push(reportCards.join(''));
   if(execution.length) blocks.push(section('下一步建议', execution.join('<br>')));
   if(evidenceMeta.length) blocks.push(section('框架与证据说明', evidenceMeta.join('<br>')));
-  if(qs.length) blocks.push('<p style="margin:8px 0 0 0"><b>如果你愿意我再精准一档：</b>'+qs[0].replace(/\s+/g,' ').trim()+'</p>');
   return blocks.length?('<div class="advisor-structured">'+blocks.join('')+'</div>'):'';
 }
 function renderAdvisor(){
@@ -1928,10 +1965,12 @@ function renderAdvisor(){
   advisorState.messages.forEach(function(m){
     var isUser=m.role==='user';
     var hydrated=!isUser?hydrateAssistantMessage(m.content,m.structured):{content:m.content,structured:m.structured};
-    h+='<div class="advisor-msg'+(isUser?' user':'')+'">';
+    h+='<div class="advisor-msg'+(isUser?' user':' assistant')+'">';
     h+='<div class="who">'+(isUser?'你':'学校评估助手')+'</div>';
-    h+='<div class="bubble">'+escapeHtml(hydrated.content).replace(/\n/g,'<br>')+'</div>';
+    h+='<div class="bubble">';
+    h+=isUser?escapeHtml(hydrated.content).replace(/\n/g,'<br>'):formatAssistantText(hydrated.content);
     if(!isUser&&hydrated.structured) h+=renderStructured(hydrated.structured);
+    h+='</div>';
     h+='</div>';
   });
   box.innerHTML=h;
@@ -2207,11 +2246,8 @@ function closeSheet(){
 }
 
 /* 小红书口碑跳转（微信内复制关键词，外部直接打开） */
-function normalizeSchoolNameForSearch(name){
-  return displaySchoolName(name);
-}
 function buildDZKeyword(name){
-  var q=normalizeSchoolNameForSearch(name).trim();
+  var q=normalizeSchoolNameForSearch(getSchoolSearchName(name));
   if(!q) return '';
   return q;
 }
@@ -2260,8 +2296,9 @@ function openDZ(name){
   }
 }
 function openXHS(name){
-  var kw=name+' 口碑';
-  var url='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(name)+'&source=web_explore_feed';
+  var cleanName=normalizeSchoolNameForSearch(getSchoolSearchName(name));
+  var kw=cleanName+' 幼升小 口碑';
+  var url='https://www.xiaohongshu.com/search_result/?keyword='+encodeURIComponent(kw)+'&source=web_explore_feed';
   var isWx=/MicroMessenger/i.test(navigator.userAgent);
   if(isWx){
     /* 微信内：复制关键词到剪贴板 */
