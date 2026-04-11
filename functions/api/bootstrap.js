@@ -15,7 +15,7 @@ function json(data, status = 200) {
 }
 
 const RAW_BASE = "https://raw.githubusercontent.com/kallenhu1-spec/school-advisor/main/data";
-const SUPPLEMENTAL_SEED_V2_FILES = ["seed_v2_baoshan.json", "seed_v2_songjiang.json", "seed_v2_fengxian.json"];
+const SUPPLEMENTAL_SEED_V2_FILES = ["seed_v2_baoshan.json", "seed_v2_songjiang.json", "seed_v2_fengxian.json", "seed_v2_yangpu.json"];
 
 function normalizeSchoolName(name) {
   return String(name || "")
