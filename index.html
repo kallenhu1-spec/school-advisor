@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>上海幼升小选校助手 2026</title>
 <script>
-var ENABLE_1V1_DECISION=true; // AI时代学校评估入口开关
+var ENABLE_1V1_DECISION=false; // AI时代学校评估入口开关
 
 function switchOuterTab(n,btn){
   if(n===3 && !ENABLE_1V1_DECISION){
@@ -1030,6 +1030,8 @@ document.addEventListener('DOMContentLoaded',function(){
   if(!ENABLE_1V1_DECISION){
     var one=document.getElementById('otb-1v1');
     if(one) one.style.display='none';
+    var onePanel=document.getElementById('ot3');
+    if(onePanel) onePanel.style.display='none';
   }
   loadRemoteData().finally(function(){
     loadForm();
