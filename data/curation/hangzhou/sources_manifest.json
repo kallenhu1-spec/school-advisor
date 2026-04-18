@@ -1,0 +1,32 @@
+[
+  {
+    "district": "xihu",
+    "url": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+    "label": "西湖区学校名录",
+    "sourceLevel": "official"
+  },
+  {
+    "district": "shangcheng",
+    "url": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+    "label": "上城区小学信息",
+    "sourceLevel": "official"
+  },
+  {
+    "district": "gongshu",
+    "url": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+    "label": "拱墅区教育概况",
+    "sourceLevel": "official"
+  },
+  {
+    "district": "binjiang",
+    "url": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+    "label": "滨江区小学信息",
+    "sourceLevel": "official"
+  },
+  {
+    "district": "yuhang",
+    "url": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+    "label": "余杭区义务教育学校名录",
+    "sourceLevel": "official"
+  }
+]

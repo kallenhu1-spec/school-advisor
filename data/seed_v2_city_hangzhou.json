@@ -1,0 +1,5969 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-04-16T09:41:35Z",
+  "district": null,
+  "city": "hangzhou",
+  "scope": "city",
+  "schoolName": null,
+  "dataNote": "杭州学校基础信息已按区政府学校名录、区教育局学校页和学校官网批量校准；已优先补充民办学校的2025招生口径与可核实学费；学校画像统一标注为AI总结，不将未核实信息伪装成官方事实。",
+  "schools": [
+    {
+      "name": "学军小学",
+      "officialName": "学军小学",
+      "address": "杭州市文二路求智巷6号 / 杭州市西湖区萍水西街198号 / 杭州市西湖区转塘镇梦圆街188号",
+      "phone": "88062162 / 87969182 / 81969820",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 30.2745,
+      "lng": 120.1275,
+      "desc": "西湖区强势公办，基础教学扎实，家长关注度高",
+      "profile": {
+        "tag": "西湖公办T1",
+        "philosophy": null,
+        "path": [
+          "区内优质初中",
+          "公办对口升学"
+        ],
+        "pros": [
+          "家长认可度高",
+          "基础训练清晰",
+          "学校辨识度强"
+        ],
+        "cons": [
+          "热度高",
+          "学区与入学门槛敏感"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "AI总结，待补官方来源"
+      },
+      "links": {
+        "map": null,
+        "xhs": "学军小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "文一街小学",
+      "officialName": "文一街小学",
+      "address": "杭州市西湖区保俶北路88号杭州市文一街小学 / 杭州市西湖区秀里街306号",
+      "phone": "88052813 / 81023512",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 30.2861,
+      "lng": 120.1194,
+      "desc": "西湖老牌热门公办，语数基础与学习氛围突出",
+      "profile": {
+        "tag": "西湖公办T1",
+        "philosophy": null,
+        "path": [
+          "区内优质初中",
+          "公办对口升学"
+        ],
+        "pros": [
+          "历史口碑强",
+          "基础教学稳",
+          "区域认可度高"
+        ],
+        "cons": [
+          "竞争感较强",
+          "更适合能跟上节奏的家庭"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "AI总结，待补官方来源"
+      },
+      "links": {
+        "map": null,
+        "xhs": "文一街小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "杭州绿城育华学校小学部",
+      "officialName": "绿城育华小学",
+      "address": "西湖区文一西路532-1",
+      "phone": "89961013",
+      "officialUrl": "https://www.hzlcyh.cn/",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "district": "xihu",
+      "type": "pri",
+      "tier": "T2",
+      "lat": 30.2464,
+      "lng": 120.0954,
+      "desc": "老牌民办双语向学校，家长常作为国际化备选",
+      "profile": {
+        "tag": "西湖民办T2",
+        "philosophy": null,
+        "path": [
+          "民办/国际化路径"
+        ],
+        "pros": [
+          "双语特色明确",
+          "家长辨识度高"
+        ],
+        "cons": [
+          "收费待核实",
+          "适配度取决于家庭方向"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "AI总结，待补官方来源"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杭州绿城育华学校小学部 幼升小",
+        "dianping": null
+      },
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.hzxh.gov.cn/art/2025/6/25/art_1229507042_59049293.html",
+        "admissionSource": "official",
+        "lotteryNeeded": true,
+        "lotteryData": "2025年西湖区官方公告：报名人数超过招生计划数，将于6月30日进行电脑派位。"
+      }
+    },
+    {
+      "name": "三墩小学",
+      "officialName": "三墩小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "三墩小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区振华路28号 / 杭州市西湖区三墩镇双桥社区肖家坝68号",
+      "phone": "87683011 / 87683076",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "之江外语学校",
+      "officialName": "之江外语学校",
+      "district": "xihu",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "之江外语学校 幼升小",
+        "dianping": null
+      },
+      "address": "文一西路102号",
+      "phone": "88850875",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "profile": {
+        "tag": "西湖民办T3",
+        "slogan": "外语特色取向明显，适合作为双语方向补充备选",
+        "ideas": [
+          "外语特色",
+          "民办补充选项",
+          "通勤适配重要"
+        ],
+        "hw": 3,
+        "stress": 3,
+        "path": [
+          "民办路径",
+          "区内初中升学"
+        ],
+        "pros": [
+          "方向明确",
+          "适合扩大民办备选池"
+        ],
+        "cons": [
+          "公开口碑与招生细节仍需继续补充"
+        ],
+        "xhs": "之江外语学校 幼升小",
+        "sourceLevel": "ai-draft",
+        "sourceNote": "学校画像为AI总结，基础信息来自西湖区学校名录"
+      },
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.hzxh.gov.cn/art/2025/6/25/art_1229507042_59049293.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年西湖区官方公告按“杭州市之江外语实验学校”发布，报名人数未超过招生计划数，报名学生一次性全部录取。"
+      }
+    },
+    {
+      "name": "九莲小学",
+      "officialName": "九莲小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "九莲小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区九莲新村55号",
+      "phone": "87382272",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "云谷学校小学部",
+      "officialName": "云谷学校小学部",
+      "district": "xihu",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "云谷学校小学部 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区灯彩街与荆大路交汇处西南角",
+      "phone": "85062928",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "profile": {
+        "tag": "西湖民办T2",
+        "slogan": "高关注度民办学校，适合看课程创新与成长环境的家庭",
+        "ideas": [
+          "课程创新",
+          "校园资源较新",
+          "家庭教育理念匹配度重要"
+        ],
+        "hw": 3,
+        "stress": 3,
+        "path": [
+          "民办/双语路径",
+          "区内初中升学"
+        ],
+        "pros": [
+          "学校辨识度较高",
+          "环境与设施关注度高"
+        ],
+        "cons": [
+          "招生细则与费用仍需逐年核实"
+        ],
+        "xhs": "云谷学校小学部 幼升小",
+        "sourceLevel": "ai-draft",
+        "sourceNote": "学校画像为AI总结，基础信息来自西湖区学校名录"
+      },
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.hzxh.gov.cn/art/2025/6/25/art_1229507042_59049293.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年西湖区官方公告：报名人数未超过招生计划数，报名学生一次性全部录取。"
+      }
+    },
+    {
+      "name": "保俶塔实验学校小学部",
+      "officialName": "保俶塔实验学校小学部",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "保俶塔实验学校小学部 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区天目山路81号",
+      "phone": "85213853",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "保俶塔申花实验学校小学部",
+      "officialName": "保俶塔申花实验学校小学部",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "保俶塔申花实验学校小学部 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区竞舟北路189号",
+      "phone": "87332910",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "古荡第一小学",
+      "officialName": "古荡第一小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "古荡第一小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区益乐路6-1",
+      "phone": "28850955",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "周浦小学",
+      "officialName": "周浦小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "周浦小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区双浦镇周家埭村408号",
+      "phone": "87615712",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "和家园小学",
+      "officialName": "和家园小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "和家园小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区杨梅山路261号",
+      "phone": "28161710",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "嘉绿苑小学",
+      "officialName": "嘉绿苑小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "嘉绿苑小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区嘉绿横路嘉绿苑西1-1号 / 杭州市西湖区三墩镇汇周街100号",
+      "phone": "56256170 / 81027978",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "大禹路小学",
+      "officialName": "大禹路小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "大禹路小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区三墩镇金兰巷2号 / 杭州市西湖区三墩镇甲来路86号",
+      "phone": "88908808 / 88908828",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "府苑小学",
+      "officialName": "府苑小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "府苑小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市紫荆花路1号府苑新村内",
+      "phone": "56928066",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "政苑小学",
+      "officialName": "政苑小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "政苑小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区丰潭路政苑小区73-2号",
+      "phone": "89710120",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "文三街教育集团定山小学",
+      "officialName": "文三街教育集团定山小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文三街教育集团定山小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区转塘街道灵凤街178号",
+      "phone": "56583587",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "文三街教育集团文三街小学",
+      "officialName": "文三街教育集团文三街小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文三街教育集团文三街小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区上宁巷3号",
+      "phone": "56890708",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "文三街教育集团文苑小学",
+      "officialName": "文三街教育集团文苑小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文三街教育集团文苑小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区竞舟路111号",
+      "phone": "56877112",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "文新小学",
+      "officialName": "文新小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文新小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市文三西路491号",
+      "phone": "56928648",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "文理二小",
+      "officialName": "文理二小",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文理二小 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区三墩镇金庄路与联鸿街交叉口",
+      "phone": "56001507",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "文理小学",
+      "officialName": "文理小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文理小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区三墩镇嘉仁路499号",
+      "phone": "56001507",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "星洲二小",
+      "officialName": "星洲二小",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "星洲二小 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区莲紫路8号",
+      "phone": "83825734",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "星洲小学",
+      "officialName": "星洲小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "星洲小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区紫荆花路288号",
+      "phone": "28802080",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "求是教育集团（总校）之江二小",
+      "officialName": "求是教育集团（总校）之江二小",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "求是教育集团（总校）之江二小 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区文景路330号",
+      "phone": "28171011",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "求是教育集团（总校）浙江大学附属小学",
+      "officialName": "求是教育集团（总校）浙江大学附属小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "求是教育集团（总校）浙江大学附属小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区浙大路18号",
+      "phone": "28802011",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "求是教育集团（总校）浙江大学附属第二小学",
+      "officialName": "求是教育集团（总校）浙江大学附属第二小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "求是教育集团（总校）浙江大学附属第二小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区三墩镇五常港路409号",
+      "phone": "28003751",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "浙江工业大学附属实验学校小学部",
+      "officialName": "浙江工业大学附属实验学校小学部",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "浙江工业大学附属实验学校小学部 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区留下街道杨梅山路388号",
+      "phone": "56335737",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "留下小学",
+      "officialName": "留下小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "留下小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区留下大街2号",
+      "phone": "87657826",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "省府路小学",
+      "officialName": "省府路小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "省府路小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市丰潭路莲花街108号",
+      "phone": "56053206",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "省教育厅教研室附属小学",
+      "officialName": "省教育厅教研室附属小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "省教育厅教研室附属小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区高技街6号",
+      "phone": "89930839",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "竞舟小学",
+      "officialName": "竞舟小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "竞舟小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区竞舟路221号",
+      "phone": "28802050",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "竞舟第二小学",
+      "officialName": "竞舟第二小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "竞舟第二小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区溪云之巷1号",
+      "phone": "28802050",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "翠苑第一小学",
+      "officialName": "翠苑第一小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "翠苑第一小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区文一路375号 / 杭州市西湖区竞舟路299号",
+      "phone": "87607913 / 87607956",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "翠苑第二小学",
+      "officialName": "翠苑第二小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "翠苑第二小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区翠苑三区165号",
+      "phone": "87939505",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "育才外国语学校",
+      "officialName": "育才外国语学校",
+      "district": "xihu",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "育才外国语学校 幼升小",
+        "dianping": null
+      },
+      "address": "西湖区文二西路698号",
+      "phone": "8971 5869",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "育才教育集团（总校）文溪校区",
+      "officialName": "育才教育集团（总校）文溪校区",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "育才教育集团（总校）文溪校区 幼升小",
+        "dianping": null
+      },
+      "address": "西湖区凌波路8号",
+      "phone": "89995205",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "育才教育集团（总校）黄姑山路校区",
+      "officialName": "育才教育集团（总校）黄姑山路校区",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "育才教育集团（总校）黄姑山路校区 幼升小",
+        "dianping": null
+      },
+      "address": "西湖区黄姑山横路70号",
+      "phone": "88925920",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "行知二小",
+      "officialName": "行知二小",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "行知二小 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区双龙街378号",
+      "phone": "87975881",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "行知小学",
+      "officialName": "行知小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "行知小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区行知巷6号",
+      "phone": "56773793",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "袁浦小学",
+      "officialName": "袁浦小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "袁浦小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区双浦镇兰溪口村1号",
+      "phone": "87329161",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "西子实验学校小学部",
+      "officialName": "西子实验学校小学部",
+      "district": "xihu",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "西子实验学校小学部 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区双浦镇姚家坞村126号",
+      "phone": "87151639",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "西子湖小学",
+      "officialName": "西子湖小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "西子湖小学 幼升小",
+        "dianping": null
+      },
+      "address": "西湖区龙井路76号 / 西湖区之江路40号",
+      "phone": "87971784－104 / 86591220",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "西湖小学教育集团（总校）紫萱小学",
+      "officialName": "西湖小学教育集团（总校）紫萱小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "西湖小学教育集团（总校）紫萱小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市紫宣路333号",
+      "phone": "56928002",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "西湖小学教育集团（总校）西湖小学",
+      "officialName": "西湖小学教育集团（总校）西湖小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "西湖小学教育集团（总校）西湖小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市曙光路143号",
+      "phone": "56928367",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "西湖第一实验学校小学部",
+      "officialName": "西湖第一实验学校小学部",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "西湖第一实验学校小学部 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区转塘街道龙坞茶镇葛衙庄龙新路",
+      "phone": "56195418",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "西溪实验学校",
+      "officialName": "西溪实验学校",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "西溪实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市西湖区文一西路578号",
+      "phone": "89931551",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "转塘小学",
+      "officialName": "转塘小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "转塘小学 幼升小",
+        "dianping": null
+      },
+      "address": "西湖区转塘街道象山路361号 / 杭州市转塘街道回龙张家55号",
+      "phone": "56202910 / 56201715",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "钱塘外语学校（学院路校区）",
+      "officialName": "钱塘外语学校（学院路校区）",
+      "district": "xihu",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "钱塘外语学校（学院路校区） 幼升小",
+        "dianping": null
+      },
+      "address": "西湖区学院路146号",
+      "phone": "56707459",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.hzxh.gov.cn/art/2025/6/25/art_1229507042_59049293.html",
+        "admissionSource": "official",
+        "lotteryNeeded": true,
+        "lotteryData": "2025年西湖区官方公告按“杭州市钱塘外语学校（民转公学校）”统一发布，报名人数超过招生计划数，将于6月30日进行电脑派位。"
+      }
+    },
+    {
+      "name": "钱塘外语学校（文二路校区）",
+      "officialName": "钱塘外语学校（文二路校区）",
+      "district": "xihu",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "钱塘外语学校（文二路校区） 幼升小",
+        "dianping": null
+      },
+      "address": "西湖区文二西路88号",
+      "phone": "56707459",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.hzxh.gov.cn/art/2025/6/25/art_1229507042_59049293.html",
+        "admissionSource": "official",
+        "lotteryNeeded": true,
+        "lotteryData": "2025年西湖区官方公告按“杭州市钱塘外语学校（民转公学校）”统一发布，报名人数超过招生计划数，将于6月30日进行电脑派位。"
+      }
+    },
+    {
+      "name": "长桥小学",
+      "officialName": "长桥小学",
+      "district": "xihu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "长桥小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市南山路64号",
+      "phone": "87794358",
+      "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "西湖区学校名录",
+      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+    },
+    {
+      "name": "天长小学",
+      "officialName": "杭州市天长小学",
+      "address": "孝女路校区：湖滨街道孝女路4号 东坡路校区：湖滨街道东坡路94——乙号",
+      "phone": "0571-87911991-8003",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/8/15/art_1229738835_4290998.html",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T1",
+      "lat": 30.2551,
+      "lng": 120.1764,
+      "desc": "上城核心老牌名校，人文与基础训练并重",
+      "profile": {
+        "tag": "上城公办T1",
+        "philosophy": null,
+        "path": [
+          "上城区优质初中",
+          "公办对口升学"
+        ],
+        "pros": [
+          "品牌辨识度高",
+          "校园文化成熟"
+        ],
+        "cons": [
+          "家长期待值高",
+          "学位敏感"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "AI总结，待补官方来源"
+      },
+      "links": {
+        "map": null,
+        "xhs": "天长小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "采荷第一小学",
+      "officialName": "杭州市采荷第一小学",
+      "address": "采荷校区：采荷街道采菱路42号 双菱校区：上城区采荷街道双菱新村56幢",
+      "phone": "0571-56970016",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/8/15/art_1229738835_4290998.html",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 30.2505,
+      "lng": 120.2072,
+      "desc": "上城区关注度较高的公办校，课程与家校协同成熟",
+      "profile": {
+        "tag": "上城公办T2",
+        "philosophy": null,
+        "path": [
+          "上城区公办初中",
+          "民办摇号备选"
+        ],
+        "pros": [
+          "综合均衡",
+          "片区热度稳定"
+        ],
+        "cons": [
+          "具体校区差异待核实"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "AI总结，待补官方来源"
+      },
+      "links": {
+        "map": null,
+        "xhs": "采荷第一小学 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "丁信小学",
+      "officialName": "杭州市丁信小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "丁信小学 幼升小",
+        "dianping": null
+      },
+      "address": "童园校区：杭州市上城区丁兰街道杭玻街100号 真园校区：丁兰街道建塘南路2号",
+      "phone": "0571-86675997",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "丁兰第三小学",
+      "officialName": "杭州市丁兰第三小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "丁兰第三小学 幼升小",
+        "dianping": null
+      },
+      "address": "丁兰街道丁桥路2号-30",
+      "phone": "0571-87995223",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "丁兰第二小学",
+      "officialName": "杭州市丁兰第二小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "丁兰第二小学 幼升小",
+        "dianping": null
+      },
+      "address": "丁兰街道环丁路68号",
+      "phone": "0571-56056013",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "丁荷小学",
+      "officialName": "杭州市丁荷小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "丁荷小学 幼升小",
+        "dianping": null
+      },
+      "address": "枣园校区：丁兰街道同港路128号 蕙园校区：丁兰街道蕙兰雅路751号",
+      "phone": "0571-81067703",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "丁蕙第二小学",
+      "officialName": "杭州市丁蕙第二小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "丁蕙第二小学 幼升小",
+        "dianping": null
+      },
+      "address": "本部：丁兰街道天龙路55号 白鹤校区：丁兰街道怀希路3号",
+      "phone": "0571-81067769",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "凤凰小学",
+      "officialName": "杭州市凤凰小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "凤凰小学 幼升小",
+        "dianping": null
+      },
+      "address": "秋涛校区：紫阳街道南瓦坊12号 钱江校区：紫阳街道凤凰北苑9号 / 余杭区余杭街道352号",
+      "phone": "17767095035（工作日8:30-16:30） / 88660551",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息 / 余杭区义务教育学校名录",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "南肖埠小学",
+      "officialName": "杭州市南肖埠小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "南肖埠小学 幼升小",
+        "dianping": null
+      },
+      "address": "凯旋街道太平门直街185号",
+      "phone": "0571-56503372",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "四季青小学",
+      "officialName": "杭州市四季青小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "四季青小学 幼升小",
+        "dianping": null
+      },
+      "address": "四季青街道景昙路98号",
+      "phone": "0571-56927727",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "回族穆兴小学",
+      "officialName": "杭州市回族穆兴小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "回族穆兴小学 幼升小",
+        "dianping": null
+      },
+      "address": "小营校区：小营街道皮市巷99号 穆兴校区：小营街道丰家兜23—4",
+      "phone": "0571-87076009",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "夏衍小学",
+      "officialName": "杭州市夏衍小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "夏衍小学 幼升小",
+        "dianping": null
+      },
+      "address": "彭埠街道莲花桥路2号",
+      "phone": "0571-86499303",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "夏衍第二小学",
+      "officialName": "杭州市夏衍第二小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "夏衍第二小学 幼升小",
+        "dianping": null
+      },
+      "address": "彭埠街道元宝塘南巷1号",
+      "phone": "0571-86499303",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "大学路小学",
+      "officialName": "杭州市大学路小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "大学路小学 幼升小",
+        "dianping": null
+      },
+      "address": "小营街道大学路新村54号",
+      "phone": "0571-87919369",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "天长观潮小学",
+      "officialName": "杭州市天长观潮小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "天长观潮小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市上城区昙花庵东路146号",
+      "phone": "0571-86962022",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "娃哈哈小学",
+      "officialName": "杭州市娃哈哈小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "娃哈哈小学 幼升小",
+        "dianping": null
+      },
+      "address": "清波街道劳动路95号",
+      "phone": "0571-87064256",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "profile": {
+        "tag": "上城公办T2",
+        "slogan": "老牌学校转公后关注度仍高，适合看教学风格与片区适配",
+        "ideas": [
+          "学校辨识度高",
+          "中心城区学校",
+          "家庭节奏匹配重要"
+        ],
+        "hw": 3,
+        "stress": 3,
+        "path": [
+          "区内公办初中",
+          "中心城区升学路径"
+        ],
+        "pros": [
+          "品牌辨识度高",
+          "城市核心区位优势明显"
+        ],
+        "cons": [
+          "学校口径变化后需持续关注最新招生政策"
+        ],
+        "xhs": "娃哈哈小学 幼升小",
+        "sourceLevel": "ai-draft",
+        "sourceNote": "学校画像为AI总结，基础信息来自上城区小学信息页"
+      }
+    },
+    {
+      "name": "崇文实验学校",
+      "officialName": "杭州市崇文实验学校",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "崇文实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "上城区望江街道近江南路1号",
+      "phone": "0571-86560816",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "profile": {
+        "tag": "上城公办T2",
+        "slogan": "一贯制路径省心，综合素养导向",
+        "ideas": [
+          "九年一贯",
+          "综合能力培养",
+          "项目学习"
+        ],
+        "hw": 3,
+        "stress": 2,
+        "path": [
+          "校内直升/区内公办初中"
+        ],
+        "pros": [
+          "路径相对省心",
+          "综合活动丰富"
+        ],
+        "cons": [
+          "一贯制质量体验需看具体年级"
+        ],
+        "xhs": "崇文实验学校小学部 幼升小",
+        "sourceLevel": "ai-draft",
+        "sourceNote": "AI总结，待补官方来源"
+      },
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "崇文未来学校",
+      "officialName": "杭州市崇文未来学校",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "崇文未来学校 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市上城区甘王路3号",
+      "phone": "0571-86568201",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "时代小学",
+      "officialName": "杭州市时代小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "时代小学 幼升小",
+        "dianping": null
+      },
+      "address": "上城区小营街道建国中路锅子弄37号",
+      "phone": "0571-87066560",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "景华小学",
+      "officialName": "杭州市景华小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "景华小学 幼升小",
+        "dianping": null
+      },
+      "address": "凯旋街道景芳六区34幢",
+      "phone": "0571-56076628",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "景和小学",
+      "officialName": "杭州市景和小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "景和小学 幼升小",
+        "dianping": null
+      },
+      "address": "四季青街道景芳路1号",
+      "phone": "0571-56757883",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "杭州天地实验小学",
+      "officialName": "杭州天地实验小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州天地实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "望江街道徐家埠路50号",
+      "phone": "0571-56270311",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "杭州师范大学东城小学",
+      "officialName": "杭州师范大学东城小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州师范大学东城小学 幼升小",
+        "dianping": null
+      },
+      "address": "艺苑校区：九堡街道金禾街158号 科苑校区：九堡街道仁爱路66号",
+      "phone": "0571-28188910,28277531",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "杭州师范大学东城第二小学",
+      "officialName": "杭州师范大学东城第二小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州师范大学东城第二小学 幼升小",
+        "dianping": null
+      },
+      "address": "九堡街道杭乔路38号",
+      "phone": "0571-28254010",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "杭州师范大学第一附属小学",
+      "officialName": "杭州师范大学第一附属小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州师范大学第一附属小学 幼升小",
+        "dianping": null
+      },
+      "address": "清波街道四宜路180号",
+      "phone": "0571-87071981",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "杭州师范大学附属丁兰实验学校",
+      "officialName": "杭州师范大学附属丁兰实验学校",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州师范大学附属丁兰实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "兰园校区：丁兰街道环丁路925号 雅园校区：丁兰街道环丁路751号",
+      "phone": "0571-28315142",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "杭州新世纪外国语学校",
+      "officialName": "杭州新世纪外国语学校",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州新世纪外国语学校 幼升小",
+        "dianping": null
+      },
+      "address": "小营街道清吟街128号",
+      "phone": "0571-86593776",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "profile": {
+        "tag": "上城公办T2",
+        "slogan": "外语特色与国际理解方向清晰，家长关注度长期稳定",
+        "ideas": [
+          "外语特色",
+          "国际理解课程",
+          "学校品牌辨识度较高"
+        ],
+        "hw": 3,
+        "stress": 3,
+        "path": [
+          "区内公办初中",
+          "外语特色发展路径"
+        ],
+        "pros": [
+          "外语方向明确",
+          "学校历史口碑基础较好"
+        ],
+        "cons": [
+          "转公后口径需结合最新招生细则理解"
+        ],
+        "xhs": "杭州新世纪外国语学校 幼升小",
+        "sourceLevel": "ai-draft",
+        "sourceNote": "学校画像为AI总结，基础信息来自上城区小学信息页"
+      }
+    },
+    {
+      "name": "杭州春芽实验学校",
+      "officialName": "杭州春芽实验学校",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州春芽实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "凯旋街道景芳四区24号",
+      "phone": "0571-86032191",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "杭州采荷第三小学",
+      "officialName": "杭州采荷第三小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州采荷第三小学 幼升小",
+        "dianping": null
+      },
+      "address": "采荷街道经纬路1号",
+      "phone": "0571-58123164",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "江锦小学",
+      "officialName": "杭州市江锦小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "江锦小学 幼升小",
+        "dianping": null
+      },
+      "address": "四季青街道百安路1号",
+      "phone": "0571-58123156",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "浙江大学华家池子弟小学",
+      "officialName": "浙江大学华家池子弟小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "浙江大学华家池子弟小学 幼升小",
+        "dianping": null
+      },
+      "address": "凯旋街道凯旋路258号",
+      "phone": "0571-86971007",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "浙江师范大学附属丁蕙实验小学",
+      "officialName": "浙江师范大学附属丁蕙实验小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "浙江师范大学附属丁蕙实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "本部：丁兰街道华鹤街851号 临风书院：丁兰街道三义路59号",
+      "phone": "0571-86013088",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "滨江第一小学",
+      "officialName": "杭州市滨江第一小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "滨江第一小学 幼升小",
+        "dianping": null
+      },
+      "address": "采荷街道观音塘小区下车路38-1",
+      "phone": "0571-86067903",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "澎博小学",
+      "officialName": "杭州市澎博小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "澎博小学 幼升小",
+        "dianping": null
+      },
+      "address": "彭埠街道九州路355号",
+      "phone": "0571-86637368",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "澎汇小学",
+      "officialName": "杭州市澎汇小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "澎汇小学 幼升小",
+        "dianping": null
+      },
+      "address": "彭埠街道红建街528号",
+      "phone": "0571-56601612",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "澎致小学",
+      "officialName": "杭州市澎致小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "澎致小学 幼升小",
+        "dianping": null
+      },
+      "address": "彭埠街道杨柳郡园三区",
+      "phone": "0571-56269968",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "澎雅小学",
+      "officialName": "杭州市澎雅小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "澎雅小学 幼升小",
+        "dianping": null
+      },
+      "address": "彭埠街道澎雅弄9号",
+      "phone": "0571-86051009",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "濮家小学",
+      "officialName": "杭州市濮家小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "濮家小学 幼升小",
+        "dianping": null
+      },
+      "address": "万家校区：闸弄口街道万家花园欣和苑3幢 濮家校区 ：闸弄口街道濮家井19号",
+      "phone": "0571-58123303",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "笕新小学",
+      "officialName": "杭州市笕新小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "笕新小学 幼升小",
+        "dianping": null
+      },
+      "address": "笕桥街道机场路110号",
+      "phone": "0571-56970917",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "笕桥小学",
+      "officialName": "杭州市笕桥小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "笕桥小学 幼升小",
+        "dianping": null
+      },
+      "address": "笕桥街道机场路228号",
+      "phone": "0571-85141774",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "笕桥花园小学",
+      "officialName": "杭州市笕桥花园小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "笕桥花园小学 幼升小",
+        "dianping": null
+      },
+      "address": "笕桥街道明月桥路399号",
+      "phone": "0571-88065276",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "笕正小学",
+      "officialName": "杭州市笕正小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "笕正小学 幼升小",
+        "dianping": null
+      },
+      "address": "笕桥街道全冯弄28号",
+      "phone": "0571-56009332",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "紫阳小学",
+      "officialName": "杭州市紫阳小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "紫阳小学 幼升小",
+        "dianping": null
+      },
+      "address": "紫阳街道中山南路太庙巷7号",
+      "phone": "0571-86078067",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "胜利实验学校",
+      "officialName": "杭州市胜利实验学校",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "胜利实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "紫阳街道甬江路80号",
+      "phone": "0571-86560906",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "胜利实验笕成小学",
+      "officialName": "杭州市胜利实验笕成小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "胜利实验笕成小学 幼升小",
+        "dianping": null
+      },
+      "address": "上城区笕桥街道源聚支路5号",
+      "phone": "0571-81382285",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "胜利小学",
+      "officialName": "杭州市胜利小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "胜利小学 幼升小",
+        "dianping": null
+      },
+      "address": "新城校区：紫阳街道吟潮路350号 钱塘校区：望江街道富春路199号",
+      "phone": "0571-85073526",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "胜利山南小学",
+      "officialName": "杭州市胜利山南小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "胜利山南小学 幼升小",
+        "dianping": null
+      },
+      "address": "低段校区：南星街道复兴南苑12号高段校区：南星街道海月路2号",
+      "phone": "0571- 86033277",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "茅以升实验学校",
+      "officialName": "杭州市茅以升实验学校",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "茅以升实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "凯旋街道景芳二区35幢",
+      "phone": "0571-56970233",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "蒋筑英学校",
+      "officialName": "杭州市蒋筑英学校",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "蒋筑英学校 幼升小",
+        "dianping": null
+      },
+      "address": "紫阳街道金狮苑20号",
+      "phone": "0571-86771880",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "采荷第二小学",
+      "officialName": "杭州市采荷第二小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "采荷第二小学 幼升小",
+        "dianping": null
+      },
+      "address": "采荷街道凯旋路58-1号",
+      "phone": "0571-86989406",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "金都天长小学",
+      "officialName": "杭州市金都天长小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "金都天长小学 幼升小",
+        "dianping": null
+      },
+      "address": "紫阳街道候潮路6号",
+      "phone": "0571-86585972",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "钱江新城实验小学",
+      "officialName": "杭州市钱江新城实验小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "钱江新城实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "四季青街道太平门直街599号",
+      "phone": "0571-56970067",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "饮马井巷小学",
+      "officialName": "杭州市饮马井巷小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "饮马井巷小学 幼升小",
+        "dianping": null
+      },
+      "address": "小营街道河坊街灰团巷11号",
+      "phone": "0571-87806790-8001",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "高银巷小学",
+      "officialName": "杭州市高银巷小学",
+      "district": "shangcheng",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "高银巷小学 幼升小",
+        "dianping": null
+      },
+      "address": "清波街道后市街16号",
+      "phone": "0571-87804335",
+      "sourceUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "上城区小学信息",
+      "officialUrl": "https://www.hzsc.gov.cn/art/2024/10/8/art_1229772969_59079925.html"
+    },
+    {
+      "name": "杭州观成实验学校小学部",
+      "officialName": "杭州观成实验学校",
+      "address": "颜三路58号",
+      "phone": "85390309(小学部) / 85837732(初中部)",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2023/12/14/art_1229773179_152888.html",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 30.3276,
+      "lng": 120.1455,
+      "desc": "民办关注校，偏综合素养与校园活动体验",
+      "profile": {
+        "tag": "拱墅公办T2",
+        "philosophy": null,
+        "path": [
+          "校内衔接",
+          "区内公办初中"
+        ],
+        "pros": [
+          "公办路径更稳定",
+          "校园活动较多"
+        ],
+        "cons": [
+          "长期升学口碑仍需观察"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "学校画像为AI总结；基础信息已按拱墅区官方学校页校准"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杭州观成实验学校小学部 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "胜蓝实验小学",
+      "officialName": "杭州市胜蓝实验小学",
+      "address": "东新园孚信苑11号",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/6/13/art_1229773158_162082.html",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 30.3138,
+      "lng": 120.1613,
+      "desc": "拱墅区热门公办，课程均衡，社区认可度较高",
+      "profile": {
+        "tag": "拱墅公办T2",
+        "philosophy": null,
+        "path": [
+          "拱墅区公办初中"
+        ],
+        "pros": [
+          "稳健型选择",
+          "片区口碑较好"
+        ],
+        "cons": [
+          "细化招生口径待补充"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "AI总结，待补官方来源"
+      },
+      "links": {
+        "map": null,
+        "xhs": "胜蓝实验小学 幼升小",
+        "dianping": null
+      },
+      "phone": "85810913"
+    },
+    {
+      "name": "东园小学",
+      "officialName": "杭州市东园小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "东园小学 幼升小",
+        "dianping": null
+      },
+      "address": "树园新村25-1号",
+      "phone": "85188332、85185265",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "京都小学",
+      "officialName": "杭州市京都小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "京都小学 幼升小",
+        "dianping": null
+      },
+      "address": "流水西苑21幢",
+      "phone": "85459679、85456697",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "人民小学",
+      "officialName": "杭州市人民小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "人民小学 幼升小",
+        "dianping": null
+      },
+      "address": "新昌路100号",
+      "phone": "56623201、58111573",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "刀茅巷小学",
+      "officialName": "杭州市刀茅巷小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "刀茅巷小学 幼升小",
+        "dianping": null
+      },
+      "address": "回龙庙前50号",
+      "phone": "87292053",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "北秀小学",
+      "officialName": "杭州市北秀小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "北秀小学 幼升小",
+        "dianping": null
+      },
+      "address": "青城路9号",
+      "phone": "56261800",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "半山实验小学",
+      "officialName": "杭州市半山实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "半山实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "半山路2-1号",
+      "phone": "85836981、85836983",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "华东师范大学附属杭州学校",
+      "officialName": "华东师范大学附属杭州学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "华东师范大学附属杭州学校 幼升小",
+        "dianping": null
+      },
+      "address": "永固巷871号",
+      "phone": "87791691(小学部) / 87790592(初中部)",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "卖鱼桥小学",
+      "officialName": "杭州市卖鱼桥小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "卖鱼桥小学 幼升小",
+        "dianping": null
+      },
+      "address": "湖墅新村16号",
+      "phone": "81187390、86058560",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "和睦小学",
+      "officialName": "杭州市和睦小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "和睦小学 幼升小",
+        "dianping": null
+      },
+      "address": "和睦新村15幢1号",
+      "phone": "56331368、56252413",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "和苑实验小学",
+      "officialName": "杭州市和苑实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "和苑实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "竞舟北路120号",
+      "phone": "87171856",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "外语实验小学",
+      "officialName": "杭州市外语实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "外语实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "苑中路12号",
+      "phone": "88318944",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "大关中学附属小学",
+      "officialName": "杭州市大关中学附属小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "大关中学附属小学 幼升小",
+        "dianping": null
+      },
+      "address": "和睦路79-1号",
+      "phone": "56306521",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "大关小学",
+      "officialName": "杭州市大关小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "大关小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭塘路108号",
+      "phone": "88033512、18967129787",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "大关苑第一小学",
+      "officialName": "杭州市大关苑第一小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "大关苑第一小学 幼升小",
+        "dianping": null
+      },
+      "address": "大关西四苑22号",
+      "phone": "58102727-8007",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "大成实验学校",
+      "officialName": "杭州市大成实验学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "大成实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "三里亭路155号",
+      "phone": "86415252",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "天水小学",
+      "officialName": "杭州市天水小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "天水小学 幼升小",
+        "dianping": null
+      },
+      "address": "天水巷100号",
+      "phone": "85176494",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "安吉路实验学校",
+      "officialName": "杭州市安吉路实验学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "安吉路实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "直戒坛寺巷5号",
+      "phone": "85055946(小学部) / 85167491(初中部)",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "安吉路教育集团新天地实验学校",
+      "officialName": "杭州市安吉路教育集团新天地实验学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "安吉路教育集团新天地实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "新天地街499号",
+      "phone": "81112690(小学部) / 81113590(初中部)",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "安吉路新文实验小学",
+      "officialName": "杭州市安吉路新文实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "安吉路新文实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "新文路16号",
+      "phone": "88036693",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "小河小学",
+      "officialName": "杭州市小河小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "小河小学 幼升小",
+        "dianping": null
+      },
+      "address": "赵伍路111号",
+      "phone": "88268279、88268281",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "建新小学",
+      "officialName": "杭州市建新小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "建新小学 幼升小",
+        "dianping": null
+      },
+      "address": "古河巷19号",
+      "phone": "56236711",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "德天实验小学",
+      "officialName": "杭州市德天实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "德天实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "德胜东村50幢",
+      "phone": "28196304",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "德胜小学",
+      "officialName": "杭州市德胜小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "德胜小学 幼升小",
+        "dianping": null
+      },
+      "address": "德胜新村德苑路96号",
+      "phone": "88232919",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "拱宸桥小学",
+      "officialName": "杭州市拱宸桥小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "拱宸桥小学 幼升小",
+        "dianping": null
+      },
+      "address": "永庆路88号",
+      "phone": "88161670",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "文晖实验小学",
+      "officialName": "杭州市文晖实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文晖实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "祥符街道隐秀路430号",
+      "phone": "88908736",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "文津小学",
+      "officialName": "杭州市文津小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文津小学 幼升小",
+        "dianping": null
+      },
+      "address": "月亮路36号",
+      "phone": "56009553",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "文润小学",
+      "officialName": "杭州市文润小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文润小学 幼升小",
+        "dianping": null
+      },
+      "address": "康桥街道聚贤路99号",
+      "phone": "81187390、86058560",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "文渊小学",
+      "officialName": "杭州市文渊小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文渊小学 幼升小",
+        "dianping": null
+      },
+      "address": "学前路8号",
+      "phone": "88048785",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "文澜实验学校",
+      "officialName": "杭州市文澜实验学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文澜实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "风量街222号",
+      "phone": "56252977",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "文澜小学(文澜二小)",
+      "officialName": "杭州市文澜小学(文澜二小)",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文澜小学(文澜二小) 幼升小",
+        "dianping": null
+      },
+      "address": "隽逸路229号",
+      "phone": "88018578",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "文龙巷小学",
+      "officialName": "杭州市文龙巷小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文龙巷小学 幼升小",
+        "dianping": null
+      },
+      "address": "十五家园79号",
+      "phone": "85150979",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "新华实验小学",
+      "officialName": "杭州市新华实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "新华实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "叶青兜路18-1号",
+      "phone": "88010308",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "明德小学",
+      "officialName": "杭州市明德小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "明德小学 幼升小",
+        "dianping": null
+      },
+      "address": "半山路5号",
+      "phone": "88010264",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "明珠实验学校",
+      "officialName": "杭州市明珠实验学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "明珠实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "石祥路38号(小学部)东新路岳营巷60号(初中部)",
+      "phone": "88194520(小学部) / 85380491(初中部)",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "星澜小学",
+      "officialName": "杭州市星澜小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "星澜小学 幼升小",
+        "dianping": null
+      },
+      "address": "星桥街190号",
+      "phone": "56009560",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "景成实验学校",
+      "officialName": "杭州市景成实验学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "景成实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "北景园回龙路266号",
+      "phone": "88231623",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "朝晖实验小学",
+      "officialName": "杭州市朝晖实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "朝晖实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "朝晖一区50幢",
+      "phone": "56929314",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "杭州上海世外学校",
+      "officialName": "杭州上海世外学校",
+      "district": "gongshu",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州上海世外学校 幼升小",
+        "dianping": null
+      },
+      "address": "丽水路167号",
+      "phone": "89981598",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.gongshu.gov.cn/art/2025/6/25/art_1229549346_4365521.html",
+        "admissionSource": "official",
+        "lotteryNeeded": true,
+        "lotteryData": "2025年拱墅区官方公告：报名人数超过招生计划数，将于6月30日进行电脑派位录取。"
+      }
+    },
+    {
+      "name": "杭州育才登云小学",
+      "officialName": "杭州育才登云小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州育才登云小学 幼升小",
+        "dianping": null
+      },
+      "address": "棠子桥路79号",
+      "phone": "88020662",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "杭州锦绣 ·育才中学附属学校",
+      "officialName": "杭州锦绣 ·育才中学附属学校",
+      "district": "gongshu",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州锦绣 ·育才中学附属学校 幼升小",
+        "dianping": null
+      },
+      "address": "永固巷9号",
+      "phone": "88321803",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.gongshu.gov.cn/art/2025/6/25/art_1229549346_4365521.html",
+        "admissionSource": "official",
+        "lotteryNeeded": true,
+        "lotteryData": "2025年拱墅区官方公告：报名人数超过招生计划数，将于6月30日进行电脑派位录取。"
+      }
+    },
+    {
+      "name": "杭州长江实验小学",
+      "officialName": "杭州长江实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州长江实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "万寿亭街9号",
+      "phone": "56052902、56053382",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "树人小学",
+      "officialName": "杭州市树人小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "树人小学 幼升小",
+        "dianping": null
+      },
+      "address": "新昌路18号",
+      "phone": "56387290",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "桃源小学",
+      "officialName": "杭州市桃源小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "桃源小学 幼升小",
+        "dianping": null
+      },
+      "address": "桃源街603号",
+      "phone": "86655209",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "永天实验小学",
+      "officialName": "杭州市永天实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "永天实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "体育场路永康苑23号",
+      "phone": "85197765",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "永正实验学校",
+      "officialName": "杭州市永正实验学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "永正实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "三墩路70号",
+      "phone": "28886103(小学部)",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "求知小学",
+      "officialName": "杭州市求知小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "求知小学 幼升小",
+        "dianping": null
+      },
+      "address": "康宁街36号",
+      "phone": "88148306、88091475",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "江心岛小学",
+      "officialName": "杭州市江心岛小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "江心岛小学 幼升小",
+        "dianping": null
+      },
+      "address": "古河巷72号",
+      "phone": "56317163",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "浙大城市学院附属学校",
+      "officialName": "浙大城市学院附属学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "浙大城市学院附属学校 幼升小",
+        "dianping": null
+      },
+      "address": "树人街18号",
+      "phone": "81960826",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "浙江省教育科学研究院附属小学",
+      "officialName": "浙江省教育科学研究院附属小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "浙江省教育科学研究院附属小学 幼升小",
+        "dianping": null
+      },
+      "address": "建工路88号",
+      "phone": "58237705",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "浙江省杭州第十四中学附属学校",
+      "officialName": "浙江省杭州第十四中学附属学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "浙江省杭州第十四中学附属学校 幼升小",
+        "dianping": null
+      },
+      "address": "龙腾街501号",
+      "phone": "88375660、88035817",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "现代实验小学",
+      "officialName": "杭州市现代实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "现代实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "绍兴路现代名苑4栋",
+      "phone": "86695180",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "申花小学",
+      "officialName": "杭州市申花小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "申花小学 幼升小",
+        "dianping": null
+      },
+      "address": "申花路301号",
+      "phone": "88033820、88038862",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "祥符小学",
+      "officialName": "杭州市祥符小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "祥符小学 幼升小",
+        "dianping": null
+      },
+      "address": "祥符路18号",
+      "phone": "86793080",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "福山外国语小学",
+      "officialName": "杭州市福山外国语小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "福山外国语小学 幼升小",
+        "dianping": null
+      },
+      "address": "夏莲路218号",
+      "phone": "28888608",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "育才京杭小学",
+      "officialName": "杭州市育才京杭小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "育才京杭小学 幼升小",
+        "dianping": null
+      },
+      "address": "赵伍路288号",
+      "phone": "88176526",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "育才大城北学校",
+      "officialName": "杭州市育才大城北学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "育才大城北学校 幼升小",
+        "dianping": null
+      },
+      "address": "顾扬路518号",
+      "phone": "87978803(小学部) / 87990965(初中部)",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "莫干山路小学",
+      "officialName": "杭州市莫干山路小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "莫干山路小学 幼升小",
+        "dianping": null
+      },
+      "address": "莫干山路752弄",
+      "phone": "87383240",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "观成武林小学",
+      "officialName": "杭州市观成武林小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "观成武林小学 幼升小",
+        "dianping": null
+      },
+      "address": "新西路230号",
+      "phone": "86836710、19157932375",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "运河湾实验学校",
+      "officialName": "杭州市运河湾实验学校",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "运河湾实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "筑研路99号",
+      "phone": "88038969",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "长寿桥小学",
+      "officialName": "杭州市长寿桥小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "长寿桥小学 幼升小",
+        "dianping": null
+      },
+      "address": "孩儿巷234号",
+      "phone": "56058809",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "长寿桥岳帅小学",
+      "officialName": "杭州市长寿桥岳帅小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "长寿桥岳帅小学 幼升小",
+        "dianping": null
+      },
+      "address": "长岳街28号",
+      "phone": "56317301",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "长阳小学",
+      "officialName": "杭州市长阳小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "长阳小学 幼升小",
+        "dianping": null
+      },
+      "address": "广业街299号",
+      "phone": "88232962",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "长青小学",
+      "officialName": "杭州市长青小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "长青小学 幼升小",
+        "dianping": null
+      },
+      "address": "再行路211号",
+      "phone": "81605683",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "青蓝小学",
+      "officialName": "杭州市青蓝小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "青蓝小学 幼升小",
+        "dianping": null
+      },
+      "address": "东清巷66号",
+      "phone": "88890053",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "青蓝青华实验小学",
+      "officialName": "杭州市青蓝青华实验小学",
+      "district": "gongshu",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "青蓝青华实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭玻街529号",
+      "phone": "56750059",
+      "sourceUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "拱墅区教育概况",
+      "officialUrl": "https://www.gongshu.gov.cn/art/2024/8/12/art_1229493430_59081773.html"
+    },
+    {
+      "name": "杭州二中白马湖学校小学部",
+      "officialName": "杭州二中白马湖学校",
+      "address": "滨江区浦沿街道滨文路188号",
+      "phone": "86798900",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2024/6/12/art_1229514336_59072372.html",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2024/6/12/art_1229514336_59072372.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "校名与地址来自滨江区 2024 年小学信息页；电话来自滨江区学校官方页",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T2",
+      "lat": 30.1785,
+      "lng": 120.2057,
+      "desc": "滨江关注校，硬件条件较新，科技氛围明显",
+      "profile": {
+        "tag": "滨江公办T2",
+        "philosophy": null,
+        "path": [
+          "滨江区公办初中"
+        ],
+        "pros": [
+          "滨江板块关注高",
+          "硬件较新"
+        ],
+        "cons": [
+          "长期升学口碑仍需观察"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "AI总结，待补官方来源"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杭州二中白马湖学校小学部 幼升小",
+        "dianping": null
+      }
+    },
+    {
+      "name": "东冠小学",
+      "officialName": "杭州市东冠小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "东冠小学 幼升小",
+        "dianping": null
+      },
+      "address": "滨江区浦沿街道东冠社区431号",
+      "phone": "0571-56131830",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "丹枫实验小学",
+      "officialName": "杭州市丹枫实验小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "丹枫实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区丹枫路520号",
+      "phone": "0571-56073799",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "创意城小学",
+      "officialName": "杭州市创意城小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "创意城小学 幼升小",
+        "dianping": null
+      },
+      "address": "滨江区长河街道腾龙路601号",
+      "phone": "0571-87779574",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "北塘河小学",
+      "officialName": "杭州市北塘河小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "北塘河小学 幼升小",
+        "dianping": null
+      },
+      "address": "固陵路198号",
+      "phone": "0571-86624133",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "博文小学",
+      "officialName": "杭州市博文小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "博文小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区立业路298号",
+      "phone": "0571-88395667",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "奥体实验小学",
+      "officialName": "杭州市奥体实验小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "奥体实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "浙江省杭州市滨江区扬帆路330号",
+      "phone": "0571-87779569",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "彩虹城小学",
+      "officialName": "杭州市彩虹城小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "彩虹城小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区伟业路501号",
+      "phone": "0571-56131975",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "春晖小学",
+      "officialName": "杭州市春晖小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "春晖小学 幼升小",
+        "dianping": null
+      },
+      "address": "滨江区东流路55号",
+      "phone": "13732290852",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "江晖小学",
+      "officialName": "杭州市江晖小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "江晖小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区八图园巷5号",
+      "phone": "0571-85155752",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "浦沿小学",
+      "officialName": "杭州市浦沿小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "浦沿小学 幼升小",
+        "dianping": null
+      },
+      "address": "滨江区浦沿街道慧炬街376号 杭州竺可桢学校（过渡）",
+      "phone": "0571-56696615",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "滨和小学",
+      "officialName": "杭州市滨和小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "滨和小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区新联路18号",
+      "phone": "0571-87831949",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "滨文小学",
+      "officialName": "杭州市滨文小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "滨文小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区滨文路670号",
+      "phone": "0571-56696729 、0571-56696606",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "滨江实验小学",
+      "officialName": "杭州市滨江实验小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "滨江实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "滨江区平乐街80号",
+      "phone": "0571-86608606",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "硅谷小学",
+      "officialName": "杭州市硅谷小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "硅谷小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区浦沿街道常学街230号",
+      "phone": "0571-56280781",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "西兴实验小学",
+      "officialName": "杭州市西兴实验小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "西兴实验小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区西兴街道官河路9号",
+      "phone": "0571-88102133",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "钱塘实验小学（时代校区）",
+      "officialName": "杭州市钱塘实验小学（时代校区）",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "钱塘实验小学（时代校区） 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区长河街道长一社区花园周369号",
+      "phone": "0571-56690613",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "钱塘实验小学（本部）",
+      "officialName": "杭州市钱塘实验小学（本部）",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "钱塘实验小学（本部） 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区东信大道1328号",
+      "phone": "0571—58113017",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "钱江湾小学",
+      "officialName": "杭州市钱江湾小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "钱江湾小学 幼升小",
+        "dianping": null
+      },
+      "address": "杭州市滨江区西浦路1453号",
+      "phone": "0571-56801166",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "长河小学",
+      "officialName": "杭州市长河小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "长河小学 幼升小",
+        "dianping": null
+      },
+      "address": "浙江省杭州市滨江区长河街道双庙路23号",
+      "phone": "0571-88893699、0571-88893670",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "闻涛小学",
+      "officialName": "杭州市闻涛小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "闻涛小学 幼升小",
+        "dianping": null
+      },
+      "address": "浙江省杭州市滨江区新月路570号",
+      "phone": "0571-86622175",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "高教园小学",
+      "officialName": "杭州市高教园小学",
+      "district": "binjiang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "高教园小学 幼升小",
+        "dianping": null
+      },
+      "address": "滨江区浦沿街道生地街188号，明乐府北面",
+      "phone": "0571-56073090",
+      "sourceUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "滨江区小学信息",
+      "officialUrl": "https://www.hhtz.gov.cn/art/2025/5/30/art_1229879565_59076101.html"
+    },
+    {
+      "name": "杭州余杭区育海外国语学校",
+      "officialName": "杭州余杭区育海外国语学校",
+      "address": "余杭区闲林街道闲湖城255号",
+      "phone": "88686118",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "校名与地址来自余杭区 2024 年义务教育学校名录；电话参考杭州市教育局历史学校名录页",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": null,
+      "lng": null,
+      "desc": "余杭区民办外语向学校，适合作为民办备选重点关注",
+      "profile": {
+        "tag": "余杭民办T2",
+        "philosophy": null,
+        "path": [
+          "民办初中备选",
+          "区内初中升学"
+        ],
+        "pros": [
+          "学校定位清晰",
+          "适合优先看外语方向的家庭"
+        ],
+        "cons": [
+          "收费与真实办学风格待核实"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "基于2025余杭区官方名单补齐，画像为AI总结"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杭州余杭区育海外国语学校 幼升小",
+        "dianping": null
+      },
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": true,
+        "lotteryData": "2025年余杭区官方公告：报名人数超过招生计划数，将于6月30日进行电脑派位录取。"
+      }
+    },
+    {
+      "name": "杭州狄邦文理学校",
+      "officialName": "杭州狄邦文理学校",
+      "address": "浙江省杭州市余杭区国文路1号",
+      "phone": "0571-56395678",
+      "officialUrl": "https://www.rkcshz.cn/zh/",
+      "sourceUrl": "https://www.rkcshz.cn/zh/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC/",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "地址与电话来自学校官网“联系我们”页面",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": null,
+      "lng": null,
+      "desc": "余杭民办综合学校，适合作为双语和综合发展方向的备选",
+      "profile": {
+        "tag": "余杭民办T2",
+        "philosophy": null,
+        "path": [
+          "双语/国际化路径",
+          "区内初中升学"
+        ],
+        "pros": [
+          "定位相对综合",
+          "适合多方向家庭初筛"
+        ],
+        "cons": [
+          "真实课程与费用待核实"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "基于2025余杭区官方名单补齐，画像为AI总结"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杭州狄邦文理学校 幼升小",
+        "dianping": null
+      },
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年余杭区官方公告：报名资格审核通过的学生数未超过学校招生计划数，资格审核通过的学生全部录取。"
+      },
+      "tuition": {
+        "term": 78000,
+        "note": "2025-2026学年小学学费；住宿费6300元/学期（5天寄宿）、9450元/学期（7天寄宿）。来源：学校2025-2026学年幼升小招生简章。",
+        "sourceLevel": "official",
+        "sourceUrl": "https://www.rkcshz.cn/zh/2025/06/03/10833/"
+      }
+    },
+    {
+      "name": "杭州英特外国语学校",
+      "officialName": "杭州市余杭区杭州英特外国语学校",
+      "address": "余杭区余杭街道上和路1号",
+      "officialUrl": "https://www.hefls.net/",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": null,
+      "lng": null,
+      "desc": "余杭辨识度较高的民办外国语学校，常见于国际化与双语路径备选",
+      "profile": {
+        "tag": "余杭民办T2",
+        "philosophy": null,
+        "path": [
+          "双语/国际化路径",
+          "区内初中升学"
+        ],
+        "pros": [
+          "辨识度较高",
+          "适合看双语方向的家庭"
+        ],
+        "cons": [
+          "具体收费与升学风格待核实"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "基于2025余杭区官方名单补齐，画像为AI总结"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杭州英特外国语学校 幼升小",
+        "dianping": null
+      },
+      "phone": "89081601",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年余杭区官方公告：报名资格审核通过的学生数未超过学校招生计划数，资格审核通过的学生全部录取。"
+      }
+    },
+    {
+      "name": "杭州蕙兰未来科技城学校",
+      "officialName": "杭州蕙兰未来科技城学校",
+      "address": "余杭区余杭街道钱学森路68号",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": null,
+      "lng": null,
+      "desc": "未来科技城板块民办学校，更适合关注板块发展与通勤的家庭",
+      "profile": {
+        "tag": "余杭民办T2",
+        "philosophy": null,
+        "path": [
+          "民办初中备选",
+          "区内初中升学"
+        ],
+        "pros": [
+          "适合未来科技城周边家庭",
+          "板块匹配度强"
+        ],
+        "cons": [
+          "收费与办学细节待核实"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "基于2025余杭区官方名单补齐，画像为AI总结"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杭州蕙兰未来科技城学校 幼升小",
+        "dianping": null
+      },
+      "phone": "89308535",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年余杭区官方公告：报名资格审核通过的学生数未超过学校招生计划数，资格审核通过的学生全部录取。"
+      }
+    },
+    {
+      "name": "杭州市余杭区金成外国语小学",
+      "officialName": "杭州市余杭区金成外国语小学",
+      "address": "余杭区闲林街道天目山西路203号",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T2",
+      "lat": null,
+      "lng": null,
+      "desc": "余杭区民办外国语小学，适合重视英语环境的家庭关注",
+      "profile": {
+        "tag": "余杭民办T2",
+        "philosophy": null,
+        "path": [
+          "区内初中升学",
+          "民办备选"
+        ],
+        "pros": [
+          "定位明确",
+          "适合看英语环境的家庭"
+        ],
+        "cons": [
+          "口碑细节与收费待核实"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "基于2025余杭区官方名单补齐，画像为AI总结"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杭州市余杭区金成外国语小学 幼升小",
+        "dianping": null
+      },
+      "phone": "88690860",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年余杭区官方公告：报名资格审核通过的学生数未超过学校招生计划数，资格审核通过的学生全部录取。"
+      }
+    },
+    {
+      "name": "东塘小学",
+      "officialName": "杭州市余杭区东塘小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "东塘小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区仁和街道东塘村洪家舍7号",
+      "phone": "86300015",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "东方未来学校",
+      "officialName": "杭州市余杭区东方未来学校",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "东方未来学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道金家渡北路王家塘路180号",
+      "phone": "89005002",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "东澜外国语学校",
+      "officialName": "杭州市余杭区东澜外国语学校",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "东澜外国语学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区仁和街道杭州市余杭区仁和街道仁和大道50号",
+      "phone": "86392310",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "东风小学",
+      "officialName": "杭州市余杭区东风小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "东风小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区仁和街道树东路15号",
+      "phone": "86301618",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "中泰小学",
+      "officialName": "杭州市余杭区中泰小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "中泰小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区中泰街道中泰路37号",
+      "phone": "88636379",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "中泰武术学校",
+      "officialName": "杭州市余杭区中泰武术学校",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "中泰武术学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区中泰街道八角亭58号",
+      "phone": "88639322",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "云会小学",
+      "officialName": "杭州市余杭区云会小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "云会小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区仁和街道西南山北路66号",
+      "phone": "86330261",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "五常小学",
+      "officialName": "杭州市余杭区五常小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "五常小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区五常街道天竺路8号",
+      "phone": "88731269",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "仁和小学",
+      "officialName": "杭州市余杭区仁和小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "仁和小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区仁和街道求学路2号",
+      "phone": "86390905",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "仓前云溪小学",
+      "officialName": "杭州市余杭区仓前云溪小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "仓前云溪小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区仓前街道留泽街398号",
+      "phone": "89002001",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "仓前小学",
+      "officialName": "杭州市余杭区仓前小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "仓前小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区仓前街道仓兴街348-2号",
+      "phone": "88663312",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "余杭区杭州绿城育华桃花源学校",
+      "officialName": "余杭区杭州绿城育华桃花源学校",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "余杭区杭州绿城育华桃花源学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区中泰街道梅花山36-1号",
+      "phone": "88653618",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "余杭蔚澜学校",
+      "officialName": "杭州市余杭蔚澜学校",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "余杭蔚澜学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区五常街道高教路968-6",
+      "phone": "88731515",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "南湖实验学校",
+      "officialName": "杭州市余杭区南湖实验学校",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "南湖实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区中泰街道南峰村施家头8号",
+      "phone": "暂无",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "大禹小学",
+      "officialName": "杭州市余杭区大禹小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "大禹小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区余杭街道城东路298号",
+      "phone": "88662206",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "天空之城小学",
+      "officialName": "杭州市余杭区天空之城小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "天空之城小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区五常街道杭州市余杭区五常街道天空之城小区云汇城19幢",
+      "phone": "88777870",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "太炎小学",
+      "officialName": "杭州市余杭区太炎小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "太炎小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区余杭街道方井头8号",
+      "phone": "88662030",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "径山双溪小学",
+      "officialName": "杭州市余杭区径山双溪小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "径山双溪小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区径山镇水磨苑106号",
+      "phone": "88501570",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "径山潘板小学",
+      "officialName": "杭州市余杭区径山潘板小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "径山潘板小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区径山镇塘东2-1",
+      "phone": "57876173",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "径山长乐小学",
+      "officialName": "杭州市余杭区径山长乐小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "径山长乐小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区径山镇长生路31号",
+      "phone": "88601006",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "文化村实验学校",
+      "officialName": "杭州市余杭区文化村实验学校",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "文化村实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道良渚文化村社区劝学里1号",
+      "phone": "暂无",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "未来科技城海创小学",
+      "officialName": "杭州市余杭区未来科技城海创小学",
+      "address": "余杭区五常街道杭州市余杭区五常街道永寿街128号",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": 30.2868,
+      "lng": 119.9992,
+      "desc": "余杭新城板块学校，适合关注通勤与新校成长性的家庭",
+      "profile": {
+        "tag": "余杭公办T3",
+        "philosophy": null,
+        "path": [
+          "余杭区公办初中"
+        ],
+        "pros": [
+          "适合区域居住家庭",
+          "新校成长空间大"
+        ],
+        "cons": [
+          "历史口碑积累较少"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "AI总结，待补官方来源"
+      },
+      "links": {
+        "map": null,
+        "xhs": "未来科技城海创小学 幼升小",
+        "dianping": null
+      },
+      "phone": "85853390",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "未来科技城海曙小学",
+      "officialName": "杭州市余杭区未来科技城海曙小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "未来科技城海曙小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区五常街道联创街2-2",
+      "phone": "87165713",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "杜甫小学",
+      "officialName": "杭州市余杭区杜甫小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杜甫小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道杜甫村美学街1210号",
+      "phone": "暂无",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "绿城育华亲亲学校",
+      "officialName": "杭州市余杭区绿城育华亲亲学校",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "绿城育华亲亲学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道朱家路2号",
+      "phone": "89003509",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "profile": {
+        "tag": "余杭民办T2",
+        "slogan": "绿城育华系余杭民办校，常被纳入品质型家庭备选",
+        "ideas": [
+          "绿城育华系",
+          "民办备选",
+          "社区配套"
+        ],
+        "hw": 3,
+        "stress": 3,
+        "path": [
+          "区内初中升学",
+          "民办备选"
+        ],
+        "pros": [
+          "品牌辨识度较强",
+          "适合重视稳定办学风格的家庭"
+        ],
+        "cons": [
+          "收费与校区差异待核实"
+        ],
+        "xhs": "杭州余杭绿城育华亲亲学校 幼升小",
+        "sourceLevel": "ai-draft",
+        "sourceNote": "基于2025余杭区官方名单补齐，画像为AI总结"
+      },
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年余杭区官方公告：报名资格审核通过的学生数未超过学校招生计划数，资格审核通过的学生全部录取。"
+      }
+    },
+    {
+      "name": "绿城育华翡翠城学校",
+      "officialName": "杭州市余杭区绿城育华翡翠城学校",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "绿城育华翡翠城学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区闲林街道高教路89号",
+      "phone": "89383908",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "profile": {
+        "tag": "余杭民办T2",
+        "slogan": "绿城育华系余杭民办校，板块与社区属性明显",
+        "ideas": [
+          "绿城育华系",
+          "社区型民办",
+          "板块适配"
+        ],
+        "hw": 3,
+        "stress": 3,
+        "path": [
+          "区内初中升学",
+          "民办备选"
+        ],
+        "pros": [
+          "适合翡翠城周边家庭",
+          "品牌辨识度较强"
+        ],
+        "cons": [
+          "具体升学与收费待核实"
+        ],
+        "xhs": "杭州余杭绿城育华翡翠城学校 幼升小",
+        "sourceLevel": "ai-draft",
+        "sourceNote": "基于2025余杭区官方名单补齐，画像为AI总结"
+      },
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年余杭区官方公告：报名资格审核通过的学生数未超过学校招生计划数，资格审核通过的学生全部录取。"
+      }
+    },
+    {
+      "name": "杭州师范大学附属未来科技城小学",
+      "officialName": "杭州师范大学附属未来科技城小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "杭州师范大学附属未来科技城小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区仓前街道杭州市余杭区景腾北路",
+      "phone": "暂无",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "杭州新明半岛英才学校",
+      "officialName": "杭州市余杭区新明半岛英才学校",
+      "address": "余杭区中泰街道新明半岛商住区内",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "余杭社区型民办学校，适合优先考虑居住板块与通勤便利性的家庭",
+      "profile": {
+        "tag": "余杭民办T3",
+        "philosophy": null,
+        "path": [
+          "区内初中升学",
+          "民办备选"
+        ],
+        "pros": [
+          "更适合周边家庭就近关注",
+          "补充备选价值高"
+        ],
+        "cons": [
+          "学校细化口碑待核实"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "基于2025余杭区官方名单补齐，画像为AI总结"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杭州新明半岛英才学校 幼升小",
+        "dianping": null
+      },
+      "phone": "88660301",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年余杭区官方公告：报名资格审核通过的学生数未超过学校招生计划数，资格审核通过的学生全部录取。"
+      }
+    },
+    {
+      "name": "杭州维翰学校",
+      "officialName": "杭州市余杭区维翰学校",
+      "address": "余杭区五常街道荆长大道533号",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "余杭民办学校，适合作为差异化办学方向的补充备选",
+      "profile": {
+        "tag": "余杭民办T3",
+        "philosophy": null,
+        "path": [
+          "区内初中升学",
+          "民办备选"
+        ],
+        "pros": [
+          "适合扩大备选池",
+          "可结合通勤一起看"
+        ],
+        "cons": [
+          "市场信息相对较少"
+        ],
+        "sourceLevel": "ai-draft",
+        "sourceNote": "基于2025余杭区官方名单补齐，画像为AI总结"
+      },
+      "links": {
+        "map": null,
+        "xhs": "杭州维翰学校 幼升小",
+        "dianping": null
+      },
+      "phone": "88665902",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年余杭区官方公告：报名资格审核通过的学生数未超过学校招生计划数，资格审核通过的学生全部录取。"
+      }
+    },
+    {
+      "name": "海辰小学",
+      "officialName": "杭州市余杭区海辰小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "海辰小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区仓前街道白龙潭28号",
+      "phone": "89057706",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "狄邦文理学校",
+      "officialName": "杭州市余杭区狄邦文理学校",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "狄邦文理学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区中泰街道国文路1号",
+      "phone": "56395678",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": false,
+        "lotteryData": "2025年余杭区官方公告：报名资格审核通过的学生数未超过学校招生计划数，资格审核通过的学生全部录取。"
+      },
+      "tuition": {
+        "term": 78000,
+        "note": "2025-2026学年小学学费；住宿费6300元/学期（5天寄宿）、9450元/学期（7天寄宿）。来源：学校2025-2026学年幼升小招生简章。",
+        "sourceLevel": "official",
+        "sourceUrl": "https://www.rkcshz.cn/zh/2025/06/03/10833/"
+      }
+    },
+    {
+      "name": "玉鸟小学",
+      "officialName": "杭州市余杭区玉鸟小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "玉鸟小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道杜甫社区美学街158号",
+      "phone": "暂无",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "理想实验学校",
+      "officialName": "杭州市余杭区理想实验学校",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "理想实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道杭州市余杭区玉鸟街与杜文路交叉口西北180米",
+      "phone": "88771126",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "瓶窑彭公小学",
+      "officialName": "杭州市余杭区瓶窑彭公小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "瓶窑彭公小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区瓶窑镇周家畈62号",
+      "phone": "88523567",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "瓶窑第一小学",
+      "officialName": "杭州市余杭区瓶窑第一小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "瓶窑第一小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区瓶窑镇凤溪路388号",
+      "phone": "88541870",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "瓶窑第三小学",
+      "officialName": "杭州市余杭区瓶窑第三小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "瓶窑第三小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区瓶窑镇港渠路61号",
+      "phone": "57891287",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "瓶窑第二小学",
+      "officialName": "杭州市余杭区瓶窑第二小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "瓶窑第二小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区瓶窑镇南村97号",
+      "phone": "86287089",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "瓶窑长命小学",
+      "officialName": "杭州市余杭区瓶窑长命小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "瓶窑长命小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区瓶窑镇观山路33－3号",
+      "phone": "88531281",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "百丈小学",
+      "officialName": "杭州市余杭区百丈小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "百丈小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区百丈镇竹城路58号",
+      "phone": "88561921",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "禹航实验学校",
+      "officialName": "杭州市余杭区禹航实验学校",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "禹航实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区余杭街道禹学巷8号",
+      "phone": "暂无",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "育才小学",
+      "officialName": "杭州市余杭区育才小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "育才小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区余杭街道金星社区梅家桥177号",
+      "phone": "暂无",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "育海外国语学校",
+      "officialName": "杭州市余杭区育海外国语学校",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "育海外国语学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区闲林街道闲湖城255号",
+      "phone": "88680527",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.yuhang.gov.cn/art/2025/6/25/art_1229511764_4365508.html",
+        "admissionSource": "official",
+        "lotteryNeeded": true,
+        "lotteryData": "2025年余杭区官方公告：报名人数超过招生计划数，将于6月30日进行电脑派位录取。"
+      }
+    },
+    {
+      "name": "舟枕小学",
+      "officialName": "杭州市余杭区舟枕小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "舟枕小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区余杭街道西杨梅岭11号",
+      "phone": "88660401",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "良渚七贤小学",
+      "officialName": "杭州市余杭区良渚七贤小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "良渚七贤小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道浥浪桥2号",
+      "phone": "89189097",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "良渚古墩路小学",
+      "officialName": "杭州市余杭区良渚古墩路小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "良渚古墩路小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道金汇南路7号",
+      "phone": "88583353",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "良渚实验学校",
+      "officialName": "杭州市余杭区良渚实验学校",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "良渚实验学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道莫干山路1795号",
+      "phone": "88762295",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "良渚杭行路小学",
+      "officialName": "杭州市余杭区良渚杭行路小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "良渚杭行路小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道杭行路1600号",
+      "phone": "88771766",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "良渚沈括小学",
+      "officialName": "杭州市余杭区良渚沈括小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "良渚沈括小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道良运街399号",
+      "phone": "89009799",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "良渚第一小学",
+      "officialName": "杭州市余杭区良渚第一小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "良渚第一小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道东方西路121号",
+      "phone": "88778418",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "良渚第三小学",
+      "officialName": "杭州市余杭区良渚第三小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "良渚第三小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道安溪路2号",
+      "phone": "88791159",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "良渚第二小学",
+      "officialName": "杭州市余杭区良渚第二小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "良渚第二小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区良渚街道博园西路222号",
+      "phone": "88783568",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "蒲公英学校",
+      "officialName": "杭州市余杭区蒲公英学校",
+      "district": "yuhang",
+      "type": "pri",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "蒲公英学校 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区瓶窑镇浙江省杭州市余杭区长命村",
+      "phone": "88532881",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "闲林和睦小学",
+      "officialName": "杭州市余杭区闲林和睦小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "闲林和睦小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区闲林街道良睦路蒋家桥",
+      "phone": "89089030",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "闲林小学",
+      "officialName": "杭州市余杭区闲林小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "闲林小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区闲林街道文卫路26-1号",
+      "phone": "88686769",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "鸬鸟小学",
+      "officialName": "杭州市余杭区鸬鸟小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "鸬鸟小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区鸬鸟镇碧山头1-3号",
+      "phone": "88576232",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    },
+    {
+      "name": "黄湖小学",
+      "officialName": "杭州市余杭区黄湖小学",
+      "district": "yuhang",
+      "type": "pub",
+      "tier": "T3",
+      "lat": null,
+      "lng": null,
+      "desc": "基础信息已按官方目录校准，学校画像待补充",
+      "links": {
+        "map": null,
+        "xhs": "黄湖小学 幼升小",
+        "dianping": null
+      },
+      "address": "余杭区黄湖镇育前路17号",
+      "phone": "88517289",
+      "sourceUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html",
+      "basicInfoSourceLevel": "official",
+      "basicInfoSourceNote": "余杭区义务教育学校名录",
+      "officialUrl": "https://www.yuhang.gov.cn/art/2024/8/16/art_1229511761_4291290.html"
+    }
+  ],
+  "TF": {},
+  "DN": {},
+  "pipelineMeta": {
+    "seedV1": null,
+    "officialExtract": null,
+    "structuredInput": null,
+    "officialStats": {
+      "rows": 0,
+      "matched": 0,
+      "updated": 0
+    },
+    "structuredStats": {
+      "rows": 0,
+      "matched": 0,
+      "updated": 0
+    }
+  }
+}

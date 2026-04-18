@@ -221,6 +221,33 @@ dataSource: {
 - 不接受“只给二手整理链接没有原 PDF”的 official 标注。
 - 如果 Google 受限，可用同关键词在官方站内检索补齐，但要写明替代路径。
 
+### 任务 F：杭州城市扩展工作流（固定记忆）
+
+当任务目标是“把杭州分站学校名单拉全，并把基础信息补对”时，优先按下面顺序执行：
+
+1. 先读取 `data/curation/hangzhou/sources_manifest.json`
+2. 从各区官方学校目录页抽取“学校主名单”，输出到 `data/curation/hangzhou/school_master_list_hangzhou.jsonl`
+3. 基础字段只先补：
+   - `officialName`
+   - `district`
+   - `type`
+   - `address`
+   - `phone`
+   - `sourceUrl`
+   - `basicInfoSourceLevel`
+4. 用官方目录抽取结果回填 `data/seed_v2_city_hangzhou.json`
+5. 已有热门学校画像保留；新增学校若暂无画像，不要伪造，交给前端详情兜底
+6. 完成后必须运行杭州 QA：
+   - `python3 backend/tools/check_hangzhou_seed.py`
+   - 检查是否存在缺 `district/type/address/sourceUrl` 的学校
+   - 检查是否有重复学校
+7. 最后再考虑补 `officialUrl / tuition / admission / profile`
+
+杭州工作流的原则：
+- 先做全名单和基础身份字段，再补招生和画像
+- 基础信息优先级高于画像文案
+- 允许学校画像缺失，但不允许基础身份字段错误
+
 ## 生产链路执行顺序（强制）
 
 当被要求“产学校数据”时，默认按以下顺序执行（即 E 与 D 合并）：
