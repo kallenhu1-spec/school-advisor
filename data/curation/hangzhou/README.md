@@ -55,8 +55,15 @@
 - 主控脚本：`scripts/run_hangzhou_night_shift.sh`
 - 主Agent计划脚本：`backend/tools/plan_hangzhou_night_shift.py`
 
-默认会在北京时间以下时段自动运行：
+默认会在北京时间每 2 小时自动运行一轮，当前时段为：
 
+- 09:30
+- 11:30
+- 13:30
+- 15:30
+- 17:30
+- 19:30
+- 21:30
 - 23:30
 - 01:30
 - 03:30
