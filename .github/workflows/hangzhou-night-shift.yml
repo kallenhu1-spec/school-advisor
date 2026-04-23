@@ -3,8 +3,10 @@ name: Hangzhou Night Shift
 on:
   schedule:
     - cron: '30 15 * * *'   # 北京时间 23:30
-    - cron: '30 18 * * *'   # 北京时间 02:30
+    - cron: '30 17 * * *'   # 北京时间 01:30
+    - cron: '30 19 * * *'   # 北京时间 03:30
     - cron: '30 21 * * *'   # 北京时间 05:30
+    - cron: '30 23 * * *'   # 北京时间 07:30
   workflow_dispatch:
     inputs:
       auto_curator:
