@@ -131,6 +131,65 @@ jobs:
           python3 backend/tools/build_hangzhou_school_directory.py > reports/night-shift/hangzhou/latest-build.json
           python3 backend/tools/check_hangzhou_seed.py > reports/night-shift/hangzhou/latest-qa-post.json
 
+      - name: Build Human Summary
+        run: |
+          python3 - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+
+          root = Path("reports/night-shift/hangzhou")
+          qa_path = root / "latest-qa-post.json"
+          if not qa_path.exists():
+              qa_path = root / "latest-qa.json"
+          qa = json.loads(qa_path.read_text(encoding="utf-8"))
+
+          plan_path = root / "latest-main-plan.md"
+          plan = plan_path.read_text(encoding="utf-8").strip() if plan_path.exists() else "主Agent计划待生成"
+          orchestrator_path = root / "latest-orchestrator.md"
+          orchestrator = orchestrator_path.read_text(encoding="utf-8").strip() if orchestrator_path.exists() else ""
+
+          run_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+          lines = [
+              f"# 杭州自动值守总结 - {run_time}",
+              "",
+              "## 本轮结果",
+              f"- 学校总数：{qa.get('schoolCount', 0)}",
+              f"- P0 缺失：{qa.get('missingBasicsCount', 0)}",
+              f"- 民办招生覆盖：{qa.get('privateAdmissionReadyCount', 0)}/{qa.get('privateSchoolCount', 0)}",
+              f"- 民办学费覆盖：{qa.get('privateTuitionReadyCount', 0)}/{qa.get('privateSchoolCount', 0)}",
+              f"- 画像缺失：{qa.get('profileMissingCount', 0)}",
+              "",
+              "## 本轮做了什么",
+              "- 重建了杭州 seed",
+              "- 跑了 QA 检查并生成主Agent计划",
+          ]
+
+          if (root / "latest-qa-post.json").exists():
+              lines.append("- 若开启 AUTO_DATA_CURATOR，也已执行 data-curator 并回跑 QA")
+
+          lines.extend(
+              [
+                  "",
+                  "## 本轮风险",
+                  f"- 基础字段阻断：{'有' if qa.get('missingBasicsCount', 0) > 0 or qa.get('duplicateKeys') else '无'}",
+                  f"- 招生覆盖缺口：{max(qa.get('privateSchoolCount', 0) - qa.get('privateAdmissionReadyCount', 0), 0)} 所",
+                  f"- 学费覆盖缺口：{max(qa.get('privateSchoolCount', 0) - qa.get('privateTuitionReadyCount', 0), 0)} 所",
+                  "",
+                  "## 下一步",
+                  "- 继续按主Agent计划推进最高优先级任务",
+                  "",
+                  "## 主Agent计划",
+                  plan,
+              ]
+          )
+
+          if orchestrator:
+              lines.extend(["", "## 主Agent补充说明", orchestrator])
+
+          (root / "latest-summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+          PY
+
       - name: Create Daily Sync Issue
         uses: actions/github-script@v7
         with:
@@ -139,19 +198,22 @@ jobs:
             const fs = require('fs');
             const path = 'reports/night-shift/hangzhou/latest-main-plan.md';
             const qaPath = 'reports/night-shift/hangzhou/latest-qa.json';
+            const summaryPath = 'reports/night-shift/hangzhou/latest-summary.md';
             const qa = JSON.parse(fs.readFileSync(qaPath, 'utf8'));
             const plan = fs.existsSync(path) ? fs.readFileSync(path, 'utf8') : '夜班计划文件待生成';
+            const summary = fs.existsSync(summaryPath) ? fs.readFileSync(summaryPath, 'utf8') : '本轮总结反馈待生成';
             const today = new Date().toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' });
             const title = `[Night Shift] 杭州数据值守 ${today}`;
             const body =
-              `## 杭州夜班自动值守已执行\n\n` +
+              `## 杭州自动值守已执行\n\n` +
               `- 学校总数：${qa.schoolCount}\n` +
               `- P0 缺失：${qa.missingBasicsCount}\n` +
               `- 民办招生覆盖：${qa.privateAdmissionReadyCount}/${qa.privateSchoolCount}\n` +
               `- 民办学费覆盖：${qa.privateTuitionReadyCount}/${qa.privateSchoolCount}\n` +
               `- 画像缺失：${qa.profileMissingCount}\n\n` +
+              `### 本轮总结反馈\n\n${summary}\n\n` +
               `### 主Agent日计划\n\n${plan}\n\n` +
-              `> 说明：这是夜间定时任务自动生成的日报。`;
+              `> 说明：这是定时任务自动生成的总结反馈与日报。`;
 
             const existing = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
