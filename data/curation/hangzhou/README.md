@@ -46,3 +46,34 @@
 - 基础信息优先使用官方目录页
 - 学校画像缺失时不要造假，用前端兜底展示
 - `ai-draft` 只用于画像，不用于基础身份字段
+
+## 夜班自动上班
+
+仓库已预留杭州夜班自动值守工作流：
+
+- 工作流文件：`.github/workflows/hangzhou-night-shift.yml`
+- 主控脚本：`scripts/run_hangzhou_night_shift.sh`
+- 主Agent计划脚本：`backend/tools/plan_hangzhou_night_shift.py`
+
+默认会在北京时间以下时段自动运行：
+
+- 23:30
+- 02:30
+- 05:30
+
+每次夜班会完成：
+
+1. 重建杭州 seed
+2. 跑 QA 检查
+3. 由主Agent生成当天工作计划
+4. 给仓库创建/更新一条 `night-shift-report` 日报
+
+若希望 data-curator 也自动补数，需要：
+
+- 配置 `OPENAI_API_KEY` secret
+- 配置仓库变量 `AUTO_DATA_CURATOR=true`
+
+建议：
+
+- 先只开 QA + 主Agent计划，观察 2-3 天
+- 再开启 `AUTO_DATA_CURATOR=true` 进入全自动补数

@@ -61,6 +61,19 @@ content = """
 - [ ] AI咨询功能是否有「仅供参考，以官方发布为准」提示
 - [ ] 是否存在「保录」等违规承诺表述
 
+### 夜班自动值守（数据维护场景）
+- [ ] `officialName / district / type / address / sourceUrl / basicInfoSourceLevel` 是否有缺失
+- [ ] `phone / officialUrl` 缺失是否异常增加
+- [ ] 民办学校 `admissionUrl / lotteryNeeded / lotteryData` 覆盖率是否下降
+- [ ] 民办学校 `tuition` 覆盖率是否下降
+- [ ] 学校总数是否异常下降
+- [ ] 是否出现重复学校
+
+夜班结论规则：
+- 基础字段缺失、学校总数异常下降、重复学校出现：一律 `❌ 阻断`
+- 招生/学费/画像覆盖不足：标 `⚠️ 风险`，并要求主Agent排入当日计划
+- 若基础字段未过线，不允许主Agent优先安排画像扩写
+
 ## 输出格式
 
 ### 验证结果摘要

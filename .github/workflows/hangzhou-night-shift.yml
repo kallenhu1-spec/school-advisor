@@ -1,0 +1,171 @@
+name: Hangzhou Night Shift
+
+on:
+  schedule:
+    - cron: '30 15 * * *'   # 北京时间 23:30
+    - cron: '30 18 * * *'   # 北京时间 02:30
+    - cron: '30 21 * * *'   # 北京时间 05:30
+  workflow_dispatch:
+    inputs:
+      auto_curator:
+        description: '是否启用 data-curator 自动补数（true/false）'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  hangzhou-night-shift:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+      AUTO_CURATOR: ${{ github.event.inputs.auto_curator || vars.AUTO_DATA_CURATOR || 'false' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run QA Scan And Main Plan
+        run: |
+          mkdir -p reports/night-shift/hangzhou
+          bash scripts/run_hangzhou_night_shift.sh
+
+      - name: Upload Night Shift Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hangzhou-night-shift-${{ github.run_id }}
+          path: reports/night-shift/hangzhou
+
+      - name: QA Reviewer Nightly Summary
+        if: ${{ secrets.OPENAI_API_KEY != '' }}
+        uses: openai/codex-action@v1
+        with:
+          agent: qa-reviewer
+          api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt: |
+            这是杭州分站的夜班自动值守任务，用户已授权自动执行，无需等待确认。
+
+            请读取：
+            - reports/night-shift/hangzhou/latest-qa.json
+            - data/seed_v2_city_hangzhou.json
+
+            重点检查：
+            1. P0 基础字段是否缺失
+            2. 民办招生覆盖率和学费覆盖率
+            3. 是否需要阻断自动发布
+
+            请输出一份不超过 400 字的 markdown 摘要，写入：
+            reports/night-shift/hangzhou/latest-qa-review.md
+
+      - name: Main Orchestrator Plan
+        if: ${{ secrets.OPENAI_API_KEY != '' }}
+        uses: openai/codex-action@v1
+        with:
+          agent: main-orchestrator
+          api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt: |
+            这是杭州分站的夜班自动值守任务，用户已授权自动执行，无需等待确认。
+
+            请读取：
+            - reports/night-shift/hangzhou/latest-qa.json
+            - reports/night-shift/hangzhou/latest-main-plan.md
+            - data/seed_v2_city_hangzhou.json
+
+            你的任务：
+            1. 根据 QA 结果生成主Agent日计划
+            2. 明确今天是否允许自动发布
+            3. 指定 data-curator 的最高优先级任务
+
+            请输出 markdown，并写入：
+            reports/night-shift/hangzhou/latest-orchestrator.md
+
+      - name: Data Curator Auto Shift
+        if: ${{ env.AUTO_CURATOR == 'true' && secrets.OPENAI_API_KEY != '' }}
+        uses: openai/codex-action@v1
+        with:
+          agent: data-curator
+          api-key: ${{ secrets.OPENAI_API_KEY }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            这是杭州分站的夜班自动值守任务，用户已授权自动执行，无需等待确认。
+
+            请读取：
+            - reports/night-shift/hangzhou/latest-qa.json
+            - reports/night-shift/hangzhou/latest-orchestrator.md
+            - data/curation/hangzhou/README.md
+
+            你的目标：
+            1. 只处理杭州分站数据
+            2. 只做主Agent计划中优先级最高的 1-2 项
+            3. 只允许修改以下范围：
+               - data/seed_v2_city_hangzhou.json
+               - backend/tools/build_hangzhou_school_directory.py
+               - data/curation/hangzhou/**
+               - index.html（仅当展示逻辑确需配合数据字段）
+            4. 完成后重新运行：
+               - python3 backend/tools/build_hangzhou_school_directory.py
+               - python3 backend/tools/check_hangzhou_seed.py
+            5. 不得发布线上，不得修改非杭州数据
+
+      - name: Re-run QA After Curator
+        if: ${{ env.AUTO_CURATOR == 'true' }}
+        run: |
+          python3 backend/tools/build_hangzhou_school_directory.py > reports/night-shift/hangzhou/latest-build.json
+          python3 backend/tools/check_hangzhou_seed.py > reports/night-shift/hangzhou/latest-qa-post.json
+
+      - name: Create Daily Sync Issue
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = 'reports/night-shift/hangzhou/latest-main-plan.md';
+            const qaPath = 'reports/night-shift/hangzhou/latest-qa.json';
+            const qa = JSON.parse(fs.readFileSync(qaPath, 'utf8'));
+            const plan = fs.existsSync(path) ? fs.readFileSync(path, 'utf8') : '夜班计划文件待生成';
+            const today = new Date().toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' });
+            const title = `[Night Shift] 杭州数据值守 ${today}`;
+            const body =
+              `## 杭州夜班自动值守已执行\n\n` +
+              `- 学校总数：${qa.schoolCount}\n` +
+              `- P0 缺失：${qa.missingBasicsCount}\n` +
+              `- 民办招生覆盖：${qa.privateAdmissionReadyCount}/${qa.privateSchoolCount}\n` +
+              `- 民办学费覆盖：${qa.privateTuitionReadyCount}/${qa.privateSchoolCount}\n` +
+              `- 画像缺失：${qa.profileMissingCount}\n\n` +
+              `### 主Agent日计划\n\n${plan}\n\n` +
+              `> 说明：这是夜间定时任务自动生成的日报。`;
+
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'night-shift-report',
+              per_page: 50
+            });
+
+            const match = existing.data.find(it => it.title === title);
+            if (match) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: match.number,
+                body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['night-shift-report']
+              });
+            }
