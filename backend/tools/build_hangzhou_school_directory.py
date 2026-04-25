@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import re
+import time
 from collections import OrderedDict
 from datetime import datetime, timezone
 from html import unescape
@@ -339,9 +340,17 @@ PROFILE_FALLBACKS = {
 }
 
 
-def fetch_html(url):
-    req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    return urlopen(req, timeout=30).read().decode("utf-8", "ignore")
+def fetch_html(url, retries=3, timeout=30):
+    last_error = None
+    for attempt in range(1, retries + 1):
+        try:
+            req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            return urlopen(req, timeout=timeout).read().decode("utf-8", "ignore")
+        except Exception as err:
+            last_error = err
+            if attempt < retries:
+                time.sleep(min(2 * attempt, 5))
+    raise last_error
 
 
 def clean_html_text(value):
@@ -504,6 +513,23 @@ def aggregate_official_rows():
     return aggregated
 
 
+def load_master_list_rows():
+    if not MASTER_LIST_PATH.exists():
+        return OrderedDict()
+    aggregated = OrderedDict()
+    with MASTER_LIST_PATH.open("r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            school = json.loads(line)
+            key = canonical_name(school.get("officialName") or school.get("name"))
+            if not key:
+                continue
+            aggregated[key] = school
+    return aggregated
+
+
 def load_existing_seed():
     return json.loads(SEED_PATH.read_text(encoding="utf-8"))
 
@@ -604,7 +630,22 @@ def write_master_list(official_rows):
 
 
 def main():
-    official_rows = aggregate_official_rows()
+    try:
+        official_rows = aggregate_official_rows()
+    except Exception as err:
+        official_rows = load_master_list_rows()
+        if not official_rows:
+            raise
+        print(
+            json.dumps(
+                {
+                    "warning": "official fetch failed; fallback to cached master list",
+                    "error": str(err),
+                    "fallbackPath": str(MASTER_LIST_PATH.relative_to(ROOT)),
+                },
+                ensure_ascii=False,
+            )
+        )
     seed = merge_seed(load_existing_seed(), official_rows)
     write_master_list(official_rows)
     SEED_PATH.write_text(json.dumps(seed, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
