@@ -32,6 +32,7 @@ jobs:
     env:
       TZ: Asia/Shanghai
       AUTO_CURATOR: ${{ github.event.inputs.auto_curator || vars.AUTO_DATA_CURATOR || 'false' }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -55,11 +56,11 @@ jobs:
           path: reports/night-shift/hangzhou
 
       - name: QA Reviewer Nightly Summary
-        if: ${{ secrets.OPENAI_API_KEY != '' }}
+        if: ${{ env.OPENAI_API_KEY != '' }}
         uses: openai/codex-action@v1
         with:
           agent: qa-reviewer
-          api-key: ${{ secrets.OPENAI_API_KEY }}
+          api-key: ${{ env.OPENAI_API_KEY }}
           prompt: |
             这是杭州分站的夜班自动值守任务，用户已授权自动执行，无需等待确认。
 
@@ -76,11 +77,11 @@ jobs:
             reports/night-shift/hangzhou/latest-qa-review.md
 
       - name: Main Orchestrator Plan
-        if: ${{ secrets.OPENAI_API_KEY != '' }}
+        if: ${{ env.OPENAI_API_KEY != '' }}
         uses: openai/codex-action@v1
         with:
           agent: main-orchestrator
-          api-key: ${{ secrets.OPENAI_API_KEY }}
+          api-key: ${{ env.OPENAI_API_KEY }}
           prompt: |
             这是杭州分站的夜班自动值守任务，用户已授权自动执行，无需等待确认。
 
@@ -98,11 +99,11 @@ jobs:
             reports/night-shift/hangzhou/latest-orchestrator.md
 
       - name: Data Curator Auto Shift
-        if: ${{ env.AUTO_CURATOR == 'true' && secrets.OPENAI_API_KEY != '' }}
+        if: ${{ env.AUTO_CURATOR == 'true' && env.OPENAI_API_KEY != '' }}
         uses: openai/codex-action@v1
         with:
           agent: data-curator
-          api-key: ${{ secrets.OPENAI_API_KEY }}
+          api-key: ${{ env.OPENAI_API_KEY }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           prompt: |
             这是杭州分站的夜班自动值守任务，用户已授权自动执行，无需等待确认。
