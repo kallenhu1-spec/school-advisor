@@ -73,6 +73,9 @@ content = """
 - 基础字段缺失、学校总数异常下降、重复学校出现：一律 `❌ 阻断`
 - 招生/学费/画像覆盖不足：标 `⚠️ 风险`，并要求主Agent排入当日计划
 - 若基础字段未过线，不允许主Agent优先安排画像扩写
+- 若 `privateAdmissionReadyCount < privateSchoolCount`，必须明确写出“招生缺口由 data-curator 主补，qa-reviewer 主验，必要时 policy 介入口径冲突”
+- 若 `privateTuitionReadyCount < privateSchoolCount`，必须明确写出“学费缺口由 data-curator 主补，qa-reviewer 复核来源等级”
+- 对招生与学费任务，QA 不只报数字，还要点名缺口类别、来源风险和下一轮责任角色
 
 ## 输出格式
 
