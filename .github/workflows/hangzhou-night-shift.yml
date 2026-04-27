@@ -31,8 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
-      AUTO_CURATOR: ${{ github.event.inputs.auto_curator || vars.AUTO_DATA_CURATOR || 'false' }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      AUTO_CURATOR: ${{ github.event.inputs.auto_curator || vars.AUTO_DATA_CURATOR || 'true' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -56,81 +55,29 @@ jobs:
           path: reports/night-shift/hangzhou
 
       - name: QA Reviewer Nightly Summary
-        if: ${{ env.OPENAI_API_KEY != '' }}
-        uses: openai/codex-action@v1
-        with:
-          agent: qa-reviewer
-          api-key: ${{ env.OPENAI_API_KEY }}
-          prompt: |
-            这是杭州分站的夜班自动值守任务，用户已授权自动执行，无需等待确认。
-
-            请读取：
-            - reports/night-shift/hangzhou/latest-qa.json
-            - data/seed_v2_city_hangzhou.json
-
-            重点检查：
-            1. P0 基础字段是否缺失
-            2. 民办招生覆盖率和学费覆盖率
-            3. 是否需要阻断自动发布
-
-            请输出一份不超过 400 字的 markdown 摘要，写入：
-            reports/night-shift/hangzhou/latest-qa-review.md
+        run: |
+          python3 backend/tools/write_hangzhou_qa_review.py \
+            --qa reports/night-shift/hangzhou/latest-qa.json \
+            --out reports/night-shift/hangzhou/latest-qa-review.md
 
       - name: Main Orchestrator Plan
-        if: ${{ env.OPENAI_API_KEY != '' }}
-        uses: openai/codex-action@v1
-        with:
-          agent: main-orchestrator
-          api-key: ${{ env.OPENAI_API_KEY }}
-          prompt: |
-            这是杭州分站的夜班自动值守任务，用户已授权自动执行，无需等待确认。
-
-            请读取：
-            - reports/night-shift/hangzhou/latest-qa.json
-            - reports/night-shift/hangzhou/latest-main-plan.md
-            - data/seed_v2_city_hangzhou.json
-
-            你的任务：
-            1. 根据 QA 结果生成主Agent日计划
-            2. 明确今天是否允许自动发布
-            3. 指定 data-curator 的最高优先级任务
-
-            请输出 markdown，并写入：
-            reports/night-shift/hangzhou/latest-orchestrator.md
+        run: |
+          python3 backend/tools/write_hangzhou_orchestrator.py \
+            --plan-json reports/night-shift/hangzhou/latest-main-plan.json \
+            --out reports/night-shift/hangzhou/latest-orchestrator.md
 
       - name: Data Curator Auto Shift
-        if: ${{ env.AUTO_CURATOR == 'true' && env.OPENAI_API_KEY != '' }}
-        uses: openai/codex-action@v1
-        with:
-          agent: data-curator
-          api-key: ${{ env.OPENAI_API_KEY }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          prompt: |
-            这是杭州分站的夜班自动值守任务，用户已授权自动执行，无需等待确认。
-
-            请读取：
-            - reports/night-shift/hangzhou/latest-qa.json
-            - reports/night-shift/hangzhou/latest-orchestrator.md
-            - data/curation/hangzhou/README.md
-
-            你的目标：
-            1. 只处理杭州分站数据
-            2. 只做主Agent计划中优先级最高的 1-2 项
-            3. 只允许修改以下范围：
-               - data/seed_v2_city_hangzhou.json
-               - backend/tools/build_hangzhou_school_directory.py
-               - data/curation/hangzhou/**
-               - index.html（仅当展示逻辑确需配合数据字段）
-            4. 完成后重新运行：
-               - python3 backend/tools/build_hangzhou_school_directory.py
-               - python3 backend/tools/check_hangzhou_seed.py
-            5. 不得发布线上，不得修改非杭州数据
+        if: ${{ env.AUTO_CURATOR == 'true' }}
+        run: |
+          python3 backend/tools/run_hangzhou_auto_curator.py \
+            --qa-before reports/night-shift/hangzhou/latest-qa.json \
+            --report-out reports/night-shift/hangzhou/latest-curator-report.md \
+            --qa-after reports/night-shift/hangzhou/latest-qa-post.json
 
       - name: Re-run QA After Curator
         if: ${{ env.AUTO_CURATOR == 'true' }}
         run: |
-          python3 backend/tools/build_hangzhou_school_directory.py > reports/night-shift/hangzhou/latest-build.json
-          python3 backend/tools/check_hangzhou_seed.py > reports/night-shift/hangzhou/latest-qa-post.json
+          test -f reports/night-shift/hangzhou/latest-qa-post.json
 
       - name: Build Human Summary
         run: |
@@ -147,8 +94,12 @@ jobs:
 
           plan_path = root / "latest-main-plan.md"
           plan = plan_path.read_text(encoding="utf-8").strip() if plan_path.exists() else "主Agent计划待生成"
+          qa_review_path = root / "latest-qa-review.md"
+          qa_review = qa_review_path.read_text(encoding="utf-8").strip() if qa_review_path.exists() else ""
           orchestrator_path = root / "latest-orchestrator.md"
           orchestrator = orchestrator_path.read_text(encoding="utf-8").strip() if orchestrator_path.exists() else ""
+          curator_path = root / "latest-curator-report.md"
+          curator_report = curator_path.read_text(encoding="utf-8").strip() if curator_path.exists() else ""
 
           run_time = datetime.now().strftime("%Y-%m-%d %H:%M")
           lines = [
@@ -187,6 +138,10 @@ jobs:
 
           if orchestrator:
               lines.extend(["", "## 主Agent补充说明", orchestrator])
+          if qa_review:
+              lines.extend(["", "## QA Reviewer 结论", qa_review])
+          if curator_report:
+              lines.extend(["", "## Data Curator 执行报告", curator_report])
 
           (root / "latest-summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
           PY
