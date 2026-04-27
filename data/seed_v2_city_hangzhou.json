@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generatedAt": "2026-04-16T09:41:35Z",
+  "generatedAt": "2026-04-27T02:01:27Z",
   "district": null,
   "city": "hangzhou",
   "scope": "city",
@@ -869,10 +869,10 @@
       "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
     },
     {
-      "name": "育才外国语学校",
-      "officialName": "育才外国语学校",
+      "name": "育才实验学校",
+      "officialName": "杭州市育才实验学校",
       "district": "xihu",
-      "type": "pri",
+      "type": "pub",
       "tier": "T3",
       "lat": null,
       "lng": null,
@@ -886,8 +886,21 @@
       "phone": "8971 5869",
       "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
       "basicInfoSourceLevel": "official",
-      "basicInfoSourceNote": "西湖区学校名录",
-      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html"
+      "basicInfoSourceNote": "西湖区学校名录 / 杭州市育才实验学校简介（2022年转公）",
+      "officialUrl": "https://www.hzxhjy.cn/ycwgy/xxgk/xxgkml/dwgk/dwjj/202312/t20231206_702173.shtml",
+      "admission": {
+        "admissionYear": 2025,
+        "admissionUrl": "https://www.hzxhjy.cn/xhjyw/xjrd/202506/t20250625_739217.shtml",
+        "admissionSource": "official",
+        "lotteryNeeded": true,
+        "lotteryData": "2025年西湖区官方公告按“杭州市育才实验学校（民转公学校）”发布，报名人数超过招生计划数，将进行电脑派位。"
+      },
+      "tuition": {
+        "term": 0,
+        "note": "学校2022年转为公办，2025年招生简章明确不收取学费。",
+        "sourceLevel": "official",
+        "sourceUrl": "https://www.hzxhjy.cn/ycwgy/xxgk/zsydj/202412/P020241226564461874841.pdf"
+      }
     },
     {
       "name": "育才教育集团（总校）文溪校区",
@@ -1145,7 +1158,7 @@
       "name": "钱塘外语学校（学院路校区）",
       "officialName": "钱塘外语学校（学院路校区）",
       "district": "xihu",
-      "type": "pri",
+      "type": "pub",
       "tier": "T3",
       "lat": null,
       "lng": null,
@@ -1159,21 +1172,27 @@
       "phone": "56707459",
       "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
       "basicInfoSourceLevel": "official",
-      "basicInfoSourceNote": "西湖区学校名录",
-      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceNote": "西湖区学校名录 / 杭州市钱塘外语学校简介（2022年转公）",
+      "officialUrl": "https://www.hzxhjy.cn/qtwyxx/xxgk/xxjj/202412/t20241203_724855.shtml",
       "admission": {
         "admissionYear": 2025,
         "admissionUrl": "https://www.hzxh.gov.cn/art/2025/6/25/art_1229507042_59049293.html",
         "admissionSource": "official",
         "lotteryNeeded": true,
         "lotteryData": "2025年西湖区官方公告按“杭州市钱塘外语学校（民转公学校）”统一发布，报名人数超过招生计划数，将于6月30日进行电脑派位。"
+      },
+      "tuition": {
+        "term": 0,
+        "note": "学校2022年体制调整，由民办转为公办；义务教育阶段按公办学校口径不收取学费。",
+        "sourceLevel": "official",
+        "sourceUrl": "https://www.hzxhjy.cn/qtwyxx/xxgk/xxjj/202412/t20241203_724855.shtml"
       }
     },
     {
       "name": "钱塘外语学校（文二路校区）",
       "officialName": "钱塘外语学校（文二路校区）",
       "district": "xihu",
-      "type": "pri",
+      "type": "pub",
       "tier": "T3",
       "lat": null,
       "lng": null,
@@ -1187,14 +1206,20 @@
       "phone": "56707459",
       "sourceUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
       "basicInfoSourceLevel": "official",
-      "basicInfoSourceNote": "西湖区学校名录",
-      "officialUrl": "https://www.hzxh.gov.cn/art/2023/6/9/art_1229507039_59029380.html",
+      "basicInfoSourceNote": "西湖区学校名录 / 杭州市钱塘外语学校简介（2022年转公）",
+      "officialUrl": "https://www.hzxhjy.cn/qtwyxx/xxgk/xxjj/202412/t20241203_724855.shtml",
       "admission": {
         "admissionYear": 2025,
         "admissionUrl": "https://www.hzxh.gov.cn/art/2025/6/25/art_1229507042_59049293.html",
         "admissionSource": "official",
         "lotteryNeeded": true,
         "lotteryData": "2025年西湖区官方公告按“杭州市钱塘外语学校（民转公学校）”统一发布，报名人数超过招生计划数，将于6月30日进行电脑派位。"
+      },
+      "tuition": {
+        "term": 0,
+        "note": "学校2022年体制调整，由民办转为公办；义务教育阶段按公办学校口径不收取学费。",
+        "sourceLevel": "official",
+        "sourceUrl": "https://www.hzxhjy.cn/qtwyxx/xxgk/xxjj/202412/t20241203_724855.shtml"
       }
     },
     {
@@ -3339,6 +3364,12 @@
         "admissionSource": "official",
         "lotteryNeeded": true,
         "lotteryData": "2025年拱墅区官方公告：报名人数超过招生计划数，将于6月30日进行电脑派位录取。"
+      },
+      "tuition": {
+        "term": 35000,
+        "note": "2025年小学收费标准为学费35000元/学期；中餐（含点心）收费标准为28元/餐。",
+        "sourceLevel": "official",
+        "sourceUrl": "https://www.shwfl.edu.cn/hzshswxx/list.htm"
       }
     },
     {
