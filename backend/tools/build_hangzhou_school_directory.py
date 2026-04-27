@@ -61,6 +61,51 @@ OFFICIAL_URL_OVERRIDES = {
     }
 }
 
+SCHOOL_OVERRIDES = {
+    "育才外国语学校": {
+        "name": "育才实验学校",
+        "officialName": "杭州市育才实验学校",
+        "type": "pub",
+        "officialUrl": "https://www.hzxhjy.cn/ycwgy/xxgk/xxgkml/dwgk/dwjj/202312/t20231206_702173.shtml",
+        "basicInfoSourceNote": "西湖区学校名录 / 杭州市育才实验学校简介（2022年转公）",
+        "admission": {
+            "admissionYear": 2025,
+            "admissionUrl": "https://www.hzxhjy.cn/xhjyw/xjrd/202506/t20250625_739217.shtml",
+            "admissionSource": "official",
+            "lotteryNeeded": True,
+            "lotteryData": "2025年西湖区官方公告按“杭州市育才实验学校（民转公学校）”发布，报名人数超过招生计划数，将进行电脑派位。",
+        },
+        "tuition": {
+            "term": 0,
+            "note": "学校2022年转为公办，2025年招生简章明确不收取学费。",
+            "sourceLevel": "official",
+            "sourceUrl": "https://www.hzxhjy.cn/ycwgy/xxgk/zsydj/202412/P020241226564461874841.pdf",
+        },
+    },
+    "钱塘外语学校(学院路校区)": {
+        "type": "pub",
+        "officialUrl": "https://www.hzxhjy.cn/qtwyxx/xxgk/xxjj/202412/t20241203_724855.shtml",
+        "basicInfoSourceNote": "西湖区学校名录 / 杭州市钱塘外语学校简介（2022年转公）",
+        "tuition": {
+            "term": 0,
+            "note": "学校2022年体制调整，由民办转为公办；义务教育阶段按公办学校口径不收取学费。",
+            "sourceLevel": "official",
+            "sourceUrl": "https://www.hzxhjy.cn/qtwyxx/xxgk/xxjj/202412/t20241203_724855.shtml",
+        },
+    },
+    "钱塘外语学校(文二路校区)": {
+        "type": "pub",
+        "officialUrl": "https://www.hzxhjy.cn/qtwyxx/xxgk/xxjj/202412/t20241203_724855.shtml",
+        "basicInfoSourceNote": "西湖区学校名录 / 杭州市钱塘外语学校简介（2022年转公）",
+        "tuition": {
+            "term": 0,
+            "note": "学校2022年体制调整，由民办转为公办；义务教育阶段按公办学校口径不收取学费。",
+            "sourceLevel": "official",
+            "sourceUrl": "https://www.hzxhjy.cn/qtwyxx/xxgk/xxjj/202412/t20241203_724855.shtml",
+        },
+    },
+}
+
 ADMISSION_OVERRIDES = {
     "杭州绿城育华学校小学部": {
         "admission": {
@@ -241,6 +286,14 @@ TUITION_OVERRIDES = {
             "note": "2025-2026学年小学学费；住宿费6300元/学期（5天寄宿）、9450元/学期（7天寄宿）。来源：学校2025-2026学年幼升小招生简章。",
             "sourceLevel": "official",
             "sourceUrl": "https://www.rkcshz.cn/zh/2025/06/03/10833/",
+        }
+    },
+    "杭州上海世外学校": {
+        "tuition": {
+            "term": 35000,
+            "note": "2025年小学收费标准为学费35000元/学期；中餐（含点心）收费标准为28元/餐。",
+            "sourceLevel": "official",
+            "sourceUrl": "https://www.shwfl.edu.cn/hzshswxx/list.htm",
         }
     },
 }
@@ -550,6 +603,9 @@ def deep_merge(base, override):
 
 def apply_curated_overrides(school):
     canonical_key = canonical_name(school.get("name") or school.get("officialName"))
+    school_override = SCHOOL_OVERRIDES.get(school.get("name")) or SCHOOL_OVERRIDES.get(canonical_key)
+    if school_override:
+        school = deep_merge(school, school_override)
     phone_override = PHONE_OVERRIDES.get(school.get("name")) or PHONE_OVERRIDES.get(canonical_key)
     if phone_override and not school.get("phone"):
         school["phone"] = phone_override["phone"]
